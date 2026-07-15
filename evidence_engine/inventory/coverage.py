@@ -1,0 +1,41 @@
+"""Coverage inventory and audit functions."""
+
+from evidence_engine._legacy import (
+    annotate_nonstructured_coverage,
+    audit_file_coverage,
+    audit_plist_coverage,
+    audit_sqlite_database,
+    build_app_coverage,
+    build_coverage_audit,
+    build_native_target_coverage,
+    category_for_path,
+    events_for_coverage,
+    file_type_for_path,
+    manifest_lookup_for_path,
+    parse_backup_manifests,
+    parser_event_match,
+    parser_for_path,
+    safe_file_size,
+    supported_tables_for_record,
+    write_coverage_outputs,
+)
+
+__all__ = [
+    "annotate_nonstructured_coverage",
+    "audit_file_coverage",
+    "audit_plist_coverage",
+    "audit_sqlite_database",
+    "build_app_coverage",
+    "build_coverage_audit",
+    "build_native_target_coverage",
+    "category_for_path",
+    "events_for_coverage",
+    "file_type_for_path",
+    "manifest_lookup_for_path",
+    "parse_backup_manifests",
+    "parser_event_match",
+    "parser_for_path",
+    "safe_file_size",
+    "supported_tables_for_record",
+    "write_coverage_outputs",
+]

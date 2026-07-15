@@ -1,0 +1,75 @@
+@'
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# IDE and OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Logs and generated outputs
+*.log
+output/
+outputs/
+reports/generated/
+tmp/
+temp/
+
+# Evidence and forensic data
+dev-evidence/
+test-evidence/
+client-evidence/
+evidence/
+uploads/
+backups/
+cases/
+sample_data/private/
+
+*.E01
+*.Ex01
+*.L01
+*.AD1
+*.001
+*.dd
+*.raw
+*.img
+*.dmg
+*.zip
+*.7z
+*.tar
+*.gz
+
+# Databases and extracted artifacts
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Exception: allow sanitized test fixtures when explicitly placed here
+!tests/fixtures/**/*.db
+!tests/fixtures/**/*.sqlite
+!tests/fixtures/**/*.sqlite3
+
+# Node/frontend
+node_modules/
+.next/
+dist/
+build/
+'@ | Set-Content -Encoding UTF8 .gitignore

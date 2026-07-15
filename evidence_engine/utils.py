@@ -1,0 +1,41 @@
+"""Shared datetime, formatting, hashing, and JSON helpers."""
+
+from evidence_engine._legacy import (
+    apple_datetime,
+    duration_text,
+    format_dt,
+    in_range,
+    iso_or_common_datetime,
+    json_dumps,
+    load_optional_pillow,
+    normalize_phone,
+    parse_dt,
+    safe_fromtimestamp,
+    safe_int,
+    section_for,
+    sha256,
+    short_path,
+    timestamp_from_any,
+    unix_datetime,
+    webkit_datetime,
+)
+
+__all__ = [
+    "apple_datetime",
+    "duration_text",
+    "format_dt",
+    "in_range",
+    "iso_or_common_datetime",
+    "json_dumps",
+    "load_optional_pillow",
+    "normalize_phone",
+    "parse_dt",
+    "safe_fromtimestamp",
+    "safe_int",
+    "section_for",
+    "sha256",
+    "short_path",
+    "timestamp_from_any",
+    "unix_datetime",
+    "webkit_datetime",
+]
