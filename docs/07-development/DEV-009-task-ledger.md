@@ -14,7 +14,7 @@
 
 | DEV-0004 | Architecture recommendation | COMPLETE | DEV-0002 approval | ARC-001 | Owner approved ARC-001 on 2026-07-24; approval recorded as DEC-0002; architecture establishes immutable-source/working-copy boundaries, tenant authorization, provenance-complete records, supported/legacy isolation, and additive migrations without changing support status |
 
-| DEV-0101 | Backend scaffold | COMPLETE | DEV-0002, DEV-0003, DEV-0004 | DEV-0101-backend-scaffold-acceptance | Default composition is health-only and import-isolated from legacy processing; explicit unsupported legacy composition preserves characterization behavior; backend 12/12 and evidence-engine 5/5 tests passed; no migration or support promotion |
+| DEV-0101 | Backend scaffold | COMPLETE | DEV-0002, DEV-0003, DEV-0004 | DEV-0101-backend-scaffold-acceptance | Owner approved completion on 2026-07-24 in DEC-0003; default composition is health-only and import-isolated from legacy processing; backend 12/12 and evidence-engine 5/5 tests passed; pytest temp workaround and TestClient warning recorded; no migration or support promotion |
 
 | DEV-0201 | Apple backup input adapter | READY | DEV-0003, DEV-0004, DEV-0101 | To be created | Pre-existing path checks are PARTIALLY_IMPLEMENTED and unvalidated; task-specific requirements and measurable acceptance criteria must be approved before implementation; initial target is unencrypted Apple local backup |
 

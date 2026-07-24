@@ -84,3 +84,40 @@ The owner approved ARC-001 as the architectural basis for the MVP:
   acceptance criteria are defined.
 - No parser, artifact family, input type, schema, workflow, or conclusion is
   promoted to supported status.
+
+## DEC-0003 — Approve DEV-0101 backend scaffold
+
+- Date: 2026-07-24
+- Status: APPROVED
+- Owner: Project owner
+- Task: DEV-0101
+- Decision source: Explicit owner approval recorded in the controlled
+  development task on 2026-07-24
+- Governing document: DEV-0101 backend scaffold acceptance criteria
+
+### Decision
+
+The owner approved DEV-0101 as complete:
+
+- the default FastAPI composition root exposes only the approved scaffold
+  surface;
+- legacy case, evidence, summary, and processing routes remain isolated behind
+  the explicit legacy compatibility application;
+- legacy processing remains unavailable from the default composition root;
+- the scaffold-boundary tests and recorded passing results are accepted as the
+  validation record;
+- use of a repository-local ignored pytest temporary directory is accepted as
+  a documented development-environment workaround;
+- the third-party TestClient deprecation warning is accepted as tracked
+  technical debt; and
+- the explicit legacy application must not be deployed, exposed, or included
+  in the supported SaaS surface.
+
+### Consequences
+
+- DEV-0101 remains `COMPLETE`.
+- DEV-0201 may begin after task-specific measurable acceptance criteria and
+  DOC-002 mappings are created.
+- RSK-0001 and RSK-0002 track the accepted residual risks.
+- No parser, artifact family, input type, workflow, or production capability is
+  promoted to supported status.
