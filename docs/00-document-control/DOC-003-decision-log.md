@@ -121,3 +121,63 @@ The owner approved DEV-0101 as complete:
 - RSK-0001 and RSK-0002 track the accepted residual risks.
 - No parser, artifact family, input type, workflow, or production capability is
   promoted to supported status.
+
+## DEC-0004 — Approve DEV-0201 Apple backup input adapter
+
+- Date: 2026-07-24
+- Status: APPROVED
+- Owner: Project owner
+- Task: DEV-0201
+- Decision source: Explicit owner approval recorded in the controlled
+  development task on 2026-07-24
+- Governing document: DEV-0201 Apple backup input adapter acceptance criteria
+
+### Decision
+
+The owner approved DEV-0201 as complete. The read-only, root-confined adapter,
+its six controlled outcomes, provenance, deterministic audit data, limitations,
+synthetic tests, and recorded validation results satisfy the task-specific
+acceptance criteria.
+
+### Consequences
+
+- DEV-0201 may be marked `COMPLETE`.
+- DEV-0202 is next in the implementation-plan order.
+- DEV-0201 ready outcomes remain adapter handoff states only.
+- No input type, parser, artifact family, workflow, evidence source, or
+  production capability is promoted to supported status.
+
+## DEC-0005 — DEV-0202 requested validation scope
+
+- Date: 2026-07-24
+- Status: BLOCKED_PENDING_CLARIFICATION
+- Owner: Project owner
+- Task: DEV-0202
+- Decision source: Owner instruction recorded in the controlled development
+  task on 2026-07-24
+
+### Requested scope
+
+The owner requested a complete Apple backup validation subsystem with distinct
+outcomes for invalid, non-Apple, unencrypted, encrypted, corrupt, incomplete,
+and unsupported-version inputs. The requested minimum checks include required
+backup files and layout, plist keys, encryption state, SQLite readability and
+required tables, schema/version compatibility, corruption, and missing
+components.
+
+### Blocking conflicts
+
+Implementation cannot begin defensibly until both conflicts are resolved:
+
+1. SQLite readability, required-table, and corruption checks require SQLite
+   processing. AGENTS.md and ARC-001 require controlled working copies for
+   SQLite processing, while the DEV-0202 instruction prohibits creating working
+   copies.
+2. `APPLE_BACKUP_UNSUPPORTED_VERSION` requires an approved compatibility
+   profile identifying accepted backup, Manifest plist, Manifest database,
+   iOS, and schema versions/fingerprints. PRD-007 §12 reserves supported iOS
+   versions and schema fingerprints for owner approval, and no such profile
+   currently exists.
+
+No implementation or implied compatibility policy is authorized while these
+conflicts remain.

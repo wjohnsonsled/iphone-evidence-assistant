@@ -4,7 +4,8 @@
 
 - Scope: Phase 2 task boundaries
 - Architecture: ARC-001
-- Current implementation task: DEV-0201, validation pending
+- Current implementation task: DEV-0201 complete; DEV-0202 blocked pending
+  owner clarification recorded in DEC-0005
 - Input support effect: none
 
 ## 2. Governing principle
