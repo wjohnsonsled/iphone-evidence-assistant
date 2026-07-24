@@ -10,7 +10,7 @@
 
 | DEV-0002 | Confirm MVP scope against baseline | COMPLETE | DEV-0001 | PRD-003; PRD-007; FOR-004; FOR-006 | Owner approved PRD-007 on 2026-07-24; approval recorded as DEC-0001; no artifact, parser, schema, workflow, or conclusion was promoted |
 
-| DEV-0003 | Create traceability baseline | READY | DEV-0002 approval | DOC-002 | Pending; must trace pre-existing implemented-but-unvalidated code and quarantine controls |
+| DEV-0003 | Create traceability baseline | COMPLETE | DEV-0002 approval | DOC-002 | DOC-002 traces 46 uniquely identified requirements to implementation evidence, verification evidence, and owning tasks or explicit gaps; deterministic matrix validation passed; no support status changed |
 
 | DEV-0004 | Architecture recommendation | READY | DEV-0002 approval | ARC-001 | Existing architecture is conditionally reusable; supported/legacy registry separation, evidence-source boundaries, security, provenance, timestamps, and working-copy architecture remain undecided |
 
