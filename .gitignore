@@ -9,6 +9,7 @@ __pycache__/
 htmlcov/
 .venv/
 venv/
+references/*.pdf
 
 # Environment and secrets
 .env
