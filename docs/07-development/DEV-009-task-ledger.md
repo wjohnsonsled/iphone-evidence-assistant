@@ -16,7 +16,9 @@
 
 | DEV-0101 | Backend scaffold | COMPLETE | DEV-0002, DEV-0003, DEV-0004 | DEV-0101-backend-scaffold-acceptance | Owner approved completion on 2026-07-24 in DEC-0003; default composition is health-only and import-isolated from legacy processing; backend 12/12 and evidence-engine 5/5 tests passed; pytest temp workaround and TestClient warning recorded; no migration or support promotion |
 
-| DEV-0201 | Apple backup input adapter | READY | DEV-0003, DEV-0004, DEV-0101 | To be created | Pre-existing path checks are PARTIALLY_IMPLEMENTED and unvalidated; task-specific requirements and measurable acceptance criteria must be approved before implementation; initial target is unencrypted Apple local backup |
+| DEV-0201 | Apple backup input adapter | VALIDATION_PENDING | DEV-0003, DEV-0004, DEV-0101 | DEV-0201-apple-backup-input-adapter-acceptance | Additive read-only adapter implements six explicit outcomes, root/link controls, provenance, limitations, and deterministic audit data; focused 14/14, backend 26/26, and characterization 5/5 tests passed; owner review pending; no input support claim |
+
+| DEV-0202 | Validate required Apple backup structure | BLOCKED | DEV-0201 approval | To be created | Next plan-ordered task; must define structural profiles and deterministic synthetic fixtures without promoting input support |
 
 | DEV-0203 | Backup encryption-state detection | BLOCKED | DEV-0201, DEV-0202 | To be created | Database field exists, but detection is NOT_IMPLEMENTED; initial release is detection/reporting only |
 

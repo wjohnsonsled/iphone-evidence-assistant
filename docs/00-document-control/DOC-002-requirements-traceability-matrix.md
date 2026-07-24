@@ -38,7 +38,7 @@ statuses. They must not be displayed as support claims.
 
 | Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owning task or gap |
 |---|---|---|---|---|---|---|
-| PRD-IN-001 | Accept only a structurally valid Apple local iPhone backup in the initial supported path | PRD-003 §3; PRD-007 §4 | `PARTIAL_UNVALIDATED` | `backend/app/services/case_processing.py` performs broad path-marker checks | `backend/tests/test_path_validation.py` characterizes root/path behavior only | DEV-0201; DEV-0202 |
+| PRD-IN-001 | Accept only a structurally valid Apple local iPhone backup in the initial supported path | PRD-003 §3; PRD-007 §4 | `PARTIAL_UNVALIDATED` | DEV-0201 adds a supported-boundary directory adapter; Apple structure validation is not implemented | DEV-0201 adapter tests do not establish Apple structure support | DEV-0202 |
 | PRD-IN-002 | Distinguish unencrypted, encrypted, incomplete, malformed/corrupted, and unsupported inputs | AGENTS.md Input scope; PRD-007 §4 | `APPROVED_UNIMPLEMENTED` | `backend/app/models/device.py` has an unpopulated `backup_encrypted` field | No classification fixture suite | DEV-0201 through DEV-0203 |
 | PRD-IN-003 | Prioritize unencrypted backups as the first input target | PRD-003 §3; PRD-007 §4; DEC-0001 | `DOCUMENTED_CONTROL` | No conforming supported intake path exists | Owner approval DEC-0001 | DEV-0201 through DEV-0202 |
 | PRD-IN-004 | Detect and report encrypted backups without decrypting or processing inaccessible content | PRD-007 §5; DEC-0001 | `APPROVED_UNIMPLEMENTED` | Database field only; no detection/reporting implementation | No encryption-state fixtures | DEV-0203 |
@@ -52,7 +52,7 @@ statuses. They must not be displayed as support claims.
 
 | Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owning task or gap |
 |---|---|---|---|---|---|---|
-| FOR-INT-001 | Treat submitted source evidence as immutable and never modify it | AGENTS.md Mandatory forensic rules | `PARTIAL_UNVALIDATED` | Legacy SQLite access uses URI `mode=ro`; no immutable intake boundary exists | No source before/after hash test | DEV-0201; DEV-0207 |
+| FOR-INT-001 | Treat submitted source evidence as immutable and never modify it | AGENTS.md Mandatory forensic rules | `PARTIAL_UNVALIDATED` | DEV-0201 adapter performs metadata-only inspection; immutable evidence-source registration is not implemented | Synthetic DEV-0201 before/after fixture hash and directory-state test | DEV-0103; DEV-0207 |
 | FOR-INT-002 | Separate submitted source evidence from derived data and working copies | AGENTS.md; PRD-007 §10 | `APPROVED_UNIMPLEMENTED` | Backend writes normalized output separately but opens source databases directly | No boundary or working-copy tests | DEV-0103; DEV-0201; architecture decision |
 | FOR-INT-003 | Generate and retain SHA-256 for source and material derived files; surface hash failures | AGENTS.md; PRD-007 §10 | `PARTIAL_UNVALIDATED` | `evidence_engine/_legacy.py::sha256()` and size-limited coverage hashing exist; failures may become empty strings | Characterization tests do not prove complete hashing/failure behavior | DEV-0207; DEV-0210 |
 | FOR-PROV-001 | Retain provenance from every normalized record to its source artifact and stable source record | AGENTS.md; FOR-004 §5 | `PARTIAL_UNVALIDATED` | `NormalizedEvent` and `EvidenceEvent` contain provenance-like fields without an enforced locator contract | Persistence tests verify storage, not locator resolvability | DEV-0301; DEV-0302 |
@@ -91,7 +91,7 @@ statuses. They must not be displayed as support claims.
 |---|---|---|---|---|---|---|
 | SEC-AUT-001 | Authenticate users and services before case access | AGENTS.md Security rules; PRD-007 §10 | `APPROVED_UNIMPLEMENTED` | No authentication principal or middleware identified | No authentication tests | Phase 8 task unassigned |
 | SEC-AUT-002 | Enforce authorization and case/tenant isolation server-side | AGENTS.md Security rules; PRD-007 §10 | `APPROVED_UNIMPLEMENTED` | Case IDs filter queries but any caller may provide any case ID | No cross-case/cross-tenant tests | DEV-0103; Phase 8 task unassigned |
-| SEC-INP-001 | Validate untrusted uploaded files and paths; prevent traversal and unsafe execution | AGENTS.md Security rules | `PARTIAL_UNVALIDATED` | Root-boundary path validation exists; upload and structural validation do not | `backend/tests/test_path_validation.py` covers basic traversal | DEV-0201; security task unassigned |
+| SEC-INP-001 | Validate untrusted uploaded files and paths; prevent traversal and unsafe execution | AGENTS.md Security rules | `PARTIAL_UNVALIDATED` | DEV-0201 adds lexical/resolved root confinement and link/reparse rejection; upload and structural validation do not exist | DEV-0201 root escape, invalid-root, link-boundary, and input-type tests | DEV-0202; security task unassigned |
 | SEC-SEC-001 | Never commit or log credentials, passwords, tokens, production secrets, or decrypted secret values | AGENTS.md Security rules; PRD-007 §5 | `DOCUMENTED_CONTROL` | No initial password flow exists; development configuration requires later review | No secret scan or log-redaction suite | DEV-0104; security task unassigned |
 | SEC-AUD-001 | Record security- and evidence-relevant actions without sensitive secret content | FOR-006 §8; AGENTS.md Security rules | `APPROVED_UNIMPLEMENTED` | Ordinary application logging exists; no audit-event model | No audit tests | DEV-0104; Phase 8 task unassigned |
 
@@ -135,22 +135,35 @@ The following governing documents remain empty placeholders and cannot yet
 supply detailed requirements or acceptance criteria:
 
 - DOC-000 document register;
-- DOC-004 risk register;
 - PRD-001 product requirements;
 - PRD-004 limitations;
-- ARC-001 architecture;
-- FOR-001 through FOR-003 and FOR-005;
+- FOR-001, FOR-002, and FOR-005;
 - AI-001, AI-003, and AI-005;
 - SEC-001 threat model;
 - QMS-003 definition of done; and
 - QMS-004 test strategy.
 
-The matrix therefore marks affected work as unimplemented, unassessed, or
-assigned to a later task. It does not fill those policy and architecture gaps
-by inference. DEV-0004 is the next approved task and must address architecture
-recommendations without treating placeholder documents as approved decisions.
+The matrix marks affected work as unimplemented, unassessed, or assigned to a
+later task. It does not fill remaining policy gaps by inference.
 
-## 13. Maintenance rules
+## 13. DEV-0201 Apple backup input-adapter requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owning task or gap |
+|---|---|---|---|---|---|---|
+| DEV-0201-R01 | Supported adapter has no legacy dependency | DEV-0201 acceptance §4 | `IMPLEMENTED_TASK_VALIDATED` | `backend/app/intake/apple_backup.py` | AC-11 | DEV-0201 owner review |
+| DEV-0201-R02 | Configured evidence roots fail closed unless valid directories without link/reparse boundaries | DEV-0201 acceptance §4 | `IMPLEMENTED_TASK_VALIDATED` | `AppleBackupInputAdapter._validate_roots()` | AC-12 | DEV-0201 owner review |
+| DEV-0201-R03 | Adapter uses the exact six controlled outcomes | DEV-0201 acceptance §4 | `IMPLEMENTED_TASK_VALIDATED` | `InputAdapterStatus` | AC-01 | DEV-0201 owner review |
+| DEV-0201-R04 | Result preserves adapter-level source provenance and audit fields | DEV-0201 acceptance §4 | `IMPLEMENTED_TASK_VALIDATED` | `InputInspectionResult` | AC-02; AC-08 | DEV-0201 owner review |
+| DEV-0201-R05 | Root escape and link/reparse components fail validation | DEV-0201 acceptance §4 | `IMPLEMENTED_TASK_VALIDATED` | Adapter boundary checks | AC-06 | DEV-0201 owner review |
+| DEV-0201-R06 | Adapter performs no writes, parsing, hashing, copying, or recursive traversal | DEV-0201 acceptance §4 | `IMPLEMENTED_TASK_VALIDATED` | Metadata-only implementation | AC-10; AC-14 | DEV-0201 owner review |
+| DEV-0201-R07 | Missing input and existing unsupported input are distinct | DEV-0201 acceptance §4 | `IMPLEMENTED_TASK_VALIDATED` | `MISSING` and `UNSUPPORTED_INPUT` branches | AC-04; AC-05 | DEV-0201 owner review |
+| DEV-0201-R08 | Successful empty-directory inspection is distinct and makes no support claim | DEV-0201 acceptance §4 | `IMPLEMENTED_TASK_VALIDATED` | `READY_ZERO_RESULTS` branch and limitations | AC-03 | DEV-0201 owner review |
+| DEV-0201-R09 | Filesystem operational errors become structured processing failures | DEV-0201 acceptance §4 | `IMPLEMENTED_TASK_VALIDATED` | Structured `PROCESSING_FAILED` branches | AC-07 | DEV-0201 owner review |
+| DEV-0201-R10 | Fixed inputs, clock, and correlation ID produce deterministic results | DEV-0201 acceptance §4 | `IMPLEMENTED_TASK_VALIDATED` | Injected clock/correlation and frozen result | AC-09 | DEV-0201 owner review |
+| DEV-0201-R11 | Ready results explicitly leave structure, encryption, hashing, and support unassessed | DEV-0201 acceptance §4 | `IMPLEMENTED_TASK_VALIDATED` | `UNASSESSED_LIMITATIONS` | AC-08; AC-14 | DEV-0201 owner review |
+| DEV-0201-R12 | Tests use synthetic temporary fixtures and prove source immutability | DEV-0201 acceptance §4 | `IMPLEMENTED_TASK_VALIDATED` | `backend/tests/test_apple_backup_input_adapter.py` | AC-10; AC-13 | DEV-0201 owner review |
+
+## 14. Maintenance rules
 
 1. Assign a stable requirement ID before implementing requirement-driven
    behavior.
@@ -165,7 +178,7 @@ recommendations without treating placeholder documents as approved decisions.
 8. A parser or artifact promotion requires its complete FOR-004 profile and a
    separate owner approval; updating this matrix cannot perform promotion.
 
-## 14. DEV-0004 architecture-recommendation trace
+## 15. DEV-0004 architecture-recommendation trace
 
 ARC-001 was approved by DEC-0002 on 2026-07-24 and is an architecture
 requirement source for downstream tasks. It addresses existing requirement IDs
@@ -185,7 +198,7 @@ as follows:
 These references are architecture traceability evidence. They do not establish
 runtime implementation, validation, or artifact support.
 
-## 15. DEV-0003 acceptance criteria
+## 16. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |
 |---|---|---|

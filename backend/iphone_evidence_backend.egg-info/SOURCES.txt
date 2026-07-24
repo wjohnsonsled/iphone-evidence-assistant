@@ -9,6 +9,8 @@ app/core/config.py
 app/core/database.py
 app/core/errors.py
 app/core/logging.py
+app/intake/__init__.py
+app/intake/apple_backup.py
 app/legacy/__init__.py
 app/legacy/main.py
 app/legacy/router.py
@@ -40,6 +42,7 @@ iphone_evidence_backend.egg-info/dependency_links.txt
 iphone_evidence_backend.egg-info/requires.txt
 iphone_evidence_backend.egg-info/top_level.txt
 tests/test_api.py
+tests/test_apple_backup_input_adapter.py
 tests/test_path_validation.py
 tests/test_persistence.py
 tests/test_scaffold_boundaries.py

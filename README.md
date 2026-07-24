@@ -70,6 +70,17 @@ The backend still lacks authentication, authorization, tenant isolation,
 evidence-source intake, controlled working copies, validated Apple backup
 classification, supported-parser execution, and supported evidence storage.
 
+## Supported-boundary intake foundation
+
+`backend/app/intake/apple_backup.py` contains the DEV-0201 read-only filesystem
+adapter. It confines directory candidates to configured evidence roots and
+returns typed adapter outcomes with provenance for later DEV-0202 structure
+validation.
+
+The adapter does not validate Apple backup structure, detect encryption, hash
+or parse source files, create working copies, or establish input support. It is
+not exposed through the default API.
+
 The following are development commands, not a production deployment procedure.
 The current Compose configuration also references a missing
 `backend/.env.example` and requires reconciliation before use:
