@@ -8,11 +8,11 @@
 
 | DEV-0001 | Repository baseline inspection and reconciliation | COMPLETE | None | DEV-001; DOC-005; PRD-006; DEV-000 | Documentation review recorded through DEV-0002 authorization on 2026-07-24; baseline accepted for scope reconciliation; backend pytest limitation remains recorded in DOC-005 |
 
-| DEV-0002 | Confirm MVP scope against baseline | VALIDATION_PENDING | DEV-0001 | PRD-003; PRD-007; FOR-004; FOR-006 | Reconciled unencrypted-first input scope, artifact candidates, encrypted detection-only behavior, repository claim boundary, reuse decisions, and legacy-parser quarantine policy on 2026-07-24; owner review pending |
+| DEV-0002 | Confirm MVP scope against baseline | COMPLETE | DEV-0001 | PRD-003; PRD-007; FOR-004; FOR-006 | Owner approved PRD-007 on 2026-07-24; approval recorded as DEC-0001; no artifact, parser, schema, workflow, or conclusion was promoted |
 
-| DEV-0003 | Create traceability baseline | BLOCKED | DEV-0002 approval | DOC-002 | Pending; must trace pre-existing implemented-but-unvalidated code and quarantine controls |
+| DEV-0003 | Create traceability baseline | READY | DEV-0002 approval | DOC-002 | Pending; must trace pre-existing implemented-but-unvalidated code and quarantine controls |
 
-| DEV-0004 | Architecture recommendation | BLOCKED | DEV-0002 approval | ARC-001 | Existing architecture is conditionally reusable; supported/legacy registry separation, evidence-source boundaries, security, provenance, timestamps, and working-copy architecture remain undecided |
+| DEV-0004 | Architecture recommendation | READY | DEV-0002 approval | ARC-001 | Existing architecture is conditionally reusable; supported/legacy registry separation, evidence-source boundaries, security, provenance, timestamps, and working-copy architecture remain undecided |
 
 | DEV-0101 | Backend scaffold | BLOCKED | DEV-0002, DEV-0003, DEV-0004 | To be created | Pre-existing FastAPI/SQLAlchemy/Alembic scaffold remains IMPLEMENTED_NOT_VALIDATED; evaluate for reuse under approved architecture and acceptance criteria |
 
@@ -67,4 +67,3 @@ The pre-existing backend, evidence engine, parsers, reports, and AI components
 remain implemented-but-unvalidated or partial. FOR-006 defines their quarantine
 from the future supported production path. DEV-0002 makes no runtime change and
 does not complete any downstream implementation task.
-
