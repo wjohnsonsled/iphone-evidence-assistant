@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-@'
-=======
-# Secrets
+# Secrets and local configuration
 .env
 .env.*
 !.env.example
@@ -10,26 +7,33 @@
 *.p12
 *.pfx
 
-# Evidence and forensic images
+# Evidence, forensic images, and case material
+dev-evidence/
+test-evidence/
+client-evidence/
 evidence/
 case-data/
 uploads/
+backups/
+cases/
 workspaces/
 exports/
-reports/generated/
+sample_data/private/
 *.E01
 *.Ex01
 *.AD1
 *.L01
+*.001
 *.dd
 *.raw
 *.img
+*.dmg
 *.vmdk
 *.vhd
 *.vhdx
 *.plaso
 
-# Apple backups and forensic databases
+# Apple backup manifests and forensic databases
 Manifest.db
 Manifest.plist
 Info.plist
@@ -38,14 +42,23 @@ sms.db
 CallHistory.storedata
 AddressBook.sqlitedb
 keychain-backup.plist
-
-# SQLite temporary files
+*.db
+*.sqlite
+*.sqlite3
 *.db-wal
 *.db-shm
 *.db-journal
 *.sqlite-wal
 *.sqlite-shm
 *.sqlite-journal
+
+# Synthetic fixtures are allowed only in controlled test fixture directories
+!tests/fixtures/**/*.db
+!tests/fixtures/**/*.sqlite
+!tests/fixtures/**/*.sqlite3
+!backend/tests/fixtures/**/*.db
+!backend/tests/fixtures/**/*.sqlite
+!backend/tests/fixtures/**/*.sqlite3
 
 # Archives that may contain evidence
 *.zip
@@ -54,7 +67,6 @@ keychain-backup.plist
 *.tar
 *.gz
 
->>>>>>> master
 # Python
 __pycache__/
 *.py[cod]
@@ -65,101 +77,35 @@ __pycache__/
 htmlcov/
 .venv/
 venv/
-<<<<<<< HEAD
-references/*.pdf
 
-# Environment and secrets
-.env
-.env.*
-!.env.example
-*.pem
-*.key
-
-# IDE and OS
-.vscode/
-.idea/
-Thumbs.db
-.DS_Store
-
-# Logs and generated outputs
-*.log
+# Generated outputs and local runtime data
 output/
 outputs/
 reports/generated/
-tmp/
-temp/
-
-# Evidence and forensic data
-dev-evidence/
-test-evidence/
-client-evidence/
-evidence/
-uploads/
-backups/
-cases/
-sample_data/private/
-
-*.E01
-*.Ex01
-*.L01
-*.AD1
-*.001
-*.dd
-*.raw
-*.img
-*.dmg
-*.zip
-*.7z
-*.tar
-*.gz
-
-# Databases and extracted artifacts
-*.db
-*.db-wal
-*.db-shm
-*.sqlite
-*.sqlite3
-
-# Exception: allow sanitized test fixtures when explicitly placed here
-!tests/fixtures/**/*.db
-!tests/fixtures/**/*.sqlite
-!tests/fixtures/**/*.sqlite3
-
-# Node/frontend
-node_modules/
-.next/
-dist/
-build/
-'@ | Set-Content -Encoding UTF8 .gitignore
-=======
-
-# Node
-node_modules/
-dist/
-build/
-coverage/
-.next/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-
-# Operating system
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# Runtime data
 data/
 tmp/
 temp/
 logs/
 *.log
-
-# Local Docker volumes
 docker-data/
 postgres-data/
 redis-data/
 object-storage/
->>>>>>> master
+
+# Frontend and build output
+node_modules/
+.next/
+dist/
+build/
+coverage/
+
+# IDE and operating system
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Third-party local reference material
+references/*.pdf

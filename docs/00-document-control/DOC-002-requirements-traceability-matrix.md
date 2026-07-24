@@ -25,6 +25,7 @@ implemented-but-unvalidated or quarantined as recorded in DOC-005 and PRD-006.
 | Status | Meaning |
 |---|---|
 | `DOCUMENTED_CONTROL` | The requirement is an approved control; runtime implementation may belong to a later task |
+| `IMPLEMENTED_TASK_VALIDATED` | The requirement passed its task-specific acceptance tests; this does not establish artifact or workflow support |
 | `PARTIAL_UNVALIDATED` | Some relevant code exists, but declared behavior, validation, or acceptance is incomplete |
 | `APPROVED_UNIMPLEMENTED` | The requirement is approved and no conforming implementation has been identified |
 | `LEGACY_QUARANTINED` | Relevant pre-baseline behavior exists only in the unsupported legacy/compatibility path |
@@ -79,7 +80,7 @@ statuses. They must not be displayed as support claims.
 |---|---|---|---|---|---|---|
 | FOR-QTN-001 | Use a separate explicit, versioned supported-parser registry | FOR-006 §3 | `APPROVED_UNIMPLEMENTED` | Backend calls legacy `plugins()` directly | No supported-registry tests | DEV-0304 |
 | FOR-QTN-002 | Disable every parser by default unless approved for its declared profile | FOR-006 §4 | `APPROVED_UNIMPLEMENTED` | Legacy registry enables numerous unapproved parsers | No fail-closed registry tests | DEV-0304 |
-| FOR-QTN-003 | Prevent quarantined output from supported storage, search, AI, reports, citations, and coverage | FOR-006 §6; DEC-0001 | `APPROVED_UNIMPLEMENTED` | Backend persists output assembled from the legacy registry | No end-to-end isolation tests | DEV-0304 and Phase 5–7 tasks |
+| FOR-QTN-003 | Prevent quarantined output from supported storage, search, AI, reports, citations, and coverage | FOR-006 §6; DEC-0001 | `PARTIAL_UNVALIDATED` | DEV-0101 excludes all legacy evidence routes from the default composition; supported stores and downstream retrieval do not yet exist | Default composition-boundary tests only; no end-to-end supported-store isolation tests | DEV-0304 and Phase 5–7 tasks |
 | FOR-QTN-004 | Promote a parser only after complete profile validation, traceability, tests, documentation, and owner approval | AGENTS.md All-or-nothing support rule; FOR-006 §7 | `DOCUMENTED_CONTROL` | No parser is promoted | FOR-004 and explicit owner gate | Per-artifact Phase 4 tasks |
 | FOR-QTN-005 | Fail closed on unknown schemas and prohibit generic-parser fallback as supported evidence | FOR-006 §9 | `LEGACY_QUARANTINED` | Generic SQLite/plist parsing exists in the legacy path | No supported-path failure tests | DEV-0304; per-artifact tasks |
 | FOR-QTN-006 | Retain legacy CLI only as a compatibility/characterization surface unless separately approved | FOR-006 §10; PRD-007 §8 | `DOCUMENTED_CONTROL` | Legacy CLI remains present | Distribution decision remains owner-controlled | DEV-0304; owner decision if distribution proposed |
@@ -114,7 +115,21 @@ statuses. They must not be displayed as support claims.
 | QMS-ACC-001 | Define explicit acceptance criteria and satisfy implementation, validation, tests, documentation, provenance, and failure handling before support | AGENTS.md All-or-nothing support rule; FOR-004 §1 | `DOCUMENTED_CONTROL` | Downstream task-specific acceptance documents are absent | No artifact acceptance review has occurred | Every downstream task |
 | QMS-TRC-001 | Update traceability, documentation, task ledger, and completion evidence for every task | AGENTS.md Development method | `DOCUMENTED_CONTROL` | DOC-002 and DEV-009 establish the control surfaces | Document validation for DEV-0003 | Every task |
 
-## 11. Baseline gaps and controls
+## 11. DEV-0101 backend-scaffold requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owning task or gap |
+|---|---|---|---|---|---|---|
+| DEV-0101-R01 | Default factory is the supported-path composition root | DEV-0101 acceptance §5 | `IMPLEMENTED_TASK_VALIDATED` | `backend/app/main.py` | `backend/tests/test_scaffold_boundaries.py` | DEV-0101 |
+| DEV-0101-R02 | Default API exposes health only | DEV-0101 acceptance §5 | `IMPLEMENTED_TASK_VALIDATED` | `backend/app/api/router.py` | Default OpenAPI and route-negative tests | DEV-0101 |
+| DEV-0101-R03 | Default composition has no legacy-processing import dependency | DEV-0101 acceptance §5 | `IMPLEMENTED_TASK_VALIDATED` | Supported main/router import graph | Static AST boundary test | DEV-0101 |
+| DEV-0101-R04 | Legacy API is reachable only through an explicit compatibility factory | DEV-0101 acceptance §5 | `LEGACY_QUARANTINED` | `backend/app/legacy/main.py`; `backend/app/legacy/router.py` | Legacy route characterization test | DEV-0101 acceptance review |
+| DEV-0101-R05 | Legacy API warns that it is unsupported and characterization-only | DEV-0101 acceptance §5 | `LEGACY_QUARANTINED` | Legacy FastAPI title and description | Metadata assertion | DEV-0101 acceptance review |
+| DEV-0101-R06 | Structured errors, settings, sessions, and Alembic scaffold remain intact | DEV-0101 acceptance §5 | `IMPLEMENTED_TASK_VALIDATED` | Existing backend core and migration modules unchanged | Backend regression suite | DEV-0101 |
+| DEV-0101-R07 | Repository ignores evidence, secrets, databases, companions, and generated data without conflict debris | DEV-0101 acceptance §5 | `IMPLEMENTED_TASK_VALIDATED` | `.gitignore` | Repository-safety test | DEV-0101 |
+| DEV-0101-R08 | Scaffold tests are deterministic and synthetic | DEV-0101 acceptance §5 | `IMPLEMENTED_TASK_VALIDATED` | In-memory SQLite and temporary-path tests | Backend and characterization suites | DEV-0101 |
+| DEV-0101-R09 | Scaffold introduces no migration or support promotion | DEV-0101 acceptance §5 | `DOCUMENTED_CONTROL` | No migration added; default evidence routes absent | Git diff and acceptance review | DEV-0101 |
+
+## 12. Baseline gaps and controls
 
 The following governing documents remain empty placeholders and cannot yet
 supply detailed requirements or acceptance criteria:
@@ -135,7 +150,7 @@ assigned to a later task. It does not fill those policy and architecture gaps
 by inference. DEV-0004 is the next approved task and must address architecture
 recommendations without treating placeholder documents as approved decisions.
 
-## 12. Maintenance rules
+## 13. Maintenance rules
 
 1. Assign a stable requirement ID before implementing requirement-driven
    behavior.
@@ -150,7 +165,7 @@ recommendations without treating placeholder documents as approved decisions.
 8. A parser or artifact promotion requires its complete FOR-004 profile and a
    separate owner approval; updating this matrix cannot perform promotion.
 
-## 13. DEV-0004 architecture-recommendation trace
+## 14. DEV-0004 architecture-recommendation trace
 
 ARC-001 was approved by DEC-0002 on 2026-07-24 and is an architecture
 requirement source for downstream tasks. It addresses existing requirement IDs
@@ -170,7 +185,7 @@ as follows:
 These references are architecture traceability evidence. They do not establish
 runtime implementation, validation, or artifact support.
 
-## 14. DEV-0003 acceptance criteria
+## 15. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |
 |---|---|---|

@@ -58,13 +58,17 @@ python -m unittest discover -s tests
 The tests use sanitized synthetic events and coverage records, plus the
 deterministic self-checks already present in the original implementation.
 
-## Pre-existing backend scaffold
+## Backend scaffold
 
-The `backend/` project contains PostgreSQL persistence and a minimal FastAPI API for
-case creation, local backup processing, evidence queries, and deterministic case
-summaries. It is implemented but not validated or accepted as the MVP. It lacks
-required authentication, authorization, tenant isolation, validated Apple
-backup classification, and supported-parser quarantine.
+The default `backend/app/main.py` application is a pre-validation scaffold that
+exposes only database health. Case creation, local-path processing, evidence
+queries, and summaries were moved behind the explicit
+`backend/app/legacy/main.py` compatibility composition root. They remain
+implemented-but-unvalidated and are not included in the default product path.
+
+The backend still lacks authentication, authorization, tenant isolation,
+evidence-source intake, controlled working copies, validated Apple backup
+classification, supported-parser execution, and supported evidence storage.
 
 The following are development commands, not a production deployment procedure.
 The current Compose configuration also references a missing

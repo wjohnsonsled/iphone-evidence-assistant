@@ -1,8 +1,11 @@
 # API
 
-All endpoints are mounted under `/api/v1`.
+## Default application
 
-## Health
+The default composition root is `app.main:app`. All endpoints are mounted
+under `/api/v1`.
+
+DEV-0101 intentionally exposes only:
 
 `GET /api/v1/health`
 
@@ -14,127 +17,34 @@ Response:
 
 If the database is unavailable, the API returns a structured `503` error.
 
-## Create Case
+No case, evidence, intake, processing, search, AI, citation, or reporting route
+is available from the default application. Those routes require their approved
+authorization, tenant, evidence-source, provenance, and supported-parser tasks.
 
-`POST /api/v1/cases`
+The default application is a pre-validation backend foundation. Its presence
+does not establish a supported input or evidence workflow.
 
-Request:
+## Legacy compatibility application
 
-```json
-{
-  "name": "Test iPhone Backup",
-  "description": "Sanitized development case",
-  "source_path": "/evidence/test-backup"
-}
-```
+The explicit `app.legacy.main:legacy_app` composition root preserves the
+pre-existing case, local-path processing, evidence-query, and summary endpoints
+for synthetic characterization and controlled compatibility testing.
 
-Response:
+That application and all of its routes, parsers, records, coverage, summaries,
+and output are unsupported legacy behavior. It must not be deployed or
+presented as the supported product API. It is structurally excluded from the
+default application.
 
-```json
-{
-  "id": "uuid",
-  "name": "Test iPhone Backup",
-  "status": "created",
-  "created_at": "2026-07-15T18:00:00Z"
-}
-```
+## Error responses
 
-`source_path` is accepted for internal tracking but is not returned from the
-case detail response.
-
-## Get Case
-
-`GET /api/v1/cases/{case_id}`
-
-Returns case metadata, processing state, device summaries, evidence counts, and
-coverage counts.
-
-## Process Local Backup
-
-`POST /api/v1/cases/{case_id}/process`
-
-Request:
-
-```json
-{"backup_path": "/evidence/test-backup"}
-```
-
-The path must exist, be a directory, appear to be a supported iPhone backup or
-extracted case directory, and resolve under configured `EVIDENCE_ROOT`.
-
-The endpoint runs synchronously for the MVP and returns a processing job.
-
-## List Evidence
-
-`GET /api/v1/cases/{case_id}/evidence`
-
-Query parameters:
-
-- `event_type`
-- `category`
-- `start_time`
-- `end_time`
-- `contact_key`
-- `conversation_key`
-- `limit`, default `100`, maximum `500`
-- `offset`, default `0`
-- `sort`, `asc` or `desc`
-
-Response:
-
-```json
-{
-  "case_id": "uuid",
-  "total": 1423,
-  "count": 100,
-  "items": []
-}
-```
-
-List items include ID, timestamp, event type, category, summary, source
-artifact, source database, source record ID, confidence score, conversation key,
-and contact key. Raw values are not returned by default.
-
-## Get Evidence Record
-
-`GET /api/v1/cases/{case_id}/evidence/{evidence_id}`
-
-Returns the complete normalized evidence record, including details, raw values,
-source metadata, confidence basis, and parser metadata. The record must belong
-to the requested case.
-
-## Evidence Summary
-
-`GET /api/v1/cases/{case_id}/summary`
-
-Returns deterministic summary data only:
-
-- total events
-- earliest and latest timestamps
-- counts by event type
-- counts by artifact
-- top contacts
-- top conversations
-- attachment count
-- coverage statuses
-- warning count
-- error count
-
-## Error Responses
-
-Errors use this shape:
+Structured application errors use this shape:
 
 ```json
 {
   "error": {
-    "code": "case_not_found",
-    "message": "Case was not found.",
+    "code": "database_unavailable",
+    "message": "Database is unavailable.",
     "request_id": "uuid"
   }
 }
 ```
-
-Common codes include `case_not_found`, `invalid_backup_path`,
-`backup_path_not_found`, `unsupported_backup_structure`,
-`processing_already_in_progress`, `evidence_record_not_found`,
-`database_unavailable`, and `evidence_engine_failure`.

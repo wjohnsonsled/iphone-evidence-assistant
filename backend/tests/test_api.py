@@ -11,7 +11,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.pool import StaticPool
 
 from app.core.database import Base, get_session
-from app.main import app
+from app.legacy.main import legacy_app
 from app.models import Case, EvidenceEvent
 
 
@@ -28,9 +28,9 @@ def make_client() -> TestClient:
         with SessionLocal() as session:
             yield session
 
-    app.dependency_overrides[get_session] = override_session
-    app.state.test_session_local = SessionLocal
-    return TestClient(app)
+    legacy_app.dependency_overrides[get_session] = override_session
+    legacy_app.state.test_session_local = SessionLocal
+    return TestClient(legacy_app)
 
 
 def test_create_get_list_detail_and_summary() -> None:
@@ -38,7 +38,7 @@ def test_create_get_list_detail_and_summary() -> None:
     created = client.post("/api/v1/cases", json={"name": "API case", "description": "fixture"}).json()
     case_id = created["id"]
 
-    SessionLocal = app.state.test_session_local
+    SessionLocal = legacy_app.state.test_session_local
     with SessionLocal() as session:
         case = session.get(Case, UUID(case_id))
         session.add(

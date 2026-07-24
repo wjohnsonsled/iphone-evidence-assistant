@@ -4,8 +4,7 @@
 
 - Python 3.12
 - Docker and Docker Compose
-- A sanitized decrypted iPhone backup or extracted case directory for manual
-  processing tests
+- No evidence input is required for the default backend scaffold
 
 ## Environment Setup
 
@@ -33,6 +32,10 @@ docker compose up --build
 
 The backend listens on `http://localhost:8000`.
 
+The container starts the default `app.main:app` composition root. DEV-0101
+limits that application to the database health endpoint. It does not expose an
+evidence-processing workflow.
+
 ## Database Migrations
 
 From inside the backend container or a local environment with dependencies
@@ -56,40 +59,26 @@ pytest
 The automated tests use mocked/sanitized evidence-engine outputs and do not
 require a real iPhone backup.
 
-## Processing a Sanitized Local Backup
+## Legacy compatibility testing
 
-Place a sanitized decrypted backup under:
+The pre-existing case, processing, evidence, and summary routes are retained
+only through `app.legacy.main:legacy_app`. They are unsupported
+characterization behavior and are not included in the default application.
 
-```text
-./dev-evidence/test-backup
-```
-
-Create a case:
-
-```bash
-curl -X POST http://localhost:8000/api/v1/cases \
-  -H "Content-Type: application/json" \
-  -d '{"name":"Sanitized Backup","description":"Development case","source_path":"/evidence/test-backup"}'
-```
-
-Process the backup:
+When a task specifically requires legacy API characterization with synthetic
+fixtures, it may be started explicitly from `backend/`:
 
 ```bash
-curl -X POST http://localhost:8000/api/v1/cases/{case_id}/process \
-  -H "Content-Type: application/json" \
-  -d '{"backup_path":"/evidence/test-backup"}'
+uvicorn app.legacy.main:legacy_app
 ```
 
-Then inspect evidence:
-
-```bash
-curl http://localhost:8000/api/v1/cases/{case_id}/evidence
-curl http://localhost:8000/api/v1/cases/{case_id}/summary
-```
+Do not use real evidence. Do not distribute or deploy this compatibility
+application as a supported product surface.
 
 ## Security Notes
 
-- Processing paths are resolved and restricted to configured evidence roots.
-- `..` traversal outside `EVIDENCE_ROOT` is rejected.
+- The default application exposes no case or evidence routes.
+- The legacy path boundary remains characterization behavior only.
 - Backup passwords are not accepted, logged, or stored.
-- Raw evidence values are excluded from list and summary responses.
+- Authentication, authorization, tenant isolation, intake, and audit controls
+  remain required before evidence APIs can enter the default application.

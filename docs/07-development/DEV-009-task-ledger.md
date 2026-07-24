@@ -14,13 +14,13 @@
 
 | DEV-0004 | Architecture recommendation | COMPLETE | DEV-0002 approval | ARC-001 | Owner approved ARC-001 on 2026-07-24; approval recorded as DEC-0002; architecture establishes immutable-source/working-copy boundaries, tenant authorization, provenance-complete records, supported/legacy isolation, and additive migrations without changing support status |
 
-| DEV-0101 | Backend scaffold | READY | DEV-0002, DEV-0003, DEV-0004 | To be created | Pre-existing FastAPI/SQLAlchemy/Alembic scaffold remains IMPLEMENTED_NOT_VALIDATED; evaluate for reuse under approved architecture and acceptance criteria |
+| DEV-0101 | Backend scaffold | COMPLETE | DEV-0002, DEV-0003, DEV-0004 | DEV-0101-backend-scaffold-acceptance | Default composition is health-only and import-isolated from legacy processing; explicit unsupported legacy composition preserves characterization behavior; backend 12/12 and evidence-engine 5/5 tests passed; no migration or support promotion |
 
-| DEV-0201 | Apple backup input adapter | BLOCKED | DEV-0003, DEV-0004, DEV-0101 | To be created | Pre-existing path checks are PARTIALLY_IMPLEMENTED and unvalidated; initial target is unencrypted Apple local backup |
+| DEV-0201 | Apple backup input adapter | READY | DEV-0003, DEV-0004, DEV-0101 | To be created | Pre-existing path checks are PARTIALLY_IMPLEMENTED and unvalidated; task-specific requirements and measurable acceptance criteria must be approved before implementation; initial target is unencrypted Apple local backup |
 
 | DEV-0203 | Backup encryption-state detection | BLOCKED | DEV-0201, DEV-0202 | To be created | Database field exists, but detection is NOT_IMPLEMENTED; initial release is detection/reporting only |
 
-| DEV-0304 | Artifact support-status model and parser quarantine enforcement | BLOCKED | DEV-0003, DEV-0004 | FOR-004; FOR-006; acceptance document to be created | Legacy registry exists but supported registry/quarantine enforcement is NOT_IMPLEMENTED |
+| DEV-0304 | Artifact support-status model and parser quarantine enforcement | READY | DEV-0003, DEV-0004 | FOR-004; FOR-006; acceptance document to be created | Legacy registry exists but supported registry/quarantine enforcement is NOT_IMPLEMENTED; plan order keeps DEV-0201 next |
 
 
 
