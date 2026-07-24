@@ -30,6 +30,23 @@ Exit criteria:
 
 \- No production feature implementation has begun using unresolved assumptions.
 
+\### Phase 0 reconciliation controls
+
+\- DEV-0001 records the pre-existing implementation as baseline inventory.
+
+\- DEV-0002 limits the initial MVP to unencrypted-first Apple local backups and
+the artifact candidates in PRD-003 and FOR-004.
+
+\- Existing evidence-engine and backend code is implemented-but-unvalidated and
+does not satisfy a downstream task merely because it exists.
+
+\- FOR-006 requires a separate approved production parser registry and
+quarantine of legacy, experimental, deferred, and unsupported parser output.
+
+\- Runtime quarantine is not implemented by DEV-0002 and must be assigned an
+approved implementation task after traceability, architecture, and acceptance
+criteria are established.
+
 
 
 \## Phase 1 — Application foundation
@@ -51,6 +68,10 @@ Exit criteria:
 \- DEV-0107: Establish local Docker development environment.
 
 \- DEV-0108: Establish CI quality checks.
+
+Phase 1 must evaluate the pre-existing scaffold before reuse. Authentication,
+authorization, tenant isolation, evidence-source boundaries, and audit records
+must be designed before the scaffold can be accepted for a shared deployment.
 
 
 
@@ -77,6 +98,16 @@ Exit criteria:
 \- DEV-0209: Produce intake coverage report.
 
 \- DEV-0210: Persist processing errors and omissions.
+
+Phase 2 input order:
+
+1\. Validated unencrypted Apple local backup.
+
+2\. Encrypted-backup detection and explicit reporting only.
+
+Encrypted-backup decryption, password handling, extracted-directory support,
+physical/full-filesystem acquisition, and third-party extraction ingestion are
+not included without separate approval.
 
 
 
@@ -147,6 +178,11 @@ Each parser requires:
 \- validation review;
 
 \- support-matrix update.
+
+Only the approved production registry may execute in the supported path.
+Legacy compatibility, experimental, deferred, and unsupported parser output
+must be excluded from supported stores, search, AI, reports, citations, and
+coverage calculations.
 
 
 
@@ -249,4 +285,8 @@ Codex must implement one approved task at a time.
 Codex must not continue automatically to the next task after completing the
 
 current task.
+
+Implementation presence is not task completion or support evidence. Every task
+requires its own approved acceptance criteria, traceability, tests, validation,
+documentation, and completion review.
 

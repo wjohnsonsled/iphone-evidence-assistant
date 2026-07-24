@@ -1,17 +1,27 @@
-# Evidence Engine
+# AI-Powered iPhone Evidence Assistant — Pre-Validation Repository
 
-Reusable Python package extracted from `window_investigator.py`.
+> **Support notice:** This repository contains legacy compatibility code and an
+> implemented-but-unvalidated backend scaffold. No parser, artifact family,
+> Apple backup input, AI workflow, or report is currently approved as supported
+> production functionality. Plugin presence and successful execution do not
+> establish forensic support. See `docs/01-product/PRD-007-mvp-scope-reconciliation.md`
+> and `docs/03-forensics/FOR-006-legacy-parser-quarantine-policy.md`.
+
+## Legacy Evidence Engine
+
+Legacy-compatible Python package extracted from `window_investigator.py`.
 
 The refactor keeps the original forensic logic in `evidence_engine._legacy`
-and exposes stable package modules for models, parsers, normalization,
+and exposes package import boundaries for models, parsers, normalization,
 analysis, inventory, AI grounding, reports, and CLI execution. This preserves
 the current command behavior while giving a future FastAPI application importable
 entry points.
 
-## Installation
+## Legacy compatibility execution
 
-No third-party package installation is required for the current script. From the
-repository root, run commands with Python 3.11+:
+The following commands preserve historical behavior for characterization and
+compatibility. Their output is not a supported production evidence workflow.
+From the repository root, run with Python 3.11+:
 
 ```powershell
 python window_investigator.py --list-plugins --start "2026-06-25 16:25:00" --end "2026-06-25 16:58:00"
@@ -48,13 +58,17 @@ python -m unittest discover -s tests
 The tests use sanitized synthetic events and coverage records, plus the
 deterministic self-checks already present in the original implementation.
 
-## Backend MVP
+## Pre-existing backend scaffold
 
-The `backend/` project adds PostgreSQL persistence and a minimal FastAPI API for
+The `backend/` project contains PostgreSQL persistence and a minimal FastAPI API for
 case creation, local backup processing, evidence queries, and deterministic case
-summaries.
+summaries. It is implemented but not validated or accepted as the MVP. It lacks
+required authentication, authorization, tenant isolation, validated Apple
+backup classification, and supported-parser quarantine.
 
-Local Docker startup:
+The following are development commands, not a production deployment procedure.
+The current Compose configuration also references a missing
+`backend/.env.example` and requires reconciliation before use:
 
 ```bash
 docker compose up --build
