@@ -12,9 +12,9 @@
 
 | DEV-0003 | Create traceability baseline | COMPLETE | DEV-0002 approval | DOC-002 | DOC-002 traces 46 uniquely identified requirements to implementation evidence, verification evidence, and owning tasks or explicit gaps; deterministic matrix validation passed; no support status changed |
 
-| DEV-0004 | Architecture recommendation | VALIDATION_PENDING | DEV-0002 approval | ARC-001 | ARC-001 recommends an incremental modular-monolith architecture with immutable-source/working-copy boundaries, tenant authorization, provenance-complete records, controlled statuses, supported/legacy isolation, and additive migrations; owner approval pending; no support status changed |
+| DEV-0004 | Architecture recommendation | COMPLETE | DEV-0002 approval | ARC-001 | Owner approved ARC-001 on 2026-07-24; approval recorded as DEC-0002; architecture establishes immutable-source/working-copy boundaries, tenant authorization, provenance-complete records, supported/legacy isolation, and additive migrations without changing support status |
 
-| DEV-0101 | Backend scaffold | BLOCKED | DEV-0002, DEV-0003, DEV-0004 | To be created | Pre-existing FastAPI/SQLAlchemy/Alembic scaffold remains IMPLEMENTED_NOT_VALIDATED; evaluate for reuse under approved architecture and acceptance criteria |
+| DEV-0101 | Backend scaffold | READY | DEV-0002, DEV-0003, DEV-0004 | To be created | Pre-existing FastAPI/SQLAlchemy/Alembic scaffold remains IMPLEMENTED_NOT_VALIDATED; evaluate for reuse under approved architecture and acceptance criteria |
 
 | DEV-0201 | Apple backup input adapter | BLOCKED | DEV-0003, DEV-0004, DEV-0101 | To be created | Pre-existing path checks are PARTIALLY_IMPLEMENTED and unvalidated; initial target is unencrypted Apple local backup |
 

@@ -4,7 +4,8 @@
 
 - Task: DEV-0004
 - Date: 2026-07-24
-- Status: validation pending
+- Status: approved
+- Owner approval: DEC-0002, 2026-07-24
 - Decision authority: Project owner
 - Inputs: AGENTS.md, DEC-0001, DOC-002, DOC-005, PRD-003, PRD-006,
   PRD-007, FOR-004, FOR-006, DEV-000, DEV-001, and repository inspection
@@ -468,3 +469,8 @@ These decisions must be assigned explicit tasks before dependent implementation.
 Approve the architecture in Section 2 as the basis for downstream acceptance
 criteria and implementation planning. Keep DEV-0004 in `VALIDATION_PENDING`
 until the owner records an approval or requested revisions in DOC-003.
+
+The project owner approved this recommendation on 2026-07-24. DEC-0002 records
+the decision. This approval establishes an architectural basis only and does
+not promote any parser, artifact, input type, schema, workflow, or conclusion
+to supported status.

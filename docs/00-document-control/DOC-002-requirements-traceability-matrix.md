@@ -152,8 +152,9 @@ recommendations without treating placeholder documents as approved decisions.
 
 ## 13. DEV-0004 architecture-recommendation trace
 
-ARC-001 is a recommendation pending owner approval, not a new approved
-requirement source. It addresses existing requirement IDs as follows:
+ARC-001 was approved by DEC-0002 on 2026-07-24 and is an architecture
+requirement source for downstream tasks. It addresses existing requirement IDs
+as follows:
 
 | Existing requirement group | ARC-001 recommendation |
 |---|---|
@@ -166,8 +167,8 @@ requirement source. It addresses existing requirement IDs as follows:
 | AI and RPT | One authorization-scoped supported-record query boundary and citation chain in §5.7 |
 | QMS | Additive migration stages and boundary tests in §12 |
 
-These references may become architecture traceability evidence only after owner
-approval is recorded in DOC-003.
+These references are architecture traceability evidence. They do not establish
+runtime implementation, validation, or artifact support.
 
 ## 14. DEV-0003 acceptance criteria
 
