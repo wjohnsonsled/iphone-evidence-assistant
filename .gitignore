@@ -1,0 +1,93 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Evidence and forensic images
+evidence/
+case-data/
+uploads/
+workspaces/
+exports/
+reports/generated/
+*.E01
+*.Ex01
+*.AD1
+*.L01
+*.dd
+*.raw
+*.img
+*.vmdk
+*.vhd
+*.vhdx
+*.plaso
+
+# Apple backups and forensic databases
+Manifest.db
+Manifest.plist
+Info.plist
+Status.plist
+sms.db
+CallHistory.storedata
+AddressBook.sqlitedb
+keychain-backup.plist
+
+# SQLite temporary files
+*.db-wal
+*.db-shm
+*.db-journal
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite-journal
+
+# Archives that may contain evidence
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Node
+node_modules/
+dist/
+build/
+coverage/
+.next/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Runtime data
+data/
+tmp/
+temp/
+logs/
+*.log
+
+# Local Docker volumes
+docker-data/
+postgres-data/
+redis-data/
+object-storage/

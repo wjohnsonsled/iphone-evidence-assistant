@@ -1,0 +1,33 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: evidence
+      POSTGRES_PASSWORD: evidence_dev_password
+      POSTGRES_DB: evidence
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U evidence -d evidence"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    env_file:
+      - backend/.env.example
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./dev-evidence:/evidence:ro
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  postgres-data:
