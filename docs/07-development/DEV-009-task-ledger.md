@@ -12,7 +12,7 @@
 
 | DEV-0003 | Create traceability baseline | COMPLETE | DEV-0002 approval | DOC-002 | DOC-002 traces 46 uniquely identified requirements to implementation evidence, verification evidence, and owning tasks or explicit gaps; deterministic matrix validation passed; no support status changed |
 
-| DEV-0004 | Architecture recommendation | READY | DEV-0002 approval | ARC-001 | Existing architecture is conditionally reusable; supported/legacy registry separation, evidence-source boundaries, security, provenance, timestamps, and working-copy architecture remain undecided |
+| DEV-0004 | Architecture recommendation | VALIDATION_PENDING | DEV-0002 approval | ARC-001 | ARC-001 recommends an incremental modular-monolith architecture with immutable-source/working-copy boundaries, tenant authorization, provenance-complete records, controlled statuses, supported/legacy isolation, and additive migrations; owner approval pending; no support status changed |
 
 | DEV-0101 | Backend scaffold | BLOCKED | DEV-0002, DEV-0003, DEV-0004 | To be created | Pre-existing FastAPI/SQLAlchemy/Alembic scaffold remains IMPLEMENTED_NOT_VALIDATED; evaluate for reuse under approved architecture and acceptance criteria |
 

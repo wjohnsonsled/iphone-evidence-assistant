@@ -150,7 +150,26 @@ recommendations without treating placeholder documents as approved decisions.
 8. A parser or artifact promotion requires its complete FOR-004 profile and a
    separate owner approval; updating this matrix cannot perform promotion.
 
-## 13. DEV-0003 acceptance criteria
+## 13. DEV-0004 architecture-recommendation trace
+
+ARC-001 is a recommendation pending owner approval, not a new approved
+requirement source. It addresses existing requirement IDs as follows:
+
+| Existing requirement group | ARC-001 recommendation |
+|---|---|
+| PRD-IN and PRD-SCP | Intake module, classification sequence, and legacy input separation in §§5.2 and 11 |
+| FOR-INT and FOR-PROV | Trust boundaries and domain model in §§5–8 |
+| FOR-FAIL and FOR-STS | Atomic parser execution and controlled statuses in §§5.4 and 9 |
+| FOR-SQL and FOR-TIME | Controlled working-copy and normalized record contracts in §§5.3 and 8 |
+| FOR-QTN | Separate composition roots, stores, registry snapshots, and architectural import tests in §§5.4–5.6 |
+| SEC | Authorization context, tenant-owned entities, least privilege, and audit controls in §§7 and 10 |
+| AI and RPT | One authorization-scoped supported-record query boundary and citation chain in §5.7 |
+| QMS | Additive migration stages and boundary tests in §12 |
+
+These references may become architecture traceability evidence only after owner
+approval is recorded in DOC-003.
+
+## 14. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |
 |---|---|---|
