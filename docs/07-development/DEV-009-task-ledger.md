@@ -24,21 +24,21 @@
 
 | DEV-0211 | Profile and validate secondary Apple backup encryption indicators | DEFERRED | Owner-approved signal sources and revised compatibility profile | To be created | Must source, characterize, order, and define conflicts for every candidate signal; requires synthetic and Apple-produced fixtures plus owner approval before implementation or promotion |
 
-| DEV-0251 | Evidence-object domain contract | IN_PROGRESS | DEV-0202; DEC-0011 | WP-0250-acceptance-criteria | Relational evidence-integrity implementation authorized; no support effect |
-| DEV-0252 | Stable evidence identifier strategy | NOT_STARTED | DEV-0251 | WP-0250-acceptance-criteria | UUID strategy must remain distinct from content hashes |
-| DEV-0253 | Evidence lifecycle state machine | NOT_STARTED | DEV-0251 | WP-0250-acceptance-criteria | Explicit audited transition table required |
-| DEV-0254 | Cryptographic hash registry | NOT_STARTED | DEV-0251, DEV-0252 | WP-0250-acceptance-criteria | Immutable SHA-256 observations required |
-| DEV-0255 | Evidence integrity verification service | NOT_STARTED | DEV-0254 | WP-0250-acceptance-criteria | Fail-closed verification required |
-| DEV-0256 | Evidence access and lock policy | NOT_STARTED | DEV-0253, DEV-0255 | WP-0250-acceptance-criteria | Application coordination controls only |
-| DEV-0257 | Chain-of-custody event model | NOT_STARTED | DEV-0251, DEV-0253 | WP-0250-acceptance-criteria | Application handling history; no legal-sufficiency claim |
-| DEV-0258 | Evidence audit-event taxonomy | NOT_STARTED | DEV-0257 | WP-0250-acceptance-criteria | Append-only service taxonomy |
-| DEV-0259 | Provenance graph foundation | NOT_STARTED | DEV-0251, DEV-0258 | WP-0250-acceptance-criteria | Relational implementation only |
-| DEV-0260 | Provenance relationship validation | NOT_STARTED | DEV-0259 | WP-0250-acceptance-criteria | Cross-tenant/dangling/cycle validation |
-| DEV-0261 | Evidence mutation detector | NOT_STARTED | DEV-0254, DEV-0255 | WP-0250-acceptance-criteria | Preserve history; do not infer cause |
-| DEV-0262 | Integrity policy enforcement service | NOT_STARTED | DEV-0256, DEV-0260, DEV-0261 | WP-0250-acceptance-criteria | Unsupported and legacy paths fail closed |
-| DEV-0263 | Common supported-parser contract | NOT_STARTED | DEV-0259, DEV-0262 | WP-0250-acceptance-criteria | Contract conformance does not confer support |
-| DEV-0264 | Parser-contract conformance harness | NOT_STARTED | DEV-0263 | WP-0250-acceptance-criteria | Synthetic candidate parsers only |
-| DEV-0265 | End-to-end integrity validation package | NOT_STARTED | DEV-0251 through DEV-0264 | WP-0250-acceptance-criteria | WP owner-review gate |
+| DEV-0251 | Evidence-object domain contract | VALIDATION_PENDING | DEV-0202; DEC-0011 | WP-0250-acceptance-criteria | Typed contract and additive relational model pass synthetic validation |
+| DEV-0252 | Stable evidence identifier strategy | VALIDATION_PENDING | DEV-0251 | WP-0250-acceptance-criteria | UUIDv4 identity is stable and content/path independent |
+| DEV-0253 | Evidence lifecycle state machine | VALIDATION_PENDING | DEV-0251 | WP-0250-acceptance-criteria | Transition and denial matrix is atomic and audited |
+| DEV-0254 | Cryptographic hash registry | VALIDATION_PENDING | DEV-0251, DEV-0252 | WP-0250-acceptance-criteria | Immutable streaming SHA-256 observations validated |
+| DEV-0255 | Evidence integrity verification service | VALIDATION_PENDING | DEV-0254 | WP-0250-acceptance-criteria | Verified/mismatch/unstable/failure states distinct |
+| DEV-0256 | Evidence access and lock policy | VALIDATION_PENDING | DEV-0253, DEV-0255 | WP-0250-acceptance-criteria | Application intent/conflict/owner/stale controls validated |
+| DEV-0257 | Chain-of-custody event model | VALIDATION_PENDING | DEV-0251, DEV-0253 | WP-0250-acceptance-criteria | Immutable ordered prior-linked application handling events |
+| DEV-0258 | Evidence audit-event taxonomy | VALIDATION_PENDING | DEV-0257 | WP-0250-acceptance-criteria | Closed append-only taxonomy validated |
+| DEV-0259 | Provenance graph foundation | VALIDATION_PENDING | DEV-0251, DEV-0258 | WP-0250-acceptance-criteria | Relational nodes/edges implemented |
+| DEV-0260 | Provenance relationship validation | VALIDATION_PENDING | DEV-0259 | WP-0250-acceptance-criteria | Path/dangling/cross-tenant/cycle/parser-link checks validated |
+| DEV-0261 | Evidence mutation detector | VALIDATION_PENDING | DEV-0254, DEV-0255 | WP-0250-acceptance-criteria | Checkpoint mismatch and instability block safely |
+| DEV-0262 | Integrity policy enforcement service | VALIDATION_PENDING | DEV-0256, DEV-0260, DEV-0261 | WP-0250-acceptance-criteria | Writable, legacy, unverified, broken-provenance and unknown-profile contexts blocked |
+| DEV-0263 | Common supported-parser contract | VALIDATION_PENDING | DEV-0259, DEV-0262 | WP-0250-acceptance-criteria | Typed candidate-only parser contract implemented |
+| DEV-0264 | Parser-contract conformance harness | VALIDATION_PENDING | DEV-0263 | WP-0250-acceptance-criteria | Identity/profile/provenance/coverage/omission/self-test enforcement validated |
+| DEV-0265 | End-to-end integrity validation package | VALIDATION_PENDING | DEV-0251 through DEV-0264 | WP-0250-acceptance-criteria | Synthetic E2E, full regression, migration and documentation validation complete; owner gate |
 
 | DEV-0304 | Artifact support-status model and parser quarantine enforcement | READY | DEV-0003, DEV-0004 | FOR-004; FOR-006; acceptance document to be created | Legacy registry exists but supported registry/quarantine enforcement is NOT_IMPLEMENTED; plan order keeps DEV-0201 next |
 

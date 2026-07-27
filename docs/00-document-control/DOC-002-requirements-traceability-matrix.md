@@ -226,16 +226,16 @@ approved runtime requirement source.
 
 | Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
 |---|---|---|---|---|---|---|
-| WP0250-ID | Stable application UUID distinct from content hashes | ARC-002; WP-0250 | `APPROVED_UNIMPLEMENTED` | Pending | WP-0250 AC | DEV-0251/0252 |
-| WP0250-LIFE | Explicit atomic audited lifecycle | ARC-002; WP-0250 | `APPROVED_UNIMPLEMENTED` | Pending | Transition tests | DEV-0253 |
-| WP0250-HASH | Immutable SHA-256 observation registry and verification | ARC-002; WP-0250 | `APPROVED_UNIMPLEMENTED` | Pending | Known/mutation/history tests | DEV-0254/0255/0261 |
-| WP0250-LOCK | Approved intent and application lock policy | ARC-002; WP-0250 | `APPROVED_UNIMPLEMENTED` | Pending | Conflict/stale/release tests | DEV-0256 |
-| WP0250-CUST | Append-only tenant-scoped handling history without signature claim | ARC-002; WP-0250 | `APPROVED_UNIMPLEMENTED` | Pending | Ordering/linkage tests | DEV-0257 |
-| WP0250-AUD | Closed append-only audit taxonomy | ARC-002; WP-0250 | `APPROVED_UNIMPLEMENTED` | Pending | Taxonomy/immutability tests | DEV-0258 |
-| WP0250-PROV | Relational complete tenant-scoped provenance and validation | ARC-002; WP-0250 | `APPROVED_UNIMPLEMENTED` | Pending | Path/cycle/cross-tenant tests | DEV-0259/0260 |
-| WP0250-POL | Mutation and policy enforcement block unsafe, legacy, unsupported, or broken-provenance processing | ARC-002; WP-0250 | `APPROVED_UNIMPLEMENTED` | Pending | Policy matrix tests | DEV-0261/0262 |
-| WP0250-PARSER | Common typed parser contract and conformance harness; candidate is not supported | ARC-002; WP-0250 | `APPROVED_UNIMPLEMENTED` | Pending | Synthetic conformance suite | DEV-0263/0264 |
-| WP0250-E2E | Additive relational migration and deterministic end-to-end integrity package | WP-0250 | `APPROVED_UNIMPLEMENTED` | Pending | Migration/regression checks | DEV-0265 |
+| WP0250-ID | Stable application UUID distinct from content hashes | ARC-002; WP-0250 | `IMPLEMENTED_TASK_VALIDATED` | EvidenceObject/register service and relational model | UUID/domain tests | DEV-0251/0252 |
+| WP0250-LIFE | Explicit atomic audited lifecycle | ARC-002; WP-0250 | `IMPLEMENTED_TASK_VALIDATED` | LifecycleService/TRANSITIONS | Transition/denial tests | DEV-0253 |
+| WP0250-HASH | Immutable SHA-256 observation registry and verification | ARC-002; WP-0250 | `IMPLEMENTED_TASK_VALIDATED` | HashRegistry/MutationDetector | Known/mutation/history tests | DEV-0254/0255/0261 |
+| WP0250-LOCK | Approved intent and application lock policy | ARC-002; WP-0250 | `IMPLEMENTED_TASK_VALIDATED` | EvidenceLockService | Conflict/stale/release tests | DEV-0256 |
+| WP0250-CUST | Append-only tenant-scoped handling history without signature claim | ARC-002; WP-0250 | `IMPLEMENTED_TASK_VALIDATED` | CustodyService/model | Ordering/linkage/immutability tests | DEV-0257 |
+| WP0250-AUD | Closed append-only audit taxonomy | ARC-002; WP-0250 | `IMPLEMENTED_TASK_VALIDATED` | AuditEventType/AppendOnlyAuditService | Event and immutability tests | DEV-0258 |
+| WP0250-PROV | Relational complete tenant-scoped provenance and validation | ARC-002; WP-0250 | `IMPLEMENTED_TASK_VALIDATED` | ProvenanceService/models | Path/cycle/cross-tenant tests | DEV-0259/0260 |
+| WP0250-POL | Mutation and policy enforcement block unsafe, legacy, unsupported, or broken-provenance processing | ARC-002; WP-0250 | `IMPLEMENTED_TASK_VALIDATED` | MutationDetector/IntegrityPolicy | Policy matrix tests | DEV-0261/0262 |
+| WP0250-PARSER | Common typed parser contract and conformance harness; candidate is not supported | ARC-002; WP-0250 | `IMPLEMENTED_TASK_VALIDATED` | EvidenceParser/ParserConformanceHarness | Synthetic conformance suite | DEV-0263/0264 |
+| WP0250-E2E | Additive relational migration and deterministic end-to-end integrity package | WP-0250 | `IMPLEMENTED_TASK_VALIDATED` | Migration 0002 and E2E flow | Migration/regression checks | DEV-0265 |
 
 ARC-001 was approved by DEC-0002 on 2026-07-24 and is an architecture
 requirement source for downstream tasks. It addresses existing requirement IDs

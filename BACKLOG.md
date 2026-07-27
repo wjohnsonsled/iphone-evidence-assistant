@@ -163,26 +163,26 @@ backlog wording differs.
 
 ## WP-0250 Evidence Integrity Infrastructure
 
-**Package status:** `IN_PROGRESS`  
+**Package status:** `VALIDATION_PENDING`
 **Support effect:** None.
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0251 | Evidence-object domain contract | IN_PROGRESS | DEV-0202 | Package gate |
-| DEV-0252 | Stable evidence identifier strategy | NOT_STARTED | DEV-0251 | Package gate |
-| DEV-0253 | Evidence lifecycle state machine | NOT_STARTED | DEV-0251 | Package gate |
-| DEV-0254 | Cryptographic hash registry | NOT_STARTED | DEV-0251, DEV-0252 | Package gate |
-| DEV-0255 | Evidence integrity verification service | NOT_STARTED | DEV-0254 | Package gate |
-| DEV-0256 | Evidence access and lock policy | NOT_STARTED | DEV-0253, DEV-0255 | Package gate |
-| DEV-0257 | Chain-of-custody event model | NOT_STARTED | DEV-0251, DEV-0253 | Package gate |
-| DEV-0258 | Evidence audit-event taxonomy | NOT_STARTED | DEV-0257 | Package gate |
-| DEV-0259 | Provenance graph foundation | NOT_STARTED | DEV-0251, DEV-0258 | Package gate |
-| DEV-0260 | Provenance relationship validation | NOT_STARTED | DEV-0259 | Package gate |
-| DEV-0261 | Evidence mutation detector | NOT_STARTED | DEV-0254, DEV-0255 | Package gate |
-| DEV-0262 | Integrity policy enforcement service | NOT_STARTED | DEV-0256, DEV-0260, DEV-0261 | Package gate |
-| DEV-0263 | Common supported-parser contract | NOT_STARTED | DEV-0259, DEV-0262 | Package gate |
-| DEV-0264 | Parser-contract conformance harness | NOT_STARTED | DEV-0263 | Package gate |
-| DEV-0265 | End-to-end integrity validation package | NOT_STARTED | DEV-0251 through DEV-0264 | Package gate |
+| DEV-0251 | Evidence-object domain contract | VALIDATION_PENDING | DEV-0202 | Package gate |
+| DEV-0252 | Stable evidence identifier strategy | VALIDATION_PENDING | DEV-0251 | Package gate |
+| DEV-0253 | Evidence lifecycle state machine | VALIDATION_PENDING | DEV-0251 | Package gate |
+| DEV-0254 | Cryptographic hash registry | VALIDATION_PENDING | DEV-0251, DEV-0252 | Package gate |
+| DEV-0255 | Evidence integrity verification service | VALIDATION_PENDING | DEV-0254 | Package gate |
+| DEV-0256 | Evidence access and lock policy | VALIDATION_PENDING | DEV-0253, DEV-0255 | Package gate |
+| DEV-0257 | Chain-of-custody event model | VALIDATION_PENDING | DEV-0251, DEV-0253 | Package gate |
+| DEV-0258 | Evidence audit-event taxonomy | VALIDATION_PENDING | DEV-0257 | Package gate |
+| DEV-0259 | Provenance graph foundation | VALIDATION_PENDING | DEV-0251, DEV-0258 | Package gate |
+| DEV-0260 | Provenance relationship validation | VALIDATION_PENDING | DEV-0259 | Package gate |
+| DEV-0261 | Evidence mutation detector | VALIDATION_PENDING | DEV-0254, DEV-0255 | Package gate |
+| DEV-0262 | Integrity policy enforcement service | VALIDATION_PENDING | DEV-0256, DEV-0260, DEV-0261 | Package gate |
+| DEV-0263 | Common supported-parser contract | VALIDATION_PENDING | DEV-0259, DEV-0262 | Package gate |
+| DEV-0264 | Parser-contract conformance harness | VALIDATION_PENDING | DEV-0263 | Package gate |
+| DEV-0265 | End-to-end integrity validation package | VALIDATION_PENDING | DEV-0251 through DEV-0264 | Package gate |
 
 DEV-0203 remains the intake encryption-report projection. WP-0250 is the sole
 authority for evidence registration, stable evidence UUIDs, hash observations,

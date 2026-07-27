@@ -192,3 +192,30 @@ def test_parser_harness_rejects_version_provenance_coverage_omission_and_registr
     assert "silent_omission" in ParserConformanceHarness().evaluate(parser, context()).failures
     parser.parse = lambda _: parser_result(examined=2, emitted=1)
     assert "coverage_not_reconciled" in ParserConformanceHarness().evaluate(parser, context()).failures
+
+
+def test_end_to_end_candidate_integrity_flow(tmp_path):
+    actor, correlation = uuid4(), uuid4()
+    item = evidence()
+    audit = AppendOnlyAuditService()
+    lifecycle = LifecycleService(audit)
+    item = lifecycle.transition(item, EvidenceLifecycle.VALIDATING, actor_id=actor, correlation_id=correlation)
+    item = lifecycle.transition(item, EvidenceLifecycle.VALIDATED, actor_id=actor, correlation_id=correlation)
+    source = tmp_path / "synthetic.bin"; source.write_bytes(b"synthetic evidence")
+    registry = HashRegistry(audit)
+    baseline = registry.compute(source, item, purpose="registration", role="source", actor_id=actor, correlation_id=correlation)
+    checkpoint = registry.compute(source, item, purpose="pre_processing", role="source", actor_id=actor, correlation_id=correlation)
+    item = MutationDetector(registry).evaluate(item, baseline, checkpoint, actor_id=actor, correlation_id=correlation)
+    assert item.integrity_state is IntegrityState.VERIFIED
+    item = lifecycle.transition(item, EvidenceLifecycle.HASH_VERIFIED, actor_id=actor, correlation_id=correlation)
+    item = EvidenceLockService(audit).acquire(item, actor_id=actor, intent=AccessIntent.PARSE_CONTROLLED_COPY, correlation_id=correlation)
+    provenance = ProvenanceService()
+    source_node = ProvenanceNode(uuid4(), item.tenant_id, item.case_id, ProvenanceNodeType.SOURCE_ARTIFACT, "source")
+    record_node = ProvenanceNode(uuid4(), item.tenant_id, item.case_id, ProvenanceNodeType.NORMALIZED_RECORD, "record")
+    provenance.add_node(source_node); provenance.add_node(record_node)
+    provenance.add_edge(ProvenanceEdge(uuid4(), item.tenant_id, item.case_id, record_node.node_id, source_node.node_id, ProvenanceRelationship.NORMALIZED_FROM, "synthetic.parser", "1.0.0"))
+    report = provenance.validate_path(record_node.node_id, source_node.node_id)
+    parse_context = context(integrity_state=item.integrity_state, provenance_report=report)
+    conformance = ParserConformanceHarness().evaluate(SyntheticParser(), parse_context)
+    assert conformance.conforming and conformance.support_effect == "NONE_CANDIDATE_ONLY"
+    assert any(event.event_type is AuditEventType.HASH_VERIFIED for event in audit.events)

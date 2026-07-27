@@ -1,6 +1,6 @@
 # ARC-002 — Evidence Integrity and Supported-Parser Contract
 
-**Status:** Proposed architecture addendum  
+**Status:** Authorized for WP-0250 implementation by DEC-0011; owner package review pending
 **Parent architecture:** ARC-001  
 **Applies to:** WP-0250 and all future supported artifact parsers  
 **Owner approval:** Required before implementation choices that conflict with ARC-001

@@ -1,6 +1,6 @@
 # WP-0250 — Evidence Integrity Infrastructure Acceptance
 
-- Status: IN_PROGRESS
+- Status: VALIDATION_PENDING — OWNER PACKAGE REVIEW
 - Tasks: DEV-0251 through DEV-0265
 - Architecture: ARC-001 and authorized additive ARC-002 contract
 - Implementation: relational MVP; application-level coordination controls
@@ -35,3 +35,10 @@
 - Source write operations are absent from approved services.
 - No graph database, external service, signature, nonrepudiation, API, parser
   promotion, real evidence, deployment, or remote Git operation.
+
+## Validation result
+
+All DEV-0251 through DEV-0265 criteria pass against deterministic synthetic
+fixtures. Focused 11/11, backend 82/82, characterization 5/5, compilation,
+single-head migration upgrade/downgrade generation, and diff checks pass. The
+package remains candidate infrastructure pending owner review.
