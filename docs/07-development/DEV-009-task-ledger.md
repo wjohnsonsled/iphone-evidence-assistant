@@ -18,7 +18,7 @@
 
 | DEV-0201 | Apple backup input adapter | COMPLETE | DEV-0003, DEV-0004, DEV-0101 | DEV-0201-apple-backup-input-adapter-acceptance | Owner approved completion on 2026-07-24 in DEC-0004; additive read-only adapter implements six explicit outcomes, root/link controls, provenance, limitations, and deterministic audit data; focused 14/14, backend 26/26, and characterization 5/5 tests passed; no input support claim |
 
-| DEV-0202 | Validate required Apple backup structure | VALIDATION_PENDING | DEV-0201; DEC-0006 | DEV-0202-apple-backup-validation-acceptance; FOR-007 proposed | Stage A AC-01 through AC-16 passed: proposed compatibility profile and generic synthetic controlled-copy validation are ready for owner review; Stage B Apple classification remains blocked pending owner approval of FOR-007; no input support claim |
+| DEV-0202 | Validate required Apple backup structure | IN_PROGRESS | DEV-0201; DEC-0006; DEC-0007 | DEV-0202-apple-backup-validation-acceptance; FOR-007 approved profile | Stage A approved in DEC-0007; Stage B vocabulary and profile decisions approved for implementation; classification conflict between minimum identity and invalid-SQLite corruption rules requires resolution before the affected behavior can be implemented; no input support claim |
 
 | DEV-0203 | Backup encryption-state detection | BLOCKED | DEV-0201, DEV-0202 | To be created | Database field exists, but detection is NOT_IMPLEMENTED; initial release is detection/reporting only |
 

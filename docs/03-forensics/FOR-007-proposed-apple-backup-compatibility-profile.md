@@ -4,13 +4,16 @@
 
 - Task: DEV-0202
 - Date prepared: 2026-07-27
-- Status: PROPOSED — OWNER REVIEW REQUIRED
-- Runtime effect: none
+- Status: APPROVED FOR DEV-0202 STAGE-B IMPLEMENTATION — CLARIFICATION REQUIRED
+- Runtime effect: Stage-B implementation authorized after the classification
+  conflict in DEC-0007 is resolved
 - Input/artifact support effect: none
 - Profile identifier: `APPLE_LOCAL_BACKUP_PROFILE_PROPOSED_001`
 
-This document proposes classification rules. None may be implemented as an
-Apple compatibility decision until the owner approves or revises them.
+The owner approved the profile decisions on 2026-07-27 for synthetic Stage-B
+implementation. This approval is not a compatibility or support promotion.
+DEC-0007 records one conflicting invalid-SQLite classification that must be
+resolved before implementation of the affected behavior.
 
 ## 2. Evidence-basis labels
 
@@ -387,4 +390,3 @@ Approve, revise, or reject:
 8. the schema-fingerprint algorithm;
 9. the classification precedence; and
 10. the fixture evidence required before any compatibility or support claim.
-

@@ -4,7 +4,7 @@
 
 - Task: DEV-0202
 - Date: 2026-07-27
-- Status: VALIDATION_PENDING — PROFILE REVIEW GATE
+- Status: IN_PROGRESS — STAGE-B CLASSIFICATION CLARIFICATION
 - Dependencies: DEV-0201, DEC-0006
 - Compatibility profile: FOR-007, proposed
 - Input/artifact support effect: none
@@ -20,14 +20,15 @@
   SQLite fixtures;
 - record hashing, companion relationships, cleanup, and audit data.
 
-### Stage B — Not authorized yet
+### Stage B — Authorized with one unresolved classification conflict
 
-- implement Apple identity, completeness, encryption, schema, version, or final
-  classification rules;
-- expose the validator through an API; or
-- make any input-support claim.
+- implement the approved Apple identity, completeness, encryption, schema,
+  version, and final classification rules using synthetic fixtures only.
 
-Stage B requires explicit approval of FOR-007.
+Stage B must not expose the validator through an API or make an input-support
+claim. DEC-0007 records a conflict between the minimum identity threshold and
+the invalid-SQLite corruption rule. Implementation of the classifier is paused
+until the controlling outcome for that fixture is clarified.
 
 ## 3. Controlled-copy requirements
 

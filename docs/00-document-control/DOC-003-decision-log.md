@@ -214,3 +214,46 @@ fixture or implementation-observation basis.
 
 No general working-copy subsystem, input support, parser support, or artifact
 support is approved.
+
+## DEC-0007 — DEV-0202 Stage-A approval and Stage-B compatibility decisions
+
+- Date: 2026-07-27
+- Status: APPROVED_WITH_IMPLEMENTATION_CLARIFICATION_REQUIRED
+- Owner: Project owner
+- Task: DEV-0202
+- Decision source: Explicit owner instruction supplied in the controlled
+  development task on 2026-07-27
+- Governing documents: FOR-007 and DEV-0202 acceptance criteria
+
+### Decision
+
+The owner approved DEV-0202 Stage A and commit
+`8bea1677eae4a30d5205bbe45ac8652c85acab19`. The owner also approved the
+Stage-B outcome vocabulary, identity and completeness rules, plist and
+encryption handling, controlled-copy failure treatment, Manifest SQLite
+integrity checks, `MANIFEST_FILES_V1`, deterministic schema fingerprint,
+version handling, classification precedence, and synthetic-fixture plan.
+
+Stage B is authorized for isolated implementation without production API
+exposure. Synthetic characterization is not production compatibility
+validation. A separate validation package using documented Apple-produced test
+backups and owner approval remains required before any compatibility or support
+claim.
+
+### Unresolved implementation conflict
+
+The approved minimum identity threshold requires `Manifest.db` to be identified
+as SQLite and says a failure to meet that threshold is
+`NOT_AN_APPLE_BACKUP`. The separately approved corruption rule says an invalid
+SQLite `Manifest.db` is `APPLE_BACKUP_CORRUPT`. Because
+`NOT_AN_APPLE_BACKUP` precedes `APPLE_BACKUP_CORRUPT`, both cannot control the
+same present-but-invalid `Manifest.db` fixture. Owner clarification is required
+before implementing that user-facing classification.
+
+### Consequences
+
+- DEV-0201 remains `COMPLETE`.
+- DEV-0202 returns to `IN_PROGRESS` for Stage B.
+- No Apple backup, input type, parser, artifact, workflow, or production
+  capability is promoted to supported status.
+- Repository decisions and DEV-009 override stale generic backlog wording.

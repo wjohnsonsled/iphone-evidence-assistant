@@ -112,8 +112,8 @@ A task may be marked `COMPLETE` only after the required owner approval is record
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0201 | Apple backup input adapter | VALIDATION_PENDING | DEV-0101 | Immediate |
-| DEV-0202 | Apple backup structure validator | BLOCKED | DEV-0201 | Compatibility-profile gate |
+| DEV-0201 | Apple backup input adapter | COMPLETE | DEV-0101 | Complete |
+| DEV-0202 | Apple backup structure validator | IN_PROGRESS | DEV-0201 | Compatibility-profile gate approved; task validation gate remains |
 | DEV-0203 | Evidence-source registration model | NOT_STARTED | DEV-0202 | Package gate |
 | DEV-0204 | SHA-256 hashing service | NOT_STARTED | DEV-0203 | Package gate |
 | DEV-0205 | Controlled SQLite working-copy service | NOT_STARTED | DEV-0204 | Package gate |
@@ -134,10 +134,12 @@ The approved validator vocabulary must explicitly distinguish at least:
 - `APPLE_BACKUP_ENCRYPTED`
 - `APPLE_BACKUP_UNENCRYPTED`
 - `APPLE_BACKUP_UNSUPPORTED_VERSION`
-- `VALIDATION_FAILED`
-- `PROCESSING_FAILED`
+- `APPLE_BACKUP_VALIDATION_FAILED`
+- `APPLE_BACKUP_INDETERMINATE`
 
-The final vocabulary and precedence require owner approval before implementation.
+The vocabulary and precedence were approved by the owner for DEV-0202 Stage B
+on 2026-07-27. Existing approved decisions and DEV-009 control if generic
+backlog wording differs.
 
 ### WP-0200 completion criteria
 
