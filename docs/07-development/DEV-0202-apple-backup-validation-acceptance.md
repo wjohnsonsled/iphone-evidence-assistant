@@ -4,7 +4,7 @@
 
 - Task: DEV-0202
 - Date: 2026-07-27
-- Status: VALIDATION_PENDING — STAGE-B OWNER REVIEW
+- Status: IN_PROGRESS — ENCRYPTION-INDICATOR CLARIFICATION
 - Dependencies: DEV-0201, DEC-0006
 - Compatibility profile: FOR-007, proposed
 - Input/artifact support effect: none
@@ -132,3 +132,9 @@ Validation on 2026-07-27:
 
 All behavior remains synthetic characterization. A production compatibility
 claim requires the separately approved Apple-produced validation package.
+
+One required fixture remains unresolved: the approved profile defines
+`Manifest.plist.IsEncrypted` as the sole encryption-state signal but requires a
+contradictory-indicators test. Creating that test requires approval of a second
+indicator and its semantics. The validator therefore remains `IN_PROGRESS`
+despite all implemented tests passing.
