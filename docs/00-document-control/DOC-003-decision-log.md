@@ -257,3 +257,24 @@ before implementing that user-facing classification.
 - No Apple backup, input type, parser, artifact, workflow, or production
   capability is promoted to supported status.
 - Repository decisions and DEV-009 override stale generic backlog wording.
+
+## DEC-0008 — Independent identity and Manifest structural-validity resolution
+
+- Date: 2026-07-27
+- Status: APPROVED
+- Owner: Project owner
+- Task: DEV-0202
+
+The owner resolved DEC-0007 by separating plist-derived Apple-backup candidate
+identity from `Manifest.db` structural validity. Candidate identity requires a
+validated directory, regular `Manifest.db`, at least one regular recognized
+plist, and at least one approved recognized identity field in a safely parsed
+plist.
+
+An invalid `Manifest.db` is `APPLE_BACKUP_CORRUPT` only after independent
+identity is established. Without independent identity it is
+`NOT_AN_APPLE_BACKUP`; safely readable but insufficient identity observations
+may be `APPLE_BACKUP_INDETERMINATE`; operational inability to decide is
+`APPLE_BACKUP_VALIDATION_FAILED`.
+
+No support status changes.

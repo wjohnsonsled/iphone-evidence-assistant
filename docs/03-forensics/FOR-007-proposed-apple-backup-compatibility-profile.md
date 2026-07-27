@@ -4,16 +4,15 @@
 
 - Task: DEV-0202
 - Date prepared: 2026-07-27
-- Status: APPROVED FOR DEV-0202 STAGE-B IMPLEMENTATION — CLARIFICATION REQUIRED
-- Runtime effect: Stage-B implementation authorized after the classification
-  conflict in DEC-0007 is resolved
+- Status: APPROVED FOR DEV-0202 STAGE-B SYNTHETIC VALIDATION
+- Runtime effect: isolated non-API validator implementation authorized
 - Input/artifact support effect: none
 - Profile identifier: `APPLE_LOCAL_BACKUP_PROFILE_PROPOSED_001`
 
 The owner approved the profile decisions on 2026-07-27 for synthetic Stage-B
 implementation. This approval is not a compatibility or support promotion.
-DEC-0007 records one conflicting invalid-SQLite classification that must be
-resolved before implementation of the affected behavior.
+DEC-0008 resolves the invalid-SQLite classification by separating independent
+plist identity from database structural validity.
 
 ## 2. Evidence-basis labels
 
@@ -390,3 +389,31 @@ Approve, revise, or reject:
 8. the schema-fingerprint algorithm;
 9. the classification precedence; and
 10. the fixture evidence required before any compatibility or support claim.
+
+## 13. Approved controlling addendum — DEC-0008
+
+This addendum replaces conflicting provisional text above.
+
+Independent identity requires a validated directory, regular `Manifest.db`, at
+least one regular identity plist, and at least one safely parsed recognized
+field. Initial recognized fields are:
+
+- `Info.plist`: `Product Version`, `Target Identifier`, `Unique Identifier`;
+- `Manifest.plist`: `IsEncrypted`;
+- `Status.plist`: `SnapshotState`.
+
+SQLite validity is observed separately. Invalid SQLite with independent
+identity is `APPLE_BACKUP_CORRUPT`; invalid or valid SQLite without independent
+identity is `NOT_AN_APPLE_BACKUP`, except that safely readable but insufficient
+identity observations may be `APPLE_BACKUP_INDETERMINATE`. Operational
+inspection failure is `APPLE_BACKUP_VALIDATION_FAILED`.
+
+`MANIFEST_FILES_V1` requires case-insensitive SQLite identifiers for table
+`Files` and columns `fileID`, `domain`, `relativePath`, `flags`, and `file`.
+Additional tables and columns are allowed. Canonical deterministic UTF-8 JSON
+records normalized tables, columns, declared types, nullability, primary-key
+position, and indexes; its SHA-256 is the schema fingerprint.
+
+Synthetic validation does not establish production compatibility. The
+Apple-produced multi-version validation package and a separate owner decision
+remain mandatory before any compatibility or support claim.

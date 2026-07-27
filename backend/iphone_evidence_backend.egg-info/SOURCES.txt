@@ -11,6 +11,7 @@ app/core/errors.py
 app/core/logging.py
 app/intake/__init__.py
 app/intake/apple_backup.py
+app/intake/backup_validator.py
 app/intake/controlled_copy.py
 app/legacy/__init__.py
 app/legacy/main.py
@@ -44,6 +45,7 @@ iphone_evidence_backend.egg-info/requires.txt
 iphone_evidence_backend.egg-info/top_level.txt
 tests/test_api.py
 tests/test_apple_backup_input_adapter.py
+tests/test_backup_validator.py
 tests/test_controlled_copy.py
 tests/test_path_validation.py
 tests/test_persistence.py

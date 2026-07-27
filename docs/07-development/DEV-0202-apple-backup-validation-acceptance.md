@@ -4,7 +4,7 @@
 
 - Task: DEV-0202
 - Date: 2026-07-27
-- Status: IN_PROGRESS — STAGE-B CLASSIFICATION CLARIFICATION
+- Status: VALIDATION_PENDING — STAGE-B OWNER REVIEW
 - Dependencies: DEV-0201, DEC-0006
 - Compatibility profile: FOR-007, proposed
 - Input/artifact support effect: none
@@ -26,9 +26,7 @@
   version, and final classification rules using synthetic fixtures only.
 
 Stage B must not expose the validator through an API or make an input-support
-claim. DEC-0007 records a conflict between the minimum identity threshold and
-the invalid-SQLite corruption rule. Implementation of the classifier is paused
-until the controlling outcome for that fixture is clarified.
+claim. DEC-0008 resolved the identity/database-validity conflict.
 
 ## 3. Controlled-copy requirements
 
@@ -105,3 +103,32 @@ All AC-01 through AC-16 passed on 2026-07-27.
 The fixtures were generated entirely in test temporary directories. No client
 evidence, Apple-produced backup, legacy parser, migration, or production API
 route was used or changed.
+
+## 8. Stage-B acceptance and validation record
+
+Stage B requires the nine approved distinct outcomes, independent plist
+identity, required-file and `SnapshotState` checks, Boolean `IsEncrypted`
+handling, controlled-copy-only SQLite integrity inspection,
+`MANIFEST_FILES_V1`, canonical schema fingerprinting, explicit provenance,
+observations and limitations, and no API/artifact parsing/support promotion.
+
+Deterministic tests cover valid encrypted and unencrypted candidates; invalid
+adapter inputs; non-Apple and indeterminate identity; every missing required
+plist; malformed plists; snapshot and encryption states; invalid SQLite with
+and without independent identity; integrity failure; absent `Files`; each
+required column absent; compatible added tables/columns; cleanup failure;
+schema-fingerprint determinism; and production/legacy boundary isolation.
+Stage-A tests continue to cover source mutation, companion-set mutation, hash
+mismatch, links/reparse points, path escape, and controlled-copy cleanup.
+
+Validation on 2026-07-27:
+
+- focused Stage-B tests: 26 passed;
+- full backend suite: 64 passed with one accepted third-party deprecation
+  warning;
+- legacy characterization: 5 passed;
+- compilation: passed;
+- migrations: none.
+
+All behavior remains synthetic characterization. A production compatibility
+claim requires the separately approved Apple-produced validation package.
