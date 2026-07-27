@@ -417,3 +417,21 @@ position, and indexes; its SHA-256 is the schema fingerprint.
 Synthetic validation does not establish production compatibility. The
 Apple-produced multi-version validation package and a separate owner decision
 remain mandatory before any compatibility or support claim.
+
+## 14. Approved encryption addendum — DEC-0009
+
+For DEV-0202, `Manifest.plist.IsEncrypted` is the only encryption signal.
+Boolean true records encrypted; Boolean false records unencrypted. Either
+controls the final encrypted/unencrypted outcome only after all
+higher-precedence rules. Missing or non-Boolean is indeterminate. Operational
+inability to inspect the value is validation failure.
+
+Contradictory-signal handling is removed from this profile. Do not infer
+encryption from filenames, `Manifest.db` behavior, iOS or backup versions,
+directory names, keybag-like files, entropy, parser behavior, password prompts,
+third-party observations, or undocumented plist keys. Earlier provisional
+conflict text is superseded by this addendum.
+
+Secondary signals are deferred to DEV-0211 pending sourced characterization,
+precedence and conflict rules, synthetic and Apple-produced fixtures, a revised
+profile, and owner approval.

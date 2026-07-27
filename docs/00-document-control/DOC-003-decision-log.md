@@ -278,3 +278,26 @@ may be `APPLE_BACKUP_INDETERMINATE`; operational inability to decide is
 `APPLE_BACKUP_VALIDATION_FAILED`.
 
 No support status changes.
+
+## DEC-0009 — Single encryption signal and secondary-indicator deferral
+
+- Date: 2026-07-27
+- Status: APPROVED
+- Owner: Project owner
+- Task: DEV-0202
+
+The owner removed contradictory-encryption-indicator handling and its fixture
+from DEV-0202. For the current candidate profile,
+`Manifest.plist.IsEncrypted` is the only approved signal: Boolean true or false
+is recorded and controls the corresponding final outcome only when no
+higher-precedence outcome applies; missing or non-Boolean is indeterminate; an
+operational inability to inspect it is validation failure.
+
+Encryption must not be inferred from filenames, database behavior, versions,
+directory names, keybag-like material, entropy, parser behavior, password
+prompts, third-party observations, or undocumented plist keys.
+
+Secondary signals are deferred to DEV-0211 and require sourced characterization,
+precedence and conflict rules, synthetic fixtures, Apple-produced validation
+fixtures, a revised profile, and owner approval before implementation.
+No support status changes.

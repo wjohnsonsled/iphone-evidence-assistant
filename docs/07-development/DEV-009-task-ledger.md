@@ -18,9 +18,11 @@
 
 | DEV-0201 | Apple backup input adapter | COMPLETE | DEV-0003, DEV-0004, DEV-0101 | DEV-0201-apple-backup-input-adapter-acceptance | Owner approved completion on 2026-07-24 in DEC-0004; additive read-only adapter implements six explicit outcomes, root/link controls, provenance, limitations, and deterministic audit data; focused 14/14, backend 26/26, and characterization 5/5 tests passed; no input support claim |
 
-| DEV-0202 | Validate required Apple backup structure | IN_PROGRESS | DEV-0201; DEC-0006 through DEC-0008 | DEV-0202-apple-backup-validation-acceptance; FOR-007 approved profile | Stage A approved; DEC-0008 resolved identity; isolated Stage-B classifier passes focused and regression suites; contradictory-indicator fixture remains blocked because no secondary encryption indicator is approved; no input support claim |
+| DEV-0202 | Validate required Apple backup structure | VALIDATION_PENDING | DEV-0201; DEC-0006 through DEC-0009 | DEV-0202-apple-backup-validation-acceptance; FOR-007 approved profile | Stage A and isolated Stage-B synthetic characterization pass all acceptance and regression tests; DEC-0009 removes contradictory-signal scope and defers secondary indicators; Apple-produced validation and owner completion review remain required; no support claim |
 
 | DEV-0203 | Backup encryption-state detection | BLOCKED | DEV-0201, DEV-0202 | To be created | Database field exists, but detection is NOT_IMPLEMENTED; initial release is detection/reporting only |
+
+| DEV-0211 | Profile and validate secondary Apple backup encryption indicators | DEFERRED | Owner-approved signal sources and revised compatibility profile | To be created | Must source, characterize, order, and define conflicts for every candidate signal; requires synthetic and Apple-produced fixtures plus owner approval before implementation or promotion |
 
 | DEV-0304 | Artifact support-status model and parser quarantine enforcement | READY | DEV-0003, DEV-0004 | FOR-004; FOR-006; acceptance document to be created | Legacy registry exists but supported registry/quarantine enforcement is NOT_IMPLEMENTED; plan order keeps DEV-0201 next |
 

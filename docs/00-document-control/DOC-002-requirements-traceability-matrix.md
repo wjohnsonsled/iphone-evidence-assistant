@@ -204,12 +204,13 @@ approved runtime requirement source.
 | DEV-0202-R17 | Establish candidate identity independently from SQLite validity | DEC-0008 | `IMPLEMENTED_TASK_VALIDATED` | Recognized-field identity observations | Invalid/valid SQLite identity matrix tests | DEV-0202 Stage B |
 | DEV-0202-R18 | Distinguish missing, malformed, insufficient, and operational plist outcomes | DEC-0007; DEC-0008 | `IMPLEMENTED_TASK_VALIDATED` | Plist classification branches | Missing/malformed/read-failure tests | DEV-0202 Stage B |
 | DEV-0202-R19 | Apply case-sensitive `SnapshotState=finished` rule | DEC-0007 | `IMPLEMENTED_TASK_VALIDATED` | Snapshot-state branch | Finished/non-finished/missing tests | DEV-0202 Stage B |
-| DEV-0202-R20 | Interpret only Boolean `Manifest.plist.IsEncrypted` | DEC-0007 | `IMPLEMENTED_TASK_VALIDATED` | Encryption-state branch | True/false/missing/wrong-type tests | DEV-0202 Stage B |
+| DEV-0202-R20 | Use only Boolean `Manifest.plist.IsEncrypted`; missing/wrong-type is indeterminate and operational failure is validation failure | DEC-0007; DEC-0009 | `IMPLEMENTED_TASK_VALIDATED` | Encryption-state and plist-read failure branches | True/false/missing/wrong-type/read-failure tests | DEV-0202 Stage B |
 | DEV-0202-R21 | Inspect Manifest SQLite only through verified controlled copy | DEC-0007; ARC-001 | `IMPLEMENTED_TASK_VALIDATED` | `ControlledCopyManager` integration | Corruption/integrity/cleanup tests | DEV-0202 Stage B |
 | DEV-0202-R22 | Validate `MANIFEST_FILES_V1` without table/column-order sensitivity | DEC-0007 | `IMPLEMENTED_TASK_VALIDATED` | Case-folded schema inspection | Missing table/each column/additional schema tests | DEV-0202 Stage B |
 | DEV-0202-R23 | Record canonical schema JSON and SHA-256 fingerprint | DEC-0007 | `IMPLEMENTED_TASK_VALIDATED` | `_inspect_manifest()` | Deterministic fingerprint test | DEV-0202 Stage B |
 | DEV-0202-R24 | Record explanation, observations, provenance, limitations, and deterministic audit | DEV-0202 owner scope | `IMPLEMENTED_TASK_VALIDATED` | `BackupValidationResult` | Canonical audit test | DEV-0202 Stage B |
 | DEV-0202-R25 | Keep validator isolated from API, legacy, and artifact parsing | DEC-0007; AGENTS.md | `IMPLEMENTED_TASK_VALIDATED` | `app.intake.backup_validator` | Static boundary and regression tests | DEV-0202 Stage B |
+| DEV-0211-R01 | Do not implement secondary encryption indicators until each is sourced, characterized, ordered, conflict-profiled, fixture-tested, and owner approved | DEC-0009 | `DOCUMENTED_CONTROL` | No secondary signal exists in the validator | Static boundary and DEV-0202 encryption tests | DEV-0211 deferred |
 
 ## 16. DEV-0004 architecture-recommendation trace
 

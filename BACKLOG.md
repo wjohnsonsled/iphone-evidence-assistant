@@ -113,7 +113,7 @@ A task may be marked `COMPLETE` only after the required owner approval is record
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
 | DEV-0201 | Apple backup input adapter | COMPLETE | DEV-0101 | Complete |
-| DEV-0202 | Apple backup structure validator | IN_PROGRESS | DEV-0201 | Encryption-indicator clarification gate |
+| DEV-0202 | Apple backup structure validator | VALIDATION_PENDING | DEV-0201 | Task validation gate |
 | DEV-0203 | Evidence-source registration model | NOT_STARTED | DEV-0202 | Package gate |
 | DEV-0204 | SHA-256 hashing service | NOT_STARTED | DEV-0203 | Package gate |
 | DEV-0205 | Controlled SQLite working-copy service | NOT_STARTED | DEV-0204 | Package gate |
@@ -122,6 +122,7 @@ A task may be marked `COMPLETE` only after the required owner approval is record
 | DEV-0208 | Intake cleanup and failure recovery | NOT_STARTED | DEV-0205 | Package gate |
 | DEV-0209 | Intake resource limits and denial-of-service controls | NOT_STARTED | DEV-0202 | Package gate |
 | DEV-0210 | Intake package integration tests | NOT_STARTED | DEV-0203 through DEV-0209 | Package gate |
+| DEV-0211 | Profile and validate secondary Apple backup encryption indicators | DEFERRED | Separately approved signal sources and revised compatibility profile | Owner profile gate |
 
 ### DEV-0202 required classifications
 
