@@ -14,6 +14,10 @@ app/intake/apple_backup.py
 app/intake/backup_validator.py
 app/intake/controlled_copy.py
 app/intake/encryption_state.py
+app/integrity/__init__.py
+app/integrity/domain.py
+app/integrity/parser_contract.py
+app/integrity/services.py
 app/legacy/__init__.py
 app/legacy/main.py
 app/legacy/router.py
@@ -22,6 +26,7 @@ app/models/case.py
 app/models/coverage.py
 app/models/device.py
 app/models/evidence_event.py
+app/models/integrity.py
 app/models/processing_job.py
 app/models/types.py
 app/repositories/__init__.py
@@ -49,6 +54,7 @@ tests/test_apple_backup_input_adapter.py
 tests/test_backup_validator.py
 tests/test_controlled_copy.py
 tests/test_encryption_state.py
+tests/test_integrity_infrastructure.py
 tests/test_path_validation.py
 tests/test_persistence.py
 tests/test_scaffold_boundaries.py
