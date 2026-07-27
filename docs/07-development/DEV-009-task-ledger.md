@@ -20,7 +20,7 @@
 
 | DEV-0202 | Validate required Apple backup structure | COMPLETE | DEV-0201; DEC-0006 through DEC-0010 | DEV-0202-apple-backup-validation-acceptance; FOR-007 candidate profile | Owner approved the synthetic validation framework and controlled classification logic in DEC-0010; candidate profile still requires Apple-produced multi-version validation and separate promotion approval; no support claim |
 
-| DEV-0203 | Backup encryption-state detection | READY | DEV-0201, DEV-0202 | To be created | Existing approved ledger/implementation-plan scope controls over generic backlog wording; initial release is detection/reporting only and must not decrypt |
+| DEV-0203 | Backup encryption-state detection | VALIDATION_PENDING | DEV-0201, DEV-0202 | DEV-0203-backup-encryption-state-acceptance | Typed projection reports five distinct states from DEV-0202 only; raw observation/provenance retained; only unencrypted is handoff-eligible; focused 7/7, backend 71/71, legacy 5/5; no decryption, API, persistence, migration, or support claim |
 
 | DEV-0211 | Profile and validate secondary Apple backup encryption indicators | DEFERRED | Owner-approved signal sources and revised compatibility profile | To be created | Must source, characterize, order, and define conflicts for every candidate signal; requires synthetic and Apple-produced fixtures plus owner approval before implementation or promotion |
 

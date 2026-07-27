@@ -39,9 +39,9 @@ statuses. They must not be displayed as support claims.
 | Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owning task or gap |
 |---|---|---|---|---|---|---|
 | PRD-IN-001 | Accept only a structurally valid Apple local iPhone backup in the initial supported path | PRD-003 §3; PRD-007 §4 | `PARTIAL_UNVALIDATED` | DEV-0201 adds a supported-boundary directory adapter; Apple structure validation is not implemented | DEV-0201 adapter tests do not establish Apple structure support | DEV-0202 |
-| PRD-IN-002 | Distinguish unencrypted, encrypted, incomplete, malformed/corrupted, and unsupported inputs | AGENTS.md Input scope; PRD-007 §4 | `APPROVED_UNIMPLEMENTED` | `backend/app/models/device.py` has an unpopulated `backup_encrypted` field | No classification fixture suite | DEV-0201 through DEV-0203 |
+| PRD-IN-002 | Distinguish unencrypted, encrypted, incomplete, malformed/corrupted, and unsupported inputs | AGENTS.md Input scope; PRD-007 §4 | `IMPLEMENTED_TASK_VALIDATED` | DEV-0202 classifier and DEV-0203 reporting projection | Synthetic classification and encryption-report suites | DEV-0201 through DEV-0203; production compatibility remains unvalidated |
 | PRD-IN-003 | Prioritize unencrypted backups as the first input target | PRD-003 §3; PRD-007 §4; DEC-0001 | `DOCUMENTED_CONTROL` | No conforming supported intake path exists | Owner approval DEC-0001 | DEV-0201 through DEV-0202 |
-| PRD-IN-004 | Detect and report encrypted backups without decrypting or processing inaccessible content | PRD-007 §5; DEC-0001 | `APPROVED_UNIMPLEMENTED` | Database field only; no detection/reporting implementation | No encryption-state fixtures | DEV-0203 |
+| PRD-IN-004 | Detect and report encrypted backups without decrypting or processing inaccessible content | PRD-007 §5; DEC-0001 | `IMPLEMENTED_TASK_VALIDATED` | `app.intake.encryption_state` | DEV-0203 focused tests | DEV-0203 owner review |
 | PRD-IN-005 | Do not accept, retain, or log backup passwords in the initial MVP | PRD-007 §5; SEC-001 placeholder | `DOCUMENTED_CONTROL` | No password intake interface identified | No secret-handling tests | DEV-0203; security task unassigned |
 | PRD-IN-006 | Exclude physical/full-filesystem acquisitions, third-party tool ingestion, and nonvalidated extracted directories | PRD-007 §4; DEC-0001 | `LEGACY_QUARANTINED` | Legacy CLI accepts broader extracted-directory layouts | Documentation approval only; runtime gate absent | DEV-0201; DEV-0304 |
 | PRD-SCP-001 | Limit initial artifact candidates to backup metadata/inventory, messages, attachments, calls, and contacts | PRD-007 §6; FOR-004 §2; DEC-0001 | `DOCUMENTED_CONTROL` | Legacy registry contains both candidate and excluded families | FOR-004 matrix and DEC-0001 | DEV-0304 and per-artifact Phase 4 tasks |
@@ -211,6 +211,14 @@ approved runtime requirement source.
 | DEV-0202-R24 | Record explanation, observations, provenance, limitations, and deterministic audit | DEV-0202 owner scope | `IMPLEMENTED_TASK_VALIDATED` | `BackupValidationResult` | Canonical audit test | DEV-0202 Stage B |
 | DEV-0202-R25 | Keep validator isolated from API, legacy, and artifact parsing | DEC-0007; AGENTS.md | `IMPLEMENTED_TASK_VALIDATED` | `app.intake.backup_validator` | Static boundary and regression tests | DEV-0202 Stage B |
 | DEV-0211-R01 | Do not implement secondary encryption indicators until each is sourced, characterized, ordered, conflict-profiled, fixture-tested, and owner approved | DEC-0009 | `DOCUMENTED_CONTROL` | No secondary signal exists in the validator | Static boundary and DEV-0202 encryption tests | DEV-0211 deferred |
+| DEV-0203-R01 | Consume only DEV-0202 validation results | DEV-0203 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `report_encryption_state()` typed input | AC-01 through AC-03 | DEV-0203 |
+| DEV-0203-R02 | Report five closed encryption states distinctly | DEV-0203 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `BackupEncryptionState` | AC-01 through AC-03 | DEV-0203 |
+| DEV-0203-R03 | Preserve raw Boolean and locator when present | DEV-0203 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `EncryptionStateReport` | AC-05 | DEV-0203 |
+| DEV-0203-R04 | Only unencrypted is handoff-eligible, without support implication | DEV-0203 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `processing_eligible` | AC-04 | DEV-0203 |
+| DEV-0203-R05 | Encrypted is reporting-only; no decryption or parsing | DEV-0203 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Closed projection module | AC-04; AC-07 | DEV-0203 |
+| DEV-0203-R06 | Accept no password and infer no secondary signal | DEC-0009; DEV-0203 acceptance | `IMPLEMENTED_TASK_VALIDATED` | No source inspection or credential interface | AC-07 | DEV-0203 |
+| DEV-0203-R07 | Preserve provenance, correlation, limitations, and deterministic audit | DEV-0203 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Report audit serialization | AC-05; AC-06 | DEV-0203 |
+| DEV-0203-R08 | Add no API, migration, legacy dependency, persistence, or support | DEV-0203 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Isolated intake module | AC-07; regression suite | DEV-0203 |
 
 ## 16. DEV-0004 architecture-recommendation trace
 

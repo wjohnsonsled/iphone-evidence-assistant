@@ -13,6 +13,7 @@ app/intake/__init__.py
 app/intake/apple_backup.py
 app/intake/backup_validator.py
 app/intake/controlled_copy.py
+app/intake/encryption_state.py
 app/legacy/__init__.py
 app/legacy/main.py
 app/legacy/router.py
@@ -47,6 +48,7 @@ tests/test_api.py
 tests/test_apple_backup_input_adapter.py
 tests/test_backup_validator.py
 tests/test_controlled_copy.py
+tests/test_encryption_state.py
 tests/test_path_validation.py
 tests/test_persistence.py
 tests/test_scaffold_boundaries.py

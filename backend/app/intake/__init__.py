@@ -18,12 +18,18 @@ from app.intake.controlled_copy import (
     ControlledSQLiteCopy,
     SQLiteStructuralObservation,
 )
+from app.intake.encryption_state import (
+    BackupEncryptionState,
+    EncryptionStateReport,
+    report_encryption_state,
+)
 
 __all__ = [
     "AppleBackupValidator",
     "AppleBackupInputAdapter",
     "BackupValidationOutcome",
     "BackupValidationResult",
+    "BackupEncryptionState",
     "CleanupStatus",
     "ControlledCopyError",
     "ControlledCopyManager",
@@ -31,5 +37,7 @@ __all__ = [
     "InputAdapterStatus",
     "InputInspectionIssue",
     "InputInspectionResult",
+    "EncryptionStateReport",
     "SQLiteStructuralObservation",
+    "report_encryption_state",
 ]
