@@ -296,6 +296,26 @@ customer evidence remain unapproved and unsupported. Any future support
 promotion requires a documented validation package using Apple-produced test
 backups across multiple intended versions and a separate owner approval.
 
+## DEC-0011 — Insert and execute WP-0250 evidence-integrity infrastructure
+
+- Date: 2026-07-27
+- Status: APPROVED_FOR_IMPLEMENTATION
+- Owner: Project owner
+- Tasks: DEV-0251 through DEV-0265
+- Architecture: ARC-001 with additive ARC-002 contract
+
+The owner authorized an additive relational evidence-integrity layer between
+intake and future parser execution. It owns stable evidence UUIDs, immutable
+SHA-256 observations, lifecycle and integrity states, application-level access
+locks, append-only custody and audit services, tenant-scoped provenance,
+mutation and policy enforcement, and the common future supported-parser
+contract and conformance harness.
+
+DEV-0203 remains the encryption-reporting projection; existing controlled-copy
+work is reused rather than duplicated. No graph database, OS write-block claim,
+digital-signature/nonrepudiation claim, production API, real evidence, or
+support promotion is authorized.
+
 ## DEC-0009 — Single encryption signal and secondary-indicator deferral
 
 - Date: 2026-07-27

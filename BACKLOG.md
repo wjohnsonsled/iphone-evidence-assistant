@@ -159,6 +159,42 @@ backlog wording differs.
 
 ---
 
+# PHASE 2.5 — EVIDENCE INTEGRITY INFRASTRUCTURE
+
+## WP-0250 Evidence Integrity Infrastructure
+
+**Package status:** `IN_PROGRESS`  
+**Support effect:** None.
+
+| Task | Title | Status | Dependencies | Owner Gate |
+|---|---|---:|---|---|
+| DEV-0251 | Evidence-object domain contract | IN_PROGRESS | DEV-0202 | Package gate |
+| DEV-0252 | Stable evidence identifier strategy | NOT_STARTED | DEV-0251 | Package gate |
+| DEV-0253 | Evidence lifecycle state machine | NOT_STARTED | DEV-0251 | Package gate |
+| DEV-0254 | Cryptographic hash registry | NOT_STARTED | DEV-0251, DEV-0252 | Package gate |
+| DEV-0255 | Evidence integrity verification service | NOT_STARTED | DEV-0254 | Package gate |
+| DEV-0256 | Evidence access and lock policy | NOT_STARTED | DEV-0253, DEV-0255 | Package gate |
+| DEV-0257 | Chain-of-custody event model | NOT_STARTED | DEV-0251, DEV-0253 | Package gate |
+| DEV-0258 | Evidence audit-event taxonomy | NOT_STARTED | DEV-0257 | Package gate |
+| DEV-0259 | Provenance graph foundation | NOT_STARTED | DEV-0251, DEV-0258 | Package gate |
+| DEV-0260 | Provenance relationship validation | NOT_STARTED | DEV-0259 | Package gate |
+| DEV-0261 | Evidence mutation detector | NOT_STARTED | DEV-0254, DEV-0255 | Package gate |
+| DEV-0262 | Integrity policy enforcement service | NOT_STARTED | DEV-0256, DEV-0260, DEV-0261 | Package gate |
+| DEV-0263 | Common supported-parser contract | NOT_STARTED | DEV-0259, DEV-0262 | Package gate |
+| DEV-0264 | Parser-contract conformance harness | NOT_STARTED | DEV-0263 | Package gate |
+| DEV-0265 | End-to-end integrity validation package | NOT_STARTED | DEV-0251 through DEV-0264 | Package gate |
+
+DEV-0203 remains the intake encryption-report projection. WP-0250 is the sole
+authority for evidence registration, stable evidence UUIDs, hash observations,
+lifecycle, locks, custody, audit, provenance, mutation policy, and parser
+conformance. Later WP-0200 tasks must adapt to these contracts and must not
+create competing implementations.
+
+**Owner-review gate:** Approve the evidence-integrity architecture, relational
+data model, lifecycle, audit taxonomy, provenance model, and parser contract.
+
+---
+
 # PHASE 3 — TENANCY, AUTHORIZATION, AND CASE MODEL
 
 ## WP-0300 SaaS Security Foundation
@@ -194,7 +230,7 @@ backlog wording differs.
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0401 | Processing-run model | NOT_STARTED | WP-0200, WP-0300 | Package gate |
+| DEV-0401 | Processing-run model | NOT_STARTED | WP-0200, WP-0250, WP-0300 | Package gate |
 | DEV-0402 | Source-artifact identity model | NOT_STARTED | DEV-0401 | Package gate |
 | DEV-0403 | Stable source-locator model | NOT_STARTED | DEV-0402 | Package gate |
 | DEV-0404 | Parser identity and version model | NOT_STARTED | DEV-0401 | Package gate |
@@ -235,7 +271,7 @@ Every supported record can be traced to:
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0501 | Metadata artifact discovery via Manifest.db | NOT_STARTED | WP-0200, WP-0400 | Artifact gate |
+| DEV-0501 | Metadata artifact discovery via Manifest.db | NOT_STARTED | WP-0200, WP-0400, DEV-0263, DEV-0264 | Artifact gate |
 | DEV-0502 | Info.plist controlled reader | NOT_STARTED | DEV-0501 | Artifact gate |
 | DEV-0503 | Manifest.plist controlled reader | NOT_STARTED | DEV-0501 | Artifact gate |
 | DEV-0504 | Status.plist controlled reader | NOT_STARTED | DEV-0501 | Artifact gate |
@@ -255,7 +291,7 @@ Every supported record can be traced to:
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0601 | Manifest.db schema-profile validator | NOT_STARTED | WP-0200, WP-0400 | Artifact gate |
+| DEV-0601 | Manifest.db schema-profile validator | NOT_STARTED | WP-0200, WP-0400, DEV-0263, DEV-0264 | Artifact gate |
 | DEV-0602 | Files-table controlled query layer | NOT_STARTED | DEV-0601 | Artifact gate |
 | DEV-0603 | FileID normalization | NOT_STARTED | DEV-0602 | Artifact gate |
 | DEV-0604 | Domain normalization | NOT_STARTED | DEV-0602 | Artifact gate |
@@ -277,7 +313,7 @@ Every supported record can be traced to:
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0701 | Contacts artifact discovery | NOT_STARTED | WP-0600 | Artifact gate |
+| DEV-0701 | Contacts artifact discovery | NOT_STARTED | WP-0600, DEV-0263, DEV-0264 | Artifact gate |
 | DEV-0702 | Contacts schema-profile validator | NOT_STARTED | DEV-0701 | Artifact gate |
 | DEV-0703 | Person and organization extraction | NOT_STARTED | DEV-0702 | Artifact gate |
 | DEV-0704 | Phone-number extraction and normalization | NOT_STARTED | DEV-0702 | Artifact gate |
@@ -299,7 +335,7 @@ Every supported record can be traced to:
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0801 | Call-history artifact discovery | NOT_STARTED | WP-0600 | Artifact gate |
+| DEV-0801 | Call-history artifact discovery | NOT_STARTED | WP-0600, DEV-0263, DEV-0264 | Artifact gate |
 | DEV-0802 | Call-history schema-profile validator | NOT_STARTED | DEV-0801 | Artifact gate |
 | DEV-0803 | Call record extraction | NOT_STARTED | DEV-0802 | Artifact gate |
 | DEV-0804 | Direction and disposition normalization | NOT_STARTED | DEV-0803 | Artifact gate |
@@ -321,7 +357,7 @@ Every supported record can be traced to:
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0901 | sms.db artifact discovery | NOT_STARTED | WP-0600 | Artifact gate |
+| DEV-0901 | sms.db artifact discovery | NOT_STARTED | WP-0600, DEV-0263, DEV-0264 | Artifact gate |
 | DEV-0902 | sms.db schema-profile validator | NOT_STARTED | DEV-0901 | Artifact gate |
 | DEV-0903 | Message extraction | NOT_STARTED | DEV-0902 | Artifact gate |
 | DEV-0904 | Handle extraction | NOT_STARTED | DEV-0902 | Artifact gate |
@@ -348,7 +384,7 @@ Every supported record can be traced to:
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-1001 | Attachment-row extraction | NOT_STARTED | WP-0900 | Artifact gate |
+| DEV-1001 | Attachment-row extraction | NOT_STARTED | WP-0900, DEV-0263, DEV-0264 | Artifact gate |
 | DEV-1002 | Message-attachment relationship extraction | NOT_STARTED | DEV-1001 | Artifact gate |
 | DEV-1003 | Backup-file resolution through Manifest.db | NOT_STARTED | DEV-1001, WP-0600 | Artifact gate |
 | DEV-1004 | Attachment controlled-copy service | NOT_STARTED | DEV-1003, DEV-0205 | Artifact gate |
@@ -370,7 +406,7 @@ Every supported record can be traced to:
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-1101 | Supported parser registry | NOT_STARTED | WP-0400 | Package gate |
+| DEV-1101 | Supported parser registry | NOT_STARTED | WP-0400, DEV-0262, DEV-0263, DEV-0264 | Package gate |
 | DEV-1102 | Legacy parser registry isolation | NOT_STARTED | DEV-1101 | Package gate |
 | DEV-1103 | Fail-closed parser executor | NOT_STARTED | DEV-1101 | Package gate |
 | DEV-1104 | Processing-run state machine | NOT_STARTED | DEV-0401 | Package gate |
@@ -391,7 +427,7 @@ Every supported record can be traced to:
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-1201 | Supported-record search service | NOT_STARTED | WP-0400, supported artifact gates | Package gate |
+| DEV-1201 | Supported-record search service | NOT_STARTED | WP-0400, DEV-0260, supported artifact gates | Package gate |
 | DEV-1202 | Exact text search | NOT_STARTED | DEV-1201 | Package gate |
 | DEV-1203 | Phone-number search | NOT_STARTED | DEV-1201 | Package gate |
 | DEV-1204 | Email-address search | NOT_STARTED | DEV-1201 | Package gate |
@@ -414,7 +450,7 @@ Every supported record can be traced to:
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-1301 | Supported-record retrieval interface | NOT_STARTED | WP-1200 | Package gate |
+| DEV-1301 | Supported-record retrieval interface | NOT_STARTED | WP-1200, DEV-0260 | Package gate |
 | DEV-1302 | Evidence chunking and context assembly | NOT_STARTED | DEV-1301 | Package gate |
 | DEV-1303 | Citation-required answer contract | NOT_STARTED | DEV-1301 | Package gate |
 | DEV-1304 | Unsupported-evidence rejection | NOT_STARTED | DEV-1301 | Package gate |
@@ -447,7 +483,7 @@ Every supported record can be traced to:
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-1401 | Report data contract | NOT_STARTED | WP-0400, WP-1200 | Package gate |
+| DEV-1401 | Report data contract | NOT_STARTED | WP-0400, WP-1200, DEV-0260 | Package gate |
 | DEV-1402 | Device and backup summary section | NOT_STARTED | supported metadata gate | Package gate |
 | DEV-1403 | Evidence-source and chain-of-custody section | NOT_STARTED | WP-0200 | Package gate |
 | DEV-1404 | Coverage and limitation section | NOT_STARTED | DEV-0408, DEV-1105 | Package gate |
