@@ -6,10 +6,22 @@ from app.intake.apple_backup import (
     InputInspectionIssue,
     InputInspectionResult,
 )
+from app.intake.controlled_copy import (
+    CleanupStatus,
+    ControlledCopyError,
+    ControlledCopyManager,
+    ControlledSQLiteCopy,
+    SQLiteStructuralObservation,
+)
 
 __all__ = [
     "AppleBackupInputAdapter",
+    "CleanupStatus",
+    "ControlledCopyError",
+    "ControlledCopyManager",
+    "ControlledSQLiteCopy",
     "InputAdapterStatus",
     "InputInspectionIssue",
     "InputInspectionResult",
+    "SQLiteStructuralObservation",
 ]

@@ -178,7 +178,30 @@ later task. It does not fill remaining policy gaps by inference.
 8. A parser or artifact promotion requires its complete FOR-004 profile and a
    separate owner approval; updating this matrix cannot perform promotion.
 
-## 15. DEV-0004 architecture-recommendation trace
+## 15. DEV-0202 controlled-copy and profile requirements
+
+DEV-0202 Stage A is limited by DEC-0006. FOR-007 is proposed and is not an
+approved runtime requirement source.
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owning task or gap |
+|---|---|---|---|---|---|---|
+| DEV-0202-R01 | Copy only main and exact supported companion names | DEV-0202 acceptance §3 | `IMPLEMENTED_TASK_VALIDATED` | `ControlledCopyManager` companion discovery | AC-01; AC-02 passed | DEV-0202 Stage A |
+| DEV-0202-R02 | Require regular link-free files inside evidence source | DEV-0202 acceptance §3 | `IMPLEMENTED_TASK_VALIDATED` | Controlled-copy path validation | AC-03 passed | DEV-0202 Stage A |
+| DEV-0202-R03 | Record paths, sizes, and pre/copy/post SHA-256 | DEV-0202 acceptance §3 | `IMPLEMENTED_TASK_VALIDATED` | `ControlledFileRecord` | AC-01; AC-04; AC-12 passed | DEV-0202 Stage A |
+| DEV-0202-R04 | Fail unless all hashes match | DEV-0202 acceptance §3 | `IMPLEMENTED_TASK_VALIDATED` | Copy verification failure path | AC-01; AC-04 passed | DEV-0202 Stage A |
+| DEV-0202-R05 | Detect companion-set mutation | DEV-0202 acceptance §3 | `IMPLEMENTED_TASK_VALIDATED` | Companion rediscovery check | AC-02; AC-05 passed | DEV-0202 Stage A |
+| DEV-0202-R06 | Create temporary workspace outside evidence source | DEV-0202 acceptance §3 | `IMPLEMENTED_TASK_VALIDATED` | Workspace boundary check | AC-06 passed | DEV-0202 Stage A |
+| DEV-0202-R07 | Preserve companion basenames together | DEV-0202 acceptance §3 | `IMPLEMENTED_TASK_VALIDATED` | Single controlled workspace | AC-02 passed | DEV-0202 Stage A |
+| DEV-0202-R08 | Open copied SQLite read-only/query-only | DEV-0202 acceptance §3 | `IMPLEMENTED_TASK_VALIDATED` | `ControlledSQLiteCopy.read_only_uri`; `inspect_sqlite_structure()` | AC-07 passed | DEV-0202 Stage A |
+| DEV-0202-R09 | Prohibit mutation and source SQLite access | DEV-0202 acceptance §3 | `IMPLEMENTED_TASK_VALIDATED` | Controlled-copy-only SQLite boundary | AC-07; AC-13 passed | DEV-0202 Stage A |
+| DEV-0202-R10 | Verify working hashes after SQLite use | DEV-0202 acceptance §3 | `IMPLEMENTED_TASK_VALIDATED` | Post-inspection hash verification | AC-08 passed | DEV-0202 Stage A |
+| DEV-0202-R11 | Delete workspace unless retained explicitly for a test | DEV-0202 acceptance §3 | `IMPLEMENTED_TASK_VALIDATED` | Context cleanup and test-retention flag | AC-09; AC-11 passed | DEV-0202 Stage A |
+| DEV-0202-R12 | Record cleanup outcome deterministically | DEV-0202 acceptance §3 | `IMPLEMENTED_TASK_VALIDATED` | `ControlledCopyAudit`; `CleanupStatus` | AC-09 through AC-12 passed | DEV-0202 Stage A |
+| DEV-0202-R13 | Fail closed with structured safe audit data | DEV-0202 acceptance §3 | `IMPLEMENTED_TASK_VALIDATED` | `ControlledCopyError` | AC-03 through AC-05; AC-10 passed | DEV-0202 Stage A |
+| DEV-0202-R14 | No legacy, Apple compatibility, or API integration | DEV-0202 acceptance §3 | `IMPLEMENTED_TASK_VALIDATED` | Isolated `app.intake.controlled_copy` module | AC-13; AC-15 passed | DEV-0202 Stage A |
+| DEV-0202-R15 | Synthetic fixtures only | DEV-0202 acceptance §3 | `IMPLEMENTED_TASK_VALIDATED` | Temporary generated SQLite/byte fixtures | AC-14 passed | DEV-0202 Stage A |
+
+## 16. DEV-0004 architecture-recommendation trace
 
 ARC-001 was approved by DEC-0002 on 2026-07-24 and is an architecture
 requirement source for downstream tasks. It addresses existing requirement IDs
@@ -198,7 +221,7 @@ as follows:
 These references are architecture traceability evidence. They do not establish
 runtime implementation, validation, or artifact support.
 
-## 16. DEV-0003 acceptance criteria
+## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |
 |---|---|---|

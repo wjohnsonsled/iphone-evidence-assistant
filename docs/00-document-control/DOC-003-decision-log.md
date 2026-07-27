@@ -181,3 +181,36 @@ Implementation cannot begin defensibly until both conflicts are resolved:
 
 No implementation or implied compatibility policy is authorized while these
 conflicts remain.
+
+## DEC-0006 — Limited DEV-0202 controlled-copy and profile authorization
+
+- Date: 2026-07-27
+- Status: APPROVED_LIMITED
+- Owner: Project owner
+- Task: DEV-0202
+- Decision source: Explicit owner instruction recorded in the controlled
+  development task on 2026-07-27
+
+### Decision
+
+The owner authorized:
+
+1. a generic ephemeral controlled-copy mechanism for `Manifest.db` and present
+   `-wal`, `-shm`, and `-journal` companions, solely to demonstrate safe
+   structural validation and SQLite integrity checking; and
+2. preparation of a proposed Apple local-backup compatibility profile for
+   separate owner review.
+
+The copy mechanism must hash source and copied files, verify source stability
+across copying, preserve companion names/relationships, use read-only SQLite
+access, record cleanup, fail closed, and use synthetic fixtures only.
+
+### Remaining gate
+
+Apple identity, structure, encryption, schema, version, and classification
+rules must not be implemented until FOR-007 is approved. Rules without
+authoritative Apple documentation must remain provisional and identify their
+fixture or implementation-observation basis.
+
+No general working-copy subsystem, input support, parser support, or artifact
+support is approved.
