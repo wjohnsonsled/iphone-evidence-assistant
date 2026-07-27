@@ -255,6 +255,16 @@ as follows:
 These references are architecture traceability evidence. They do not establish
 runtime implementation, validation, or artifact support.
 
+## 16A. DEV-0102 reproducible-environment requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0102-R01 | Commit one exact runtime, development, build, and transitive Python resolution | BACKLOG WP-0100; DEV-0102 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `backend/requirements.lock` | AC-01; clean-environment install | DEV-0102 |
+| DEV-0102-R02 | Fail deterministically on ranges, duplicates, or missing declared dependencies | DEV-0102 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `backend/scripts/verify_lock.py` | AC-02; AC-03; negative unit tests | DEV-0102 |
+| DEV-0102-R03 | Use the same lock for container installation without editable or second-graph resolution | DEV-0102 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `backend/Dockerfile` | AC-04 static test | DEV-0102 |
+| DEV-0102-R04 | Validate a non-editable application install in an isolated environment | DEV-0102 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Documented clean-install workflow | AC-05; `pip check`; import smoke test | DEV-0102 |
+| DEV-0102-R05 | Preserve runtime, evidence boundaries, migrations, and support status | AGENTS.md; DEV-0102 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Dependency-only implementation | AC-06 through AC-08; regression suite | DEV-0102 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |

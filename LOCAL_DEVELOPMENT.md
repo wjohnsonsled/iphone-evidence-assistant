@@ -48,13 +48,21 @@ alembic upgrade head
 
 ## Running Tests
 
-Install development dependencies:
+Create an isolated environment and install the committed resolution:
 
 ```bash
-cd backend
-python -m pip install -e ".[dev]"
-pytest
+python -m venv .venv
+.venv/Scripts/python -m pip install -r backend/requirements.lock
+.venv/Scripts/python -m pip install --no-deps --no-build-isolation ./backend
+.venv/Scripts/python backend/scripts/verify_lock.py --project backend/pyproject.toml --lock backend/requirements.lock
+.venv/Scripts/python -m pip check
+.venv/Scripts/python -m pytest backend
 ```
+
+On POSIX systems, use `.venv/bin/python`. The lock contains exact direct and
+transitive versions for the backend and its development tests. `pyproject.toml`
+remains the abstract package declaration; it is not the reproducible install
+input. Do not use an editable install for clean-environment validation.
 
 The automated tests use mocked/sanitized evidence-engine outputs and do not
 require a real iPhone backup.

@@ -87,7 +87,7 @@ A task may be marked `COMPLETE` only after the required owner approval is record
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
 | DEV-0101 | Backend scaffold and legacy isolation | COMPLETE | DEV-0004 | Complete |
-| DEV-0102 | Dependency locking and reproducible environment | READY | DEV-0101 | Package gate |
+| DEV-0102 | Dependency locking and reproducible environment | VALIDATION_PENDING | DEV-0101 | Package gate |
 | DEV-0103 | Configuration model and environment validation | NOT_STARTED | DEV-0102 | Package gate |
 | DEV-0104 | Structured error model | NOT_STARTED | DEV-0103 | Package gate |
 | DEV-0105 | Structured application logging baseline | NOT_STARTED | DEV-0103 | Package gate |

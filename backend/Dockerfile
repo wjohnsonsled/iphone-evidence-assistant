@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM python:3.12.13-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
@@ -8,7 +8,8 @@ WORKDIR /app
 COPY evidence_engine /app/evidence_engine
 COPY window_investigator.py /app/window_investigator.py
 COPY backend /app
-RUN pip install --no-cache-dir -e ".[dev]"
+RUN pip install --no-cache-dir --requirement requirements.lock \
+    && pip install --no-cache-dir --no-deps --no-build-isolation .
 
 EXPOSE 8000
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

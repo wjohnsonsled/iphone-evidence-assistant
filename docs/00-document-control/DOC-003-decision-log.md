@@ -279,6 +279,24 @@ may be `APPLE_BACKUP_INDETERMINATE`; operational inability to decide is
 
 No support status changes.
 
+## DEC-0012 — DEV-0102 reproducible Python dependency strategy
+
+- Date: 2026-07-27
+- Status: IMPLEMENTED_PENDING_PACKAGE_REVIEW
+- Owner: Development task authority
+- Task: DEV-0102
+
+The backend retains abstract direct dependency declarations in `pyproject.toml`
+and uses a committed, exact direct-and-transitive `requirements.lock` as the
+reproducible development and container installation input. A standard-library
+validator fails when the lock contains a range, duplicate, or omits a declared
+runtime or development dependency. The container uses the same lock and
+installs the application non-editably without dependency re-resolution.
+
+This decision changes dependency resolution only. It adds no evidence behavior,
+API, migration, parser, artifact support, or production approval. Automated
+vulnerability and secret scanning remain later foundation controls.
+
 ## DEC-0010 — DEV-0202 completion approval
 
 - Date: 2026-07-27

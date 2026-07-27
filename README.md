@@ -82,8 +82,8 @@ or parse source files, create working copies, or establish input support. It is
 not exposed through the default API.
 
 The following are development commands, not a production deployment procedure.
-The current Compose configuration also references a missing
-`backend/.env.example` and requires reconciliation before use:
+Compose uses the committed dependency lock but still requires local environment
+configuration and is not an approved production deployment:
 
 ```bash
 docker compose up --build
@@ -96,12 +96,20 @@ cd backend
 alembic upgrade head
 ```
 
-Run backend tests after installing dev dependencies:
+Create a clean environment, install the exact locked dependencies, and install
+the application without resolving a second dependency graph:
 
 ```bash
-cd backend
-python -m pip install -e ".[dev]"
-pytest
+python -m venv .venv
+.venv/Scripts/python -m pip install -r backend/requirements.lock
+.venv/Scripts/python -m pip install --no-deps --no-build-isolation ./backend
+.venv/Scripts/python backend/scripts/verify_lock.py --project backend/pyproject.toml --lock backend/requirements.lock
+.venv/Scripts/python -m pytest backend
 ```
+
+On POSIX systems, replace `.venv/Scripts/python` with `.venv/bin/python`.
+`backend/requirements.lock` is the reproducible application and development
+resolution; update it deliberately and validate it whenever dependency
+declarations change.
 
 See `API.md`, `DATABASE_DESIGN.md`, and `LOCAL_DEVELOPMENT.md` for details.

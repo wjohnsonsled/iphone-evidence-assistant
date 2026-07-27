@@ -152,7 +152,9 @@ The highest risks are:
 - Compose references a missing environment file, while the existing root
   example is empty.
 - Logs can contain source paths and artifact-derived exception strings.
-- No dependency lock, vulnerability scan, secret scan, or CI gate is present.
+- DEV-0102 adds a validated exact Python dependency lock and clean-environment
+  installation path. Vulnerability scanning, secret scanning, and a CI gate
+  remain absent and are tracked by later foundation work.
 
 ### Duplication, obsolete code, and technical debt
 
