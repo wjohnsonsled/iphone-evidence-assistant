@@ -204,7 +204,7 @@ data model, lifecycle, audit taxonomy, provenance model, and parser contract.
 | DEV-0301 | Tenant model | NOT_STARTED | DEV-0103 | Package gate |
 | DEV-0302 | User and role model | NOT_STARTED | DEV-0301 | Package gate |
 | DEV-0303 | Case model | NOT_STARTED | DEV-0301 | Package gate |
-| DEV-0304 | Authorization service | READY | DEV-0101 | Package gate |
+| DEV-0304 | Artifact support-status model and parser quarantine enforcement | VALIDATION_PENDING | DEV-0003, DEV-0004 | Forensic package gate |
 | DEV-0305 | Evidence-source tenant and case linkage | NOT_STARTED | DEV-0203, DEV-0303 | Package gate |
 | DEV-0306 | Audit-actor attribution | NOT_STARTED | DEV-0302, DEV-0206 | Package gate |
 | DEV-0307 | Cross-tenant isolation tests | NOT_STARTED | DEV-0304, DEV-0305 | Package gate |
@@ -221,6 +221,11 @@ data model, lifecycle, audit taxonomy, provenance model, and parser contract.
 - deterministic isolation tests.
 
 **Owner-review gate:** Approve the SaaS security foundation before exposing evidence workflows through the supported API.
+
+Reconciliation: DEV-009's owner-approved DEV-0304 definition controls over the
+stale generic authorization-service wording previously in this table. No task
+was renumbered or overwritten. The authorization service remains an unassigned
+WP-0300 gap pending backlog reconciliation by the owner.
 
 ---
 

@@ -78,11 +78,11 @@ statuses. They must not be displayed as support claims.
 
 | Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owning task or gap |
 |---|---|---|---|---|---|---|
-| FOR-QTN-001 | Use a separate explicit, versioned supported-parser registry | FOR-006 §3 | `APPROVED_UNIMPLEMENTED` | Backend calls legacy `plugins()` directly | No supported-registry tests | DEV-0304 |
-| FOR-QTN-002 | Disable every parser by default unless approved for its declared profile | FOR-006 §4 | `APPROVED_UNIMPLEMENTED` | Legacy registry enables numerous unapproved parsers | No fail-closed registry tests | DEV-0304 |
-| FOR-QTN-003 | Prevent quarantined output from supported storage, search, AI, reports, citations, and coverage | FOR-006 §6; DEC-0001 | `PARTIAL_UNVALIDATED` | DEV-0101 excludes all legacy evidence routes from the default composition; supported stores and downstream retrieval do not yet exist | Default composition-boundary tests only; no end-to-end supported-store isolation tests | DEV-0304 and Phase 5–7 tasks |
+| FOR-QTN-001 | Use a separate explicit, versioned supported-parser registry | FOR-006 §3 | `IMPLEMENTED_TASK_VALIDATED` | `app.support.SupportedParserRegistry`; empty supported composition | DEV-0304 AC-02 through AC-04 | DEV-0304 |
+| FOR-QTN-002 | Disable every parser by default unless approved for its declared profile | FOR-006 §4 | `IMPLEMENTED_TASK_VALIDATED` | Empty composition and exact disposition/identity/profile authorization | DEV-0304 AC-03; disposition matrix | DEV-0304 |
+| FOR-QTN-003 | Prevent quarantined output from supported storage, search, AI, reports, citations, and coverage | FOR-006 §6; DEC-0001 | `PARTIAL_UNVALIDATED` | DEV-0101 excludes legacy routes; DEV-0304 output gate rejects unissued authorization, non-success, incomplete provenance, and unreconciled coverage | Gate tests pass; downstream stores/search/AI/reports do not yet exist | Phase 5–7 tasks |
 | FOR-QTN-004 | Promote a parser only after complete profile validation, traceability, tests, documentation, and owner approval | AGENTS.md All-or-nothing support rule; FOR-006 §7 | `DOCUMENTED_CONTROL` | No parser is promoted | FOR-004 and explicit owner gate | Per-artifact Phase 4 tasks |
-| FOR-QTN-005 | Fail closed on unknown schemas and prohibit generic-parser fallback as supported evidence | FOR-006 §9 | `LEGACY_QUARANTINED` | Generic SQLite/plist parsing exists in the legacy path | No supported-path failure tests | DEV-0304; per-artifact tasks |
+| FOR-QTN-005 | Fail closed on unknown schemas and prohibit generic-parser fallback as supported evidence | FOR-006 §9 | `IMPLEMENTED_TASK_VALIDATED` | Exact schema authorization; supported registry has no generic fallback or legacy import | DEV-0304 unknown-profile and static-boundary tests | DEV-0304; per-artifact tasks |
 | FOR-QTN-006 | Retain legacy CLI only as a compatibility/characterization surface unless separately approved | FOR-006 §10; PRD-007 §8 | `DOCUMENTED_CONTROL` | Legacy CLI remains present | Distribution decision remains owner-controlled | DEV-0304; owner decision if distribution proposed |
 
 ## 8. Security requirements

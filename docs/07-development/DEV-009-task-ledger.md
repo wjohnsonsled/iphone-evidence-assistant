@@ -42,7 +42,7 @@
 | DEV-0264 | Parser-contract conformance harness | VALIDATION_PENDING | DEV-0263 | WP-0250-acceptance-criteria | Identity/profile/provenance/coverage/omission/self-test enforcement validated |
 | DEV-0265 | End-to-end integrity validation package | VALIDATION_PENDING | DEV-0251 through DEV-0264 | WP-0250-acceptance-criteria | Synthetic E2E, full regression, migration and documentation validation complete; owner gate |
 
-| DEV-0304 | Artifact support-status model and parser quarantine enforcement | READY | DEV-0003, DEV-0004 | FOR-004; FOR-006; acceptance document to be created | Legacy registry exists but supported registry/quarantine enforcement is NOT_IMPLEMENTED; plan order keeps DEV-0201 next |
+| DEV-0304 | Artifact support-status model and parser quarantine enforcement | VALIDATION_PENDING | DEV-0003, DEV-0004 | DEV-0304-support-status-quarantine-acceptance; FOR-004; FOR-006 | Closed lifecycle/result models, empty versioned supported registry, fail-closed authorization, and output quarantine gate pass 19 focused and 104 backend tests; no parser/artifact registration, execution, or support promotion |
 
 
 

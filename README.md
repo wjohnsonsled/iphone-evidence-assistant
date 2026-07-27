@@ -70,6 +70,11 @@ The backend still lacks authentication, authorization, tenant isolation,
 evidence-source intake, controlled working copies, validated Apple backup
 classification, supported-parser execution, and supported evidence storage.
 
+DEV-0304 adds a closed support-status vocabulary, an explicit versioned
+supported-registry boundary, and a supported-output quarantine gate. Its
+production composition is deliberately empty. No parser or artifact is
+registered, executed, or promoted by that foundation.
+
 ## Supported-boundary intake foundation
 
 `backend/app/intake/apple_backup.py` contains the DEV-0201 read-only filesystem

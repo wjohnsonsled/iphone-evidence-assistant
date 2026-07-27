@@ -356,3 +356,26 @@ Secondary signals are deferred to DEV-0211 and require sourced characterization,
 precedence and conflict rules, synthetic fixtures, Apple-produced validation
 fixtures, a revised profile, and owner approval before implementation.
 No support status changes.
+
+## DEC-0013 — DEV-0304 empty supported-registry and quarantine boundary
+
+- Date: 2026-07-27
+- Status: IMPLEMENTED_PENDING_FORENSIC_REVIEW
+- Owner: Development task authority
+- Task: DEV-0304
+
+DEV-009 controls DEV-0304 as the artifact support-status and parser-quarantine
+task where generic BACKLOG wording conflicted. The implementation separates
+FOR-004 lifecycle labels from processing-result statuses, creates an explicit
+versioned supported registry, and requires exact registry authorization before
+supported output admission. The production registry composition is empty.
+
+Candidate, legacy, compatibility, experimental, excluded, unknown, mismatched,
+and unregistered parsers fail closed. Supported success output also fails
+closed for unissued authorization, incomplete provenance, unreconciled
+coverage, or invalid zero-record semantics.
+
+This implementation neither authenticates approval metadata nor activates a
+parser. A future nonempty registry requires an authorized, audited registry
+snapshot and the separate per-artifact owner promotion gate. No parser,
+artifact, input, workflow, API, or support status changed.
