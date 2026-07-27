@@ -428,3 +428,38 @@ At the end of each task, report:
 
 Do not claim completion when tests fail or acceptance criteria remain unmet.
 
+# AGENTS.md Addendum — Autonomous MVP Execution
+
+Add the following section to the repository's existing `AGENTS.md`. Do not replace existing instructions.
+
+---
+
+## Autonomous MVP Execution
+
+The repository root files `BACKLOG.md` and `CODEX_AUTONOMY_CHARTER.md` govern task sequencing and autonomous execution.
+
+Before starting work, the agent must read:
+
+- `BACKLOG.md`
+- `CODEX_AUTONOMY_CHARTER.md`
+- the decision log;
+- the task ledger;
+- the risk register;
+- the requirements traceability matrix;
+- the approved architecture.
+
+The agent must automatically select the first `READY` task in plan order and may continue through all unblocked tasks in the current work package without routine owner approval.
+
+The agent must stop only at:
+
+- a mandatory stop condition in `CODEX_AUTONOMY_CHARTER.md`;
+- a work-package owner-review gate;
+- an artifact-support promotion gate;
+- a release gate.
+
+Repository-specific approved decisions override generic backlog wording.
+
+No agent may infer support status from implementation presence.
+
+No unsupported or legacy output may enter supported stores, retrieval, AI, citations, reports, coverage calculations, or production claims.
+
