@@ -279,6 +279,23 @@ may be `APPLE_BACKUP_INDETERMINATE`; operational inability to decide is
 
 No support status changes.
 
+## DEC-0010 — DEV-0202 completion approval
+
+- Date: 2026-07-27
+- Status: APPROVED
+- Owner: Project owner
+- Task: DEV-0202
+
+The owner approved DEV-0202 as complete. DEV-0202 establishes only the
+validation framework and controlled classification logic validated with
+synthetic fixtures.
+
+The candidate compatibility profile is not approved for production use. Apple
+local backups, `Manifest.db`, parsers, artifacts, workflows, APIs, and real
+customer evidence remain unapproved and unsupported. Any future support
+promotion requires a documented validation package using Apple-produced test
+backups across multiple intended versions and a separate owner approval.
+
 ## DEC-0009 — Single encryption signal and secondary-indicator deferral
 
 - Date: 2026-07-27

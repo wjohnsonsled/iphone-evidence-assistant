@@ -4,7 +4,7 @@
 
 - Task: DEV-0202
 - Date prepared: 2026-07-27
-- Status: APPROVED FOR DEV-0202 STAGE-B SYNTHETIC VALIDATION
+- Status: CANDIDATE — SYNTHETIC FRAMEWORK VALIDATED; NOT PRODUCTION APPROVED
 - Runtime effect: isolated non-API validator implementation authorized
 - Input/artifact support effect: none
 - Profile identifier: `APPLE_LOCAL_BACKUP_PROFILE_PROPOSED_001`
@@ -435,3 +435,11 @@ conflict text is superseded by this addendum.
 Secondary signals are deferred to DEV-0211 pending sourced characterization,
 precedence and conflict rules, synthetic and Apple-produced fixtures, a revised
 profile, and owner approval.
+
+## 15. DEV-0202 completion boundary
+
+DEC-0010 approves the validation framework and controlled classification logic
+only. This profile remains a candidate until documented Apple-produced
+encrypted and unencrypted backups across multiple intended versions pass a
+repeatable validation package and the owner separately approves production
+compatibility or support.

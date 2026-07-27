@@ -4,7 +4,7 @@
 
 - Task: DEV-0202
 - Date: 2026-07-27
-- Status: VALIDATION_PENDING — OWNER COMPLETION REVIEW
+- Status: COMPLETE — OWNER APPROVED IN DEC-0010
 - Dependencies: DEV-0201, DEC-0006
 - Compatibility profile: FOR-007, proposed
 - Input/artifact support effect: none
@@ -136,3 +136,11 @@ claim requires the separately approved Apple-produced validation package.
 DEC-0009 removes contradictory-indicator handling and its fixture from this
 task. Secondary indicators are out of scope and deferred to DEV-0211. All
 DEV-0202 acceptance criteria now pass.
+
+## 9. Owner completion decision
+
+The owner approved DEV-0202 on 2026-07-27. Approval covers only the synthetic
+validation framework and controlled classification logic. FOR-007 remains a
+candidate profile. Production compatibility or support requires a future
+Apple-produced, multi-version fixture validation package and separate owner
+approval.
