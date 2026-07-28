@@ -256,6 +256,15 @@ as follows:
 These references are architecture traceability evidence. They do not establish
 runtime implementation, validation, or artifact support.
 
+## 16E. DEV-0106 CI-gate requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0106-R01 | Least-privilege locked CI environment | DEV-0106 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `.github/workflows/ci.yml` | AC-01 through AC-03 | DEV-0106 |
+| DEV-0106-R02 | Mandatory regression, architecture, compilation, and migration gates | MES-v1 Part 9; DEV-0106 acceptance | `IMPLEMENTED_TASK_VALIDATED` | CI job commands | AC-04 through AC-06 | DEV-0106 |
+| DEV-0106-R03 | No deployment, mutation, evidence, or support effect | DEV-0106 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Read-only workflow definition | AC-07 | DEV-0106 |
+| DEV-0106-R04 | Deterministic local validation of workflow structure | DEV-0106 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `test_ci_gate.py` | AC-08 | DEV-0106 |
+
 ## 16D. DEV-0105 structured-logging requirements
 
 | Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |

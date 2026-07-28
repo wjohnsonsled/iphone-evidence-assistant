@@ -91,7 +91,7 @@ A task may be marked `COMPLETE` only after the required owner approval is record
 | DEV-0103 | Configuration model and environment validation | COMPLETE | DEV-0102 | WP-0100 package review |
 | DEV-0104 | Structured error model | COMPLETE | DEV-0103 | WP-0100 package review |
 | DEV-0105 | Structured application logging baseline | COMPLETE | DEV-0103 | WP-0100 package review |
-| DEV-0106 | CI architecture and regression gate | READY | DEV-0102 | Package gate |
+| DEV-0106 | CI architecture and regression gate | COMPLETE | DEV-0102 | WP-0100 package review |
 
 ### WP-0100 completion criteria
 
@@ -102,7 +102,8 @@ A task may be marked `COMPLETE` only after the required owner approval is record
 - structured logs without evidence-content leakage;
 - automated tests and architecture-boundary checks.
 
-**Owner-review gate:** Approve the completed foundation package before production-facing APIs are added.
+**Owner-review gate:** READY — review DEV-0101 through DEV-0106 before any
+production-facing API work.
 
 ---
 

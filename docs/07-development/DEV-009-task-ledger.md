@@ -20,7 +20,7 @@
 | DEV-0103 | Configuration model and environment validation | COMPLETE | DEV-0102 | DEV-0103-configuration-validation-acceptance | Closed environment/log/database/root validation, safe diagnostics, 13 focused, 113 backend, and 5 legacy tests pass; WP-0100 package review pending |
 | DEV-0104 | Structured error model | COMPLETE | DEV-0103 | DEV-0104-structured-error-acceptance | Typed categories, stable safe envelopes, validation/HTTP/internal translation, 13 focused, 120 backend, and 5 legacy tests pass; WP-0100 review pending |
 | DEV-0105 | Structured application logging baseline | COMPLETE | DEV-0103 | DEV-0105-structured-logging-acceptance | Safe JSON formatter, field allowlist, redaction, traceback omission, 20 focused, 129 backend, and 5 legacy tests pass; WP-0100 review pending |
-| DEV-0106 | CI architecture and regression gate | READY | DEV-0102 | To be created | Unblocked by DEC-0014 approval of DEV-0102 |
+| DEV-0106 | CI architecture and regression gate | COMPLETE | DEV-0102 | DEV-0106-ci-regression-gate-acceptance | Least-privilege locked CI definition, local workflow validation, 10 focused, 132 backend, 5 legacy, compilation and offline migration checks pass; WP-0100 review pending |
 
 | DEV-0201 | Apple backup input adapter | COMPLETE | DEV-0003, DEV-0004, DEV-0101 | DEV-0201-apple-backup-input-adapter-acceptance | Owner approved completion on 2026-07-24 in DEC-0004; additive read-only adapter implements six explicit outcomes, root/link controls, provenance, limitations, and deterministic audit data; focused 14/14, backend 26/26, and characterization 5/5 tests passed; no input support claim |
 

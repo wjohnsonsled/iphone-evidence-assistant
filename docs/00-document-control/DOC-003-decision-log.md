@@ -449,3 +449,19 @@ generic event unless migrated to the structured boundary.
 Operational logs are not append-only audit or custody records. Redaction does
 not authorize evidence-content logging. No route, migration, evidence workflow,
 external service, or support effect is introduced.
+
+## DEC-0018 — DEV-0106 least-privilege CI regression gate
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0100_REVIEW
+- Task: DEV-0106
+
+The repository CI definition uses read-only contents permission, Python
+3.12.13, the exact dependency lock, nonisolated application installation,
+lock/environment checks, compilation, offline migration validation, full
+backend regressions, and legacy characterization tests. It has no deploy,
+remote-write, evidence-processing, or production migration step.
+
+The workflow has not run remotely; action references are major tags; and lint,
+type, vulnerability, license, secret, container, and live-database gates remain
+future hardening. No support status changes.
