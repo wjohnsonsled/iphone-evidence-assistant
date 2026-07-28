@@ -1,7 +1,8 @@
-"""Schema-neutral controlled copies for read-only SQLite validation.
+"""Schema-neutral controlled copies for read-only SQLite processing.
 
-This DEV-0202 Stage-A module contains no Apple schema or compatibility rules.
-It copies a main SQLite file and exact-name companions, verifies source
+First validated under DEV-0202 Stage A and adopted as the general candidate
+service by DEV-0205, this module contains no Apple schema or compatibility
+rules. It copies a main SQLite file and exact-name companions, verifies source
 stability and copied bytes, permits limited read-only structural observation,
 and records cleanup.
 """

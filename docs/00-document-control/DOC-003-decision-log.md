@@ -502,3 +502,18 @@ The task validates immutable, provenance-complete success and failure
 observations with synthetic caller-controlled files. It does not implement
 path selection, evidence storage, persistence adapters, package orchestration,
 an API, parsing, real-evidence use, or support promotion.
+
+## DEC-0021 — DEV-0205 adopts the existing controlled-copy service
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0200_REVIEW
+- Task: DEV-0205
+
+The schema-neutral controlled-copy mechanism first authorized for limited
+DEV-0202 validation is adopted as the single general candidate SQLite
+working-copy service. No second copy implementation is created. Its
+pre/copy/post digest fields verify copying; WP-0250 remains the sole durable
+evidence hash-observation authority.
+
+This decision grants no Apple compatibility, parsing, persistence, API, real
+evidence, deployment, or support authority.

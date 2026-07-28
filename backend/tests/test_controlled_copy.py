@@ -1,4 +1,4 @@
-"""Synthetic tests for the schema-neutral DEV-0202 controlled copy."""
+"""Synthetic tests for the schema-neutral DEV-0202/DEV-0205 controlled copy."""
 
 from __future__ import annotations
 
@@ -203,6 +203,29 @@ def test_read_only_sqlite_observation_and_working_hash_verification(tmp_path: Pa
         connection.close()
 
     assert controlled.audit.sqlite_access_mode == "READ_ONLY_QUERY_ONLY_IMMUTABLE_PRIVATE"
+
+
+def test_changed_working_file_fails_closed_before_cleanup(tmp_path: Path) -> None:
+    source_root = tmp_path / "source"
+    workspace = tmp_path / "work" / "copy"
+    source_root.mkdir()
+    main = source_root / "synthetic.db"
+    create_synthetic_sqlite(main)
+    controlled = manager_for(source_root, workspace).create(
+        main,
+        evidence_source_root=source_root,
+        correlation_id=CORRELATION_ID,
+        retain_for_testing=True,
+    )
+    controlled.main_working_path.write_bytes(b"changed synthetic working copy")
+
+    with pytest.raises(ControlledCopyError) as caught:
+        controlled.close()
+
+    assert caught.value.code == "working_copy_changed"
+    assert controlled.audit.verification_status == "FAILED"
+    assert controlled.audit.cleanup_status is CleanupStatus.RETAINED_FOR_TEST
+    shutil.rmtree(workspace)
 
 
 def test_invalid_sqlite_fails_structural_observation_and_still_cleans_up(tmp_path: Path) -> None:
