@@ -8,10 +8,16 @@ from app.evidence_core.source_artifact import SourceArtifact, SourceArtifactServ
 from app.evidence_core.source_locator import SourceLocator, create_source_locator
 from app.evidence_core.parser_identity import ParserIdentity, register_candidate_parser_identity
 from app.evidence_core.schema_fingerprint import SchemaFingerprintObservation, record_schema_fingerprint
+from app.evidence_core.typed_value import (
+    TypedRepresentation, TypedValueObservation, ValueState,
+    ValueTransformation, observe_typed_value, representation,
+)
 
 __all__ = [
     "ProcessingRun", "ProcessingRunService", "SourceArtifact",
     "SourceArtifactService", "SourceLocator", "create_source_locator",
     "ParserIdentity", "register_candidate_parser_identity",
     "SchemaFingerprintObservation", "record_schema_fingerprint",
+    "TypedRepresentation", "TypedValueObservation", "ValueState",
+    "ValueTransformation", "observe_typed_value", "representation",
 ]

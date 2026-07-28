@@ -404,6 +404,15 @@ runtime implementation, validation, or artifact support.
 | DEV-0405-R03 | Implement no universal canonicalization algorithm | DEC-0042 | `IMPLEMENTED_TASK_VALIDATED` | Supplied-observation factory only | AC-05 | DEV-0405 |
 | DEV-0405-R04 | Preserve observation relationally without support effect | WP-0400 | `IMPLEMENTED_TASK_VALIDATED` | ORM metadata | AC-06 through AC-08 | DEV-0405 |
 
+## 16L. DEV-0406 typed-value requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0406-R01 | Preserve independently addressable raw and normalized typed serializations | DEC-0043 | `IMPLEMENTED_TASK_VALIDATED` | `TypedRepresentation`; `TypedValueObservation` | AC-01; AC-02 | DEV-0406 |
+| DEV-0406-R02 | Keep required semantic states distinct and fail explicitly | DEC-0043 | `IMPLEMENTED_TASK_VALIDATED` | `ValueState`; validation | AC-03; AC-04 | DEV-0406 |
+| DEV-0406-R03 | Require complete derivation provenance for normalized values | DEC-0043 | `IMPLEMENTED_TASK_VALIDATED` | `ValueTransformation` | AC-05; AC-06 | DEV-0406 |
+| DEV-0406-R04 | Define envelopes only without transformation/support behavior | DEC-0043 | `IMPLEMENTED_TASK_VALIDATED` | Candidate domain/ORM metadata | AC-07; AC-08 | DEV-0406 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |

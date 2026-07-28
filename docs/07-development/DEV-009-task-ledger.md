@@ -75,7 +75,8 @@
 | DEV-0403 | Stable source-locator model | COMPLETE | DEV-0402 | DEV-0403-stable-source-locator-acceptance | Stable internal identity preserves raw/normalized locator values separately; no filesystem/support semantics |
 | DEV-0404 | Parser identity and version model | COMPLETE | DEV-0401 | DEV-0404-parser-identity-version-acceptance | Candidate-only persistent identity metadata; supported registry remains empty; migration DEV-0410 |
 | DEV-0405 | Schema-fingerprint observation model | COMPLETE | DEV-0402; DEC-0042 | DEV-0405-schema-fingerprint-model-acceptance | Qualified observation only; no universal canonicalization or compatibility/support inference |
-| DEV-0406 | Raw and normalized value model | READY | DEV-0402 | To be created | Dependency satisfied; follows DEV-0405 in plan order |
+| DEV-0406 | Lossless typed-value observation model | COMPLETE | DEV-0402; DEC-0043 | DEV-0406-lossless-typed-value-acceptance | Raw/normalized independently addressable; explicit semantic states and transformation provenance; no algorithms/support |
+| DEV-0407 | Timestamp provenance model | READY | DEV-0406 | To be created | Next plan-order WP-0400 task |
 
 | DEV-0451 | Source Inventory Engine | BLOCKED | WP-0200, WP-0250, DEV-0402, DEV-0403 | To be created | WP-0450 allocation under DEC-0027; blocked by evidence identity/locator foundation |
 | DEV-0452 | Artifact Coverage Engine | BLOCKED | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | To be created | Must distinguish authorization, execution, zero, rejection, failure, partial, and unsupported |

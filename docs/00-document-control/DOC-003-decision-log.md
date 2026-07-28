@@ -827,3 +827,16 @@ equivalence, parse success, or support. No universal cross-artifact algorithm
 is approved. DEC-0008 applies only to its candidate Manifest.db profile; every
 future profile requires independent validation and owner review before
 promotion.
+## DEC-0043 — Approve DEV-0406 lossless typed-value observations
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Task: DEV-0406
+
+Raw evidentiary representations remain immutable, explicitly typed and
+serialized, independently addressable, and separate from normalized derived
+representations. Semantic absence, value, failure, and indeterminate states
+remain distinct. Normalization requires complete transformation provenance and
+never supersedes raw data. This storage-envelope decision approves no
+artifact-specific transformation, parser, support, display, redaction, report,
+AI, compatibility, or production behavior.
