@@ -334,7 +334,7 @@ implementation is authorized ahead of its dependencies.
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
 | DEV-0501 | Apple backup discovery and metadata reconciliation | COMPLETE | WP-0200, WP-0400, DEV-0263, DEV-0264 | Artifact gate |
-| DEV-0502 | Info.plist controlled reader | READY | DEV-0501 | Artifact gate |
+| DEV-0502 | Info.plist controlled reader | COMPLETE | DEV-0501 | Artifact gate |
 | DEV-0503 | Manifest.plist controlled reader | READY | DEV-0501 | Artifact gate |
 | DEV-0504 | Status.plist controlled reader | READY | DEV-0501 | Artifact gate |
 | DEV-0505 | Backup metadata normalization | NOT_STARTED | DEV-0502 through DEV-0504 | Artifact gate |

@@ -110,7 +110,7 @@ readiness transitions are automatic and recorded in DEV-011.
 | DEV-0459 | Commercial Services Integration | DEFERRED | DEV-0457; separate approval | To be created | No external or paid integration authorized |
 
 | DEV-0501 | Apple backup discovery and metadata reconciliation | COMPLETE | WP-0200, WP-0400, DEV-0263, DEV-0264; DEC-0054 | DEV-0501-apple-backup-discovery-acceptance | Versioned root-confined source-specific discovery; Manifest pending validation; conflicts unresolved; no support effect |
-| DEV-0502 | Info.plist controlled reader | READY | DEV-0501 | To be created | DEC-0051 reevaluation: discovery contract complete |
+| DEV-0502 | Info.plist controlled reader | COMPLETE | DEV-0501 | DEV-0502-info-plist-reader-acceptance | Versioned projection adopts DEV-0501 reader; three approved fields; no compatibility/support |
 | DEV-0503 | Manifest.plist controlled reader | READY | DEV-0501 | To be created | DEC-0051 reevaluation: discovery contract complete |
 | DEV-0504 | Status.plist controlled reader | READY | DEV-0501 | To be created | DEC-0051 reevaluation: discovery contract complete |
 | DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | To be created | Blocked by reporting and coverage package gates |
