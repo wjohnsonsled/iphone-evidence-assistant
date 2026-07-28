@@ -16,33 +16,37 @@
 
 | DEV-0101 | Backend scaffold | COMPLETE | DEV-0002, DEV-0003, DEV-0004 | DEV-0101-backend-scaffold-acceptance | Owner approved completion on 2026-07-24 in DEC-0003; default composition is health-only and import-isolated from legacy processing; backend 12/12 and evidence-engine 5/5 tests passed; pytest temp workaround and TestClient warning recorded; no migration or support promotion |
 
-| DEV-0102 | Dependency locking and reproducible environment | VALIDATION_PENDING | DEV-0101 | DEV-0102-dependency-locking-acceptance | Exact direct/transitive Python lock, offline structural verifier, lock-enforced container install, clean-environment install, and regression validation completed; package owner-review gate remains; no runtime or support-status change |
+| DEV-0102 | Dependency locking and reproducible environment | COMPLETE | DEV-0101 | DEV-0102-dependency-locking-acceptance | Owner approved in DEC-0014 with recorded Docker-build, scanning, mutable-image-tag, pytest-directory, and TestClient-warning limitations; no runtime or support-status change |
+| DEV-0103 | Configuration model and environment validation | READY | DEV-0102 | To be created | Unblocked by DEC-0014 approval of DEV-0102 |
+| DEV-0106 | CI architecture and regression gate | READY | DEV-0102 | To be created | Unblocked by DEC-0014 approval of DEV-0102 |
 
 | DEV-0201 | Apple backup input adapter | COMPLETE | DEV-0003, DEV-0004, DEV-0101 | DEV-0201-apple-backup-input-adapter-acceptance | Owner approved completion on 2026-07-24 in DEC-0004; additive read-only adapter implements six explicit outcomes, root/link controls, provenance, limitations, and deterministic audit data; focused 14/14, backend 26/26, and characterization 5/5 tests passed; no input support claim |
 
 | DEV-0202 | Validate required Apple backup structure | COMPLETE | DEV-0201; DEC-0006 through DEC-0010 | DEV-0202-apple-backup-validation-acceptance; FOR-007 candidate profile | Owner approved the synthetic validation framework and controlled classification logic in DEC-0010; candidate profile still requires Apple-produced multi-version validation and separate promotion approval; no support claim |
 
-| DEV-0203 | Backup encryption-state detection | VALIDATION_PENDING | DEV-0201, DEV-0202 | DEV-0203-backup-encryption-state-acceptance | Typed projection reports five distinct states from DEV-0202 only; raw observation/provenance retained; only unencrypted is handoff-eligible; focused 7/7, backend 71/71, legacy 5/5; no decryption, API, persistence, migration, or support claim |
+| DEV-0203 | Backup encryption-state detection | COMPLETE | DEV-0201, DEV-0202 | DEV-0203-backup-encryption-state-acceptance | Owner approved reporting-only projection in DEC-0014; no compatibility-profile, decryption, parser, API, persistence, or support approval |
 
 | DEV-0211 | Profile and validate secondary Apple backup encryption indicators | DEFERRED | Owner-approved signal sources and revised compatibility profile | To be created | Must source, characterize, order, and define conflicts for every candidate signal; requires synthetic and Apple-produced fixtures plus owner approval before implementation or promotion |
 
-| DEV-0251 | Evidence-object domain contract | VALIDATION_PENDING | DEV-0202; DEC-0011 | WP-0250-acceptance-criteria | Typed contract and additive relational model pass synthetic validation |
-| DEV-0252 | Stable evidence identifier strategy | VALIDATION_PENDING | DEV-0251 | WP-0250-acceptance-criteria | UUIDv4 identity is stable and content/path independent |
-| DEV-0253 | Evidence lifecycle state machine | VALIDATION_PENDING | DEV-0251 | WP-0250-acceptance-criteria | Transition and denial matrix is atomic and audited |
-| DEV-0254 | Cryptographic hash registry | VALIDATION_PENDING | DEV-0251, DEV-0252 | WP-0250-acceptance-criteria | Immutable streaming SHA-256 observations validated |
-| DEV-0255 | Evidence integrity verification service | VALIDATION_PENDING | DEV-0254 | WP-0250-acceptance-criteria | Verified/mismatch/unstable/failure states distinct |
-| DEV-0256 | Evidence access and lock policy | VALIDATION_PENDING | DEV-0253, DEV-0255 | WP-0250-acceptance-criteria | Application intent/conflict/owner/stale controls validated |
-| DEV-0257 | Chain-of-custody event model | VALIDATION_PENDING | DEV-0251, DEV-0253 | WP-0250-acceptance-criteria | Immutable ordered prior-linked application handling events |
-| DEV-0258 | Evidence audit-event taxonomy | VALIDATION_PENDING | DEV-0257 | WP-0250-acceptance-criteria | Closed append-only taxonomy validated |
-| DEV-0259 | Provenance graph foundation | VALIDATION_PENDING | DEV-0251, DEV-0258 | WP-0250-acceptance-criteria | Relational nodes/edges implemented |
-| DEV-0260 | Provenance relationship validation | VALIDATION_PENDING | DEV-0259 | WP-0250-acceptance-criteria | Path/dangling/cross-tenant/cycle/parser-link checks validated |
-| DEV-0261 | Evidence mutation detector | VALIDATION_PENDING | DEV-0254, DEV-0255 | WP-0250-acceptance-criteria | Checkpoint mismatch and instability block safely |
-| DEV-0262 | Integrity policy enforcement service | VALIDATION_PENDING | DEV-0256, DEV-0260, DEV-0261 | WP-0250-acceptance-criteria | Writable, legacy, unverified, broken-provenance and unknown-profile contexts blocked |
-| DEV-0263 | Common supported-parser contract | VALIDATION_PENDING | DEV-0259, DEV-0262 | WP-0250-acceptance-criteria | Typed candidate-only parser contract implemented |
-| DEV-0264 | Parser-contract conformance harness | VALIDATION_PENDING | DEV-0263 | WP-0250-acceptance-criteria | Identity/profile/provenance/coverage/omission/self-test enforcement validated |
-| DEV-0265 | End-to-end integrity validation package | VALIDATION_PENDING | DEV-0251 through DEV-0264 | WP-0250-acceptance-criteria | Synthetic E2E, full regression, migration and documentation validation complete; owner gate |
+| DEV-0251 | Evidence-object domain contract | COMPLETE | DEV-0202; DEC-0011 | WP-0250-acceptance-criteria | Owner approved candidate infrastructure in DEC-0014; typed contract and additive relational model validated synthetically |
+| DEV-0252 | Stable evidence identifier strategy | COMPLETE | DEV-0251 | WP-0250-acceptance-criteria | Owner approved in DEC-0014; UUIDv4 identity remains content/path independent |
+| DEV-0253 | Evidence lifecycle state machine | COMPLETE | DEV-0251 | WP-0250-acceptance-criteria | Owner approved in DEC-0014; transition and denial matrix accepted with application-level limitations |
+| DEV-0254 | Cryptographic hash registry | COMPLETE | DEV-0251, DEV-0252 | WP-0250-acceptance-criteria | Owner approved in DEC-0014; immutable streaming SHA-256 observations validated |
+| DEV-0255 | Evidence integrity verification service | COMPLETE | DEV-0254 | WP-0250-acceptance-criteria | Owner approved in DEC-0014; verified/mismatch/unstable/failure states remain distinct |
+| DEV-0256 | Evidence access and lock policy | COMPLETE | DEV-0253, DEV-0255 | WP-0250-acceptance-criteria | Owner approved in DEC-0014; application coordination only, not write blocking |
+| DEV-0257 | Chain-of-custody event model | COMPLETE | DEV-0251, DEV-0253 | WP-0250-acceptance-criteria | Owner approved in DEC-0014; handling history makes no legal-sufficiency claim |
+| DEV-0258 | Evidence audit-event taxonomy | COMPLETE | DEV-0257 | WP-0250-acceptance-criteria | Owner approved in DEC-0014; closed append-only application taxonomy |
+| DEV-0259 | Provenance graph foundation | COMPLETE | DEV-0251, DEV-0258 | WP-0250-acceptance-criteria | Owner approved relational candidate model in DEC-0014 |
+| DEV-0260 | Provenance relationship validation | COMPLETE | DEV-0259 | WP-0250-acceptance-criteria | Owner approved in DEC-0014 with service-boundary bypass risk retained |
+| DEV-0261 | Evidence mutation detector | COMPLETE | DEV-0254, DEV-0255 | WP-0250-acceptance-criteria | Owner approved candidate mutation controls in DEC-0014 |
+| DEV-0262 | Integrity policy enforcement service | COMPLETE | DEV-0256, DEV-0260, DEV-0261 | WP-0250-acceptance-criteria | Owner approved candidate policy controls in DEC-0014 |
+| DEV-0263 | Common supported-parser contract | COMPLETE | DEV-0259, DEV-0262 | WP-0250-acceptance-criteria | Owner approved candidate-only contract in DEC-0014; conformance grants no support |
+| DEV-0264 | Parser-contract conformance harness | COMPLETE | DEV-0263 | WP-0250-acceptance-criteria | Owner approved synthetic conformance harness in DEC-0014 |
+| DEV-0265 | End-to-end integrity validation package | COMPLETE | DEV-0251 through DEV-0264 | WP-0250-acceptance-criteria | Owner approved WP-0250 candidate infrastructure with all documented limitations in DEC-0014 |
 
-| DEV-0304 | Artifact support-status model and parser quarantine enforcement | VALIDATION_PENDING | DEV-0003, DEV-0004 | DEV-0304-support-status-quarantine-acceptance; FOR-004; FOR-006 | Closed lifecycle/result models, empty versioned supported registry, fail-closed authorization, and output quarantine gate pass 19 focused and 104 backend tests; no parser/artifact registration, execution, or support promotion |
+| DEV-0304 | Artifact support-status model and parser quarantine enforcement | COMPLETE | DEV-0003, DEV-0004 | DEV-0304-support-status-quarantine-acceptance; FOR-004; FOR-006 | Owner approved in DEC-0014; supported registry remains empty and no capability is promoted |
+| DEV-0307 | Cross-tenant isolation tests | BLOCKED | DEV-0310, DEV-0305 | To be created | Dependency corrected by DEC-0014; implementation is not authorized until dependencies complete |
+| DEV-0310 | Authorization Service and Policy Enforcement | BLOCKED | DEV-0301, DEV-0302, DEV-0303 | To be created | Reserved by DEC-0014; no implementation authorization until dependencies and task-specific acceptance record are complete |
 
 
 

@@ -1,6 +1,6 @@
 # DEV-0304 — Artifact Support-Status Model and Parser Quarantine Enforcement
 
-- Status: VALIDATION_PENDING
+- Status: COMPLETE — owner approved in DEC-0014
 - Dependencies: DEV-0003 and DEV-0004 complete
 - Governing scope: DEV-009, FOR-004, FOR-006, ARC-001, ARC-002
 - Support effect: none; the supported registry remains empty

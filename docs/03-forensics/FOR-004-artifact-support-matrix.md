@@ -100,3 +100,17 @@ Before promotion, document:
 - owner or delegated forensic-review approval.
 
 Validation of one schema profile does not authorize another.
+
+## 6. Permanent promotion traceability
+
+Every capability promoted to Supported must permanently reference:
+
+- Owner Decision ID;
+- Validation Package ID;
+- Acceptance Record IDs;
+- Promotion Date; and
+- Current Support Status.
+
+Support promotion must be fully traceable through repository documentation.
+Missing promotion traceability is a fail-closed condition: the capability
+remains candidate, unsupported, or quarantined.

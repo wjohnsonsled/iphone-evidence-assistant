@@ -87,11 +87,11 @@ A task may be marked `COMPLETE` only after the required owner approval is record
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
 | DEV-0101 | Backend scaffold and legacy isolation | COMPLETE | DEV-0004 | Complete |
-| DEV-0102 | Dependency locking and reproducible environment | VALIDATION_PENDING | DEV-0101 | Package gate |
-| DEV-0103 | Configuration model and environment validation | NOT_STARTED | DEV-0102 | Package gate |
+| DEV-0102 | Dependency locking and reproducible environment | COMPLETE | DEV-0101 | Complete; DEC-0014 |
+| DEV-0103 | Configuration model and environment validation | READY | DEV-0102 | Package gate |
 | DEV-0104 | Structured error model | NOT_STARTED | DEV-0103 | Package gate |
 | DEV-0105 | Structured application logging baseline | NOT_STARTED | DEV-0103 | Package gate |
-| DEV-0106 | CI architecture and regression gate | NOT_STARTED | DEV-0102 | Package gate |
+| DEV-0106 | CI architecture and regression gate | READY | DEV-0102 | Package gate |
 
 ### WP-0100 completion criteria
 
@@ -114,7 +114,7 @@ A task may be marked `COMPLETE` only after the required owner approval is record
 |---|---|---:|---|---|
 | DEV-0201 | Apple backup input adapter | COMPLETE | DEV-0101 | Complete |
 | DEV-0202 | Apple backup structure validator | COMPLETE | DEV-0201 | Complete; synthetic framework only |
-| DEV-0203 | Backup encryption-state detection | VALIDATION_PENDING | DEV-0202 | Task validation gate |
+| DEV-0203 | Backup encryption-state detection | COMPLETE | DEV-0202 | Complete; DEC-0014 |
 | DEV-0204 | SHA-256 hashing service | NOT_STARTED | DEV-0203 | Package gate |
 | DEV-0205 | Controlled SQLite working-copy service | NOT_STARTED | DEV-0204 | Package gate |
 | DEV-0206 | Intake audit-event model | NOT_STARTED | DEV-0203 | Package gate |
@@ -168,21 +168,21 @@ backlog wording differs.
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0251 | Evidence-object domain contract | VALIDATION_PENDING | DEV-0202 | Package gate |
-| DEV-0252 | Stable evidence identifier strategy | VALIDATION_PENDING | DEV-0251 | Package gate |
-| DEV-0253 | Evidence lifecycle state machine | VALIDATION_PENDING | DEV-0251 | Package gate |
-| DEV-0254 | Cryptographic hash registry | VALIDATION_PENDING | DEV-0251, DEV-0252 | Package gate |
-| DEV-0255 | Evidence integrity verification service | VALIDATION_PENDING | DEV-0254 | Package gate |
-| DEV-0256 | Evidence access and lock policy | VALIDATION_PENDING | DEV-0253, DEV-0255 | Package gate |
-| DEV-0257 | Chain-of-custody event model | VALIDATION_PENDING | DEV-0251, DEV-0253 | Package gate |
-| DEV-0258 | Evidence audit-event taxonomy | VALIDATION_PENDING | DEV-0257 | Package gate |
-| DEV-0259 | Provenance graph foundation | VALIDATION_PENDING | DEV-0251, DEV-0258 | Package gate |
-| DEV-0260 | Provenance relationship validation | VALIDATION_PENDING | DEV-0259 | Package gate |
-| DEV-0261 | Evidence mutation detector | VALIDATION_PENDING | DEV-0254, DEV-0255 | Package gate |
-| DEV-0262 | Integrity policy enforcement service | VALIDATION_PENDING | DEV-0256, DEV-0260, DEV-0261 | Package gate |
-| DEV-0263 | Common supported-parser contract | VALIDATION_PENDING | DEV-0259, DEV-0262 | Package gate |
-| DEV-0264 | Parser-contract conformance harness | VALIDATION_PENDING | DEV-0263 | Package gate |
-| DEV-0265 | End-to-end integrity validation package | VALIDATION_PENDING | DEV-0251 through DEV-0264 | Package gate |
+| DEV-0251 | Evidence-object domain contract | COMPLETE | DEV-0202 | Complete; DEC-0014 |
+| DEV-0252 | Stable evidence identifier strategy | COMPLETE | DEV-0251 | Complete; DEC-0014 |
+| DEV-0253 | Evidence lifecycle state machine | COMPLETE | DEV-0251 | Complete; DEC-0014 |
+| DEV-0254 | Cryptographic hash registry | COMPLETE | DEV-0251, DEV-0252 | Complete; DEC-0014 |
+| DEV-0255 | Evidence integrity verification service | COMPLETE | DEV-0254 | Complete; DEC-0014 |
+| DEV-0256 | Evidence access and lock policy | COMPLETE | DEV-0253, DEV-0255 | Complete; DEC-0014 |
+| DEV-0257 | Chain-of-custody event model | COMPLETE | DEV-0251, DEV-0253 | Complete; DEC-0014 |
+| DEV-0258 | Evidence audit-event taxonomy | COMPLETE | DEV-0257 | Complete; DEC-0014 |
+| DEV-0259 | Provenance graph foundation | COMPLETE | DEV-0251, DEV-0258 | Complete; DEC-0014 |
+| DEV-0260 | Provenance relationship validation | COMPLETE | DEV-0259 | Complete; DEC-0014 |
+| DEV-0261 | Evidence mutation detector | COMPLETE | DEV-0254, DEV-0255 | Complete; DEC-0014 |
+| DEV-0262 | Integrity policy enforcement service | COMPLETE | DEV-0256, DEV-0260, DEV-0261 | Complete; DEC-0014 |
+| DEV-0263 | Common supported-parser contract | COMPLETE | DEV-0259, DEV-0262 | Complete; DEC-0014 |
+| DEV-0264 | Parser-contract conformance harness | COMPLETE | DEV-0263 | Complete; DEC-0014 |
+| DEV-0265 | End-to-end integrity validation package | COMPLETE | DEV-0251 through DEV-0264 | Complete; DEC-0014 |
 
 DEV-0203 remains the intake encryption-report projection. WP-0250 is the sole
 authority for evidence registration, stable evidence UUIDs, hash observations,
@@ -190,8 +190,8 @@ lifecycle, locks, custody, audit, provenance, mutation policy, and parser
 conformance. Later WP-0200 tasks must adapt to these contracts and must not
 create competing implementations.
 
-**Owner-review gate:** Approve the evidence-integrity architecture, relational
-data model, lifecycle, audit taxonomy, provenance model, and parser contract.
+**Owner-review gate:** Satisfied by DEC-0014 for candidate architectural use
+only; all limitations and support prohibitions remain controlling.
 
 ---
 
@@ -204,12 +204,13 @@ data model, lifecycle, audit taxonomy, provenance model, and parser contract.
 | DEV-0301 | Tenant model | NOT_STARTED | DEV-0103 | Package gate |
 | DEV-0302 | User and role model | NOT_STARTED | DEV-0301 | Package gate |
 | DEV-0303 | Case model | NOT_STARTED | DEV-0301 | Package gate |
-| DEV-0304 | Artifact support-status model and parser quarantine enforcement | VALIDATION_PENDING | DEV-0003, DEV-0004 | Forensic package gate |
+| DEV-0304 | Artifact support-status model and parser quarantine enforcement | COMPLETE | DEV-0003, DEV-0004 | Complete; DEC-0014 |
 | DEV-0305 | Evidence-source tenant and case linkage | NOT_STARTED | DEV-0203, DEV-0303 | Package gate |
 | DEV-0306 | Audit-actor attribution | NOT_STARTED | DEV-0302, DEV-0206 | Package gate |
-| DEV-0307 | Cross-tenant isolation tests | NOT_STARTED | DEV-0304, DEV-0305 | Package gate |
+| DEV-0307 | Cross-tenant isolation tests | NOT_STARTED | DEV-0310, DEV-0305 | Package gate |
 | DEV-0308 | Additive Alembic migration baseline | NOT_STARTED | DEV-0301 through DEV-0306 | Package gate |
 | DEV-0309 | Security package integration tests | NOT_STARTED | DEV-0301 through DEV-0308 | Package gate |
+| DEV-0310 | Authorization Service and Policy Enforcement | BLOCKED | DEV-0301, DEV-0302, DEV-0303 | Package gate |
 
 ### WP-0300 completion criteria
 
@@ -224,8 +225,8 @@ data model, lifecycle, audit taxonomy, provenance model, and parser contract.
 
 Reconciliation: DEV-009's owner-approved DEV-0304 definition controls over the
 stale generic authorization-service wording previously in this table. No task
-was renumbered or overwritten. The authorization service remains an unassigned
-WP-0300 gap pending backlog reconciliation by the owner.
+was renumbered or overwritten. DEC-0014 reserves DEV-0310 for the displaced
+authorization service and corrects DEV-0307's dependency.
 
 ---
 

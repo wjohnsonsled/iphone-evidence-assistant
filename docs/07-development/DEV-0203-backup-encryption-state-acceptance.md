@@ -1,6 +1,6 @@
 # DEV-0203 — Backup Encryption-State Detection Acceptance
 
-- Status: VALIDATION_PENDING
+- Status: COMPLETE — owner approved in DEC-0014
 - Scope: project DEV-0202's sole approved `IsEncrypted` observation into a
   typed, deterministic reporting decision.
 - Support effect: none

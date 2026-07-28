@@ -379,3 +379,29 @@ This implementation neither authenticates approval metadata nor activates a
 parser. A future nonempty registry requires an authorized, audited registry
 snapshot and the separate per-artifact owner promotion gate. No parser,
 artifact, input, workflow, API, or support status changed.
+
+## DEC-0014 — Owner package approvals and authorization-task reconciliation
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Owner: Project owner
+- Tasks: DEV-0102, DEV-0203, DEV-0251 through DEV-0265, DEV-0304, DEV-0310
+
+The owner approved DEV-0102 with its documented limitations; DEV-0304 under
+the controlling DEV-009 definition with an empty supported registry; WP-0250
+and DEV-0251 through DEV-0265 as complete candidate infrastructure for
+architectural use only; and DEV-0203 as a reporting-only projection.
+
+DEV-0310, `Authorization Service and Policy Enforcement`, is reserved. DEV-0307
+now depends on DEV-0310 and DEV-0305. DEV-0310 remains blocked until its
+dependencies and task-specific acceptance record are complete.
+
+These approvals do not authorize production deployment, parser activation,
+Apple compatibility-profile approval, decryption, API or persistence exposure,
+real evidence processing, artifact support, or support promotion. The DEV-0304
+supported registry remains empty.
+
+Every capability promoted to Supported must permanently reference its Owner
+Decision ID, Validation Package ID, Acceptance Record IDs, Promotion Date, and
+Current Support Status. Missing traceability fails closed; promotion must be
+fully traceable through repository documentation.

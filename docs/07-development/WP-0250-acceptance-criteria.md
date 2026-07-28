@@ -1,6 +1,6 @@
 # WP-0250 — Evidence Integrity Infrastructure Acceptance
 
-- Status: VALIDATION_PENDING — OWNER PACKAGE REVIEW
+- Status: COMPLETE — owner approved candidate infrastructure in DEC-0014
 - Tasks: DEV-0251 through DEV-0265
 - Architecture: ARC-001 and authorized additive ARC-002 contract
 - Implementation: relational MVP; application-level coordination controls

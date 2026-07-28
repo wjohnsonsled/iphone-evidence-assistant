@@ -160,6 +160,16 @@ Partial support must be classified as unsupported or experimental.
 
 Do not label partially implemented functionality as supported.
 
+Every capability promoted to Supported must permanently reference:
+
+- Owner Decision ID;
+- Validation Package ID;
+- Acceptance Record IDs;
+- Promotion Date; and
+- Current Support Status.
+
+Support promotion must be fully traceable through repository documentation.
+
 
 
 \## Artifact support statuses
@@ -462,4 +472,3 @@ Repository-specific approved decisions override generic backlog wording.
 No agent may infer support status from implementation presence.
 
 No unsupported or legacy output may enter supported stores, retrieval, AI, citations, reports, coverage calculations, or production claims.
-

@@ -1,5 +1,8 @@
 # QMS-005 — WP-0250 Integrity Validation Report
 
+Owner disposition: approved as complete candidate infrastructure in DEC-0014.
+The limitations below remain controlling.
+
 ## Scope
 
 Deterministic synthetic validation of DEV-0251 through DEV-0265. No real

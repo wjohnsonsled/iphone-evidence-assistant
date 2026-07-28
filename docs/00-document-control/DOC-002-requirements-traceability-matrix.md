@@ -90,10 +90,10 @@ statuses. They must not be displayed as support claims.
 | Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owning task or gap |
 |---|---|---|---|---|---|---|
 | SEC-AUT-001 | Authenticate users and services before case access | AGENTS.md Security rules; PRD-007 §10 | `APPROVED_UNIMPLEMENTED` | No authentication principal or middleware identified | No authentication tests | Phase 8 task unassigned |
-| SEC-AUT-002 | Enforce authorization and case/tenant isolation server-side | AGENTS.md Security rules; PRD-007 §10 | `APPROVED_UNIMPLEMENTED` | Case IDs filter queries but any caller may provide any case ID | No cross-case/cross-tenant tests | DEV-0103; Phase 8 task unassigned |
+| SEC-AUT-002 | Enforce authorization and case/tenant isolation server-side | AGENTS.md Security rules; PRD-007 §10 | `APPROVED_UNIMPLEMENTED` | Case IDs filter queries but any caller may provide any case ID | No cross-case/cross-tenant tests | DEV-0310; DEV-0307 |
 | SEC-INP-001 | Validate untrusted uploaded files and paths; prevent traversal and unsafe execution | AGENTS.md Security rules | `PARTIAL_UNVALIDATED` | DEV-0201 adds lexical/resolved root confinement and link/reparse rejection; upload and structural validation do not exist | DEV-0201 root escape, invalid-root, link-boundary, and input-type tests | DEV-0202; security task unassigned |
 | SEC-SEC-001 | Never commit or log credentials, passwords, tokens, production secrets, or decrypted secret values | AGENTS.md Security rules; PRD-007 §5 | `DOCUMENTED_CONTROL` | No initial password flow exists; development configuration requires later review | No secret scan or log-redaction suite | DEV-0104; security task unassigned |
-| SEC-AUD-001 | Record security- and evidence-relevant actions without sensitive secret content | FOR-006 §8; AGENTS.md Security rules | `APPROVED_UNIMPLEMENTED` | Ordinary application logging exists; no audit-event model | No audit tests | DEV-0104; Phase 8 task unassigned |
+| SEC-AUD-001 | Record security- and evidence-relevant actions without sensitive secret content | FOR-006 §8; AGENTS.md Security rules | `PARTIAL_UNVALIDATED` | WP-0250 candidate audit taxonomy exists; authorization audit integration is unimplemented | Synthetic WP-0250 audit tests only | DEV-0104; DEV-0310 |
 
 ## 9. AI, reporting, and review requirements
 
@@ -114,6 +114,7 @@ statuses. They must not be displayed as support claims.
 | QMS-TST-002 | Verify deterministic output, malformed input, provenance, timestamps, parser fixtures, authorization, and regressions where applicable | AGENTS.md Testing requirements | `PARTIAL_UNVALIDATED` | Narrow deterministic and path tests exist | Required complete suite absent | DEV-0106 and owning feature tasks |
 | QMS-ACC-001 | Define explicit acceptance criteria and satisfy implementation, validation, tests, documentation, provenance, and failure handling before support | AGENTS.md All-or-nothing support rule; FOR-004 §1 | `DOCUMENTED_CONTROL` | Downstream task-specific acceptance documents are absent | No artifact acceptance review has occurred | Every downstream task |
 | QMS-TRC-001 | Update traceability, documentation, task ledger, and completion evidence for every task | AGENTS.md Development method | `DOCUMENTED_CONTROL` | DOC-002 and DEV-009 establish the control surfaces | Document validation for DEV-0003 | Every task |
+| QMS-SUP-001 | Every Supported capability permanently records Owner Decision ID, Validation Package ID, Acceptance Record IDs, Promotion Date, and Current Support Status | DEC-0014; AGENTS.md; FOR-004 §6 | `DOCUMENTED_CONTROL` | Permanent governance rule; no capability is currently promoted | Future promotion package must fail closed if any field is absent | Every support-promotion gate |
 
 ## 11. DEV-0101 backend-scaffold requirements
 

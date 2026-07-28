@@ -1,9 +1,9 @@
 # WP-0250 — Evidence Integrity Infrastructure
 
-**Status:** `READY` after DEV-0202 is approved `COMPLETE`  
+**Status:** `COMPLETE` as candidate infrastructure under DEC-0014
 **Execution branch:** `mvp-development`  
 **Execution model:** Autonomous within this work package  
-**Owner-review gate:** Required after DEV-0265  
+**Owner-review gate:** Satisfied by DEC-0014 with all documented limitations retained
 **Support effect:** None. This package does not promote any input, parser, artifact, workflow, report, or API to supported status.
 
 ---
