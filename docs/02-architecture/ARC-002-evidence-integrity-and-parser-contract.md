@@ -359,3 +359,12 @@ production processing. The Supported Parser Registry and supported normalized
 store remain empty. Live PostgreSQL transaction behavior, production
 repositories, APIs, deployment, real evidence, and every parser/artifact
 support promotion remain subject to separate validation and approval.
+
+## Candidate Manifest.db schema-recognition boundary
+
+DEC-0059 authorizes DEV-0601 to recognize only the immutable
+`apple-manifestdb-schema` version 1 profile from a verified controlled copy.
+Schema recognition and its SHA-256 fingerprint are observations, not parser
+authorization, evidence interpretation, Apple compatibility, or support.
+Files-table row access remains a separate DEV-0602 task and no supported parser
+or normalized record exists.

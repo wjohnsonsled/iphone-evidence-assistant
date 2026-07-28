@@ -17,7 +17,7 @@ FOR-006 quarantines every legacy parser until those requirements are met.
 | BAK-001 | Backup metadata | `Info.plist` | Apple local backup | Yes | CANDIDATE | Legacy/implemented-not-validated |
 | BAK-002 | Backup status | `Status.plist` | Apple local backup | Yes | CANDIDATE | Legacy/implemented-not-validated |
 | BAK-003 | Backup manifest metadata | `Manifest.plist` | Apple local backup | Yes | CANDIDATE | Legacy/implemented-not-validated |
-| BAK-004 | Backup file manifest | `Manifest.db` | Apple local backup | Yes | CANDIDATE | Legacy/implemented-not-validated |
+| BAK-004 | Backup file manifest | `Manifest.db` | Apple local backup | Yes | CANDIDATE | Candidate schema recognition only; no parser/support |
 | BAK-005 | Backup file inventory | Derived from `Manifest.db` and stored files | Apple local backup | Yes | CANDIDATE | Legacy/implemented-not-validated |
 | MSG-001 | SMS/iMessage messages | `HomeDomain/Library/SMS/sms.db` | Apple local backup | Yes | CANDIDATE | Legacy/implemented-not-validated |
 | MSG-002 | Chats | `sms.db` | Apple local backup | Yes | CANDIDATE | Legacy/implemented-not-validated |

@@ -1089,3 +1089,32 @@ supported normalized store remain empty. No Apple compatibility, schema,
 parser, artifact, workflow, input, API, AI/reporting capability, production
 use, deployment, decryption, or support promotion is authorized. DEV-0601
 remains a mandatory owner-review gate.
+
+## DEC-0059 — Approve DEV-0601 Manifest.db schema compatibility framework
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Task: DEV-0601
+- Schema profile: `apple-manifestdb-schema` version 1
+- Fingerprint profile: `manifestdb-schema-canonical-json-sha256` version 1
+- Support effect: none
+
+The owner approves candidate schema recognition only. DEC-0008 controls the
+case-insensitive required `Files` table and `fileID`, `domain`,
+`relativePath`, `flags`, and `file` columns. Version 1 uses the
+repository-characterized TEXT/TEXT/TEXT/INTEGER/BLOB affinities, with no
+required primary-key, uniqueness, foreign-key, index, trigger, view,
+AUTOINCREMENT, or WITHOUT ROWID behavior. That affinity basis is synthetic and
+not authoritative Apple schema documentation.
+
+Validation is limited to a verified DEV-0205 controlled copy, read-only
+SQLite/header/integrity/schema observations, exact profile evaluation, and a
+DEC-0008/DEV-0405 algorithm-qualified SHA-256 schema fingerprint. Unknown
+tables and columns are preserved and do not fail an otherwise exact profile;
+unknown schemas and missing or invalid required components fail closed.
+
+No Files/Properties rows, blobs, fileIDs, domains, relative paths, metadata,
+artifacts, or user content may be read or interpreted. No parser execution,
+registry entry, supported record, Apple/input/parser/artifact/workflow
+support, API, production, deployment, real evidence, or support promotion is
+authorized.

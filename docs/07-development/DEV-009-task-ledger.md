@@ -118,6 +118,7 @@ readiness transitions are automatic and recorded in DEV-011.
 | DEV-0507 | Metadata coverage and limitation reporting | COMPLETE | DEV-0505 | DEV-0507-metadata-coverage-limitations-acceptance | Exact six-item candidate measurable set; factual distinct states and exact denominator; no completeness, absence, compatibility, or support conclusion |
 | DEV-0508 | Metadata fixture corpus | COMPLETE | DEV-0502 through DEV-0506 | DEV-0508-metadata-fixture-corpus-acceptance | Six deterministic synthetic cases cover success, encryption observation, normalization, missing, unsupported, and malformed behavior; not Apple-produced |
 | DEV-0509 | Metadata validation report | COMPLETE | DEV-0501 through DEV-0508 | DEV-0509-metadata-validation-report-acceptance; QMS-011 | Owner approved COMPLETE candidate validation in DEC-0058; all limitations remain; registry/store counts remain zero |
+| DEV-0601 | Manifest.db schema-profile validator | COMPLETE | WP-0200, WP-0400, DEV-0263, DEV-0264; DEC-0059 | DEV-0601-manifest-schema-profile-acceptance; FOR-011 | Controlled-copy read-only schema-only profile/fingerprint framework; synthetic characterization only; no rows, parser, compatibility support, or support effect |
 | DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | To be created | Blocked by reporting and coverage package gates |
 
 

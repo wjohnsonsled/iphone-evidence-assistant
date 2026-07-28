@@ -159,3 +159,14 @@
   work requires the separate DEV-0601 owner decision.
 - Supported Parser Registry entries and supported normalized records remain
   zero; no support status changed.
+
+## DEC-0059 / DEV-0601 completion reevaluation
+
+- `APPLE-SCHEMA-GATE` is resolved for the candidate
+  `apple-manifestdb-schema` version 1 profile only; DEV-0601 is COMPLETE.
+- DEV-0602 automatically advanced through `DEPENDENCIES_SATISFIED` to `READY`.
+- DEV-0603 through DEV-0607 and DEV-0609 remain dependency-blocked by DEV-0602.
+- DEV-0610 and DEV-0611 remain blocked by their complete predecessor sets.
+- DEV-0602 is selected as the highest-priority Apple local-backup MVP task.
+- No schema recognition, fingerprint, or implementation presence changes
+  support status; registry/store counts remain zero.

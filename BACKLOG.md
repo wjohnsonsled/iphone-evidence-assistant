@@ -359,8 +359,8 @@ separate owner decision.
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0601 | Manifest.db schema-profile validator | OWNER_REVIEW | WP-0200, WP-0400, DEV-0263, DEV-0264 | Artifact gate |
-| DEV-0602 | Files-table controlled query layer | NOT_STARTED | DEV-0601 | Artifact gate |
+| DEV-0601 | Manifest.db schema-profile validator | COMPLETE | WP-0200, WP-0400, DEV-0263, DEV-0264 | Artifact gate |
+| DEV-0602 | Files-table controlled query layer | READY | DEV-0601 | Artifact gate |
 | DEV-0603 | FileID normalization | NOT_STARTED | DEV-0602 | Artifact gate |
 | DEV-0604 | Domain normalization | NOT_STARTED | DEV-0602 | Artifact gate |
 | DEV-0605 | Relative-path normalization | NOT_STARTED | DEV-0602 | Artifact gate |
