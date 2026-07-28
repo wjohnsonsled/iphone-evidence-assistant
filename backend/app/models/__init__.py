@@ -7,6 +7,7 @@ from app.models.evidence_event import EvidenceEvent
 from app.models.processing_job import ProcessingJob
 from app.models.tenant import TenantModel
 from app.models.identity import PrincipalModel, TenantMembershipModel
+from app.models.security_case import SecurityCaseModel
 from app.models.integrity import (
     IntegrityAuditEvent,
     IntegrityCustodyEvent,
@@ -23,4 +24,5 @@ __all__ = [
     "IntegrityProvenanceNode",
     "TenantModel",
     "PrincipalModel", "TenantMembershipModel",
+    "SecurityCaseModel",
 ]

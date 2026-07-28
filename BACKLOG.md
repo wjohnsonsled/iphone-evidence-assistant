@@ -210,14 +210,14 @@ only; all limitations and support prohibitions remain controlling.
 |---|---|---:|---|---|
 | DEV-0301 | Tenant model | COMPLETE | DEV-0103 | WP-0300 package review |
 | DEV-0302 | User and role model | COMPLETE | DEV-0301 | WP-0300 package review |
-| DEV-0303 | Case model | READY | DEV-0301 | Package gate |
+| DEV-0303 | Case model | COMPLETE | DEV-0301 | WP-0300 package review |
 | DEV-0304 | Artifact support-status model and parser quarantine enforcement | COMPLETE | DEV-0003, DEV-0004 | Complete; DEC-0014 |
-| DEV-0305 | Evidence-source tenant and case linkage | BLOCKED | DEV-0203, DEV-0303 | Package gate |
+| DEV-0305 | Evidence-source tenant and case linkage | READY | DEV-0203, DEV-0303 | Package gate |
 | DEV-0306 | Audit-actor attribution | READY | DEV-0302, DEV-0206 | Package gate |
 | DEV-0307 | Cross-tenant isolation tests | BLOCKED | DEV-0310, DEV-0305 | Package gate |
 | DEV-0308 | Additive Alembic migration baseline | BLOCKED | DEV-0301 through DEV-0306 | Package gate |
 | DEV-0309 | Security package integration tests | BLOCKED | DEV-0301 through DEV-0308 | Package gate |
-| DEV-0310 | Authorization Service and Policy Enforcement | BLOCKED | DEV-0301, DEV-0302, DEV-0303 | Package gate |
+| DEV-0310 | Authorization Service and Policy Enforcement | READY | DEV-0301, DEV-0302, DEV-0303 | Package gate |
 
 ### WP-0300 completion criteria
 

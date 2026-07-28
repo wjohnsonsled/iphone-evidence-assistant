@@ -654,3 +654,17 @@ migration ownership and DEV-0310 retains authorization-policy ownership.
 
 No provider selection, credential storage, authentication, permission
 vocabulary, API, evidence access, deployment, or support status is introduced.
+
+## DEC-0030 — DEV-0303 tenant-scoped supported case identity
+
+- Date: 2026-07-29
+- Status: IMPLEMENTED_PENDING_WP_0300_REVIEW
+- Task: DEV-0303
+
+DEV-0303 defines an immutable UUIDv4 case identity bound to exactly one tenant,
+with separate name and creation provenance. The additive `security_cases` ORM
+contract remains separate from the quarantined legacy `cases` table. DEV-0308
+retains migration ownership.
+
+No lifecycle, membership, repository, authorization, route, evidence workflow,
+deployment, or support status is introduced.

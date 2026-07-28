@@ -63,11 +63,11 @@
 | DEV-0304 | Artifact support-status model and parser quarantine enforcement | COMPLETE | DEV-0003, DEV-0004 | DEV-0304-support-status-quarantine-acceptance; FOR-004; FOR-006 | Owner approved in DEC-0014; supported registry remains empty and no capability is promoted |
 | DEV-0301 | Tenant model | COMPLETE | DEV-0103 | DEV-0301-tenant-model-acceptance | Neutral immutable UUIDv4 tenant identity and additive ORM contract validated; no migration, API, authorization, or production tenancy decision |
 | DEV-0302 | User and role model | COMPLETE | DEV-0301 | DEV-0302-user-role-model-acceptance | Neutral USER/SERVICE principals and tenant-scoped opaque role memberships validated; no permissions, credentials, authorization, API, or migration |
-| DEV-0303 | Case model | READY | DEV-0301 | To be created | Tenant dependency satisfied; remains after DEV-0302 in plan order |
-| DEV-0305 | Evidence-source tenant and case linkage | BLOCKED | DEV-0203, DEV-0303 | To be created | Blocked by case model |
+| DEV-0303 | Case model | COMPLETE | DEV-0301 | DEV-0303-case-model-acceptance | Tenant-scoped immutable case identity and separate additive ORM contract validated; legacy cases unchanged; no migration/API/authorization |
+| DEV-0305 | Evidence-source tenant and case linkage | READY | DEV-0203, DEV-0303 | To be created | Dependencies satisfied; next task in plan order |
 | DEV-0306 | Audit-actor attribution | READY | DEV-0302, DEV-0206 | To be created | Dependencies satisfied; plan order remains after DEV-0303 and DEV-0305 |
 | DEV-0307 | Cross-tenant isolation tests | BLOCKED | DEV-0310, DEV-0305 | To be created | Dependency corrected by DEC-0014; implementation is not authorized until dependencies complete |
-| DEV-0310 | Authorization Service and Policy Enforcement | BLOCKED | DEV-0301, DEV-0302, DEV-0303 | To be created | Reserved by DEC-0014; no implementation authorization until dependencies and task-specific acceptance record are complete |
+| DEV-0310 | Authorization Service and Policy Enforcement | READY | DEV-0301, DEV-0302, DEV-0303 | To be created | Reserved by DEC-0014; dependencies satisfied but plan order follows DEV-0305 and DEV-0306 |
 
 | DEV-0451 | Source Inventory Engine | BLOCKED | WP-0200, WP-0250, DEV-0402, DEV-0403 | To be created | WP-0450 allocation under DEC-0027; blocked by evidence identity/locator foundation |
 | DEV-0452 | Artifact Coverage Engine | BLOCKED | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | To be created | Must distinguish authorization, execution, zero, rejection, failure, partial, and unsupported |
