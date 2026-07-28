@@ -395,6 +395,15 @@ runtime implementation, validation, or artifact support.
 | DEV-0404-R03 | Candidate metadata cannot establish Supported status | DEV-0304; DEC-0037 | `IMPLEMENTED_TASK_VALIDATED` | Candidate factory and SUPPORTED rejection | AC-04; AC-05 | DEV-0404 |
 | DEV-0404-R04 | Separate ORM identity metadata without execution/support effect | WP-0400 | `IMPLEMENTED_TASK_VALIDATED` | `ParserIdentityModel` | AC-06; AC-07 | DEV-0404 |
 
+## 16K. DEV-0405 fingerprint requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0405-R01 | Record qualified profile/version, canonical reference, SHA-256, provenance, time, and limitations | DEC-0042 | `IMPLEMENTED_TASK_VALIDATED` | `SchemaFingerprintObservation` | AC-01 through AC-03 | DEV-0405 |
+| DEV-0405-R02 | Fingerprint implies no compatibility, equivalence, parsing, or support | DEC-0042 | `IMPLEMENTED_TASK_VALIDATED` | Observation-only contract | AC-04 | DEV-0405 |
+| DEV-0405-R03 | Implement no universal canonicalization algorithm | DEC-0042 | `IMPLEMENTED_TASK_VALIDATED` | Supplied-observation factory only | AC-05 | DEV-0405 |
+| DEV-0405-R04 | Preserve observation relationally without support effect | WP-0400 | `IMPLEMENTED_TASK_VALIDATED` | ORM metadata | AC-06 through AC-08 | DEV-0405 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |

@@ -13,6 +13,7 @@ from app.models.processing_run import SupportedProcessingRunModel
 from app.models.source_artifact import SupportedSourceArtifactModel
 from app.models.source_locator import SupportedSourceLocatorModel
 from app.models.parser_identity import ParserIdentityModel
+from app.models.schema_fingerprint import SchemaFingerprintObservationModel
 from app.models.integrity import (
     IntegrityAuditEvent,
     IntegrityCustodyEvent,
@@ -35,4 +36,5 @@ __all__ = [
     "SupportedSourceArtifactModel",
     "SupportedSourceLocatorModel",
     "ParserIdentityModel",
+    "SchemaFingerprintObservationModel",
 ]

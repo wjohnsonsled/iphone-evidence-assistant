@@ -257,7 +257,7 @@ authorization service and corrects DEV-0307's dependency.
 | DEV-0402 | Source-artifact identity model | COMPLETE | DEV-0401 | WP-0400 review |
 | DEV-0403 | Stable source-locator model | COMPLETE | DEV-0402 | WP-0400 review |
 | DEV-0404 | Parser identity and version model | COMPLETE | DEV-0401 | WP-0400 evidence-integrity/provenance gate |
-| DEV-0405 | Schema-fingerprint model | READY | DEV-0402 | Package gate |
+| DEV-0405 | Schema-fingerprint model | COMPLETE | DEV-0402; DEC-0042 | WP-0400 review |
 | DEV-0406 | Raw and normalized value model | READY | DEV-0402 | Package gate |
 | DEV-0407 | Timestamp provenance model | NOT_STARTED | DEV-0406 | Package gate |
 | DEV-0408 | Coverage and omission model | NOT_STARTED | DEV-0401 | Package gate |

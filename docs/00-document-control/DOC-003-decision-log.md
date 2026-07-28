@@ -815,3 +815,15 @@ Existing approved scope, architecture, support, forensic limitations, task IDs,
 and audit history remain controlling. Evidence Coverage remains WP-0450 because
 WP-0400 is already allocated to the Supported Evidence Data Model. No support
 or production status changes.
+## DEC-0042 — Approve DEV-0405 qualified fingerprint observations
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Task: DEV-0405
+
+Fingerprints are profile-qualified observations with canonical-input reference,
+SHA-256 digest, provenance, time, and limitations. They imply no compatibility,
+equivalence, parse success, or support. No universal cross-artifact algorithm
+is approved. DEC-0008 applies only to its candidate Manifest.db profile; every
+future profile requires independent validation and owner review before
+promotion.

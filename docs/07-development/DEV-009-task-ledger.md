@@ -74,7 +74,7 @@
 | DEV-0402 | Source-artifact identity model | COMPLETE | DEV-0401 | DEV-0402-source-artifact-identity-acceptance | Scoped authorized candidate identity; no locator/support claim; migration DEV-0410 |
 | DEV-0403 | Stable source-locator model | COMPLETE | DEV-0402 | DEV-0403-stable-source-locator-acceptance | Stable internal identity preserves raw/normalized locator values separately; no filesystem/support semantics |
 | DEV-0404 | Parser identity and version model | COMPLETE | DEV-0401 | DEV-0404-parser-identity-version-acceptance | Candidate-only persistent identity metadata; supported registry remains empty; migration DEV-0410 |
-| DEV-0405 | Schema-fingerprint model | READY | DEV-0402 | To be created | Dependency satisfied; follows DEV-0404 in plan order |
+| DEV-0405 | Schema-fingerprint observation model | COMPLETE | DEV-0402; DEC-0042 | DEV-0405-schema-fingerprint-model-acceptance | Qualified observation only; no universal canonicalization or compatibility/support inference |
 | DEV-0406 | Raw and normalized value model | READY | DEV-0402 | To be created | Dependency satisfied; follows DEV-0405 in plan order |
 
 | DEV-0451 | Source Inventory Engine | BLOCKED | WP-0200, WP-0250, DEV-0402, DEV-0403 | To be created | WP-0450 allocation under DEC-0027; blocked by evidence identity/locator foundation |
