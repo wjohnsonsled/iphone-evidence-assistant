@@ -97,7 +97,7 @@
 | DEV-1103 | Fail-closed parser executor | COMPLETE | DEV-1101 | DEV-1103-fail-closed-parser-executor-acceptance | Authorization-before-call, controlled-input, provenance, coverage, zero-result, and safe-failure enforcement |
 | DEV-1104 | Processing-run state machine | COMPLETE | DEV-0401 | DEV-1104-processing-run-state-machine-acceptance | Immutable closed transitions with distinct complete-zero, partial, failed, and cancelled terminal states |
 | DEV-1105 | Coverage aggregation | COMPLETE | DEV-0408 | DEV-1105-coverage-aggregation-acceptance | Same-run factual status/count reducer; unavailable counts remain unknown; no evidence-gap conclusion |
-| DEV-1106 | Failure aggregation | NOT_STARTED | DEV-0409 | To be created | Safe diagnostics and partial processing |
+| DEV-1106 | Failure aggregation | COMPLETE | DEV-0409 | DEV-1106-failure-aggregation-acceptance | Same-run safe category/severity/fatal/partial reducer; broken references fail closed |
 | DEV-1107 | Idempotency and rerun controls | NOT_STARTED | DEV-1104 | To be created | Deterministic processing identity |
 | DEV-1108 | Cancellation and cleanup | NOT_STARTED | DEV-1104 | To be created | Explicit terminal outcomes |
 | DEV-1109 | Pipeline audit events | NOT_STARTED | DEV-1104, DEV-0206 | To be created | Closed append-only taxonomy |

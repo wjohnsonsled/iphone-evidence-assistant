@@ -468,7 +468,7 @@ implementation is authorized ahead of its dependencies.
 | DEV-1103 | Fail-closed parser executor | COMPLETE | DEV-1101 | Package gate |
 | DEV-1104 | Processing-run state machine | COMPLETE | DEV-0401 | Package gate |
 | DEV-1105 | Coverage aggregation | COMPLETE | DEV-0408 | Package gate |
-| DEV-1106 | Failure aggregation | NOT_STARTED | DEV-0409 | Package gate |
+| DEV-1106 | Failure aggregation | COMPLETE | DEV-0409 | Package gate |
 | DEV-1107 | Idempotency and rerun controls | NOT_STARTED | DEV-1104 | Package gate |
 | DEV-1108 | Cancellation and cleanup | NOT_STARTED | DEV-1104 | Package gate |
 | DEV-1109 | Pipeline audit events | NOT_STARTED | DEV-1104, DEV-0206 | Package gate |
