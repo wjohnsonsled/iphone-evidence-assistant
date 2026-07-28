@@ -681,3 +681,18 @@ reference a case owned by another tenant. DEV-0308 retains migration ownership.
 
 This adds no filesystem access, hashing, validation, parser, API,
 authorization, evidence processing, deployment, or support status.
+
+## DEC-0032 — DEV-0306 tenant-safe audit actor attribution
+
+- Date: 2026-07-29
+- Status: IMPLEMENTED_PENDING_WP_0300_REVIEW
+- Task: DEV-0306
+
+Audit actor context derives from a matching principal and tenant membership.
+The attributed principal ID is passed to the existing WP-0250 audit service;
+cross-tenant attribution fails before append. No second audit store or taxonomy
+is created.
+
+This grants no authentication, permission, authorization, API, evidence
+processing, deployment, or support status. Authorization-denial audit
+orchestration remains DEV-0310 scope.
