@@ -105,7 +105,7 @@ readiness transitions are automatic and recorded in DEV-011.
 | DEV-1106 | Failure aggregation | COMPLETE | DEV-0409 | DEV-1106-failure-aggregation-acceptance | Same-run safe category/severity/fatal/partial reducer; broken references fail closed |
 | DEV-1107 | Idempotency and rerun controls | OWNER_REVIEW | DEV-1104 | To be created | ARC-GATE-1107: idempotency identity, rerun lineage, concurrency, retry, and persistence semantics unresolved |
 | DEV-1108 | Cancellation and cleanup | READY | DEV-1104 | To be created | DEC-0051 reevaluation: lifecycle dependency complete; candidate cleanup scope may proceed |
-| DEV-1109 | Pipeline audit events | READY | DEV-1104, DEV-0206 | To be created | DEC-0051 reevaluation: lifecycle and closed audit taxonomy dependencies complete |
+| DEV-1109 | Pipeline audit events | COMPLETE | DEV-1104, DEV-0206 | DEV-1109-pipeline-audit-events-acceptance | Closed append-only started/completed/zero/failed mapping with scoped attribution |
 | DEV-1110 | Pipeline integration tests | NOT_STARTED | DEV-1101 through DEV-1109 | To be created | Synthetic package validation |
 | DEV-0459 | Commercial Services Integration | DEFERRED | DEV-0457; separate approval | To be created | No external or paid integration authorized |
 | DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | To be created | Blocked by reporting and coverage package gates |
