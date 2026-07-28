@@ -368,3 +368,10 @@ Schema recognition and its SHA-256 fingerprint are observations, not parser
 authorization, evidence interpretation, Apple compatibility, or support.
 Files-table row access remains a separate DEV-0602 task and no supported parser
 or normalized record exists.
+
+DEC-0060 authorizes that row access through the `manifestdb-files-query`
+version 1 controlled layer only. Observations use processing-run-scoped ROWID
+locators, ascending keyset pagination, exact raw projections, caller-supplied
+ceilings, and explicit cancellation/failure outcomes. The layer is not a
+parser, performs no normalization or interpretation, and creates no supported
+record.

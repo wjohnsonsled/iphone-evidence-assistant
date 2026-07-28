@@ -755,6 +755,33 @@ authentication, identity provider, repository, API, live PostgreSQL validation,
 deployment, evidence processing, parser activation, or support promotion is
 authorized.
 
+## DEC-0060 — Approve DEV-0602 controlled Files-table query layer
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Task: DEV-0602
+- Query profile: `manifestdb-files-query` version 1
+- Locator profile: `manifestdb-row-locator` version 1
+- Support effect: none
+
+The owner approves deterministic raw Files-row observation from the same
+verified DEV-0205 controlled copy and exact compatible DEV-0601 scope. Version
+1 permits enumeration, exact single-row retrieval, ascending ROWID keyset
+pagination, locator-only continuation, and projection only of `fileID`,
+`domain`, `relativePath`, `flags`, and `file`.
+
+ROWID is the only locator. WITHOUT ROWID returns
+`ROW_LOCATOR_UNAVAILABLE`; duplicate or nonmonotonic locators return
+`ROW_LOCATOR_DUPLICATE`; no composite or inferred locator is allowed. Raw
+column states remain distinct with no coercion. The `file` BLOB remains opaque
+bytes. Caller-supplied positive query ceilings and cancellation preserve prior
+observations and fail closed.
+
+No join, aggregation, offset pagination, write, modification PRAGMA, repair,
+replay, decoding, reconstruction, evidence interpretation, artifact parsing,
+parser execution, registry/store insertion, API, production, real evidence,
+Apple/parser/artifact/workflow support, or support promotion is authorized.
+
 Every future protected service, repository, job, report, export, AI, and API
 boundary must authorize before returning, transforming, exporting, or
 retrieving protected content. Queries must be tenant/case/resource scoped where

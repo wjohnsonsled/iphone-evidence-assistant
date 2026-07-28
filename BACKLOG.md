@@ -360,14 +360,14 @@ separate owner decision.
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
 | DEV-0601 | Manifest.db schema-profile validator | COMPLETE | WP-0200, WP-0400, DEV-0263, DEV-0264 | Artifact gate |
-| DEV-0602 | Files-table controlled query layer | OWNER_REVIEW | DEV-0601 | Artifact/provenance gate |
-| DEV-0603 | FileID normalization | NOT_STARTED | DEV-0602 | Artifact gate |
-| DEV-0604 | Domain normalization | NOT_STARTED | DEV-0602 | Artifact gate |
-| DEV-0605 | Relative-path normalization | NOT_STARTED | DEV-0602 | Artifact gate |
-| DEV-0606 | Flags and file metadata normalization | NOT_STARTED | DEV-0602 | Artifact gate |
-| DEV-0607 | Manifest metadata-blob characterization | NOT_STARTED | DEV-0602 | Artifact gate |
+| DEV-0602 | Files-table controlled query layer | COMPLETE | DEV-0601 | Artifact/provenance gate |
+| DEV-0603 | FileID normalization | OWNER_REVIEW | DEV-0602 | Evidence-integrity gate |
+| DEV-0604 | Domain normalization | OWNER_REVIEW | DEV-0602 | Evidence-interpretation gate |
+| DEV-0605 | Relative-path normalization | OWNER_REVIEW | DEV-0602 | Security/provenance gate |
+| DEV-0606 | Flags and file metadata normalization | OWNER_REVIEW | DEV-0602 | Evidence-interpretation gate |
+| DEV-0607 | Manifest metadata-blob characterization | OWNER_REVIEW | DEV-0602 | Evidence-interpretation gate |
 | DEV-0608 | Inventory provenance and coverage | NOT_STARTED | DEV-0603 through DEV-0607 | Artifact gate |
-| DEV-0609 | Duplicate and orphan detection | NOT_STARTED | DEV-0602 | Artifact gate |
+| DEV-0609 | Duplicate and orphan detection | OWNER_REVIEW | DEV-0602 | Evidence-conclusion gate |
 | DEV-0610 | Manifest fixture corpus | NOT_STARTED | DEV-0601 through DEV-0609 | Artifact gate |
 | DEV-0611 | Manifest validation report | NOT_STARTED | DEV-0601 through DEV-0610 | Artifact gate |
 

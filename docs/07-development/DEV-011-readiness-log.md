@@ -187,3 +187,23 @@
   implementation details.
 - DEV-0603 through DEV-0607 and DEV-0609 remain blocked by DEV-0602. No
   independent READY task remains.
+
+## DEC-0060 / DEV-0602 completion reevaluation
+
+- `MANIFEST-QUERY-PROVENANCE-GATE` is resolved by DEC-0060; DEV-0602 is
+  COMPLETE.
+- DEV-0603 through DEV-0607 and DEV-0609 have satisfied dependencies, but task
+  inspection places each at a mandatory gate:
+  - DEV-0603 `FILEID-NORMALIZATION-GATE`;
+  - DEV-0604 `DOMAIN-SEMANTICS-GATE`;
+  - DEV-0605 `MANIFEST-PATH-GATE`;
+  - DEV-0606 `MANIFEST-FLAGS-GATE`;
+  - DEV-0607 `MANIFEST-BLOB-GATE`;
+  - DEV-0609 `INVENTORY-RELATIONSHIP-GATE`.
+- These tasks would define forensic normalization, path/security, blob
+  interpretation, or evidence-absence/relationship semantics; none may be
+  invented from raw implementation observations.
+- DEV-0608 remains dependency-blocked by DEV-0603 through DEV-0607. DEV-0610
+  and DEV-0611 remain blocked by their predecessor sets.
+- No independent READY task remains. Registry/store counts and support status
+  remain unchanged.
