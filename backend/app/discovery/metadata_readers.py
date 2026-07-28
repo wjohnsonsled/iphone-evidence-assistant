@@ -11,3 +11,5 @@ def _claims(result,source,fields,profile):
  return MetadataClaimSet(profile,"1",source,observations,result.limitations)
 def info_plist_claims(result:DiscoveryResult)->MetadataClaimSet:
  return _claims(result,"Info.plist",("Product Version","Target Identifier","Unique Identifier"),"info-plist-candidate-reader")
+def manifest_plist_claims(result:DiscoveryResult)->MetadataClaimSet:
+ return _claims(result,"Manifest.plist",("IsEncrypted",),"manifest-plist-candidate-reader")
