@@ -256,6 +256,16 @@ as follows:
 These references are architecture traceability evidence. They do not establish
 runtime implementation, validation, or artifact support.
 
+## 16D. DEV-0105 structured-logging requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0105-R01 | Structured JSON operational logs with allowlisted metadata | DEV-0105 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `SafeJsonFormatter`; `log_event()` | AC-01; AC-02 | DEV-0105 |
+| DEV-0105-R02 | Redact credentials and omit raw exception content | AGENTS.md; DEV-0105 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `redact()`; formatter omission policy | AC-03; AC-04 | DEV-0105 |
+| DEV-0105-R03 | Preserve safe request correlation | MES-v1 Part 7; DEV-0105 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Structured DEV-0104 handler events | AC-05 | DEV-0105 |
+| DEV-0105-R04 | Distinguish operational logs from immutable audit/custody records | ARC-002; DEV-0105 acceptance | `DOCUMENTED_CONTROL` | Module and acceptance documentation | AC-06 | DEV-0105 |
+| DEV-0105-R05 | Add no evidence/API/migration/support behavior | DEV-0105 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Logging-boundary-only implementation | AC-07; AC-08 | DEV-0105 |
+
 ## 16C. DEV-0104 structured-error requirements
 
 | Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |

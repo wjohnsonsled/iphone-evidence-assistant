@@ -434,3 +434,18 @@ exception text are not returned to clients.
 
 Server-log content controls remain DEV-0105 scope. This task adds no route,
 evidence behavior, migration, external service, or support effect.
+
+## DEC-0017 — DEV-0105 safe structured operational logging
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0100_REVIEW
+- Task: DEV-0105
+
+Supported-path operational logs use JSON, allowlisted metadata, credential
+redaction, and no traceback or raw exception serialization. API error events
+retain safe request correlation. Free-form compatibility messages reduce to a
+generic event unless migrated to the structured boundary.
+
+Operational logs are not append-only audit or custody records. Redaction does
+not authorize evidence-content logging. No route, migration, evidence workflow,
+external service, or support effect is introduced.

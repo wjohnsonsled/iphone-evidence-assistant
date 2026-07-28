@@ -13,6 +13,8 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
+from app.core.logging import log_event
+
 logger = logging.getLogger(__name__)
 ERROR_CODE = re.compile(r"^[a-z][a-z0-9_]{2,63}$")
 
@@ -101,11 +103,14 @@ def add_exception_handlers(app: FastAPI) -> None:
     @app.exception_handler(ApiError)
     async def handle_api_error(request: Request, exc: ApiError) -> JSONResponse:
         request_id = str(uuid4())
-        logger.warning(
-            "api_error request_id=%s code=%s path=%s",
-            request_id,
-            exc.code,
-            request.url.path,
+        log_event(
+            logger,
+            logging.WARNING,
+            "api_error",
+            request_id=request_id,
+            code=exc.code,
+            status=exc.status_code,
+            path=request.url.path,
         )
         return _response(
             status_code=exc.status_code,
@@ -119,11 +124,14 @@ def add_exception_handlers(app: FastAPI) -> None:
     @app.exception_handler(RequestValidationError)
     async def handle_request_validation(request: Request, exc: RequestValidationError) -> JSONResponse:
         request_id = str(uuid4())
-        logger.warning(
-            "request_validation_error request_id=%s path=%s error_count=%s",
-            request_id,
-            request.url.path,
-            len(exc.errors()),
+        log_event(
+            logger,
+            logging.WARNING,
+            "request_validation_error",
+            request_id=request_id,
+            path=request.url.path,
+            status=422,
+            error_count=len(exc.errors()),
         )
         return _response(
             status_code=422,
@@ -141,11 +149,13 @@ def add_exception_handlers(app: FastAPI) -> None:
             phrase = HTTPStatus(status_code).phrase
         except ValueError:
             phrase = "Request failed"
-        logger.warning(
-            "http_error request_id=%s status=%s path=%s",
-            request_id,
-            status_code,
-            request.url.path,
+        log_event(
+            logger,
+            logging.WARNING,
+            "http_error",
+            request_id=request_id,
+            status=status_code,
+            path=request.url.path,
         )
         return _response(
             status_code=status_code,
@@ -158,7 +168,14 @@ def add_exception_handlers(app: FastAPI) -> None:
     @app.exception_handler(Exception)
     async def handle_unexpected_error(request: Request, exc: Exception) -> JSONResponse:
         request_id = str(uuid4())
-        logger.exception("unexpected_error request_id=%s path=%s", request_id, request.url.path)
+        log_event(
+            logger,
+            logging.ERROR,
+            "unexpected_error",
+            request_id=request_id,
+            status=500,
+            path=request.url.path,
+        )
         return _response(
             status_code=500,
             category=ErrorCategory.INTERNAL,

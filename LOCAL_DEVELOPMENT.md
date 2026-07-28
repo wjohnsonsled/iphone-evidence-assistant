@@ -30,6 +30,11 @@ Windows path. Configuration diagnostics use `Settings.safe_summary()` and
 must never include a password or complete database URL. These checks do not
 connect to the database or establish production readiness.
 
+Supported-path operational logs are JSON objects produced through the
+allowlisted `log_event()` boundary. They omit tracebacks and redact
+credential-shaped values. Do not log evidence content. Operational logs are
+not append-only audit or chain-of-custody records.
+
 ## Docker Startup
 
 Create a local evidence directory:
