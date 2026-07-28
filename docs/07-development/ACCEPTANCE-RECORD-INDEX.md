@@ -23,3 +23,26 @@
 Validation commands and results remain in the individual records and QMS-007.
 DEC-0027 limitations remain permanent unless explicitly superseded. None of
 these records promotes a capability to Supported.
+
+## WP-0300 permanent traceability
+
+- Owner decision: DEC-0037
+- Validation package: QMS-008
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+- Supported registry: empty
+
+| Task | Acceptance record | Completion commit |
+|---|---|---|
+| DEV-0301 | DEV-0301-tenant-model-acceptance | `de0c648` |
+| DEV-0302 | DEV-0302-user-role-model-acceptance | `5af6353` |
+| DEV-0303 | DEV-0303-case-model-acceptance | `8182fe7` |
+| DEV-0304 | DEV-0304-support-status-quarantine-acceptance | `252f767` |
+| DEV-0305 | DEV-0305-evidence-source-linkage-acceptance | `d96ad70` |
+| DEV-0306 | DEV-0306-audit-actor-attribution-acceptance | `13073a1` |
+| DEV-0307 | DEV-0307-cross-tenant-isolation-acceptance | `a02fb3f` |
+| DEV-0308 | DEV-0308-additive-security-migration-acceptance | `b167af8` |
+| DEV-0309 | DEV-0309-security-package-integration-acceptance | `2cdd8ed` |
+| DEV-0310 | DEV-0310-authorization-service-acceptance | `f7a494b` |
+
+Validation commands and results remain in the individual records and QMS-008.
+DEC-0037 limitations remain permanent unless explicitly superseded.

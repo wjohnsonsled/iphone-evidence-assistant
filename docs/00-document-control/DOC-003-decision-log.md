@@ -738,3 +738,31 @@ QMS-008 records passing synthetic/offline conformance and the unresolved lack
 of live PostgreSQL and production API/policy integration. WP-0300 is submitted
 for owner review as candidate foundation infrastructure only. No support,
 deployment, evidence processing, API exposure, or production policy is granted.
+
+## DEC-0037 — Approve WP-0300 candidate security foundation
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Tasks: WP-0300; DEV-0308; DEV-0310; DEV-0307; DEV-0309
+- Validation package: QMS-008
+- Implementation commits: `b167af8`, `f7a494b`, `a02fb3f`, `2cdd8ed`
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+
+The owner approves WP-0300 and DEV-0309 as COMPLETE candidate SaaS security
+foundation infrastructure with all QMS-008 and acceptance-record limitations.
+The supported registry remains empty. No production authorization policy,
+authentication, identity provider, repository, API, live PostgreSQL validation,
+deployment, evidence processing, parser activation, or support promotion is
+authorized.
+
+Every future protected service, repository, job, report, export, AI, and API
+boundary must authorize before returning, transforming, exporting, or
+retrieving protected content. Queries must be tenant/case/resource scoped where
+possible; inaccessible identifiers fail closed without existence disclosure.
+Safe structured security audit coverage remains mandatory at applicable future
+boundaries.
+
+The requested Evidence Coverage package already exists as WP-0450 because
+controlling WP-0400 is the Supported Evidence Data Model. WP-0450 remains
+dependency-blocked and retains DEC-0027 forensic limitations; cloud acquisition
+remains separately governed and FUTURE.

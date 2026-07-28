@@ -206,6 +206,10 @@ only; all limitations and support prohibitions remain controlling.
 
 ## WP-0300 SaaS Security Foundation
 
+**Package status:** `COMPLETE` — owner approved candidate infrastructure in
+DEC-0037. No production policy, authentication, API, live PostgreSQL
+validation, evidence processing, or support status is authorized.
+
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
 | DEV-0301 | Tenant model | COMPLETE | DEV-0103 | WP-0300 package review |
@@ -216,7 +220,7 @@ only; all limitations and support prohibitions remain controlling.
 | DEV-0306 | Audit-actor attribution | COMPLETE | DEV-0302, DEV-0206 | WP-0300 package review |
 | DEV-0307 | Cross-tenant isolation tests | COMPLETE | DEV-0310, DEV-0305 | WP-0300 review |
 | DEV-0308 | Additive Alembic migration baseline | COMPLETE | DEV-0301 through DEV-0306 | WP-0300 review; offline validated only |
-| DEV-0309 | Security package integration tests | VALIDATION_PENDING | DEV-0301 through DEV-0308; DEV-0310 | Owner review; QMS-008 |
+| DEV-0309 | Security package integration tests | COMPLETE | DEV-0301 through DEV-0308; DEV-0310 | Owner approved in DEC-0037; QMS-008 limitations retained |
 | DEV-0310 | Authorization Service and Policy Enforcement | COMPLETE | DEV-0301, DEV-0302, DEV-0303 | WP-0300 review; no default grants |
 
 ### WP-0300 completion criteria
@@ -243,7 +247,7 @@ authorization service and corrects DEV-0307's dependency.
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0401 | Processing-run model | NOT_STARTED | WP-0200, WP-0250, WP-0300 | Package gate |
+| DEV-0401 | Processing-run model | READY | WP-0200, WP-0250, WP-0300 | Package gate |
 | DEV-0402 | Source-artifact identity model | NOT_STARTED | DEV-0401 | Package gate |
 | DEV-0403 | Stable source-locator model | NOT_STARTED | DEV-0402 | Package gate |
 | DEV-0404 | Parser identity and version model | NOT_STARTED | DEV-0401 | Package gate |

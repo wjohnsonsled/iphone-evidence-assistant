@@ -69,7 +69,8 @@
 | DEV-0308 | Additive Alembic migration baseline | COMPLETE | DEV-0301 through DEV-0306 | DEV-0308-additive-security-migration-acceptance | One linear additive/reversible migration; offline SQL and regressions pass; no live PostgreSQL or support change |
 | DEV-0307 | Cross-tenant isolation tests | COMPLETE | DEV-0310, DEV-0305 | DEV-0307-cross-tenant-isolation-acceptance | Adversarial grant, source-scope, and audit non-append tests pass |
 | DEV-0310 | Authorization Service and Policy Enforcement | COMPLETE | DEV-0301, DEV-0302, DEV-0303 | DEV-0310-authorization-service-acceptance | Explicit versioned exact-match policy; no default grants |
-| DEV-0309 | Security package integration tests | VALIDATION_PENDING | DEV-0301 through DEV-0308; DEV-0310 | DEV-0309-security-package-integration-acceptance; QMS-008 | Candidate package passes synthetic/offline validation; owner review required; no live PostgreSQL or production API/policy |
+| DEV-0309 | Security package integration tests | COMPLETE | DEV-0301 through DEV-0308; DEV-0310 | DEV-0309-security-package-integration-acceptance; QMS-008 | Owner approved WP-0300 candidate foundation in DEC-0037; live PostgreSQL, production policy/auth/API, and support remain unapproved |
+| DEV-0401 | Processing-run model | READY | WP-0200, WP-0250, WP-0300 | To be created | Highest-priority dependency-satisfied MVP task after DEC-0037 |
 
 | DEV-0451 | Source Inventory Engine | BLOCKED | WP-0200, WP-0250, DEV-0402, DEV-0403 | To be created | WP-0450 allocation under DEC-0027; blocked by evidence identity/locator foundation |
 | DEV-0452 | Artifact Coverage Engine | BLOCKED | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | To be created | Must distinguish authorization, execution, zero, rejection, failure, partial, and unsupported |

@@ -343,6 +343,14 @@ runtime implementation, validation, or artifact support.
 | DEV-0307-R02 | Cross-tenant audit attempts append nothing | AGENTS.md; DEV-0307 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Tenant audit boundary | AC-03 | DEV-0307 |
 | DEV-0307-R03 | Use synthetic tests without runtime/support effect | DEV-0307 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Adversarial test module | AC-04; AC-05 | DEV-0307 |
 
+## 16E. WP-0300 owner disposition
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| SEC-WP-001 | Candidate security foundation is permanently traceable to owner approval, validation, acceptance records, commits, limitations, and support state | DEC-0037 | `OWNER_APPROVED_CANDIDATE` | Acceptance Record Index WP-0300 section | QMS-008; DEV-0301 through DEV-0310 records | WP-0300 |
+| SEC-AUTH-001 | Future protected boundaries authorize before content retrieval, transformation, export, or AI use | DEC-0037 | `APPROVED_UNIMPLEMENTED` | Governing decision and WP dependencies | Future boundary-specific tests | Owning future task |
+| SEC-AUD-001 | Future security-sensitive boundaries emit safe structured audit events where applicable | DEC-0037 | `APPROVED_UNIMPLEMENTED` | Governing decision; WP-0250 taxonomy | Future boundary-specific tests | Owning future task |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |

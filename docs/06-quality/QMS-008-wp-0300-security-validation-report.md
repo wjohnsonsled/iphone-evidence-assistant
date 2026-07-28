@@ -8,8 +8,8 @@ service/API boundary and validated with an approved PostgreSQL environment.
 
 ## Package result
 
-DEV-0301 through DEV-0310 are task-complete and the package is
-`VALIDATION_PENDING`. Tenant/case/source relational scope, explicit fail-closed
+DEV-0301 through DEV-0310 and WP-0300 are owner-approved `COMPLETE` candidate
+foundation infrastructure under DEC-0037. Tenant/case/source relational scope, explicit fail-closed
 authorization, actor attribution, parser quarantine, additive migration SQL,
 and adversarial isolation behavior are deterministic and synthetic-test
 validated.
@@ -43,3 +43,6 @@ RSK-0001, RSK-0014, RSK-0017, RSK-0018, RSK-0022, and RSK-0023 remain open.
 Application checks cannot substitute for correctly provisioned persistent
 policy, database permissions, authenticated identity, or live PostgreSQL
 validation.
+
+Owner disposition: approved with documented limitations in DEC-0037. Current
+support status remains `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`.

@@ -23,4 +23,5 @@
   API is exposed.
 - The accepted pytest temp-directory workaround and TestClient warning remain.
 
-Status: `VALIDATION_PENDING` at the WP-0300 owner-review gate.
+Status: `COMPLETE` — owner approved candidate foundation infrastructure in
+DEC-0037 with every limitation above retained.
