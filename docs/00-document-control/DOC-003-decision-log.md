@@ -766,3 +766,13 @@ The requested Evidence Coverage package already exists as WP-0450 because
 controlling WP-0400 is the Supported Evidence Data Model. WP-0450 remains
 dependency-blocked and retains DEC-0027 forensic limitations; cloud acquisition
 remains separately governed and FUTURE.
+## DEC-0038 — DEV-0401 processing-run identity
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0400_REVIEW
+- Task: DEV-0401
+
+Candidate runs have immutable identity, tenant/case/source scope,
+request/correlation provenance, and exact policy authorization provenance.
+Lifecycle remains DEV-1104 scope and migration DEV-0410 scope. No parser, API,
+evidence processing, repository, or support promotion is introduced.

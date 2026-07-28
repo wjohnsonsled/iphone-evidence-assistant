@@ -9,6 +9,7 @@ from app.models.tenant import TenantModel
 from app.models.identity import PrincipalModel, TenantMembershipModel
 from app.models.security_case import SecurityCaseModel
 from app.models.evidence_source import EvidenceSourceModel
+from app.models.processing_run import SupportedProcessingRunModel
 from app.models.integrity import (
     IntegrityAuditEvent,
     IntegrityCustodyEvent,
@@ -27,4 +28,5 @@ __all__ = [
     "PrincipalModel", "TenantMembershipModel",
     "SecurityCaseModel",
     "EvidenceSourceModel",
+    "SupportedProcessingRunModel",
 ]

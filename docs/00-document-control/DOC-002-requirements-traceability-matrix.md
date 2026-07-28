@@ -351,6 +351,15 @@ runtime implementation, validation, or artifact support.
 | SEC-AUTH-001 | Future protected boundaries authorize before content retrieval, transformation, export, or AI use | DEC-0037 | `APPROVED_UNIMPLEMENTED` | Governing decision and WP dependencies | Future boundary-specific tests | Owning future task |
 | SEC-AUD-001 | Future security-sensitive boundaries emit safe structured audit events where applicable | DEC-0037 | `APPROVED_UNIMPLEMENTED` | Governing decision; WP-0250 taxonomy | Future boundary-specific tests | Owning future task |
 
+## 16F. DEV-0401 processing-run requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0401-R01 | Immutable tenant/case/source-scoped run identity | ARC-001; WP-0400 | `IMPLEMENTED_TASK_VALIDATED` | `ProcessingRun` | AC-01; AC-02 | DEV-0401 |
+| DEV-0401-R02 | Authorize before run creation and retain policy provenance | DEC-0037 | `IMPLEMENTED_TASK_VALIDATED` | `ProcessingRunService` | AC-03; AC-04 | DEV-0401 |
+| DEV-0401-R03 | Separate candidate store metadata from legacy jobs | ARC-001 | `IMPLEMENTED_TASK_VALIDATED` | `SupportedProcessingRunModel` | AC-06 | DEV-0401 |
+| DEV-0401-R04 | No lifecycle, parser, API, evidence, or support expansion | DEV-0401 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Bounded module | AC-07 | DEV-0401 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |
