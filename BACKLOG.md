@@ -475,7 +475,7 @@ implementation is authorized ahead of its dependencies.
 | DEV-1105 | Coverage aggregation | COMPLETE | DEV-0408 | Package gate |
 | DEV-1106 | Failure aggregation | COMPLETE | DEV-0409 | Package gate |
 | DEV-1107 | Idempotency and rerun controls | OWNER_REVIEW | DEV-1104 | Package gate |
-| DEV-1108 | Cancellation and cleanup | READY | DEV-1104 | Package gate |
+| DEV-1108 | Cancellation and cleanup | COMPLETE | DEV-1104 | Package gate |
 | DEV-1109 | Pipeline audit events | COMPLETE | DEV-1104, DEV-0206 | Package gate |
 | DEV-1110 | Pipeline integration tests | NOT_STARTED | DEV-1101 through DEV-1109 | Package gate |
 

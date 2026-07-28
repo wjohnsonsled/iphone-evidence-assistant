@@ -7,6 +7,7 @@ from app.processing.lifecycle import (
 from app.processing.coverage_aggregation import CoverageAggregate, aggregate_coverage
 from app.processing.failure_aggregation import FailureAggregate, aggregate_failures
 from app.processing.audit import PipelineAuditRecorder
+from app.processing.cancellation import CancellationCoordinator
 
 __all__ = [
     "ExecutionOutcome", "SupportedParserExecutor", "ProcessingRunLifecycle",
@@ -14,4 +15,5 @@ __all__ = [
     "CoverageAggregate", "aggregate_coverage",
     "FailureAggregate", "aggregate_failures",
     "PipelineAuditRecorder",
+    "CancellationCoordinator",
 ]

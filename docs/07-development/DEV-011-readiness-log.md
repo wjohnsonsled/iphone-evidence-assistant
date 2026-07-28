@@ -43,3 +43,11 @@
 - DEV-0453 dependencies are complete, but `COV-SEMANTICS-GATE` requires owner
   review because the task freezes evidence-gap conclusion semantics.
 - DEV-1108 and DEV-1109 remain independent READY tasks.
+
+## DEV-1108 and DEV-1109 completion reevaluation
+
+- DEV-1110 remains dependency-blocked because DEV-1107 is `OWNER_REVIEW`.
+- No independent task currently satisfies every automatic-readiness condition.
+- Remaining directly dependency-satisfied tasks are at recorded architecture,
+  schema/compatibility, provenance, security, support, or attorney-conclusion
+  gates.
