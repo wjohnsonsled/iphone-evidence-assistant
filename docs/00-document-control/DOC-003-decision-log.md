@@ -487,3 +487,18 @@ This approval does not authorize production deployment or production-facing
 APIs, customer-evidence processing, parser execution, artifact validation,
 support promotion, or a change to the trust model. The all-or-nothing support
 rule remains controlling.
+
+## DEC-0020 — DEV-0204 adopts the WP-0250 hash authority
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0200_REVIEW
+- Task: DEV-0204
+
+DEV-0204 uses the owner-approved WP-0250 `HashRegistry` as the sole SHA-256
+implementation for intake. This resolves stale task wording without
+renumbering history and prevents a competing evidence hash registry.
+
+The task validates immutable, provenance-complete success and failure
+observations with synthetic caller-controlled files. It does not implement
+path selection, evidence storage, persistence adapters, package orchestration,
+an API, parsing, real-evidence use, or support promotion.

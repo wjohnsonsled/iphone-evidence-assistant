@@ -4,7 +4,7 @@
 
 - Scope: Phase 2 task boundaries
 - Architecture: ARC-001
-- Current implementation task: DEV-0203 validation pending
+- Current implementation task: DEV-0204 complete pending WP-0200 review
 - Input support effect: none
 
 ## 2. Governing principle
@@ -20,13 +20,13 @@ that an input is a supported Apple local backup.
 | DEV-0201 | Adapt a bounded filesystem directory into a typed inspection result | Does not validate Apple backup structure |
 | DEV-0202 | Validate candidate structure and collect the sole approved encryption observation | Does not establish production compatibility or support |
 | DEV-0203 | Project that observation into a typed detection/reporting state | Does not decrypt encrypted content or inspect another signal |
-| DEV-0204 | Parse approved backup metadata plist profiles | Does not authorize other plist parsing |
-| DEV-0205 | Parse approved `Manifest.db` schema profiles from controlled working copies | Does not authorize unknown schemas or direct source parsing |
-| DEV-0206 | Build deterministic backup inventory | Does not prove on-device completeness |
-| DEV-0207 | Generate and retain required source/material hashes | Does not silently omit hash failures |
-| DEV-0208 | Reconcile manifest entries to stored backup files | Does not treat missing files as no-record evidence |
-| DEV-0209 | Produce explicit intake coverage | Does not convert failure into zero results |
-| DEV-0210 | Persist structured processing errors and omissions | Does not expose secret or unsafe diagnostic content |
+| DEV-0204 | Adopt the WP-0250 SHA-256 registry for intake | Does not create a competing hash authority or establish authenticity |
+| DEV-0205 | Provide the general controlled SQLite working-copy service | Does not authorize direct source parsing |
+| DEV-0206 | Adapt intake events to the WP-0250 audit taxonomy | Does not make operational logs immutable audit records |
+| DEV-0207 | Adapt intake provenance to the WP-0250 relational model | Does not make an input or artifact supported |
+| DEV-0208 | Verify cleanup and recover from intake failures | Does not silently discard cleanup failures |
+| DEV-0209 | Enforce intake resource and denial-of-service limits | Does not establish production capacity |
+| DEV-0210 | Validate the integrated intake package synthetically | Does not authorize real evidence or production exposure |
 
 ## 4. DEV-0201 boundary
 
@@ -58,7 +58,10 @@ registration, hashing, working-copy creation, and audit persistence.
   candidate fixtures; production compatibility is unvalidated.
 - Encryption detection/reporting is implemented as a non-persistent,
   non-API projection; it is not a support claim.
-- Source-file hashing and controlled working copies are not implemented.
+- Source-file hashing has a validated shared in-memory reference implementation;
+  persistent intake orchestration is not implemented. DEV-0202 contains a
+  limited structural-validation controlled-copy mechanism, not the general
+  DEV-0205 service.
 - Tenant, authorization, evidence-source, and audit persistence are not
   implemented.
 - DEV-0201 adapter output is not eligible for evidence storage, search, AI,

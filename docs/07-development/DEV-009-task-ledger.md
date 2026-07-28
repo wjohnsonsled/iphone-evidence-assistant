@@ -28,6 +28,8 @@
 
 | DEV-0203 | Backup encryption-state detection | COMPLETE | DEV-0201, DEV-0202 | DEV-0203-backup-encryption-state-acceptance | Owner approved reporting-only projection in DEC-0014; no compatibility-profile, decryption, parser, API, persistence, or support approval |
 
+| DEV-0204 | SHA-256 hashing service | COMPLETE | DEV-0203; DEV-0254, DEV-0255 | DEV-0204-sha256-hashing-acceptance | Adopted the owner-approved WP-0250 HashRegistry as the sole intake hash authority; focused and regression validation passed; no duplicate service, API, parser, evidence access, or support promotion |
+
 | DEV-0211 | Profile and validate secondary Apple backup encryption indicators | DEFERRED | Owner-approved signal sources and revised compatibility profile | To be created | Must source, characterize, order, and define conflicts for every candidate signal; requires synthetic and Apple-produced fixtures plus owner approval before implementation or promotion |
 
 | DEV-0251 | Evidence-object domain contract | COMPLETE | DEV-0202; DEC-0011 | WP-0250-acceptance-criteria | Owner approved candidate infrastructure in DEC-0014; typed contract and additive relational model validated synthetically |
