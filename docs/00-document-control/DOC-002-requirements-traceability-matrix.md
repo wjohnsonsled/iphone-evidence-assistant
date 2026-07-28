@@ -133,6 +133,7 @@ statuses. They must not be displayed as support claims.
 | QMS-SUP-003 | Supported registry composition cannot import or enumerate quarantined legacy plugins | ARC-001; FOR-006 | `IMPLEMENTED_TASK_VALIDATED` | Separate `app.support` package; legacy access confined to `app.services.case_processing` | DEV-1102 static/runtime isolation tests | DEV-1102 |
 | QMS-SUP-004 | Future supported parser execution fails closed before calls unless exact registry, controlled-input, integrity, provenance, identity, schema, coverage, and limitation controls pass | ARC-001; ARC-002 | `IMPLEMENTED_TASK_VALIDATED` | `app.processing.SupportedParserExecutor` | DEV-1103 synthetic denial, execution-order, zero, and safe-failure tests | DEV-1103 |
 | PROC-RUN-001 | Processing lifecycle distinguishes requested, authorized, running, complete, complete-zero, partial, failed, and cancelled outcomes | ARC-001; DEC-0002 | `IMPLEMENTED_TASK_VALIDATED` | `app.processing.ProcessingRunLifecycle` | DEV-1104 transition matrix | DEV-1104 |
+| PROC-COV-001 | Processing coverage aggregation preserves factual states and unknown counts without inferring evidentiary completeness | DEC-0045; ARC-001 | `IMPLEMENTED_TASK_VALIDATED` | `app.processing.aggregate_coverage` | DEV-1105 synthetic aggregation tests | DEV-1105 |
 
 ## 11. DEV-0101 backend-scaffold requirements
 
