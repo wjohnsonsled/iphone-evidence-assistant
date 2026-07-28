@@ -335,6 +335,14 @@ runtime implementation, validation, or artifact support.
 | DEV-0310-R03 | Return safe traceable decisions | DEV-0310 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `AuthorizationDecision` | AC-01; AC-05 | DEV-0310 |
 | DEV-0310-R04 | Establish no implicit production policy or support effect | DEC-0014 | `IMPLEMENTED_TASK_VALIDATED` | Caller-supplied policy only | AC-07 | DEV-0310 |
 
+## 16D. DEV-0307 isolation requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0307-R01 | Explicit grants never override tenant/resource scope | DEV-0307 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Authorization scope boundary | AC-01; AC-02 | DEV-0307 |
+| DEV-0307-R02 | Cross-tenant audit attempts append nothing | AGENTS.md; DEV-0307 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Tenant audit boundary | AC-03 | DEV-0307 |
+| DEV-0307-R03 | Use synthetic tests without runtime/support effect | DEV-0307 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Adversarial test module | AC-04; AC-05 | DEV-0307 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |

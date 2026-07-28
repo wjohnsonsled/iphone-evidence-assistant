@@ -717,3 +717,13 @@ Authorization consumes an explicit versioned policy snapshot and permits only
 exact role/action matches after tenant, case, and evidence-source scope checks.
 There are no implicit grants or production policy. No authentication provider,
 API, evidence processing, deployment, or support promotion is authorized.
+
+## DEC-0035 — DEV-0307 cross-tenant isolation validation
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0300_REVIEW
+- Task: DEV-0307
+
+Adversarial synthetic tests establish that explicit grants cannot override
+tenant scope, cross-case sources are denied, and cross-tenant audit attempts
+append nothing. This validation adds no runtime capability or support status.

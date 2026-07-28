@@ -67,7 +67,7 @@
 | DEV-0305 | Evidence-source tenant and case linkage | COMPLETE | DEV-0203, DEV-0303 | DEV-0305-evidence-source-linkage-acceptance | Evidence-source identity derives tenant/case from supported case; composite relational key rejects cross-tenant linkage; no evidence access or support effect |
 | DEV-0306 | Audit-actor attribution | COMPLETE | DEV-0302, DEV-0206 | DEV-0306-audit-actor-attribution-acceptance | Principal/membership-derived actor context attributes WP-0250 audit events and blocks cross-tenant attribution; no permission effect |
 | DEV-0308 | Additive Alembic migration baseline | COMPLETE | DEV-0301 through DEV-0306 | DEV-0308-additive-security-migration-acceptance | One linear additive/reversible migration; offline SQL and regressions pass; no live PostgreSQL or support change |
-| DEV-0307 | Cross-tenant isolation tests | READY | DEV-0310, DEV-0305 | To be created | Dependencies satisfied |
+| DEV-0307 | Cross-tenant isolation tests | COMPLETE | DEV-0310, DEV-0305 | DEV-0307-cross-tenant-isolation-acceptance | Adversarial grant, source-scope, and audit non-append tests pass |
 | DEV-0310 | Authorization Service and Policy Enforcement | COMPLETE | DEV-0301, DEV-0302, DEV-0303 | DEV-0310-authorization-service-acceptance | Explicit versioned exact-match policy; no default grants |
 
 | DEV-0451 | Source Inventory Engine | BLOCKED | WP-0200, WP-0250, DEV-0402, DEV-0403 | To be created | WP-0450 allocation under DEC-0027; blocked by evidence identity/locator foundation |
