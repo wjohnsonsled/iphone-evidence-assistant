@@ -481,3 +481,9 @@ DEC-0047 and migration `0004_candidate_supported_store` implement candidate
 relational infrastructure. Exact registry, scope, integrity, provenance,
 coverage, and promotion references gate admission. The supported registry and
 normalized-record store remain empty; schema existence is not support.
+## DEV-1107 persistence addendum
+
+Migration 0005 is the additive linear candidate persistence contract for
+logical processing requests, atomic exact claims, immutable execution attempts,
+and prior-run relationships. Request identity and run identity are distinct.
+Production repository and transaction-isolation behavior remain unapproved.

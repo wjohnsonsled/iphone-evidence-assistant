@@ -334,3 +334,12 @@ Reports and UI must avoid overstating these controls.
 - candidate parsers require conformance work.
 
 These costs are accepted because retrofitting integrity after parser development would create larger forensic and commercial risk.
+## DEV-1107 idempotency and rerun addendum
+
+DEC-0052 separates immutable logical processing requests from execution
+attempts. Exact versioned canonical request inputs produce a SHA-256
+idempotency key. Deduplication may reference an existing request/run only before
+a new attempt begins or for an exact authorized running/completed duplicate.
+Every retry, rerun, or changed-context execution has a new run identity and
+preserves explicit prior-run lineage. Checkpoint resumption and cross-run output
+merging remain unapproved.

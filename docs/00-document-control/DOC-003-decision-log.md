@@ -942,3 +942,18 @@ ten-state vocabulary, readiness record, priority model, and work-in-progress
 limit are governing. All architecture, evidence-integrity, provenance,
 security, support, legal, AI-policy, production, deployment, and real-evidence
 owner gates remain unchanged.
+
+## DEC-0052 — Approve DEV-1107 idempotency and forensic rerun model
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Task: DEV-1107
+- Support effect: none
+
+Logical requests, idempotency claims, execution attempts, processing runs, and
+retry/rerun relationships are distinct immutable observations. Exact versioned
+SHA-256 keys may deduplicate only before a new attempt starts; every attempt
+gets a new run identity. Atomic relational claims, scoped non-disclosure,
+explicit retry/rerun intent, prior-outcome preservation, and no assumed
+resumability govern. No parser, artifact, compatibility, API, production,
+real-evidence, or support authority follows.

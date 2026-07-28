@@ -137,6 +137,7 @@ statuses. They must not be displayed as support claims.
 | PROC-RUN-001 | Processing lifecycle distinguishes requested, authorized, running, complete, complete-zero, partial, failed, and cancelled outcomes | ARC-001; DEC-0002 | `IMPLEMENTED_TASK_VALIDATED` | `app.processing.ProcessingRunLifecycle` | DEV-1104 transition matrix | DEV-1104 |
 | PROC-COV-001 | Processing coverage aggregation preserves factual states and unknown counts without inferring evidentiary completeness | DEC-0045; ARC-001 | `IMPLEMENTED_TASK_VALIDATED` | `app.processing.aggregate_coverage` | DEV-1105 synthetic aggregation tests | DEV-1105 |
 | PROC-FAIL-001 | Failure aggregation preserves safe issue/partial identities and closed factual counts without evidentiary conclusions | DEC-0046; ARC-001 | `IMPLEMENTED_TASK_VALIDATED` | `app.processing.aggregate_failures` | DEV-1106 synthetic aggregation tests | DEV-1106 |
+| PROC-IDEM-001 | Exact versioned request idempotency prevents duplicate execution without reusing run identity or erasing retry/rerun provenance | DEC-0052; ARC-001; ARC-002 | `IMPLEMENTED_TASK_VALIDATED` | `app.processing.idempotency`; migration 0005 | DEV-1107 focused concurrency, retry/rerun, isolation, recovery, and migration tests | DEV-1107 |
 
 ## 11. DEV-0101 backend-scaffold requirements
 

@@ -8,6 +8,11 @@ from app.processing.coverage_aggregation import CoverageAggregate, aggregate_cov
 from app.processing.failure_aggregation import FailureAggregate, aggregate_failures
 from app.processing.audit import PipelineAuditRecorder
 from app.processing.cancellation import CancellationCoordinator
+from app.processing.idempotency import (
+    ClaimResult,ExecutionAttempt,IdempotencyService,InMemoryAtomicRequestRepository,
+    KeyObservation,LogicalRequest,RelationshipType,RequestInputs,RequestStatus,
+    RunRelationship,generate_key,
+)
 
 __all__ = [
     "ExecutionOutcome", "SupportedParserExecutor", "ProcessingRunLifecycle",
@@ -16,4 +21,7 @@ __all__ = [
     "FailureAggregate", "aggregate_failures",
     "PipelineAuditRecorder",
     "CancellationCoordinator",
+    "ClaimResult","ExecutionAttempt","IdempotencyService",
+    "InMemoryAtomicRequestRepository","KeyObservation","LogicalRequest",
+    "RelationshipType","RequestInputs","RequestStatus","RunRelationship","generate_key",
 ]

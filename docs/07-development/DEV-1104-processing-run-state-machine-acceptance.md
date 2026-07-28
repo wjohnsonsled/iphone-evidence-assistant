@@ -21,3 +21,7 @@ pipeline audit events or durable transactions.
 Validation: focused 7 passed; full backend 331 passed with the accepted
 TestClient warning; legacy characterization 5 passed; compilation and diff
 checks passed.
+
+DEV-1107 addendum: a logical request may own multiple attempts, but every
+attempt receives a distinct immutable run identity and lifecycle history.
+Retries and reruns never rewrite or merge earlier lifecycle outcomes.

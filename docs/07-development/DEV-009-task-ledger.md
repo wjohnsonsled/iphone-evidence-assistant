@@ -103,10 +103,10 @@ readiness transitions are automatic and recorded in DEV-011.
 | DEV-1104 | Processing-run state machine | COMPLETE | DEV-0401 | DEV-1104-processing-run-state-machine-acceptance | Immutable closed transitions with distinct complete-zero, partial, failed, and cancelled terminal states |
 | DEV-1105 | Coverage aggregation | COMPLETE | DEV-0408 | DEV-1105-coverage-aggregation-acceptance | Same-run factual status/count reducer; unavailable counts remain unknown; no evidence-gap conclusion |
 | DEV-1106 | Failure aggregation | COMPLETE | DEV-0409 | DEV-1106-failure-aggregation-acceptance | Same-run safe category/severity/fatal/partial reducer; broken references fail closed |
-| DEV-1107 | Idempotency and rerun controls | OWNER_REVIEW | DEV-1104 | To be created | ARC-GATE-1107: idempotency identity, rerun lineage, concurrency, retry, and persistence semantics unresolved |
+| DEV-1107 | Idempotency and rerun controls | COMPLETE | DEV-1104; DEC-0052 | DEV-1107-idempotency-rerun-acceptance | Exact versioned key, atomic claim, immutable attempts, explicit retry/rerun lineage, additive migration 0005 |
 | DEV-1108 | Cancellation and cleanup | COMPLETE | DEV-1104 | DEV-1108-cancellation-cleanup-acceptance | Cleanup-before-terminal; cleanup failure is explicit FAILED with safe reason |
 | DEV-1109 | Pipeline audit events | COMPLETE | DEV-1104, DEV-0206 | DEV-1109-pipeline-audit-events-acceptance | Closed append-only started/completed/zero/failed mapping with scoped attribution |
-| DEV-1110 | Pipeline integration tests | NOT_STARTED | DEV-1101 through DEV-1109 | To be created | Synthetic package validation |
+| DEV-1110 | Pipeline integration tests | READY | DEV-1101 through DEV-1109 | To be created | DEC-0051 reevaluation after DEV-1107: all pipeline dependencies complete |
 | DEV-0459 | Commercial Services Integration | DEFERRED | DEV-0457; separate approval | To be created | No external or paid integration authorized |
 | DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | To be created | Blocked by reporting and coverage package gates |
 
