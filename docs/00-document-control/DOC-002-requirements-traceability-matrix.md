@@ -386,6 +386,15 @@ runtime implementation, validation, or artifact support.
 | GOV-AUT-002 | Routine task completion does not require owner approval | Autonomous Execution Charter; DEC-0041 | `APPROVED_IMPLEMENTED_GOVERNANCE` | BACKLOG completion vocabulary | GOV-001 | Governance |
 | GOV-AUT-003 | Preserve existing WP IDs and keep Evidence Coverage as WP-0450 | DEC-0027; DEC-0037; DEC-0041 | `DOCUMENTED_CONTROL` | BACKLOG; WP-0450 specification | GOV-001 | Governance |
 
+## 16J. DEV-0404 parser identity requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0404-R01 | Preserve exact parser, version, artifact family, and contract identity | ARC-002; DEV-0263 | `IMPLEMENTED_TASK_VALIDATED` | `ParserIdentity` | AC-01; AC-02 | DEV-0404 |
+| DEV-0404-R02 | Fail closed on malformed identity metadata | AGENTS.md | `IMPLEMENTED_TASK_VALIDATED` | Identity validation | AC-03 | DEV-0404 |
+| DEV-0404-R03 | Candidate metadata cannot establish Supported status | DEV-0304; DEC-0037 | `IMPLEMENTED_TASK_VALIDATED` | Candidate factory and SUPPORTED rejection | AC-04; AC-05 | DEV-0404 |
+| DEV-0404-R04 | Separate ORM identity metadata without execution/support effect | WP-0400 | `IMPLEMENTED_TASK_VALIDATED` | `ParserIdentityModel` | AC-06; AC-07 | DEV-0404 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |
