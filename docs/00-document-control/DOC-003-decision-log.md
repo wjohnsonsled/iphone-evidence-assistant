@@ -561,3 +561,25 @@ reported explicitly.
 Recovery is not scheduled and has no persistent ledger or multi-process lock.
 It does not authorize evidence-source deletion, arbitrary path deletion, an
 API, production use, real-evidence processing, or support promotion.
+
+## DEC-0025 — DEV-0209 caller-supplied intake resource policy
+
+- Date: 2026-07-28
+- Status: APPROVED_AND_IMPLEMENTED_PENDING_WP_0200_REVIEW
+- Owner: Project owner
+- Task: DEV-0209
+
+The owner requires explicit positive deployment configuration for directory
+entries/depth, pathname length, plist size, SQLite main/WAL/SHM size, aggregate
+controlled-copy size, schema enumeration, SQLite processing work, and any
+additional governing limit. Missing, malformed, nonpositive, or out-of-range
+configuration fails startup or dependency composition. No implicit production
+ceiling exists; documented synthetic values are test/development-only.
+
+Adapter exceedance is `VALIDATION_FAILED`; Apple structural-validation
+exceedance is `APPLE_BACKUP_VALIDATION_FAILED`. Both record safe
+`resource_limit_exceeded` data and do not independently imply corrupt,
+incomplete, unsupported, encrypted, or unencrypted.
+
+This decision grants no production capacity value, compatibility approval,
+deployment, real-evidence use, API, parser, artifact, or support authority.

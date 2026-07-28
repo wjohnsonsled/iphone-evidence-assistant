@@ -27,6 +27,10 @@ from app.intake.encryption_state import (
     EncryptionStateReport,
     report_encryption_state,
 )
+from app.intake.resource_limits import (
+    IntakeResourcePolicy,
+    ResourceLimitExceeded,
+)
 
 __all__ = [
     "AppleBackupValidator",
@@ -42,7 +46,9 @@ __all__ = [
     "InputAdapterStatus",
     "InputInspectionIssue",
     "InputInspectionResult",
+    "IntakeResourcePolicy",
     "RecoveryStatus",
+    "ResourceLimitExceeded",
     "EncryptionStateReport",
     "SQLiteStructuralObservation",
     "WorkspaceRecoveryRecord",

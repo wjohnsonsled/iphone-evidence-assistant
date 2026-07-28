@@ -17,6 +17,8 @@ from pathlib import Path
 from typing import Any
 from uuid import UUID
 
+from app.intake.resource_limits import IntakeResourcePolicy, ResourceLimitExceeded
+
 
 ADAPTER_NAME = "apple_local_backup_input"
 ADAPTER_VERSION = "1.0.0"
@@ -96,11 +98,13 @@ class AppleBackupInputAdapter:
         self,
         evidence_roots: Iterable[Path],
         *,
+        resource_policy: IntakeResourcePolicy,
         clock: Clock | None = None,
         entry_counter: EntryCounter | None = None,
         link_detector: LinkDetector | None = None,
     ) -> None:
         self._clock = clock or _utcnow
+        self._resource_policy = resource_policy
         self._entry_counter = entry_counter or _count_top_level_entries
         self._link_detector = link_detector or _is_link_or_reparse
         self._evidence_roots = self._validate_roots(evidence_roots)
@@ -128,6 +132,18 @@ class AppleBackupInputAdapter:
         try:
             lexical_path = Path(os.path.abspath(os.path.expanduser(original_path)))
             resolved_path = lexical_path.resolve(strict=False)
+            self._resource_policy.check_path(lexical_path)
+        except ResourceLimitExceeded:
+            return self._result(
+                InputAdapterStatus.VALIDATION_FAILED,
+                original_path,
+                inspected_at,
+                correlation_id,
+                issue=InputInspectionIssue(
+                    "resource_limit_exceeded",
+                    "Configured intake resource limit was exceeded.",
+                ),
+            )
         except (OSError, RuntimeError, ValueError):
             return self._result(
                 InputAdapterStatus.VALIDATION_FAILED,
@@ -148,6 +164,22 @@ class AppleBackupInputAdapter:
                 issue=InputInspectionIssue(
                     "input_outside_evidence_root",
                     "Input path is outside the configured evidence roots.",
+                ),
+            )
+
+        try:
+            self._resource_policy.check_path(lexical_path, relative_to=matched_root)
+        except ResourceLimitExceeded:
+            return self._result(
+                InputAdapterStatus.VALIDATION_FAILED,
+                original_path,
+                inspected_at,
+                correlation_id,
+                resolved_path=resolved_path,
+                evidence_root=matched_root,
+                issue=InputInspectionIssue(
+                    "resource_limit_exceeded",
+                    "Configured intake resource limit was exceeded.",
                 ),
             )
 
@@ -205,7 +237,26 @@ class AppleBackupInputAdapter:
             )
 
         try:
-            entry_count = self._entry_counter(resolved_path)
+            entry_count = (
+                self._entry_counter(resolved_path)
+                if self._entry_counter is not _count_top_level_entries
+                else self._resource_policy.count_directory(resolved_path)
+            )
+            if entry_count > self._resource_policy.max_directory_entries:
+                raise ResourceLimitExceeded("directory_entries")
+        except ResourceLimitExceeded:
+            return self._result(
+                InputAdapterStatus.VALIDATION_FAILED,
+                original_path,
+                inspected_at,
+                correlation_id,
+                resolved_path=resolved_path,
+                evidence_root=matched_root,
+                issue=InputInspectionIssue(
+                    "resource_limit_exceeded",
+                    "Configured intake resource limit was exceeded.",
+                ),
+            )
         except OSError:
             return self._result(
                 InputAdapterStatus.PROCESSING_FAILED,

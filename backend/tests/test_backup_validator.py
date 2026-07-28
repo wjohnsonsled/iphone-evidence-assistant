@@ -13,6 +13,7 @@ import pytest
 from app.intake.apple_backup import AppleBackupInputAdapter
 from app.intake.backup_validator import AppleBackupValidator, BackupValidationOutcome
 from app.intake.controlled_copy import ControlledCopyManager
+from tests.support.resource_policy import TEST_RESOURCE_POLICY
 
 NOW = datetime(2026, 7, 27, 18, 0, tzinfo=timezone.utc)
 CID = UUID("10000000-0000-0000-0000-000000000002")
@@ -63,10 +64,26 @@ def make_backup(
 
 
 def validate(root: Path, backup: Path, **validator_kwargs):
-    adapter = AppleBackupInputAdapter([root], clock=lambda: NOW)
+    resource_policy = validator_kwargs.pop("resource_policy", TEST_RESOURCE_POLICY)
+    adapter = AppleBackupInputAdapter(
+        [root],
+        resource_policy=resource_policy,
+        clock=lambda: NOW,
+    )
     inspection = adapter.inspect(backup, correlation_id=CID)
-    manager = validator_kwargs.pop("copy_manager", ControlledCopyManager(workspace_root=root.parent))
-    return AppleBackupValidator(manager, clock=lambda: NOW, **validator_kwargs).validate(inspection)
+    manager = validator_kwargs.pop(
+        "copy_manager",
+        ControlledCopyManager(
+            workspace_root=root.parent,
+            resource_policy=resource_policy,
+        ),
+    )
+    return AppleBackupValidator(
+        manager,
+        resource_policy=resource_policy,
+        clock=lambda: NOW,
+        **validator_kwargs,
+    ).validate(inspection)
 
 
 @pytest.mark.parametrize("encrypted,outcome", [
@@ -162,8 +179,19 @@ def test_malformed_or_missing_encryption_is_indeterminate(tmp_path, encrypted):
 
 def test_missing_and_non_directory_adapter_results_are_invalid_input(tmp_path):
     root = tmp_path / "evidence"; root.mkdir()
-    adapter = AppleBackupInputAdapter([root], clock=lambda: NOW)
-    validator = AppleBackupValidator(ControlledCopyManager(workspace_root=tmp_path), clock=lambda: NOW)
+    adapter = AppleBackupInputAdapter(
+        [root],
+        resource_policy=TEST_RESOURCE_POLICY,
+        clock=lambda: NOW,
+    )
+    validator = AppleBackupValidator(
+        ControlledCopyManager(
+            workspace_root=tmp_path,
+            resource_policy=TEST_RESOURCE_POLICY,
+        ),
+        resource_policy=TEST_RESOURCE_POLICY,
+        clock=lambda: NOW,
+    )
     missing = adapter.inspect(root / "missing", correlation_id=CID)
     file_path = root / "file"; file_path.write_text("x")
     file_result = adapter.inspect(file_path, correlation_id=CID)
@@ -180,7 +208,11 @@ def test_cleanup_failure_is_validation_failed(tmp_path):
         return workspace
     def fail_cleanup(_):
         raise OSError("synthetic cleanup failure")
-    manager = ControlledCopyManager(workspace_creator=creator, cleanup=fail_cleanup)
+    manager = ControlledCopyManager(
+        resource_policy=TEST_RESOURCE_POLICY,
+        workspace_creator=creator,
+        cleanup=fail_cleanup,
+    )
     result = validate(root, backup, copy_manager=manager)
     assert result.outcome is BackupValidationOutcome.APPLE_BACKUP_VALIDATION_FAILED
     shutil.rmtree(workspace)
@@ -191,8 +223,8 @@ def test_integrity_failure_is_corrupt(tmp_path, monkeypatch):
     backup = make_backup(root)
     from app.intake import backup_validator
     original = backup_validator._inspect_manifest
-    def failed_integrity(uri):
-        schema, fingerprint, _ = original(uri)
+    def failed_integrity(uri, policy):
+        schema, fingerprint, _ = original(uri, policy)
         return schema, fingerprint, ("synthetic integrity failure",)
     monkeypatch.setattr(backup_validator, "_inspect_manifest", failed_integrity)
     assert validate(root, backup).outcome is BackupValidationOutcome.APPLE_BACKUP_CORRUPT

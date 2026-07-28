@@ -17,6 +17,7 @@ from app.intake.controlled_copy import (
     ControlledCopyError,
     ControlledCopyManager,
 )
+from tests.support.resource_policy import TEST_RESOURCE_POLICY
 
 
 FIXED_TIME = datetime(2026, 7, 27, 14, 0, tzinfo=timezone.utc)
@@ -47,6 +48,7 @@ def manager_for(source_parent: Path, workspace: Path, **kwargs) -> ControlledCop
     workspace_root.mkdir(parents=True, exist_ok=True)
     return ControlledCopyManager(
         workspace_root=workspace_root,
+        resource_policy=TEST_RESOURCE_POLICY,
         clock=lambda: FIXED_TIME,
         workspace_creator=fixed_workspace_creator(workspace),
         **kwargs,
@@ -254,7 +256,11 @@ def test_missing_outside_nonfile_and_injected_link_sources_fail_closed(tmp_path:
     workspace_root = tmp_path / "work"
     source_root.mkdir()
     workspace_root.mkdir()
-    manager = ControlledCopyManager(workspace_root=workspace_root, clock=lambda: FIXED_TIME)
+    manager = ControlledCopyManager(
+        workspace_root=workspace_root,
+        resource_policy=TEST_RESOURCE_POLICY,
+        clock=lambda: FIXED_TIME,
+    )
 
     missing = source_root / "missing.db"
     with pytest.raises(ControlledCopyError) as missing_error:
@@ -275,6 +281,7 @@ def test_missing_outside_nonfile_and_injected_link_sources_fail_closed(tmp_path:
     create_synthetic_sqlite(link_candidate)
     link_manager = ControlledCopyManager(
         workspace_root=workspace_root,
+        resource_policy=TEST_RESOURCE_POLICY,
         clock=lambda: FIXED_TIME,
         link_detector=lambda path: path == link_candidate,
     )

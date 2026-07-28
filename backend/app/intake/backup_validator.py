@@ -20,6 +20,7 @@ from uuid import UUID
 
 from app.intake.apple_backup import InputAdapterStatus, InputInspectionResult
 from app.intake.controlled_copy import ControlledCopyError, ControlledCopyManager
+from app.intake.resource_limits import IntakeResourcePolicy, ResourceLimitExceeded
 
 VALIDATOR_NAME = "apple_local_backup_structure_validator"
 VALIDATOR_VERSION = "1.0.0"
@@ -88,10 +89,12 @@ class AppleBackupValidator:
         self,
         copy_manager: ControlledCopyManager,
         *,
+        resource_policy: IntakeResourcePolicy,
         clock: Clock | None = None,
         plist_reader: PlistReader | None = None,
     ) -> None:
         self._copy_manager = copy_manager
+        self._resource_policy = resource_policy
         self._clock = clock or (lambda: datetime.now(timezone.utc))
         self._plist_reader = plist_reader or _read_plist
 
@@ -117,8 +120,25 @@ class AppleBackupValidator:
         try:
             for name in REQUIRED_FILES:
                 path = root / name
+                self._resource_policy.check_path(
+                    path,
+                    relative_to=Path(inspection.evidence_root),
+                )
                 present[name] = path.exists() and stat.S_ISREG(path.lstat().st_mode)
                 observations.append(ValidationObservation("required_file_present", name, present[name]))
+        except ResourceLimitExceeded as exc:
+            observations.append(
+                ValidationObservation(
+                    "resource_limit_exceeded",
+                    ".",
+                    exc.resource,
+                )
+            )
+            return self._result(
+                BackupValidationOutcome.APPLE_BACKUP_VALIDATION_FAILED,
+                "Configured intake resource limit was exceeded.",
+                **base,
+            )
         except OSError:
             return self._result(BackupValidationOutcome.APPLE_BACKUP_VALIDATION_FAILED, "Required-file metadata could not be inspected.", **base)
 
@@ -129,6 +149,7 @@ class AppleBackupValidator:
             if not present[name]:
                 continue
             try:
+                self._resource_policy.check_plist(root / name)
                 value = self._plist_reader(root / name)
                 if not isinstance(value, dict):
                     malformed.add(name)
@@ -138,6 +159,19 @@ class AppleBackupValidator:
                 malformed.add(name)
             except OSError:
                 operational_failure = True
+            except ResourceLimitExceeded:
+                observations.append(
+                    ValidationObservation(
+                        "resource_limit_exceeded",
+                        name,
+                        "plist_size",
+                    )
+                )
+                return self._result(
+                    BackupValidationOutcome.APPLE_BACKUP_VALIDATION_FAILED,
+                    "Configured intake resource limit was exceeded.",
+                    **base,
+                )
 
         if operational_failure:
             return self._result(BackupValidationOutcome.APPLE_BACKUP_VALIDATION_FAILED, "A required identity plist could not be safely read.", **base)
@@ -187,11 +221,37 @@ class AppleBackupValidator:
                 correlation_id=inspection.correlation_id,
             )
             with controlled:
-                schema, fingerprint, integrity = _inspect_manifest(controlled.read_only_uri)
+                schema, fingerprint, integrity = _inspect_manifest(
+                    controlled.read_only_uri,
+                    self._resource_policy,
+                )
                 controlled.verify_working_files()
-        except ControlledCopyError:
+        except ControlledCopyError as exc:
             audit = controlled.audit.to_dict() if controlled else None
+            if exc.code == "resource_limit_exceeded":
+                observations.append(
+                    ValidationObservation(
+                        "resource_limit_exceeded",
+                        "Manifest.db",
+                        "sqlite_size",
+                    )
+                )
             return self._result(BackupValidationOutcome.APPLE_BACKUP_VALIDATION_FAILED, "Controlled-copy or SQLite inspection failed operationally.", controlled_copy_audit=audit, **base)
+        except ResourceLimitExceeded as exc:
+            audit = controlled.audit.to_dict() if controlled else None
+            observations.append(
+                ValidationObservation(
+                    "resource_limit_exceeded",
+                    "Manifest.db",
+                    exc.resource,
+                )
+            )
+            return self._result(
+                BackupValidationOutcome.APPLE_BACKUP_VALIDATION_FAILED,
+                "Configured intake resource limit was exceeded.",
+                controlled_copy_audit=audit,
+                **base,
+            )
         except sqlite3.DatabaseError:
             audit = controlled.audit.to_dict() if controlled else None
             return self._result(BackupValidationOutcome.APPLE_BACKUP_CORRUPT, "Manifest.db is not a structurally valid SQLite database.", controlled_copy_audit=audit, **base)
@@ -222,28 +282,66 @@ def _read_plist(path: Path) -> Any:
         return plistlib.load(stream)
 
 
-def _inspect_manifest(uri: str) -> tuple[dict[str, Any], str, tuple[str, ...]]:
+def _inspect_manifest(
+    uri: str,
+    policy: IntakeResourcePolicy,
+) -> tuple[dict[str, Any], str, tuple[str, ...]]:
     connection = sqlite3.connect(uri, uri=True)
+    work_units = 0
+    interrupted = False
+
+    def enforce_work_limit() -> int:
+        nonlocal work_units, interrupted
+        work_units += 1_000
+        if work_units > policy.max_sqlite_work_units:
+            interrupted = True
+            return 1
+        return 0
+
     try:
         connection.execute("PRAGMA query_only=ON")
-        integrity = tuple(str(row[0]) for row in connection.execute("PRAGMA integrity_check"))
+        connection.set_progress_handler(enforce_work_limit, 1_000)
+        try:
+            integrity = tuple(
+                str(row[0]) for row in connection.execute("PRAGMA integrity_check")
+            )
+        except sqlite3.OperationalError as exc:
+            if interrupted:
+                raise ResourceLimitExceeded("sqlite_processing_work") from exc
+            raise
         tables = []
-        names = [str(row[0]) for row in connection.execute("SELECT name FROM sqlite_schema WHERE type='table' AND name NOT LIKE 'sqlite_%'")]
+        names = [
+            str(row[0])
+            for row in connection.execute(
+                "SELECT name FROM sqlite_schema "
+                "WHERE type='table' AND name NOT LIKE 'sqlite_%'"
+            )
+        ]
+        schema_entries = len(names)
+        if schema_entries > policy.max_schema_entries:
+            raise ResourceLimitExceeded("schema_enumeration")
         for table_name in names:
             quoted = table_name.replace('"', '""')
             columns = [
                 {"name": str(row[1]).casefold(), "type": str(row[2]).casefold(), "not_null": bool(row[3]), "primary_key_position": int(row[5])}
                 for row in connection.execute(f'PRAGMA table_info("{quoted}")')
             ]
+            schema_entries += len(columns)
+            if schema_entries > policy.max_schema_entries:
+                raise ResourceLimitExceeded("schema_enumeration")
             indexes = []
             for index_row in connection.execute(f'PRAGMA index_list("{quoted}")'):
                 index_name = str(index_row[1])
                 index_quoted = index_name.replace('"', '""')
                 index_columns = sorted(str(row[2]).casefold() for row in connection.execute(f'PRAGMA index_info("{index_quoted}")'))
+                schema_entries += 1 + len(index_columns)
+                if schema_entries > policy.max_schema_entries:
+                    raise ResourceLimitExceeded("schema_enumeration")
                 indexes.append({"name": index_name.casefold(), "unique": bool(index_row[2]), "columns": index_columns})
             tables.append({"name": table_name.casefold(), "columns": sorted(columns, key=lambda item: item["name"]), "indexes": sorted(indexes, key=lambda item: item["name"])})
         schema = {"tables": sorted(tables, key=lambda item: item["name"])}
         encoded = json.dumps(schema, sort_keys=True, separators=(",", ":")).encode("utf-8")
         return schema, hashlib.sha256(encoded).hexdigest(), integrity
     finally:
+        connection.set_progress_handler(None, 0)
         connection.close()

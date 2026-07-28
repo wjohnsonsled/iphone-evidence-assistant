@@ -13,6 +13,8 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 from sqlalchemy.engine import make_url
 from sqlalchemy.exc import ArgumentError
 
+from app.intake.resource_limits import IntakeResourcePolicy, VALID_RANGES
+
 
 class Environment(str, Enum):
     DEVELOPMENT = "development"
@@ -36,6 +38,16 @@ class Settings(BaseSettings):
     evidence_root: str = Field("/evidence", alias="EVIDENCE_ROOT")
     log_level: LogLevel = Field(LogLevel.INFO, alias="LOG_LEVEL")
     environment: Environment = Field(Environment.DEVELOPMENT, alias="ENVIRONMENT")
+    intake_max_directory_entries: int = Field(..., alias="INTAKE_MAX_DIRECTORY_ENTRIES")
+    intake_max_directory_depth: int = Field(..., alias="INTAKE_MAX_DIRECTORY_DEPTH")
+    intake_max_pathname_length: int = Field(..., alias="INTAKE_MAX_PATHNAME_LENGTH")
+    intake_max_plist_bytes: int = Field(..., alias="INTAKE_MAX_PLIST_BYTES")
+    intake_max_sqlite_main_bytes: int = Field(..., alias="INTAKE_MAX_SQLITE_MAIN_BYTES")
+    intake_max_sqlite_wal_bytes: int = Field(..., alias="INTAKE_MAX_SQLITE_WAL_BYTES")
+    intake_max_sqlite_shm_bytes: int = Field(..., alias="INTAKE_MAX_SQLITE_SHM_BYTES")
+    intake_max_controlled_copy_bytes: int = Field(..., alias="INTAKE_MAX_CONTROLLED_COPY_BYTES")
+    intake_max_schema_entries: int = Field(..., alias="INTAKE_MAX_SCHEMA_ENTRIES")
+    intake_max_sqlite_work_units: int = Field(..., alias="INTAKE_MAX_SQLITE_WORK_UNITS")
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore", populate_by_name=True)
 
@@ -101,6 +113,11 @@ class Settings(BaseSettings):
             and parsed.password == "evidence_dev_password"
         ):
             raise ValueError("production must not use the documented development database password")
+        policy_values = {
+            name: getattr(self, f"intake_{name}")
+            for name in VALID_RANGES
+        }
+        IntakeResourcePolicy(**policy_values)
         return self
 
     @property
@@ -120,7 +137,17 @@ class Settings(BaseSettings):
             "database_host": parsed.host,
             "database_name": parsed.database,
             "evidence_roots": tuple(str(path) for path in self.evidence_roots),
+            "intake_resource_policy_configured": True,
         }
+
+    @property
+    def intake_resource_policy(self) -> IntakeResourcePolicy:
+        return IntakeResourcePolicy(
+            **{
+                name: getattr(self, f"intake_{name}")
+                for name in VALID_RANGES
+            }
+        )
 
 
 @lru_cache

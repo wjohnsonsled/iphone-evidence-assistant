@@ -14,6 +14,7 @@ from app.intake.apple_backup import (
     AppleBackupInputAdapter,
     InputAdapterStatus,
 )
+from tests.support.resource_policy import TEST_RESOURCE_POLICY
 
 
 FIXED_TIME = datetime(2026, 7, 24, 16, 0, tzinfo=timezone.utc)
@@ -22,7 +23,12 @@ BACKEND_ROOT = Path(__file__).resolve().parents[1]
 
 
 def make_adapter(root: Path, **kwargs) -> AppleBackupInputAdapter:
-    return AppleBackupInputAdapter([root], clock=lambda: FIXED_TIME, **kwargs)
+    return AppleBackupInputAdapter(
+        [root],
+        resource_policy=TEST_RESOURCE_POLICY,
+        clock=lambda: FIXED_TIME,
+        **kwargs,
+    )
 
 
 def test_controlled_outcomes_are_exact() -> None:
@@ -150,7 +156,11 @@ def test_invalid_configured_root_fails_closed(tmp_path: Path, root_kind: str) ->
         link_detector = lambda path: path == root.resolve()
 
     with pytest.raises(ValueError, match="evidence root"):
-        AppleBackupInputAdapter([root], link_detector=link_detector)
+        AppleBackupInputAdapter(
+            [root],
+            resource_policy=TEST_RESOURCE_POLICY,
+            link_detector=link_detector,
+        )
 
 
 def test_inspection_is_deterministic_and_audit_serializable(tmp_path: Path) -> None:

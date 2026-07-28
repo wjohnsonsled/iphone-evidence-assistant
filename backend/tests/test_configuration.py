@@ -8,6 +8,8 @@ import pytest
 from pydantic import ValidationError
 
 from app.core.config import Environment, LogLevel, Settings, get_settings
+from app.intake.resource_limits import VALID_RANGES
+from tests.support.resource_policy import TEST_RESOURCE_POLICY
 
 
 def settings(tmp_path: Path, **changes) -> Settings:
@@ -16,6 +18,10 @@ def settings(tmp_path: Path, **changes) -> Settings:
         "EVIDENCE_ROOT": str(tmp_path.resolve()),
         "ENVIRONMENT": "development",
         "LOG_LEVEL": "INFO",
+        **{
+            f"INTAKE_{name.upper()}": getattr(TEST_RESOURCE_POLICY, name)
+            for name in VALID_RANGES
+        },
     }
     values.update(changes)
     return Settings(_env_file=None, **values)
@@ -87,9 +93,39 @@ def test_environment_aliases_load_and_settings_cache_can_be_cleared(monkeypatch,
     monkeypatch.setenv("EVIDENCE_ROOT", str(tmp_path.resolve()))
     monkeypatch.setenv("ENVIRONMENT", "test")
     monkeypatch.setenv("LOG_LEVEL", "error")
+    for name in VALID_RANGES:
+        monkeypatch.setenv(
+            f"INTAKE_{name.upper()}",
+            str(getattr(TEST_RESOURCE_POLICY, name)),
+        )
     get_settings.cache_clear()
     loaded = get_settings()
     assert loaded.environment is Environment.TEST
     assert loaded.log_level is LogLevel.ERROR
     get_settings.cache_clear()
     assert get_settings.cache_info().currsize == 0
+
+
+@pytest.mark.parametrize("invalid", [None, "0", "-1", "not-an-integer"])
+def test_intake_resource_policy_is_required_and_positive(tmp_path, monkeypatch, invalid):
+    changes = {}
+    if invalid is not None:
+        changes["INTAKE_MAX_PLIST_BYTES"] = invalid
+    else:
+        monkeypatch.delenv("INTAKE_MAX_PLIST_BYTES")
+        values = {
+            "DATABASE_URL": "postgresql+psycopg://user:secret@db/evidence",
+            "EVIDENCE_ROOT": str(tmp_path.resolve()),
+            "ENVIRONMENT": "development",
+            "LOG_LEVEL": "INFO",
+            **{
+                f"INTAKE_{name.upper()}": getattr(TEST_RESOURCE_POLICY, name)
+                for name in VALID_RANGES
+                if name != "max_plist_bytes"
+            },
+        }
+        with pytest.raises(ValidationError):
+            Settings(_env_file=None, **values)
+        return
+    with pytest.raises(ValidationError):
+        settings(tmp_path, **changes)

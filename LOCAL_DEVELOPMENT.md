@@ -24,6 +24,16 @@ Configuration validation is fail-closed:
 - SQLite is permitted only for deterministic tests;
 - every semicolon-separated `EVIDENCE_ROOT` entry must be absolute and unique;
 - the documented development database password is rejected in production.
+- every `INTAKE_MAX_*` resource ceiling is explicitly supplied as a positive
+  integer within the documented range in
+  `backend/app/intake/resource_limits.py`; missing or invalid values prevent
+  startup.
+
+The committed example values are development/test-only ceilings. They are not
+production capacity recommendations. A deployment must deliberately provide
+all ten values for directory entries/depth, pathname length, plist bytes,
+SQLite main/WAL/SHM bytes, aggregate controlled-copy bytes, schema entries, and
+SQLite work units.
 
 On Windows local runs, replace the container path `/evidence` with an absolute
 Windows path. Configuration diagnostics use `Settings.safe_summary()` and

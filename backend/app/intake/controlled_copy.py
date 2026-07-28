@@ -25,6 +25,8 @@ from typing import Any
 from urllib.parse import quote
 from uuid import UUID
 
+from app.intake.resource_limits import IntakeResourcePolicy, ResourceLimitExceeded
+
 
 COMPANION_SUFFIXES = ("-wal", "-shm", "-journal")
 WORKSPACE_PREFIX = "iphone-evidence-validation-"
@@ -166,12 +168,14 @@ class ControlledSQLiteCopy:
         *,
         audit: ControlledCopyAudit,
         main_working_path: Path,
+        resource_policy: IntakeResourcePolicy,
         hasher: Hasher,
         cleanup: Cleanup,
         retain_for_testing: bool,
     ) -> None:
         self.audit = audit
         self.main_working_path = main_working_path
+        self._resource_policy = resource_policy
         self._hasher = hasher
         self._cleanup = cleanup
         self._retain_for_testing = retain_for_testing
@@ -195,9 +199,21 @@ class ControlledSQLiteCopy:
         """Run schema-neutral read-only SQLite structural checks."""
 
         connection: sqlite3.Connection | None = None
+        work_units = 0
+        interrupted = False
+
+        def enforce_work_limit() -> int:
+            nonlocal work_units, interrupted
+            work_units += 1_000
+            if work_units > self._resource_policy.max_sqlite_work_units:
+                interrupted = True
+                return 1
+            return 0
+
         try:
             connection = sqlite3.connect(self.read_only_uri, uri=True)
             connection.execute("PRAGMA query_only = ON")
+            connection.set_progress_handler(enforce_work_limit, 1_000)
             integrity_rows = tuple(str(row[0]) for row in connection.execute("PRAGMA integrity_check"))
             table_names = tuple(
                 sorted(
@@ -208,19 +224,31 @@ class ControlledSQLiteCopy:
                     )
                 )
             )
+            if len(table_names) > self._resource_policy.max_schema_entries:
+                raise ResourceLimitExceeded("schema_enumeration")
             user_version = int(connection.execute("PRAGMA user_version").fetchone()[0])
             application_id = int(connection.execute("PRAGMA application_id").fetchone()[0])
             self.audit.sqlite_access_mode = "READ_ONLY_QUERY_ONLY_IMMUTABLE_PRIVATE"
-        except sqlite3.Error as exc:
+        except (sqlite3.Error, ResourceLimitExceeded) as exc:
             self.audit.sqlite_access_mode = "READ_ONLY_FAILED"
-            self.audit.failure_code = "sqlite_validation_failed"
+            resource_failure = isinstance(exc, ResourceLimitExceeded) or interrupted
+            self.audit.failure_code = (
+                "resource_limit_exceeded"
+                if resource_failure
+                else "sqlite_validation_failed"
+            )
             raise ControlledCopyError(
-                "sqlite_validation_failed",
-                "Controlled SQLite structural validation failed.",
+                self.audit.failure_code,
+                (
+                    "Configured intake resource limit was exceeded."
+                    if resource_failure
+                    else "Controlled SQLite structural validation failed."
+                ),
                 self.audit,
             ) from exc
         finally:
             if connection is not None:
+                connection.set_progress_handler(None, 0)
                 connection.close()
 
         self.verify_working_files()
@@ -309,6 +337,7 @@ class ControlledCopyManager:
         self,
         *,
         workspace_root: Path | None = None,
+        resource_policy: IntakeResourcePolicy,
         clock: Clock | None = None,
         hasher: Hasher | None = None,
         copier: Copier | None = None,
@@ -317,6 +346,7 @@ class ControlledCopyManager:
         link_detector: LinkDetector | None = None,
     ) -> None:
         self._workspace_root = workspace_root.resolve(strict=True) if workspace_root else None
+        self._resource_policy = resource_policy
         if self._workspace_root is not None and not self._workspace_root.is_dir():
             raise ValueError("Workspace root must be a directory.")
         self._clock = clock or _utcnow
@@ -354,6 +384,7 @@ class ControlledCopyManager:
                 raise ValueError("Evidence source root must be a link-free directory.")
             self._validate_source_file(source_main, source_root)
             sources_before = self._source_set(source_main, source_root)
+            self._resource_policy.check_sqlite_set(sources_before)
             audit.companion_names_before = tuple(path.name for path in sources_before[1:])
             before_hashes = {path: self._hasher(path) for path in sources_before}
             before_sizes = {path: path.stat().st_size for path in sources_before}
@@ -409,6 +440,7 @@ class ControlledCopyManager:
             return ControlledSQLiteCopy(
                 audit=audit,
                 main_working_path=workspace / source_main.name,
+                resource_policy=self._resource_policy,
                 hasher=self._hasher,
                 cleanup=self._cleanup,
                 retain_for_testing=retain_for_testing,
@@ -417,12 +449,20 @@ class ControlledCopyManager:
             audit.failure_code = exc.code
             self._cleanup_failed_creation(audit)
             raise exc
-        except (OSError, RuntimeError, ValueError) as exc:
-            audit.failure_code = "controlled_copy_creation_failed"
+        except (OSError, RuntimeError, ValueError, ResourceLimitExceeded) as exc:
+            audit.failure_code = (
+                "resource_limit_exceeded"
+                if isinstance(exc, ResourceLimitExceeded)
+                else "controlled_copy_creation_failed"
+            )
             self._cleanup_failed_creation(audit)
             raise ControlledCopyError(
-                "controlled_copy_creation_failed",
-                "Controlled workspace could not be created safely.",
+                audit.failure_code,
+                (
+                    "Configured intake resource limit was exceeded."
+                    if isinstance(exc, ResourceLimitExceeded)
+                    else "Controlled workspace could not be created safely."
+                ),
                 audit,
             ) from exc
 
@@ -438,6 +478,7 @@ class ControlledCopyManager:
     def _validate_source_file(self, path: Path, evidence_source_root: Path) -> None:
         if not _is_relative_to(path, evidence_source_root):
             raise ValueError("Controlled-copy source is outside the evidence source.")
+        self._resource_policy.check_path(path, relative_to=evidence_source_root)
         relative = path.relative_to(evidence_source_root)
         current = evidence_source_root
         for part in relative.parts:
