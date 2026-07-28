@@ -40,6 +40,8 @@
 
 | DEV-0209 | Intake resource limits and denial-of-service controls | COMPLETE | DEV-0202; DEC-0025 | DEV-0209-intake-resource-limits-acceptance | Explicit caller-supplied policy validates ten required ceilings; adapter/copy/plist/schema/SQLite work limits fail closed with safe validation-failure outcomes and no support promotion |
 
+| DEV-0210 | Intake package integration tests | VALIDATION_PENDING | DEV-0203 through DEV-0209 | DEV-0210-intake-package-integration-acceptance; QMS-007 | Synthetic integration validates stable identity, shared hashes, controlled-copy cleanup, audit, provenance, resource denial, source immutability, distinct outcomes, and empty supported registry; owner package review required |
+
 | DEV-0211 | Profile and validate secondary Apple backup encryption indicators | DEFERRED | Owner-approved signal sources and revised compatibility profile | To be created | Must source, characterize, order, and define conflicts for every candidate signal; requires synthetic and Apple-produced fixtures plus owner approval before implementation or promotion |
 
 | DEV-0251 | Evidence-object domain contract | COMPLETE | DEV-0202; DEC-0011 | WP-0250-acceptance-criteria | Owner approved candidate infrastructure in DEC-0014; typed contract and additive relational model validated synthetically |

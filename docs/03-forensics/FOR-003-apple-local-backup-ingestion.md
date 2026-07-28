@@ -4,7 +4,7 @@
 
 - Scope: Phase 2 task boundaries
 - Architecture: ARC-001
-- Current implementation task: DEV-0204 complete pending WP-0200 review
+- Current implementation task: DEV-0210 validation pending
 - Input support effect: none
 
 ## 2. Governing principle
@@ -58,10 +58,10 @@ registration, hashing, working-copy creation, and audit persistence.
   candidate fixtures; production compatibility is unvalidated.
 - Encryption detection/reporting is implemented as a non-persistent,
   non-API projection; it is not a support claim.
-- Source-file hashing has a validated shared in-memory reference implementation;
-  persistent intake orchestration is not implemented. DEV-0202 contains a
-  limited structural-validation controlled-copy mechanism, not the general
-  DEV-0205 service.
+- Source-file hashing, controlled copies, audit, provenance, cleanup recovery,
+  and resource policy have validated shared candidate implementations.
+  Persistent production intake orchestration is not implemented; DEV-0210
+  composition exists only in deterministic synthetic tests.
 - Tenant, authorization, evidence-source, and audit persistence are not
   implemented.
 - DEV-0201 adapter output is not eligible for evidence storage, search, AI,

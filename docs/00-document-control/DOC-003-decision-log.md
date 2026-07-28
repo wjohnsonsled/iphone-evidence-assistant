@@ -583,3 +583,17 @@ incomplete, unsupported, encrypted, or unencrypted.
 
 This decision grants no production capacity value, compatibility approval,
 deployment, real-evidence use, API, parser, artifact, or support authority.
+
+## DEC-0026 — DEV-0210 test-only intake integration composition
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0200_REVIEW
+- Task: DEV-0210
+
+DEV-0210 composes the approved candidate intake and WP-0250 reference contracts
+only inside deterministic synthetic tests. No production workflow or API
+composition root is created. The supported registry remains empty.
+
+Integration success is not Apple compatibility approval, evidentiary
+completeness, parser/artifact support, real-evidence authority, deployment
+approval, or support promotion.

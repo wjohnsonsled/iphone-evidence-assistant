@@ -111,6 +111,9 @@ only. Production-facing API work remains separately governed.
 
 ## WP-0200 Apple Backup Intake and Validation
 
+**Package status:** `VALIDATION_PENDING`
+**Support effect:** None.
+
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
 | DEV-0201 | Apple backup input adapter | COMPLETE | DEV-0101 | Complete |
@@ -122,7 +125,7 @@ only. Production-facing API work remains separately governed.
 | DEV-0207 | Intake provenance model | COMPLETE | DEV-0203 | WP-0200 package review |
 | DEV-0208 | Intake cleanup and failure recovery | COMPLETE | DEV-0205 | WP-0200 package review |
 | DEV-0209 | Intake resource limits and denial-of-service controls | COMPLETE | DEV-0202 | WP-0200 package review |
-| DEV-0210 | Intake package integration tests | NOT_STARTED | DEV-0203 through DEV-0209 | Package gate |
+| DEV-0210 | Intake package integration tests | VALIDATION_PENDING | DEV-0203 through DEV-0209 | WP-0200 owner review |
 | DEV-0211 | Profile and validate secondary Apple backup encryption indicators | DEFERRED | Separately approved signal sources and revised compatibility profile | Owner profile gate |
 
 ### DEV-0202 required classifications
@@ -156,7 +159,9 @@ backlog wording differs.
 - synthetic end-to-end intake fixtures;
 - no artifact parser support claim.
 
-**Owner-review gate:** Approve the intake package and Apple compatibility profile.
+**Owner-review gate:** READY — review QMS-007 and DEV-0204 through DEV-0210.
+Package approval must remain distinct from any future Apple compatibility
+profile or support-promotion decision.
 
 ---
 
