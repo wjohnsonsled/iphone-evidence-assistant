@@ -207,3 +207,16 @@
   and DEV-0611 remain blocked by their predecessor sets.
 - No independent READY task remains. Registry/store counts and support status
   remain unchanged.
+
+## DEC-0061 / DEV-0602A readiness and validation
+
+- DEC-0061 preserves DEV-0602 COMPLETE and both version 1 profiles immutable.
+- The separately scoped DEV-0602A semantics are sufficiently specified,
+  additive, reversible, synthetic-only, and require no migration or support
+  decision; it advanced through `DEPENDENCIES_SATISFIED` and `READY`.
+- DEV-0602A implemented candidate `manifestdb-files-query` v2 and
+  `manifestdb-query-resource-controls` v1, passed its acceptance validation,
+  and is now `VALIDATION_PENDING`.
+- DEV-0603 through DEV-0607 and DEV-0609 remain at their independent mandatory
+  owner gates. DEV-0608, DEV-0610, and DEV-0611 remain dependency-blocked.
+- No other independent task is READY. Registry/store counts remain zero.

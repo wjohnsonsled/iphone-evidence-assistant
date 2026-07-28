@@ -782,6 +782,34 @@ replay, decoding, reconstruction, evidence interpretation, artifact parsing,
 parser execution, registry/store insertion, API, production, real evidence,
 Apple/parser/artifact/workflow support, or support promotion is authorized.
 
+## DEC-0061 — Reconcile DEV-0602 and authorize candidate query hardening
+
+- Date: 2026-07-28
+- Status: APPROVED_FOR_IMPLEMENTATION
+- Tasks: DEV-0602; DEV-0602A
+- Profiles: `manifestdb-files-query` v2;
+  `manifestdb-query-resource-controls` v1
+- Support effect: none
+
+DEV-0602 remains COMPLETE under DEC-0060. Query profile
+`manifestdb-files-query` v1 and locator profile `manifestdb-row-locator` v1
+remain immutable. Version 1 may return raw `file` BLOB bytes as an immutable
+in-memory observation, but may not decode, interpret, persist, log, hash, or
+publicly expose them.
+
+Expanded requirements are separately authorized as DEV-0602A. Candidate query
+v2 defaults to BLOB state/length/storage-class observations and requires
+explicit internal authorization for bounded raw bytes. It separates completion,
+termination, resource, and row states; distinguishes logical determinism from
+operational safety; uses monotonic time, deterministic projected-byte and
+fixed-overhead memory estimates, and PROCESS → TENANT → CASE →
+EVIDENCE_SOURCE → PROCESSING_RUN concurrency controls.
+
+Version 2 cannot replace, reinterpret, or silently fall back to version 1.
+DEV-0602A must stop at VALIDATION_PENDING. No BLOB interpretation, parser,
+artifact, Apple compatibility, API, persistence, production, real evidence,
+registry entry, supported record, or support promotion is authorized.
+
 Every future protected service, repository, job, report, export, AI, and API
 boundary must authorize before returning, transforming, exporting, or
 retrieving protected content. Queries must be tenant/case/resource scoped where

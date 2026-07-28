@@ -72,3 +72,12 @@ evidentiary completeness. Raw values do not establish file existence,
 authenticity, meaning, or support. The implementation and synthetic fixtures
 do not authorize a parser, registry entry, supported record, production use,
 real evidence, API, deployment, or support promotion.
+
+## Immutable version and successor boundary
+
+DEC-0061 confirms that version 1 remains immutable and COMPLETE under
+DEC-0060. Its raw `file` BLOB bytes may exist only as an in-memory immutable
+observation: no decoding, interpretation, persistence, logging, hashing,
+public API, or user-content conclusion is authorized. The separately selected
+candidate version 2 behavior is defined in FOR-013 and cannot be silently
+substituted for version 1.

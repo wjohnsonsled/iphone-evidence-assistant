@@ -86,3 +86,17 @@ support limitations remain active.
 DEV-0501 through DEV-0509 acceptance records form the complete candidate
 package. QMS-011 limitations remain active. Its synthetic corpus is not an
 Apple-produced compatibility fixture and no record promotes support.
+
+## DEV-0602A permanent validation traceability
+
+- Owner decision: DEC-0061
+- Validation package: QMS-012
+- Acceptance record: DEV-0602A-files-query-hardening-acceptance
+- Current status: `VALIDATION_PENDING`
+- Current support status: `CANDIDATE_NOT_SUPPORTED`
+- Supported registry entries: 0
+- Supported normalized records: 0
+
+DEV-0602 remains COMPLETE under DEC-0060 and its version 1 profiles remain
+immutable. DEV-0602A is separately versioned candidate infrastructure awaiting
+owner review; it promotes no support.

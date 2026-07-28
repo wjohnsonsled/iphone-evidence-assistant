@@ -375,3 +375,12 @@ locators, ascending keyset pagination, exact raw projections, caller-supplied
 ceilings, and explicit cancellation/failure outcomes. The layer is not a
 parser, performs no normalization or interpretation, and creates no supported
 record.
+
+DEC-0061 adds a separately selected candidate `manifestdb-files-query` version
+2 without changing version 1. Query completion, termination, row-value state,
+and resource state remain independent. Default BLOB observations exclude raw
+bytes; explicit internal byte access remains nonpersistent and uninterpreted.
+Logical byte and memory-estimate accounting is deterministic, while monotonic
+wall-clock and hierarchical concurrency denial are operational safety controls.
+Neither class creates an evidence, compatibility, completeness, or support
+conclusion.

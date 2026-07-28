@@ -31,3 +31,14 @@ All AC-01 through AC-10 pass using synthetic Files rows only.
 
 No migration was added. No value was interpreted, decoded, normalized, or
 persisted. Registry entries and supported normalized records remain zero.
+
+## DEC-0061 immutable-profile clarification
+
+DEV-0602 remains COMPLETE under DEC-0060. Query profile
+`manifestdb-files-query` v1 and locator profile `manifestdb-row-locator` v1
+remain immutable. Version 1 returns exact raw projected values, including raw
+`file` BLOB bytes, but never decodes, interprets, persists, logs, hashes, or
+publicly exposes those bytes. Its existing outcome codes remain authoritative.
+Its determinism claim applies to logical query behavior; operational timing can
+vary by environment. Expanded resource controls are separately tracked by
+DEV-0602A and do not retroactively change this acceptance record.

@@ -6,6 +6,16 @@ reference, and idempotency profile/version. Cross-tenant and cross-case
 requests cannot suppress each other or disclose another claim. Relational
 transaction isolation remains unvalidated on live PostgreSQL and is prohibited
 from production use pending that validation.
+
+## Candidate Manifest.db query controls — DEV-0602A
+
+Version 2 query continuations bind tenant, case, evidence source, artifact,
+database identity, processing run, query ID, and version. Application-level
+concurrency controls acquire PROCESS → TENANT → CASE → EVIDENCE_SOURCE →
+PROCESSING_RUN. Denial exposes only the scope and no workload or evidence
+content. Default BLOB observations return no bytes; explicit internal access
+requires authorization and remains nonpersistent, unlogged, uninterpreted, and
+unexposed. Production ceilings and distributed concurrency are unvalidated.
 ## Candidate metadata scope
 
 DEC-0058 does not expose WP-0500 through an API or production composition.

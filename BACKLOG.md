@@ -361,6 +361,7 @@ separate owner decision.
 |---|---|---:|---|---|
 | DEV-0601 | Manifest.db schema-profile validator | COMPLETE | WP-0200, WP-0400, DEV-0263, DEV-0264 | Artifact gate |
 | DEV-0602 | Files-table controlled query layer | COMPLETE | DEV-0601 | Artifact/provenance gate |
+| DEV-0602A | Files-table query hardening and resource-control profile | VALIDATION_PENDING | DEV-0602; DEC-0061 | Owner validation gate |
 | DEV-0603 | FileID normalization | OWNER_REVIEW | DEV-0602 | Evidence-integrity gate |
 | DEV-0604 | Domain normalization | OWNER_REVIEW | DEV-0602 | Evidence-interpretation gate |
 | DEV-0605 | Relative-path normalization | OWNER_REVIEW | DEV-0602 | Security/provenance gate |
