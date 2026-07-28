@@ -336,9 +336,9 @@ implementation is authorized ahead of its dependencies.
 | DEV-0501 | Apple backup discovery and metadata reconciliation | COMPLETE | WP-0200, WP-0400, DEV-0263, DEV-0264 | Artifact gate |
 | DEV-0502 | Info.plist controlled reader | COMPLETE | DEV-0501 | Artifact gate |
 | DEV-0503 | Manifest.plist controlled reader | COMPLETE | DEV-0501 | Artifact gate |
-| DEV-0504 | Status.plist controlled reader | READY | DEV-0501 | Artifact gate |
-| DEV-0505 | Backup metadata normalization | NOT_STARTED | DEV-0502 through DEV-0504 | Artifact gate |
-| DEV-0506 | Encryption and version field reconciliation | NOT_STARTED | DEV-0502 through DEV-0504 | Artifact gate |
+| DEV-0504 | Status.plist controlled reader | COMPLETE | DEV-0501 | Artifact gate |
+| DEV-0505 | Backup metadata normalization | READY | DEV-0502 through DEV-0504 | Artifact gate |
+| DEV-0506 | Encryption and version field reconciliation | READY | DEV-0502 through DEV-0504 | Artifact gate |
 | DEV-0507 | Metadata coverage and limitation reporting | NOT_STARTED | DEV-0505 | Artifact gate |
 | DEV-0508 | Metadata fixture corpus | NOT_STARTED | DEV-0502 through DEV-0506 | Artifact gate |
 | DEV-0509 | Metadata validation report | NOT_STARTED | DEV-0501 through DEV-0508 | Artifact gate |

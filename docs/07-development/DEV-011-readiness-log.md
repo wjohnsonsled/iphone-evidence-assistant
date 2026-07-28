@@ -73,3 +73,9 @@
   `DEPENDENCIES_SATISFIED` to `READY`.
 - DEV-0601 remains `OWNER_REVIEW`; discovery does not authorize schema
   compatibility rules.
+
+## DEV-0502 through DEV-0504 completion reevaluation
+
+- All three controlled metadata readers are COMPLETE.
+- DEV-0505 and DEV-0506 automatically advanced through
+  `DEPENDENCIES_SATISFIED` to `READY`.
