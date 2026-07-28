@@ -69,3 +69,10 @@ registration, hashing, working-copy creation, and audit persistence.
 - DEV-0201 path validation does not eliminate filesystem time-of-check/time-of-use
   risk; later evidence-source intake must bind processing to a registered,
   immutable source and verified working copy.
+## DEV-0501 candidate discovery boundary
+
+Profile `apple-local-backup-top-level-discovery` version 1 observes only the
+authorized top-level Manifest.db and three governed plists. Manifest.db remains
+pending controlled structural and DEV-0601 schema validation. Plist claims are
+source-specific; field conflicts default unresolved. Root names are not device
+identity. Discovery is not parsing, compatibility, completeness, or support.

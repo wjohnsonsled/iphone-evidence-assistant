@@ -971,3 +971,17 @@ The registry and supported normalized store remain empty. Owner review may
 approve candidate architectural use only; it cannot activate a parser, promote
 an artifact or workflow, expose an API, authorize real evidence or production
 use, or change support status.
+
+## DEC-0054 — Approve DEV-0501 Apple backup discovery semantics
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Task: DEV-0501
+- Support effect: none
+
+Discovery is limited to the authorized backup root and governed top-level
+metadata. Sources remain independently attributable; missing, malformed,
+unsupported, inaccessible, and conflicting claims remain distinct. No universal
+Manifest.db/plist precedence applies. Manifest.db content/schema compatibility
+remains DEV-0601. Directory names are observations only. No parsing,
+compatibility, real-evidence, API, production, or support authority follows.

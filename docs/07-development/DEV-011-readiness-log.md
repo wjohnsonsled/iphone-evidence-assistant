@@ -65,3 +65,11 @@
 - No independent task passes all automatic-readiness conditions. Remaining
   dependency-satisfied work is at recorded artifact/schema, coverage-semantics,
   provenance, security, attorney-conclusion, or production gates.
+
+## DEC-0054 / DEV-0501 completion reevaluation
+
+- DEV-0501 owner gate resolved and task completed.
+- DEV-0502, DEV-0503, and DEV-0504 automatically advanced through
+  `DEPENDENCIES_SATISFIED` to `READY`.
+- DEV-0601 remains `OWNER_REVIEW`; discovery does not authorize schema
+  compatibility rules.

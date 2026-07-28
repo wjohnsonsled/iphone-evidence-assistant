@@ -108,6 +108,11 @@ readiness transitions are automatic and recorded in DEV-011.
 | DEV-1109 | Pipeline audit events | COMPLETE | DEV-1104, DEV-0206 | DEV-1109-pipeline-audit-events-acceptance | Closed append-only started/completed/zero/failed mapping with scoped attribution |
 | DEV-1110 | Pipeline integration tests | VALIDATION_PENDING | DEV-1101 through DEV-1109 | DEV-1110-pipeline-integration-acceptance; QMS-010 | Synthetic integrated package complete; WP-1100 owner review required |
 | DEV-0459 | Commercial Services Integration | DEFERRED | DEV-0457; separate approval | To be created | No external or paid integration authorized |
+
+| DEV-0501 | Apple backup discovery and metadata reconciliation | COMPLETE | WP-0200, WP-0400, DEV-0263, DEV-0264; DEC-0054 | DEV-0501-apple-backup-discovery-acceptance | Versioned root-confined source-specific discovery; Manifest pending validation; conflicts unresolved; no support effect |
+| DEV-0502 | Info.plist controlled reader | READY | DEV-0501 | To be created | DEC-0051 reevaluation: discovery contract complete |
+| DEV-0503 | Manifest.plist controlled reader | READY | DEV-0501 | To be created | DEC-0051 reevaluation: discovery contract complete |
+| DEV-0504 | Status.plist controlled reader | READY | DEV-0501 | To be created | DEC-0051 reevaluation: discovery contract complete |
 | DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | To be created | Blocked by reporting and coverage package gates |
 
 
