@@ -170,3 +170,20 @@
 - DEV-0602 is selected as the highest-priority Apple local-backup MVP task.
 - No schema recognition, fingerprint, or implementation presence changes
   support status; registry/store counts remain zero.
+
+## DEV-0602 readiness refinement
+
+- Task-definition inspection identified `MANIFEST-QUERY-PROVENANCE-GATE`.
+- DEV-0602 is `OWNER_REVIEW`, not executable, because no governing record
+  defines:
+  - the stable source-row locator (`rowid`, fileID, primary key, composite, or
+    another profile);
+  - deterministic ordering and pagination;
+  - duplicate locator and `WITHOUT ROWID` handling;
+  - whether the raw `file` blob may be selected before DEV-0607;
+  - NULL, dynamic SQLite type, resource-limit, partial-read, and query-failure
+    outcomes.
+- These are evidence-integrity and provenance semantics, not routine database
+  implementation details.
+- DEV-0603 through DEV-0607 and DEV-0609 remain blocked by DEV-0602. No
+  independent READY task remains.
