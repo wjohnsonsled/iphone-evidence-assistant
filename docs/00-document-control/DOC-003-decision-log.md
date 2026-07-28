@@ -863,3 +863,15 @@ observations. Complete zero records is permitted only after authorized complete
 reconciled execution. These observations remain separate from WP-0450 derived
 coverage and make no device-level, compatibility, support, legal, or intent
 conclusion.
+## DEC-0046 — Approve DEV-0409 processing issue observations
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Task: DEV-0409
+
+Immutable processing issues use closed category, severity, and recoverability
+vocabularies with stable safe codes, sanitized diagnostics, complete
+provenance, and limitations. Partial-processing observations link completed,
+incomplete, and unresolved scope to coverage, omissions, and issues. These
+diagnostics make no evidentiary, compatibility, support, intent, legal, AI,
+report, authenticity, or production conclusion.

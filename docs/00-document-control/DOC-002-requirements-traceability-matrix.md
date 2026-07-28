@@ -432,6 +432,15 @@ runtime implementation, validation, or artifact support.
 | DEV-0408-R03 | Partial/resource/omission states retain explicit metadata and cannot appear complete | DEC-0045 | `IMPLEMENTED_TASK_VALIDATED` | Coverage and omission envelopes | AC-05 through AC-07 | DEV-0408 |
 | DEV-0408-R04 | Processing facts produce no WP-0450, device-level, support, or legal conclusion | DEC-0045 | `IMPLEMENTED_TASK_VALIDATED` | Bounded observation contract | AC-08 | DEV-0408 |
 
+## 16O. DEV-0409 issue requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0409-R01 | Closed category, severity, recoverability, and stable-code diagnostics | DEC-0046 | `IMPLEMENTED_TASK_VALIDATED` | `ProcessingIssue` enums/contract | AC-01; AC-02 | DEV-0409 |
+| DEV-0409-R02 | Reject unsafe diagnostics and store no sensitive diagnostic fields | DEC-0046; security rules | `IMPLEMENTED_TASK_VALIDATED` | Safe validation and bounded fields | AC-03; AC-04 | DEV-0409 |
+| DEV-0409-R03 | Preserve reference-only provenance and complete partial scope | DEC-0046 | `IMPLEMENTED_TASK_VALIDATED` | Issue/partial envelopes | AC-05; AC-06 | DEV-0409 |
+| DEV-0409-R04 | Keep immutable diagnostics free of evidentiary/support conclusions | DEC-0046 | `IMPLEMENTED_TASK_VALIDATED` | Frozen candidate records | AC-07; AC-08 | DEV-0409 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |

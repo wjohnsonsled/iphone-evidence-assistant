@@ -23,6 +23,10 @@ from app.evidence_core.processing_coverage import (
     ProcessingCoverageObservation, ReconciliationStatus,
     ResourceLimitObservation, count, observe_coverage,
 )
+from app.evidence_core.processing_issue import (
+    IssueCategory, IssueSeverity, PartialProcessingObservation, ProcessingIssue,
+    Recoverability, record_issue, record_partial_processing,
+)
 
 __all__ = [
     "ProcessingRun", "ProcessingRunService", "SourceArtifact",
@@ -39,4 +43,7 @@ __all__ = [
     "ExecutionState", "OmissionCategory", "OmissionObservation",
     "ProcessingCoverageObservation", "ReconciliationStatus",
     "ResourceLimitObservation", "count", "observe_coverage",
+    "IssueCategory", "IssueSeverity", "PartialProcessingObservation",
+    "ProcessingIssue", "Recoverability", "record_issue",
+    "record_partial_processing",
 ]
