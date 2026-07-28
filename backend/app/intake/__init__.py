@@ -16,7 +16,11 @@ from app.intake.controlled_copy import (
     ControlledCopyError,
     ControlledCopyManager,
     ControlledSQLiteCopy,
+    ControlledWorkspaceRecovery,
+    RecoveryStatus,
     SQLiteStructuralObservation,
+    WorkspaceRecoveryRecord,
+    WorkspaceRecoveryReport,
 )
 from app.intake.encryption_state import (
     BackupEncryptionState,
@@ -34,10 +38,14 @@ __all__ = [
     "ControlledCopyError",
     "ControlledCopyManager",
     "ControlledSQLiteCopy",
+    "ControlledWorkspaceRecovery",
     "InputAdapterStatus",
     "InputInspectionIssue",
     "InputInspectionResult",
+    "RecoveryStatus",
     "EncryptionStateReport",
     "SQLiteStructuralObservation",
+    "WorkspaceRecoveryRecord",
+    "WorkspaceRecoveryReport",
     "report_encryption_state",
 ]

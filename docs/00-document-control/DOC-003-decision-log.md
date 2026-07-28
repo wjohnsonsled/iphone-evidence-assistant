@@ -546,3 +546,18 @@ The reference service is in-memory and caller-provided locators are not yet
 bound by integrated intake orchestration. This decision grants no parser,
 artifact, Apple compatibility, persistence, API, production, real-evidence, or
 support authority.
+
+## DEC-0024 — DEV-0208 bounded controlled-workspace recovery
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0200_REVIEW
+- Task: DEV-0208
+
+Recovery may remove only stale, immediate, controlled-prefix directories under
+one validated temporary workspace root. Links, root escapes, non-directories,
+recent workspaces, unrelated entries, and deletion failures are retained and
+reported explicitly.
+
+Recovery is not scheduled and has no persistent ledger or multi-process lock.
+It does not authorize evidence-source deletion, arbitrary path deletion, an
+API, production use, real-evidence processing, or support promotion.

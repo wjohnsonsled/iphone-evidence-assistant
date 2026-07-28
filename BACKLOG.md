@@ -120,7 +120,7 @@ only. Production-facing API work remains separately governed.
 | DEV-0205 | Controlled SQLite working-copy service | COMPLETE | DEV-0204 | WP-0200 package review |
 | DEV-0206 | Intake audit-event model | COMPLETE | DEV-0203 | WP-0200 package review |
 | DEV-0207 | Intake provenance model | COMPLETE | DEV-0203 | WP-0200 package review |
-| DEV-0208 | Intake cleanup and failure recovery | NOT_STARTED | DEV-0205 | Package gate |
+| DEV-0208 | Intake cleanup and failure recovery | COMPLETE | DEV-0205 | WP-0200 package review |
 | DEV-0209 | Intake resource limits and denial-of-service controls | NOT_STARTED | DEV-0202 | Package gate |
 | DEV-0210 | Intake package integration tests | NOT_STARTED | DEV-0203 through DEV-0209 | Package gate |
 | DEV-0211 | Profile and validate secondary Apple backup encryption indicators | DEFERRED | Separately approved signal sources and revised compatibility profile | Owner profile gate |

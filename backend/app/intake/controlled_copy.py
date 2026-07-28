@@ -18,7 +18,7 @@ import stat
 import tempfile
 from collections.abc import Callable, Iterable
 from dataclasses import asdict, dataclass, field
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from enum import Enum
 from pathlib import Path
 from typing import Any
@@ -27,6 +27,7 @@ from uuid import UUID
 
 
 COMPANION_SUFFIXES = ("-wal", "-shm", "-journal")
+WORKSPACE_PREFIX = "iphone-evidence-validation-"
 Clock = Callable[[], datetime]
 Hasher = Callable[[Path], str]
 Copier = Callable[[Path, Path], None]
@@ -42,6 +43,54 @@ class CleanupStatus(str, Enum):
     SUCCEEDED = "SUCCEEDED"
     FAILED = "FAILED"
     RETAINED_FOR_TEST = "RETAINED_FOR_TEST"
+
+
+class RecoveryStatus(str, Enum):
+    """Closed outcomes for one owned workspace recovery candidate."""
+
+    REMOVED = "REMOVED"
+    SKIPPED_RECENT = "SKIPPED_RECENT"
+    REJECTED_LINK = "REJECTED_LINK"
+    REJECTED_NON_DIRECTORY = "REJECTED_NON_DIRECTORY"
+    FAILED = "FAILED"
+
+
+@dataclass(frozen=True, slots=True)
+class WorkspaceRecoveryRecord:
+    """One deterministic stale-workspace recovery observation."""
+
+    workspace_path: str
+    status: RecoveryStatus
+    modified_at: datetime | None
+    failure_code: str | None = None
+
+
+@dataclass(frozen=True, slots=True)
+class WorkspaceRecoveryReport:
+    """Immutable report for a bounded recovery pass."""
+
+    workspace_root: str
+    scanned_at: datetime
+    stale_before: datetime
+    records: tuple[WorkspaceRecoveryRecord, ...]
+
+    def canonical_json(self) -> str:
+        data = asdict(self)
+        data["scanned_at"] = self.scanned_at.isoformat()
+        data["stale_before"] = self.stale_before.isoformat()
+        data["records"] = [
+            {
+                **asdict(record),
+                "status": record.status.value,
+                "modified_at": (
+                    record.modified_at.isoformat()
+                    if record.modified_at is not None
+                    else None
+                ),
+            }
+            for record in self.records
+        ]
+        return json.dumps(data, sort_keys=True, separators=(",", ":"))
 
 
 @dataclass(frozen=True, slots=True)
@@ -422,8 +471,121 @@ class ControlledCopyManager:
             audit.failure_code = audit.failure_code or "working_copy_cleanup_failed"
 
 
+class ControlledWorkspaceRecovery:
+    """Remove only stale, owned, link-free workspaces from one configured root."""
+
+    def __init__(
+        self,
+        workspace_root: Path,
+        *,
+        clock: Clock | None = None,
+        cleanup: Cleanup | None = None,
+        link_detector: LinkDetector | None = None,
+    ) -> None:
+        resolved_root = workspace_root.resolve(strict=True)
+        if not resolved_root.is_dir():
+            raise ValueError("Workspace recovery root must be a directory.")
+        self._link_detector = link_detector or _is_link_or_reparse
+        if self._link_detector(workspace_root):
+            raise ValueError("Workspace recovery root must not be a link.")
+        self._workspace_root = resolved_root
+        self._clock = clock or _utcnow
+        self._cleanup = cleanup or shutil.rmtree
+
+    def recover_stale(self, *, older_than: timedelta) -> WorkspaceRecoveryReport:
+        """Remove stale owned workspaces and explicitly report every candidate."""
+
+        if older_than <= timedelta(0):
+            raise ValueError("Recovery age must be positive.")
+        scanned_at = _normalize_utc(self._clock())
+        stale_before = scanned_at - older_than
+        records: list[WorkspaceRecoveryRecord] = []
+
+        for candidate in sorted(
+            (
+                path
+                for path in self._workspace_root.iterdir()
+                if path.name.startswith(WORKSPACE_PREFIX)
+            ),
+            key=lambda path: path.name,
+        ):
+            try:
+                candidate_stat = candidate.lstat()
+                modified_at = datetime.fromtimestamp(
+                    candidate_stat.st_mtime,
+                    tz=timezone.utc,
+                )
+                if self._link_detector(candidate):
+                    records.append(
+                        WorkspaceRecoveryRecord(
+                            str(candidate),
+                            RecoveryStatus.REJECTED_LINK,
+                            modified_at,
+                            "recovery_link_rejected",
+                        )
+                    )
+                    continue
+                if not stat.S_ISDIR(candidate_stat.st_mode):
+                    records.append(
+                        WorkspaceRecoveryRecord(
+                            str(candidate),
+                            RecoveryStatus.REJECTED_NON_DIRECTORY,
+                            modified_at,
+                            "recovery_non_directory_rejected",
+                        )
+                    )
+                    continue
+                resolved_candidate = candidate.resolve(strict=True)
+                if (
+                    resolved_candidate.parent != self._workspace_root
+                    or not _is_relative_to(resolved_candidate, self._workspace_root)
+                ):
+                    records.append(
+                        WorkspaceRecoveryRecord(
+                            str(candidate),
+                            RecoveryStatus.REJECTED_LINK,
+                            modified_at,
+                            "recovery_root_escape_rejected",
+                        )
+                    )
+                    continue
+                if modified_at > stale_before:
+                    records.append(
+                        WorkspaceRecoveryRecord(
+                            str(resolved_candidate),
+                            RecoveryStatus.SKIPPED_RECENT,
+                            modified_at,
+                        )
+                    )
+                    continue
+                self._cleanup(resolved_candidate)
+                records.append(
+                    WorkspaceRecoveryRecord(
+                        str(resolved_candidate),
+                        RecoveryStatus.REMOVED,
+                        modified_at,
+                    )
+                )
+            except OSError:
+                records.append(
+                    WorkspaceRecoveryRecord(
+                        str(candidate),
+                        RecoveryStatus.FAILED,
+                        None,
+                        "workspace_recovery_failed",
+                    )
+                )
+
+        return WorkspaceRecoveryReport(
+            workspace_root=str(self._workspace_root),
+            scanned_at=scanned_at,
+            stale_before=stale_before,
+            records=tuple(records),
+        )
+
+
 def _create_workspace(root: Path | None) -> Path:
-    return Path(tempfile.mkdtemp(prefix="iphone-evidence-validation-", dir=root))
+    return Path(tempfile.mkdtemp(prefix=WORKSPACE_PREFIX, dir=root))
 
 
 def _sha256(path: Path) -> str:
