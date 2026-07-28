@@ -21,6 +21,12 @@ class ParserDisposition(str, Enum):
     UNKNOWN = "UNKNOWN"
 
 
+class CurrentSupportStatus(str, Enum):
+    """Registry-admissible current state; non-Supported states stay outside."""
+
+    SUPPORTED = "SUPPORTED"
+
+
 class ParserQuarantinedError(RuntimeError):
     """Structured denial that never exposes parser or evidence content."""
 
@@ -42,9 +48,11 @@ class ApprovedParserEntry:
     parser_id: str
     parser_version: str
     schema_profiles: tuple[str, ...]
-    validation_reference: str
-    approval_record: str
-    effective_date: date
+    owner_decision_id: str
+    validation_package_id: str
+    acceptance_record_ids: tuple[str, ...]
+    promotion_date: date
+    current_support_status: CurrentSupportStatus
     retirement_date: date | None = None
 
     def __post_init__(self) -> None:
@@ -53,16 +61,22 @@ class ApprovedParserEntry:
             "artifact_family",
             "parser_id",
             "parser_version",
-            "validation_reference",
-            "approval_record",
+            "owner_decision_id",
+            "validation_package_id",
         ):
             object.__setattr__(self, field, _required(getattr(self, field), field))
         profiles = tuple(sorted({_required(item, "schema_profile") for item in self.schema_profiles}))
         if not profiles:
             raise ValueError("schema_profiles_required")
         object.__setattr__(self, "schema_profiles", profiles)
-        if self.retirement_date is not None and self.retirement_date < self.effective_date:
-            raise ValueError("retirement_precedes_effective_date")
+        records = tuple(sorted({_required(item, "acceptance_record_id") for item in self.acceptance_record_ids}))
+        if not records:
+            raise ValueError("acceptance_record_ids_required")
+        object.__setattr__(self, "acceptance_record_ids", records)
+        if self.current_support_status is not CurrentSupportStatus.SUPPORTED:
+            raise ValueError("current_support_status_must_be_supported")
+        if self.retirement_date is not None and self.retirement_date < self.promotion_date:
+            raise ValueError("retirement_precedes_promotion_date")
 
     @property
     def identity(self) -> tuple[str, str, str]:
@@ -124,7 +138,7 @@ class SupportedParserRegistry:
             raise ParserQuarantinedError("parser_not_in_supported_registry")
         if schema_profile not in entry.schema_profiles:
             raise ParserQuarantinedError("schema_profile_not_approved")
-        if on_date < entry.effective_date:
+        if on_date < entry.promotion_date:
             raise ParserQuarantinedError("approval_not_effective")
         if entry.retirement_date is not None and on_date > entry.retirement_date:
             raise ParserQuarantinedError("approval_retired")

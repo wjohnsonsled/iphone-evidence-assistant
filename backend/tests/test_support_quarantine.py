@@ -13,6 +13,7 @@ import pytest
 from app.support import (
     ApprovedParserEntry,
     ArtifactLifecycleStatus,
+    CurrentSupportStatus,
     ParserAuthorization,
     ParserDisposition,
     ParserQuarantinedError,
@@ -27,14 +28,16 @@ BACKEND = Path(__file__).parents[1]
 
 def entry() -> ApprovedParserEntry:
     return ApprovedParserEntry(
-        "SYN-001",
-        "synthetic_test_only",
-        "synthetic.parser",
-        "1.0.0",
-        ("SCHEMA_B", "SCHEMA_A"),
-        "SYNTHETIC-VALIDATION",
-        "SYNTHETIC-OWNER-APPROVAL",
-        date(2026, 1, 1),
+        artifact_id="SYN-001",
+        artifact_family="synthetic_test_only",
+        parser_id="synthetic.parser",
+        parser_version="1.0.0",
+        schema_profiles=("SCHEMA_B", "SCHEMA_A"),
+        owner_decision_id="DEC-SYNTHETIC",
+        validation_package_id="QMS-SYNTHETIC",
+        acceptance_record_ids=("AC-SYNTHETIC-02", "AC-SYNTHETIC-01"),
+        promotion_date=date(2026, 1, 1),
+        current_support_status=CurrentSupportStatus.SUPPORTED,
     )
 
 
@@ -114,8 +117,9 @@ def test_unknown_identity_profile_dates_and_duplicates_fail_closed():
 @pytest.mark.parametrize(
     "change,code",
     [
-        ({"approval_record": ""}, "approval_record_required"),
-        ({"validation_reference": ""}, "validation_reference_required"),
+        ({"owner_decision_id": ""}, "owner_decision_id_required"),
+        ({"validation_package_id": ""}, "validation_package_id_required"),
+        ({"acceptance_record_ids": ()}, "acceptance_record_ids_required"),
         ({"schema_profiles": ()}, "schema_profiles_required"),
         ({"retirement_date": date(2025, 1, 1)}, "retirement_precedes"),
     ],
@@ -123,6 +127,15 @@ def test_unknown_identity_profile_dates_and_duplicates_fail_closed():
 def test_registry_entry_requires_complete_approval_metadata(change, code):
     with pytest.raises(ValueError, match=code):
         replace(entry(), **change)
+
+
+def test_promotion_traceability_is_normalized_and_permanent() -> None:
+    promoted = entry()
+    assert promoted.owner_decision_id == "DEC-SYNTHETIC"
+    assert promoted.validation_package_id == "QMS-SYNTHETIC"
+    assert promoted.acceptance_record_ids == ("AC-SYNTHETIC-01", "AC-SYNTHETIC-02")
+    assert promoted.promotion_date == date(2026, 1, 1)
+    assert promoted.current_support_status is CurrentSupportStatus.SUPPORTED
 
 
 def admission_args(**changes):

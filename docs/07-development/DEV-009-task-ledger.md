@@ -91,6 +91,17 @@
 | DEV-0456 | Question-Specific Evidence Sufficiency Engine | FUTURE | DEV-0453, WP-1200, WP-1300 | To be created | Post-MVP; no legal sufficiency conclusion |
 | DEV-0457 | Acquisition Recommendation Engine | FUTURE | DEV-0455, DEV-0456 | To be created | Post-MVP; separate acquisition-method approval |
 | DEV-0458 | Attorney Coverage Summary Generator | BLOCKED | DEV-0453, DEV-0454, DEV-1401, DEV-1404 | To be created | Attorney-readable limitations mandatory |
+
+| DEV-1101 | Supported parser registry | COMPLETE | WP-0400, DEV-0262, DEV-0263, DEV-0264 | DEV-1101-supported-parser-registry-acceptance | Reuses DEV-0304 registry; complete permanent promotion references; production entry count remains zero |
+| DEV-1102 | Legacy parser registry isolation | NOT_STARTED | DEV-1101 | To be created | Must preserve separate registries and imports |
+| DEV-1103 | Fail-closed parser executor | NOT_STARTED | DEV-1101 | To be created | No candidate or legacy execution in supported path |
+| DEV-1104 | Processing-run state machine | NOT_STARTED | DEV-0401 | To be created | Must distinguish lifecycle outcomes |
+| DEV-1105 | Coverage aggregation | NOT_STARTED | DEV-0408 | To be created | Factual aggregation only |
+| DEV-1106 | Failure aggregation | NOT_STARTED | DEV-0409 | To be created | Safe diagnostics and partial processing |
+| DEV-1107 | Idempotency and rerun controls | NOT_STARTED | DEV-1104 | To be created | Deterministic processing identity |
+| DEV-1108 | Cancellation and cleanup | NOT_STARTED | DEV-1104 | To be created | Explicit terminal outcomes |
+| DEV-1109 | Pipeline audit events | NOT_STARTED | DEV-1104, DEV-0206 | To be created | Closed append-only taxonomy |
+| DEV-1110 | Pipeline integration tests | NOT_STARTED | DEV-1101 through DEV-1109 | To be created | Synthetic package validation |
 | DEV-0459 | Commercial Services Integration | FUTURE | DEV-0457; separate approval | To be created | No external or paid integration authorized |
 | DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | To be created | Blocked by reporting and coverage package gates |
 

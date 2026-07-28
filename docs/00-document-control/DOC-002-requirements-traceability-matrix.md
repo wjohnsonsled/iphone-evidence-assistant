@@ -129,6 +129,7 @@ statuses. They must not be displayed as support claims.
 | QMS-ACC-001 | Define explicit acceptance criteria and satisfy implementation, validation, tests, documentation, provenance, and failure handling before support | AGENTS.md All-or-nothing support rule; FOR-004 §1 | `DOCUMENTED_CONTROL` | Downstream task-specific acceptance documents are absent | No artifact acceptance review has occurred | Every downstream task |
 | QMS-TRC-001 | Update traceability, documentation, task ledger, and completion evidence for every task | AGENTS.md Development method | `DOCUMENTED_CONTROL` | DOC-002 and DEV-009 establish the control surfaces | Document validation for DEV-0003 | Every task |
 | QMS-SUP-001 | Every Supported capability permanently records Owner Decision ID, Validation Package ID, Acceptance Record IDs, Promotion Date, and Current Support Status | DEC-0014; AGENTS.md; FOR-004 §6 | `DOCUMENTED_CONTROL` | Permanent governance rule; no capability is currently promoted | Future promotion package must fail closed if any field is absent | Every support-promotion gate |
+| QMS-SUP-002 | The supported processing registry enforces complete permanent promotion metadata and remains empty until a separate promotion decision | QMS-SUP-001; ARC-002 | `IMPLEMENTED_TASK_VALIDATED` | `app.support.registry.ApprovedParserEntry`; empty production composition | DEV-1101 synthetic traceability and quarantine tests | DEV-1101 |
 
 ## 11. DEV-0101 backend-scaffold requirements
 

@@ -6,6 +6,7 @@ from app.support.domain import (
 )
 from app.support.registry import (
     ApprovedParserEntry,
+    CurrentSupportStatus,
     OutputAdmission,
     ParserAuthorization,
     ParserDisposition,
@@ -17,6 +18,7 @@ from app.support.registry import (
 
 __all__ = [
     "ApprovedParserEntry",
+    "CurrentSupportStatus",
     "ArtifactLifecycleStatus",
     "OutputAdmission",
     "ParserAuthorization",

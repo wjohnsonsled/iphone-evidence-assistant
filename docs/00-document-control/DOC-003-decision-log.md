@@ -916,3 +916,15 @@ No live PostgreSQL, production repository, parser activation/execution,
 artifact or Apple compatibility, API, real evidence, report, AI, deployment,
 or support promotion is authorized. JSON observation payloads remain an
 accepted candidate limitation, not a final production representation.
+
+## DEC-0050 — Designate DEV-1101 READY
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Task: DEV-1101
+- Support effect: none
+
+The owner designates DEV-1101 ready for immediate autonomous implementation.
+The task must preserve zero Supported Parser Registry entries, zero supported
+normalized records, legacy quarantine, and the prohibitions on parser or
+artifact promotion, real-evidence processing, API exposure, and deployment.

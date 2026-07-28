@@ -4,7 +4,7 @@ import pytest
 from app.evidence_core.processing_coverage import *
 from app.evidence_core.supported_store import *
 from app.support.domain import ProcessingResultStatus
-from app.support.registry import ApprovedParserEntry,ParserDisposition,SupportedParserRegistry,create_supported_registry
+from app.support.registry import ApprovedParserEntry,CurrentSupportStatus,ParserDisposition,SupportedParserRegistry,create_supported_registry
 def u(n):return UUID(f"50000000-0000-4000-8000-{n:012d}")
 NOW=datetime(2026,7,28,tzinfo=timezone.utc)
 def coverage():
@@ -12,7 +12,7 @@ def coverage():
 def candidate(**x):
  d=dict(candidate_id=u(1),tenant_id=u(2),case_id=u(3),evidence_source_id=u(20),source_artifact_id=u(4),processing_run_id=u(5),parser_identity_id=u(7),parser_id="synthetic.parser",parser_version="1",parser_contract_version="v1",artifact_family="synthetic",schema_profile="synthetic-v1",schema_fingerprint_observation_id=u(8),source_locator_id=u(6),raw_value_observation_id=u(9),normalized_value_observation_id=None,transformation_provenance_complete=True,timestamp_observation_id=None,timestamp_provenance_complete=True,coverage=coverage(),integrity_approval_id=u(10),support_promotion_reference="DEC-SYNTHETIC",limitations=("Synthetic only.",),processing_result=ProcessingResultStatus.SUPPORTED_COMPLETE,disposition=OutputDisposition.APPROVED);return SupportedRecordCandidate(**(d|x))
 def registry():
- e=ApprovedParserEntry("SYN","synthetic","synthetic.parser","1",("synthetic-v1",),"VAL-SYN","DEC-SYNTHETIC",date(2026,1,1))
+ e=ApprovedParserEntry("SYN","synthetic","synthetic.parser","1",("synthetic-v1",),"DEC-SYNTHETIC","QMS-SYNTHETIC",("AC-SYNTHETIC",),date(2026,1,1),CurrentSupportStatus.SUPPORTED)
  r=SupportedParserRegistry("synthetic-test",(e,),instance_id=u(11))
  p=r.authorize(artifact_id="SYN",parser_id="synthetic.parser",parser_version="1",schema_profile="synthetic-v1",disposition=ParserDisposition.APPROVED,on_date=date(2026,7,28))
  a=AdmissionAuthorization(p,u(2),u(3),u(4),u(5),"supported-record.admit","DEC-SYNTHETIC")

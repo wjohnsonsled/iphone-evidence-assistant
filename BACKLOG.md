@@ -463,7 +463,7 @@ implementation is authorized ahead of its dependencies.
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-1101 | Supported parser registry | NOT_STARTED | WP-0400, DEV-0262, DEV-0263, DEV-0264 | Package gate |
+| DEV-1101 | Supported parser registry | COMPLETE | WP-0400, DEV-0262, DEV-0263, DEV-0264 | Package gate |
 | DEV-1102 | Legacy parser registry isolation | NOT_STARTED | DEV-1101 | Package gate |
 | DEV-1103 | Fail-closed parser executor | NOT_STARTED | DEV-1101 | Package gate |
 | DEV-1104 | Processing-run state machine | NOT_STARTED | DEV-0401 | Package gate |
