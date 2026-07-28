@@ -259,9 +259,9 @@ authorization service and corrects DEV-0307's dependency.
 | DEV-0404 | Parser identity and version model | COMPLETE | DEV-0401 | WP-0400 evidence-integrity/provenance gate |
 | DEV-0405 | Schema-fingerprint model | COMPLETE | DEV-0402; DEC-0042 | WP-0400 review |
 | DEV-0406 | Raw and normalized value model | COMPLETE | DEV-0402; DEC-0043 | WP-0400 review |
-| DEV-0407 | Timestamp provenance model | READY | DEV-0406 | Package gate |
-| DEV-0408 | Coverage and omission model | NOT_STARTED | DEV-0401 | Package gate |
-| DEV-0409 | Failure and partial-processing model | NOT_STARTED | DEV-0401 | Package gate |
+| DEV-0407 | Timestamp provenance model | COMPLETE | DEV-0406; DEC-0044 | WP-0400 review |
+| DEV-0408 | Coverage and omission model | READY | DEV-0401 | Package gate |
+| DEV-0409 | Failure and partial-processing model | READY | DEV-0401 | Package gate |
 | DEV-0410 | Supported evidence store | NOT_STARTED | DEV-0401 through DEV-0409 | Package gate |
 | DEV-0411 | Legacy and experimental store isolation | NOT_STARTED | DEV-0410 | Package gate |
 | DEV-0412 | Evidence-core integration tests | NOT_STARTED | DEV-0401 through DEV-0411 | Package gate |

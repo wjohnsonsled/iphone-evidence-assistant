@@ -840,3 +840,14 @@ remain distinct. Normalization requires complete transformation provenance and
 never supersedes raw data. This storage-envelope decision approves no
 artifact-specific transformation, parser, support, display, redaction, report,
 AI, compatibility, or production behavior.
+## DEC-0044 — Approve DEV-0407 timestamp provenance
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Task: DEV-0407
+
+Timestamp observations preserve raw typed values separately from interpretation
+and conversion. Controlled category, precision, timezone-source,
+interpretation, ambiguity, and conversion vocabularies govern candidate
+envelopes. No timezone, epoch, ambiguity, precision, or conversion algorithm is
+approved; artifact-specific profiles require separate governance.

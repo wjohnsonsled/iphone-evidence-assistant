@@ -413,6 +413,16 @@ runtime implementation, validation, or artifact support.
 | DEV-0406-R03 | Require complete derivation provenance for normalized values | DEC-0043 | `IMPLEMENTED_TASK_VALIDATED` | `ValueTransformation` | AC-05; AC-06 | DEV-0406 |
 | DEV-0406-R04 | Define envelopes only without transformation/support behavior | DEC-0043 | `IMPLEMENTED_TASK_VALIDATED` | Candidate domain/ORM metadata | AC-07; AC-08 | DEV-0406 |
 
+## 16M. DEV-0407 timestamp requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0407-R01 | Preserve raw timestamp and complete source/run/parser/locator provenance | DEC-0044 | `IMPLEMENTED_TASK_VALIDATED` | `TimestampObservation` | AC-01; AC-02 | DEV-0407 |
+| DEV-0407-R02 | Separate timezone source, values, rulesets, and derivation basis | DEC-0044 | `IMPLEMENTED_TASK_VALIDATED` | `TimezoneContext` | AC-03; AC-04 | DEV-0407 |
+| DEV-0407-R03 | Keep ambiguity, nonexistent time, interpretation, and conversion distinct | DEC-0044 | `IMPLEMENTED_TASK_VALIDATED` | Closed enums and validation | AC-05; AC-07 | DEV-0407 |
+| DEV-0407-R04 | Require explicit numeric epoch metadata without guessing | DEC-0044 | `IMPLEMENTED_TASK_VALIDATED` | `NumericEpochMetadata` | AC-06 | DEV-0407 |
+| DEV-0407-R05 | Define provenance envelopes only without algorithms/support | DEC-0044 | `IMPLEMENTED_TASK_VALIDATED` | Candidate domain module | AC-08 | DEV-0407 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |
