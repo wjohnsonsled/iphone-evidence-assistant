@@ -1,5 +1,10 @@
 # Codex Autonomous Development Charter
 
+> Historical compatibility document. For current and conflicting instructions,
+> `docs/governance/AUTONOMOUS_EXECUTION_CHARTER.md` controls. Generic
+> work-package completion is not an owner-review condition unless the package
+> implicates one of that charter's mandatory-review subjects.
+
 **Applies to:** AI-Powered iPhone Evidence Assistant  
 **Branch:** `mvp-development`  
 **Purpose:** Permit extended autonomous implementation while preserving owner control over forensic, architectural, security, and support decisions.

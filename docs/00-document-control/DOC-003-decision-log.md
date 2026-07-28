@@ -798,3 +798,20 @@ Candidate locators use immutable internal identity and preserve raw and
 normalized values plus the declared normalization method. They perform no
 filesystem access and assert no presence, readability, completeness, or
 support. Migration remains DEV-0410 scope.
+
+## DEC-0041 — Adopt autonomous execution charter
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Governance record: GOV-001
+
+The owner adopts `docs/governance/AUTONOMOUS_EXECUTION_CHARTER.md`. It controls
+autonomous execution where older generic stop/completion wording conflicts.
+Mandatory review is limited to architecture/trust boundaries, evidence
+integrity/provenance/security, support promotion, AI reasoning policy,
+production exposure/deployment, and legal/licensing/compliance decisions.
+
+Existing approved scope, architecture, support, forensic limitations, task IDs,
+and audit history remain controlling. Evidence Coverage remains WP-0450 because
+WP-0400 is already allocated to the Supported Evidence Data Model. No support
+or production status changes.

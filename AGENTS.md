@@ -334,7 +334,8 @@ For each implementation task:
 
 9\. Report files changed, tests run, results, and remaining limitations.
 
-10\. Stop before beginning the next task unless explicitly instructed.
+10\. Continue to the next READY task under the governing autonomous charter;
+stop only at a mandatory owner-review or safety condition.
 
 
 
@@ -446,12 +447,15 @@ Add the following section to the repository's existing `AGENTS.md`. Do not repla
 
 ## Autonomous MVP Execution
 
-The repository root files `BACKLOG.md` and `CODEX_AUTONOMY_CHARTER.md` govern task sequencing and autonomous execution.
+`docs/governance/AUTONOMOUS_EXECUTION_CHARTER.md` governs autonomous execution.
+`BACKLOG.md` governs task sequencing. `CODEX_AUTONOMY_CHARTER.md` is retained
+for history and applies only where it does not conflict with the governing
+charter.
 
 Before starting work, the agent must read:
 
 - `BACKLOG.md`
-- `CODEX_AUTONOMY_CHARTER.md`
+- `docs/governance/AUTONOMOUS_EXECUTION_CHARTER.md`
 - the decision log;
 - the task ledger;
 - the risk register;
@@ -460,12 +464,12 @@ Before starting work, the agent must read:
 
 The agent must automatically select the first `READY` task in plan order and may continue through all unblocked tasks in the current work package without routine owner approval.
 
-The agent must stop only at:
-
-- a mandatory stop condition in `CODEX_AUTONOMY_CHARTER.md`;
-- a work-package owner-review gate;
-- an artifact-support promotion gate;
-- a release gate.
+The agent must stop only when work would introduce or change architecture,
+evidence integrity, provenance, security/trust boundaries, parser or capability
+support status, AI reasoning policy, production deployment/API exposure, or a
+legal/licensing/compliance decision, or when another mandatory safety condition
+in the governing charter applies. Generic task and work-package completion does
+not require owner review.
 
 Repository-specific approved decisions override generic backlog wording.
 

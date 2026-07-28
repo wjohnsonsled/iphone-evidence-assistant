@@ -4,7 +4,11 @@
 **Document status:** Active  
 **Primary branch:** `mvp-development`  
 **Execution model:** Codex may complete the next unblocked task automatically within the active work package.  
-**Owner-review model:** Codex must stop only at the gates defined in this document and in `CODEX_AUTONOMY_CHARTER.md`.
+**Owner-review model:** `docs/governance/AUTONOMOUS_EXECUTION_CHARTER.md`
+controls. A labeled gate requires owner review only when it concerns
+architecture, evidence integrity, provenance, security/trust boundaries,
+support promotion, AI reasoning policy, production exposure/deployment, or
+legal/licensing/compliance decisions.
 
 ---
 
@@ -61,7 +65,9 @@ A task may be marked `VALIDATION_PENDING` only when:
 - a local Git commit exists;
 - the working tree is clean.
 
-A task may be marked `COMPLETE` only after the required owner approval is recorded.
+A task may be marked `COMPLETE` autonomously when its definition of done passes
+and it does not itself require a mandatory owner decision. `VALIDATION_PENDING`
+is reserved for an actual mandatory owner-review gate.
 
 ---
 
@@ -594,7 +600,9 @@ implementation is authorized ahead of its dependencies.
 | DEV-1613 | Accessibility and keyboard review | NOT_STARTED | DEV-1601 through DEV-1612 | Package gate |
 | DEV-1614 | Frontend test suite | NOT_STARTED | DEV-1601 through DEV-1613 | Package gate |
 
-**Owner-review gate:** Approve the MVP user workflow.
+**Autonomous completion:** UI workflow validation is not independently
+owner-gated. Any authentication, production API, AI-policy, legal, or support
+decision encountered within this package retains its governing mandatory gate.
 
 ---
 
@@ -670,7 +678,8 @@ Codex shall:
 8. Fix failures before continuing.
 9. Update documentation and risks.
 10. Create a local commit.
-11. Mark the task `VALIDATION_PENDING` when complete.
+11. Mark the task `COMPLETE` when its definition of done passes, unless an
+    actual mandatory owner decision makes `VALIDATION_PENDING` necessary.
 12. Continue automatically to the next task in the same work package when no owner gate is required.
 13. Stop at the work-package gate or any mandatory stop condition.
 

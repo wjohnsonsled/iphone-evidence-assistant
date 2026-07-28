@@ -378,6 +378,14 @@ runtime implementation, validation, or artifact support.
 | DEV-0403-R03 | Fail closed on invalid values without filesystem/support inference | AGENTS.md | `IMPLEMENTED_TASK_VALIDATED` | Contract validation | AC-04; AC-05 | DEV-0403 |
 | DEV-0403-R04 | Separate ORM metadata without migration/support effect | ARC-001 | `IMPLEMENTED_TASK_VALIDATED` | `SupportedSourceLocatorModel` | AC-06; AC-07 | DEV-0403 |
 
+## 16I. Autonomous execution governance
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| GOV-AUT-001 | Continue through READY tasks and stop only for enumerated mandatory decisions | Autonomous Execution Charter; DEC-0041 | `APPROVED_IMPLEMENTED_GOVERNANCE` | AGENTS.md; BACKLOG automatic execution rules | GOV-001 conflict matrix | Governance |
+| GOV-AUT-002 | Routine task completion does not require owner approval | Autonomous Execution Charter; DEC-0041 | `APPROVED_IMPLEMENTED_GOVERNANCE` | BACKLOG completion vocabulary | GOV-001 | Governance |
+| GOV-AUT-003 | Preserve existing WP IDs and keep Evidence Coverage as WP-0450 | DEC-0027; DEC-0037; DEC-0041 | `DOCUMENTED_CONTROL` | BACKLOG; WP-0450 specification | GOV-001 | Governance |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |
