@@ -303,7 +303,7 @@ WP-0450 with corresponding DEV-0451 through DEV-0460 IDs.
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0451 | Source Inventory Engine | BLOCKED | WP-0200, WP-0250, DEV-0402, DEV-0403 | WP-0450 gate |
+| DEV-0451 | Source Inventory Engine | COMPLETE | WP-0200, WP-0250, DEV-0402, DEV-0403 | WP-0450 gate |
 | DEV-0452 | Artifact Coverage Engine | BLOCKED | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | WP-0450 gate |
 | DEV-0453 | Evidence Gap Classification | BLOCKED | DEV-0451, DEV-0452 | WP-0450 gate |
 | DEV-0454 | Backup Structure and Coverage Assessment | BLOCKED | DEV-0451, DEV-0453, WP-0200 | WP-0450 gate |

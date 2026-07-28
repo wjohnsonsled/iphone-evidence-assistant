@@ -83,7 +83,7 @@
 | DEV-0411 | Legacy and experimental store isolation | COMPLETE | DEV-0410 | DEV-0411-store-isolation-acceptance | Separate scoped quarantine store has no promotion/transfer path; supported store remains empty |
 | DEV-0412 | Evidence-core integration tests | COMPLETE | DEV-0401 through DEV-0411 | DEV-0412-evidence-core-integration-acceptance; QMS-009 | Owner approved WP-0400 candidate infrastructure in DEC-0049; registry/store remain empty |
 
-| DEV-0451 | Source Inventory Engine | BLOCKED | WP-0200, WP-0250, DEV-0402, DEV-0403 | To be created | WP-0450 allocation under DEC-0027; blocked by evidence identity/locator foundation |
+| DEV-0451 | Source Inventory Engine | COMPLETE | WP-0200, WP-0250, DEV-0402, DEV-0403 | DEV-0451-source-inventory-acceptance | Deterministic registered-observation inventory only; no filesystem discovery, coverage conclusion, or support effect |
 | DEV-0452 | Artifact Coverage Engine | BLOCKED | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | To be created | Must distinguish authorization, execution, zero, rejection, failure, partial, and unsupported |
 | DEV-0453 | Evidence Gap Classification | BLOCKED | DEV-0451, DEV-0452 | To be created | Closed versioned fail-closed vocabulary required |
 | DEV-0454 | Backup Structure and Coverage Assessment | BLOCKED | DEV-0451, DEV-0453, WP-0200 | To be created | Must not infer completeness, deletion, concealment, destruction, or spoliation |
