@@ -625,3 +625,18 @@ Advisor is allocated as WP-0450 with DEV-0451 through DEV-0460. Its MVP tasks
 are blocked by evidence-core, processing, and reporting prerequisites;
 DEV-0455, DEV-0456, DEV-0457, and DEV-0459 are future. Cloud acquisition is
 separately reserved as future WP-1900.
+
+## DEC-0028 — DEV-0301 neutral tenant identity foundation
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0300_REVIEW
+- Task: DEV-0301
+
+DEV-0301 defines an immutable UUIDv4 tenant isolation key, canonical slug,
+separate display name, creation provenance, positive version, and additive
+`security_tenants` ORM contract. DEV-0308 retains migration ownership.
+
+The tenant is a neutral internal isolation boundary. This decision does not
+select a billing/legal organization model, authentication provider, production
+tenancy model, membership/role policy, authorization behavior, API, evidence
+workflow, deployment, or support status.
