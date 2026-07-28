@@ -331,7 +331,8 @@ implementation is authorized ahead of its dependencies.
 
 ## WP-0500 Apple Backup Metadata
 
-**Status:** OWNER_REVIEW — candidate package QMS-011; no support effect.
+**Status:** COMPLETE — candidate metadata infrastructure approved by DEC-0058
+with all QMS-011 limitations; no support effect.
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
@@ -343,9 +344,12 @@ implementation is authorized ahead of its dependencies.
 | DEV-0506 | Encryption and version field reconciliation | COMPLETE | DEV-0502 through DEV-0504 | Artifact gate |
 | DEV-0507 | Metadata coverage and limitation reporting | COMPLETE | DEV-0505 | Artifact gate |
 | DEV-0508 | Metadata fixture corpus | COMPLETE | DEV-0502 through DEV-0506 | Artifact gate |
-| DEV-0509 | Metadata validation report | VALIDATION_PENDING | DEV-0501 through DEV-0508 | Artifact gate |
+| DEV-0509 | Metadata validation report | COMPLETE | DEV-0501 through DEV-0508 | Artifact gate |
 
-**Owner-review gate:** Decide whether backup metadata is promoted to `SUPPORTED`, remains `CANDIDATE`, or is `REJECTED`.
+**Completion boundary:** Candidate architectural use only. Backup metadata,
+Apple compatibility, parsers, artifacts, APIs, and workflows remain
+unsupported. Any future promotion requires Apple-produced validation and a
+separate owner decision.
 
 ---
 

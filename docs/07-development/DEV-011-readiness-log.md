@@ -147,3 +147,15 @@
 - No independent READY task remains after the complete ledger reevaluation.
 - Registry entries and supported normalized records remain zero; no support
   state changed.
+
+## DEC-0058 / WP-0500 completion reevaluation
+
+- WP-0500 and DEV-0509 are COMPLETE candidate metadata infrastructure.
+- QMS-011 limitations remain active; no user-content artifact or real evidence
+  was processed.
+- No task newly moved to `DEPENDENCIES_SATISFIED` or `READY`.
+- DEV-0601 remains `OWNER_REVIEW` at the mandatory `APPLE-SCHEMA-GATE`.
+- No independent READY task remains. The next executable Apple local-backup
+  work requires the separate DEV-0601 owner decision.
+- Supported Parser Registry entries and supported normalized records remain
+  zero; no support status changed.

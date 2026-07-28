@@ -75,14 +75,14 @@ migration, and hygiene results. Its live PostgreSQL, production repository,
 production concurrency, API, deployment, real-evidence, parser-activation, and
 support limitations remain active.
 
-## WP-0500 pending validation traceability
+## WP-0500 permanent traceability
 
-- Submission decision: DEC-0057
+- Owner decision: DEC-0058
 - Validation package: QMS-011
 - Current support status: `CANDIDATE_NOT_SUPPORTED`
 - Supported registry entries: 0
 - Supported normalized records: 0
 
-DEV-0501 through DEV-0509 acceptance records form the candidate review package.
-The package is not COMPLETE until owner review. Its synthetic corpus is not an
+DEV-0501 through DEV-0509 acceptance records form the complete candidate
+package. QMS-011 limitations remain active. Its synthetic corpus is not an
 Apple-produced compatibility fixture and no record promotes support.

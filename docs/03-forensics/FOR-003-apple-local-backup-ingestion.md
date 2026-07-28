@@ -76,3 +76,8 @@ authorized top-level Manifest.db and three governed plists. Manifest.db remains
 pending controlled structural and DEV-0601 schema validation. Plist claims are
 source-specific; field conflicts default unresolved. Root names are not device
 identity. Discovery is not parsing, compatibility, completeness, or support.
+
+DEC-0058 accepts this WP-0500 surface as candidate metadata infrastructure
+only. No user-content artifact was parsed. Top-level presence and normalized
+metadata observations do not establish Apple compatibility, device identity,
+backup completeness, evidence absence, parser support, or artifact support.

@@ -388,6 +388,11 @@ No destructive migration is authorized.
   pre-baseline data unless a separate migration and validation task proves a
   safe mapping.
 
+DEC-0058 accepts WP-0500 for candidate architectural use only. Its top-level
+metadata discovery, reader, normalization, reconciliation, coverage, and
+synthetic validation components do not establish Apple/schema compatibility or
+support. Manifest.db interpretation remains gated by DEV-0601.
+
 ### Stage 4 — Review and derived work product
 
 - implement authorization-scoped search and source inspection;

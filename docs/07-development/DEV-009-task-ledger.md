@@ -117,7 +117,7 @@ readiness transitions are automatic and recorded in DEV-011.
 | DEV-0506 | Encryption and version field reconciliation | COMPLETE | DEV-0502 through DEV-0504; DEC-0009; DEC-0054 | DEV-0506-encryption-version-reconciliation-acceptance | Exact projection; IsEncrypted only; conflicts unresolved; version is not compatibility |
 | DEV-0507 | Metadata coverage and limitation reporting | COMPLETE | DEV-0505 | DEV-0507-metadata-coverage-limitations-acceptance | Exact six-item candidate measurable set; factual distinct states and exact denominator; no completeness, absence, compatibility, or support conclusion |
 | DEV-0508 | Metadata fixture corpus | COMPLETE | DEV-0502 through DEV-0506 | DEV-0508-metadata-fixture-corpus-acceptance | Six deterministic synthetic cases cover success, encryption observation, normalization, missing, unsupported, and malformed behavior; not Apple-produced |
-| DEV-0509 | Metadata validation report | VALIDATION_PENDING | DEV-0501 through DEV-0508 | DEV-0509-metadata-validation-report-acceptance; QMS-011 | Synthetic candidate package complete; WP-0500 owner review required; registry/store counts remain zero |
+| DEV-0509 | Metadata validation report | COMPLETE | DEV-0501 through DEV-0508 | DEV-0509-metadata-validation-report-acceptance; QMS-011 | Owner approved COMPLETE candidate validation in DEC-0058; all limitations remain; registry/store counts remain zero |
 | DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | To be created | Blocked by reporting and coverage package gates |
 
 

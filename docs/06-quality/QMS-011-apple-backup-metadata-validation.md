@@ -4,8 +4,9 @@
 
 - Work package: WP-0500 Apple Backup Metadata
 - Tasks: DEV-0501 through DEV-0509
-- Status: OWNER_REVIEW
-- Support status: `CANDIDATE_NOT_SUPPORTED`
+- Status: COMPLETE candidate infrastructure
+- Owner approval: DEC-0058
+- Support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
 - Supported Parser Registry entries: 0
 - Supported normalized records: 0
 
@@ -52,6 +53,7 @@ added.
 ## Active limitations and unresolved risks
 
 - The fixture corpus is synthetic and not Apple-produced.
+- No real evidence was processed and no user-content artifact was parsed.
 - The candidate Apple compatibility profile remains unapproved for production
   and unvalidated across Apple-produced multi-version backups.
 - Manifest.db receives header presence recognition only. DEV-0601 remains the
@@ -71,12 +73,12 @@ added.
   deployment, real-evidence, or attorney-facing validation occurred.
 - The accepted TestClient warning remains.
 
-## Owner-review boundary
+## Owner disposition and continuing boundary
 
-Recommendation: approve WP-0500 and DEV-0509 as COMPLETE candidate metadata
+DEC-0058 approves WP-0500 and DEV-0509 as COMPLETE candidate metadata
 infrastructure with every limitation above retained.
 
-Such approval would authorize later candidate architectural use only. It would
+This approval authorizes later candidate architectural use only. It does
 not approve the Apple compatibility profile for production, classify Apple
 local backups or metadata as Supported, activate a parser, populate the
 Supported Parser Registry or supported normalized store, expose an API,
@@ -85,3 +87,8 @@ authorize real evidence, deploy, or promote support.
 Any future support promotion requires an Apple-produced multi-version
 validation package and a separate owner decision containing the permanent
 promotion references required by QMS-SUP-001.
+
+Post-approval governance revalidation on 2026-07-28: 52 integrated WP-0500
+tests passed; 407 backend regression tests passed with the accepted TestClient
+warning; 5 legacy characterization tests passed; compilation and repository
+diff checks passed.

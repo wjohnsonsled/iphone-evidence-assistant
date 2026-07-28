@@ -1,8 +1,9 @@
 # DEV-0509 — Metadata Validation Report
 
-- Status: VALIDATION_PENDING
+- Status: COMPLETE — candidate metadata validation
 - Dependencies: DEV-0501 through DEV-0508 — COMPLETE
 - Validation package: QMS-011
+- Owner approval: DEC-0058
 - Support effect: none
 
 | ID | Acceptance criterion | Result |
@@ -17,3 +18,8 @@
 DEV-0509 validates the candidate package only. It cannot promote backup
 metadata, Apple backups, a parser, an artifact, a workflow, an API, or any
 capability to Supported.
+
+Owner disposition: DEC-0058 accepts the synthetic candidate validation package
+with every QMS-011 limitation retained. No Apple/schema compatibility, parser,
+artifact, input, workflow, API, production, real-evidence, or support authority
+follows.

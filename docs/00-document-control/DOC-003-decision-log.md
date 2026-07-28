@@ -1060,3 +1060,32 @@ Owner review may approve candidate architectural use only. It cannot approve
 production Apple compatibility, activate a parser, promote an artifact/input
 or workflow, expose an API, authorize real evidence or deployment, populate
 supported storage, or change support status.
+
+## DEC-0058 — Approve WP-0500 candidate Apple backup metadata infrastructure
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Tasks: WP-0500; DEV-0501 through DEV-0509
+- Validation package: QMS-011
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+
+The owner approves WP-0500 and DEV-0509 as COMPLETE candidate metadata
+infrastructure with every QMS-011 limitation retained. Candidate architectural
+use is approved for the version 1 discovery, metadata reconciliation,
+identifier normalization, and product-version normalization profiles and the
+documented readers, factual coverage, and synthetic fixture corpus.
+
+Discovery remains root-confined, read-only, top-level only, and nonrecursive.
+Manifest.db remains limited to presence/access/type/header observations with
+controlled structural and schema validation separate. `IsEncrypted` remains
+the only approved encryption signal. Backup-root names remain
+non-authoritative; normalized equality is not device attribution; product
+version is not compatibility; absent metadata is not deletion or evidentiary
+absence.
+
+The corpus is synthetic and not Apple-produced. No user-content artifact was
+parsed and no real evidence was processed. The Supported Parser Registry and
+supported normalized store remain empty. No Apple compatibility, schema,
+parser, artifact, workflow, input, API, AI/reporting capability, production
+use, deployment, decryption, or support promotion is authorized. DEV-0601
+remains a mandatory owner-review gate.
