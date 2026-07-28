@@ -220,3 +220,16 @@
 - DEV-0603 through DEV-0607 and DEV-0609 remain at their independent mandatory
   owner gates. DEV-0608, DEV-0610, and DEV-0611 remain dependency-blocked.
 - No other independent task is READY. Registry/store counts remain zero.
+
+## DEC-0062 / DEV-0602A completion reevaluation
+
+- The owner accepts DEV-0602A and QMS-012 as COMPLETE candidate-only
+  infrastructure. DEV-0602 and both version 1 profiles remain unchanged.
+- DEV-0603, DEV-0604, DEV-0605, DEV-0606, DEV-0607, and DEV-0609 have
+  dependency satisfaction but remain `OWNER_REVIEW` because each defines an
+  independent evidence-integrity, security, interpretation, or conclusion
+  policy that DEC-0062 expressly does not authorize.
+- DEV-0608 remains blocked by DEV-0603 through DEV-0607. DEV-0610 and DEV-0611
+  remain blocked by their predecessor sets.
+- No independent task qualifies for `READY`. The next mandatory owner gate is
+  DEV-0603 FileID normalization rules. Registry/store counts remain zero.

@@ -1,8 +1,9 @@
 # DEV-0602A — Files-Table Query Hardening and Resource-Control Profile
 
-- Status: VALIDATION_PENDING
+- Status: COMPLETE — owner-approved candidate infrastructure
 - Dependency: DEV-0602 — COMPLETE
-- Owner decision: DEC-0061
+- Implementation decision: DEC-0061
+- Completion decision: DEC-0062
 - Validation package: QMS-012
 - Support effect: none
 
@@ -10,8 +11,8 @@
 |---|---|---|---|
 | AC-01 | Preserve query v1 and locator v1 unchanged; require explicit selection of candidate query v2. | FOR-MAN-002; FOR-MAN-003 | PASS |
 | AC-02 | Default v2 BLOB observation exposes only state, length, storage class, and bounded availability; raw bytes require explicit internal authorization and remain nonpersistent and uninterpreted. | FOR-MAN-003 | PASS |
-| AC-03 | Preserve raw SQLite values, declared affinity, observed storage class, NULL, and empty states independently without coercion. | FOR-MAN-003; EVID-VAL-001 | PASS |
-| AC-04 | Keep completion, termination, row state, and resource state as separate closed dimensions. | FOR-MAN-003; FAIL-OBS-001 | PASS |
+| AC-03 | Preserve raw SQLite values, declared affinity, observed storage class, NULL, and empty states independently without coercion. | FOR-MAN-003; DEV-0406-R01 | PASS |
+| AC-04 | Keep completion, termination, row state, and resource state as separate closed dimensions. | FOR-MAN-003; DEV-0408-R03; DEV-0409-R01 | PASS |
 | AC-05 | Deterministically account exact projected bytes and the documented fixed-overhead memory estimate; stop before adding an over-limit row. | FOR-MAN-003; SEC-RES-001 | PASS |
 | AC-06 | Use monotonic wall-clock safety measurement and preserve finalized rows, last locator, audit times, usage, reason, continuation, and limitations. | FOR-MAN-003; SEC-RES-001 | PASS |
 | AC-07 | Enforce process → tenant → case → evidence-source → processing-run concurrency acquisition and deny safely without observations or workload disclosure. | FOR-MAN-003; SEC-AUTH-001 | PASS |
@@ -31,6 +32,11 @@ silently substituted for v1.
 No migration was added. No real or Apple-produced evidence was used. No BLOB
 was decoded, interpreted, persisted, logged, hashed, or publicly exposed.
 Supported registry entries and supported normalized records remain zero.
+
+DEC-0062 accepts AC-01 through AC-11 and QMS-012 as COMPLETE candidate-only
+infrastructure. It does not promote query/resource profiles, Apple inputs,
+Manifest.db content, parsers, artifacts, workflows, APIs, or any capability to
+Supported.
 
 Validation results:
 

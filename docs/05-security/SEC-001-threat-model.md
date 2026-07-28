@@ -16,6 +16,10 @@ PROCESSING_RUN. Denial exposes only the scope and no workload or evidence
 content. Default BLOB observations return no bytes; explicit internal access
 requires authorization and remains nonpersistent, unlogged, uninterpreted, and
 unexposed. Production ceilings and distributed concurrency are unvalidated.
+
+DEC-0062 accepts these controls at the candidate infrastructure level with all
+QMS-012 limitations; it does not establish production authorization,
+distributed isolation, deployment readiness, or API exposure.
 ## Candidate metadata scope
 
 DEC-0058 does not expose WP-0500 through an API or production composition.

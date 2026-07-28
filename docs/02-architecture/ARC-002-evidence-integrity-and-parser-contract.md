@@ -384,3 +384,7 @@ Logical byte and memory-estimate accounting is deterministic, while monotonic
 wall-clock and hierarchical concurrency denial are operational safety controls.
 Neither class creates an evidence, compatibility, completeness, or support
 conclusion.
+
+DEC-0062 accepts this version 2 boundary for candidate architectural use only
+with QMS-012 limitations. It authorizes no production composition, parser,
+artifact, Apple compatibility, supported record, or support status.

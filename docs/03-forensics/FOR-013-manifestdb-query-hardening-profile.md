@@ -5,8 +5,8 @@
 - Query: `manifestdb-files-query` version 2
 - Resource controls: `manifestdb-query-resource-controls` version 1
 - Locator: unchanged `manifestdb-row-locator` version 1
-- Decision: DEC-0061
-- Status: candidate, validation pending, not Supported
+- Decisions: DEC-0061 implementation; DEC-0062 candidate completion
+- Status: owner-approved candidate infrastructure, not Supported
 
 Callers explicitly select v1 or v2. There is no automatic transition,
 reinterpretation, migration, or fallback between versions. Every observation

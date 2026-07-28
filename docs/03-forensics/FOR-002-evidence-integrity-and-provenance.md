@@ -16,3 +16,7 @@ locator, continuation availability, reason, and limitations remain explicit.
 Memory is a deterministic query-layer estimate, not process memory. Operational
 limits and BLOB availability create no corruption, absence, completeness,
 interpretation, or support conclusion.
+
+DEC-0062 accepts this model as COMPLETE candidate infrastructure only. The
+observations remain ineligible for supported evidence storage, interpretation,
+AI, reporting, or support claims.

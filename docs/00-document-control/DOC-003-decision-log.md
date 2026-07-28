@@ -810,6 +810,38 @@ DEV-0602A must stop at VALIDATION_PENDING. No BLOB interpretation, parser,
 artifact, Apple compatibility, API, persistence, production, real evidence,
 registry entry, supported record, or support promotion is authorized.
 
+## DEC-0062 — Approve DEV-0602A candidate query-hardening infrastructure
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Task: DEV-0602A
+- Validation package: QMS-012
+- Acceptance record: DEV-0602A-files-query-hardening-acceptance
+- Profiles: `manifestdb-files-query` v2;
+  `manifestdb-query-resource-controls` v1
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+
+The owner approves DEV-0602A as COMPLETE candidate Files-table query-hardening
+and resource-control infrastructure with every QMS-012 limitation retained.
+DEV-0602 remains COMPLETE under DEC-0060. Query profile v1 and locator profile
+v1 remain immutable; v2 is explicitly selected and does not migrate,
+reinterpret, replace, or invalidate v1 observations.
+
+Candidate v2 retains bounded default BLOB observations, explicitly authorized
+internal run/source-scoped raw-byte access, independent completion,
+termination, value, and resource states, lossless SQLite dynamic types,
+logical determinism, monotonic operational timing, deterministic byte and
+memory estimates, hierarchical application concurrency controls, scoped
+continuations, and fail-closed controlled-copy behavior. BLOB access is not
+decoding or interpretation.
+
+No query or resource profile is Supported. No parser, artifact, Apple input,
+Manifest.db content, workflow, API, production use, deployment, physical file
+resolution, normalization, AI/report conclusion, real-evidence processing, or
+support promotion is authorized. Registry entries and supported normalized
+records remain zero. DEV-0603 through DEV-0607 and DEV-0609 remain independent
+mandatory owner gates.
+
 Every future protected service, repository, job, report, export, AI, and API
 boundary must authorize before returning, transforming, exporting, or
 retrieving protected content. Queries must be tenant/case/resource scoped where
