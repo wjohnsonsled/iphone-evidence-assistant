@@ -216,7 +216,7 @@ only; all limitations and support prohibitions remain controlling.
 | DEV-0306 | Audit-actor attribution | COMPLETE | DEV-0302, DEV-0206 | WP-0300 package review |
 | DEV-0307 | Cross-tenant isolation tests | COMPLETE | DEV-0310, DEV-0305 | WP-0300 review |
 | DEV-0308 | Additive Alembic migration baseline | COMPLETE | DEV-0301 through DEV-0306 | WP-0300 review; offline validated only |
-| DEV-0309 | Security package integration tests | BLOCKED | DEV-0301 through DEV-0308 | Package gate |
+| DEV-0309 | Security package integration tests | VALIDATION_PENDING | DEV-0301 through DEV-0308; DEV-0310 | Owner review; QMS-008 |
 | DEV-0310 | Authorization Service and Policy Enforcement | COMPLETE | DEV-0301, DEV-0302, DEV-0303 | WP-0300 review; no default grants |
 
 ### WP-0300 completion criteria

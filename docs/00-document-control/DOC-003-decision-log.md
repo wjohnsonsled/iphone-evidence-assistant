@@ -727,3 +727,14 @@ API, evidence processing, deployment, or support promotion is authorized.
 Adversarial synthetic tests establish that explicit grants cannot override
 tenant scope, cross-case sources are denied, and cross-tenant audit attempts
 append nothing. This validation adds no runtime capability or support status.
+
+## DEC-0036 — WP-0300 submitted for owner validation
+
+- Date: 2026-07-28
+- Status: VALIDATION_PENDING
+- Tasks: WP-0300; DEV-0309
+
+QMS-008 records passing synthetic/offline conformance and the unresolved lack
+of live PostgreSQL and production API/policy integration. WP-0300 is submitted
+for owner review as candidate foundation infrastructure only. No support,
+deployment, evidence processing, API exposure, or production policy is granted.
