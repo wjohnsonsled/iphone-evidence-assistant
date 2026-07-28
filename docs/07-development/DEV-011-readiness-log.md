@@ -120,3 +120,11 @@
   notwithstanding the stale pre-approval instruction embedded in DEC-0056.
 - No support, compatibility, API, production, deployment, parser, registry,
   supported-record, or real-evidence authority follows.
+
+## DEV-0507 completion reevaluation
+
+- DEV-0507 is COMPLETE after synthetic factual coverage and limitation tests.
+- DEV-0508 remains READY and is selected next.
+- DEV-0509 remains dependency-blocked by DEV-0508.
+- No support, compatibility, completeness, evidence-absence, API, production,
+  parser, registry/store, or real-evidence authority follows.
