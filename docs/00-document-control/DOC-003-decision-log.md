@@ -886,3 +886,15 @@ fail-closed admission, scoped queries, immutable records, and supersession.
 The empty production registry admits no records. Schema existence is not
 support. Live PostgreSQL, production repositories, parsers, APIs, real
 evidence, and support promotion remain unapproved.
+## DEC-0048 — Submit WP-0400 for owner validation
+
+- Date: 2026-07-28
+- Status: VALIDATION_PENDING
+- Tasks: WP-0400; DEV-0412
+- Validation package: QMS-009
+
+The complete candidate evidence-core package passes synthetic and offline
+validation and is submitted for mandatory evidence-integrity/provenance review.
+The registry and supported normalized store remain empty. No support,
+compatibility, production, parser, API, report, AI, or real-evidence
+authorization follows.

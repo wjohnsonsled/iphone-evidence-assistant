@@ -460,6 +460,14 @@ runtime implementation, validation, or artifact support.
 | DEV-0411-R03 | Quarantine queries remain tenant/case scoped | DEC-0037 | `IMPLEMENTED_TASK_VALIDATED` | `list_scoped` | AC-05 | DEV-0411 |
 | DEV-0411-R04 | Isolation adds no parser/support behavior | AGENTS.md | `IMPLEMENTED_TASK_VALIDATED` | diagnostic-only module | AC-06 | DEV-0411 |
 
+## 16R. DEV-0412 integration requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0412-R01 | Candidate evidence-core contracts compose without support-state leakage | WP-0400 | `VALIDATION_PENDING` | DEV-0401–0411 modules | 94 focused tests; QMS-009 | WP-0400 |
+| DEV-0412-R02 | Default supported store and registry remain empty and quarantine remains separate | AGENTS.md; DEC-0047 | `VALIDATION_PENDING` | integration composition test | QMS-009 | WP-0400 |
+| DEV-0412-R03 | Migration and regressions pass without production/evidence use | ARC-001 | `VALIDATION_PENDING` | migration 0004 | offline Alembic; 308 backend; 5 legacy | WP-0400 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |
