@@ -128,3 +128,12 @@
 - DEV-0509 remains dependency-blocked by DEV-0508.
 - No support, compatibility, completeness, evidence-absence, API, production,
   parser, registry/store, or real-evidence authority follows.
+
+## DEV-0508 completion reevaluation
+
+- DEV-0508 is COMPLETE with a six-case synthetic metadata corpus.
+- DEV-0509 dependencies DEV-0501 through DEV-0508 are COMPLETE and it
+  automatically advanced through `DEPENDENCIES_SATISFIED` to `READY`.
+- DEV-0509 is selected to assemble the candidate metadata validation package.
+- The subsequent WP-0500 artifact decision remains a mandatory owner-review
+  gate; validation cannot itself promote support.

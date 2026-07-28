@@ -1,0 +1,88 @@
+{
+  "corpus_id": "synthetic-apple-metadata-corpus",
+  "corpus_version": "1",
+  "origin": "SYNTHETIC_ONLY",
+  "limitations": [
+    "Not Apple-produced and not evidence.",
+    "Does not establish backup, schema, parser, artifact, or support compatibility."
+  ],
+  "cases": [
+    {
+      "case_id": "valid-unencrypted",
+      "files": {
+        "Info.plist": {
+          "Product Version": "17.0.1",
+          "Target Identifier": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "Unique Identifier": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "Manifest.plist": {"IsEncrypted": false},
+        "Status.plist": {"SnapshotState": "finished"}
+      },
+      "expected": {"encryption": false, "product_state": "ALREADY_CANONICAL", "coverage_denominator": 6}
+    },
+    {
+      "case_id": "valid-encrypted-observation",
+      "files": {
+        "Info.plist": {
+          "Product Version": "18",
+          "Target Identifier": "00008020-001C2D3E4F5A6B7C",
+          "Unique Identifier": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+        },
+        "Manifest.plist": {"IsEncrypted": true},
+        "Status.plist": {"SnapshotState": "finished"}
+      },
+      "expected": {"encryption": true, "product_state": "ALREADY_CANONICAL", "coverage_denominator": 6}
+    },
+    {
+      "case_id": "whitespace-leading-zero",
+      "files": {
+        "Info.plist": {
+          "Product Version": " 01.002.0 ",
+          "Target Identifier": " AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ",
+          "Unique Identifier": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "Manifest.plist": {"IsEncrypted": false},
+        "Status.plist": {"SnapshotState": "finished"}
+      },
+      "expected": {"encryption": false, "product_state": "NORMALIZED", "coverage_denominator": 6}
+    },
+    {
+      "case_id": "missing-unique-and-status",
+      "omit_files": ["Status.plist"],
+      "files": {
+        "Info.plist": {
+          "Product Version": "17.0",
+          "Target Identifier": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        },
+        "Manifest.plist": {"IsEncrypted": false}
+      },
+      "expected": {"encryption": false, "product_state": "ALREADY_CANONICAL", "coverage_denominator": 6}
+    },
+    {
+      "case_id": "unsupported-product-value",
+      "files": {
+        "Info.plist": {
+          "Product Version": ["17", "0"],
+          "Target Identifier": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "Unique Identifier": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "Manifest.plist": {"IsEncrypted": false},
+        "Status.plist": {"SnapshotState": "finished"}
+      },
+      "expected": {"encryption": false, "product_state": "UNSUPPORTED_FORMAT", "coverage_denominator": 6}
+    },
+    {
+      "case_id": "malformed-status",
+      "raw_files": {"Status.plist": "6e6f742d612d706c697374"},
+      "files": {
+        "Info.plist": {
+          "Product Version": "17.0",
+          "Target Identifier": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "Unique Identifier": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "Manifest.plist": {"IsEncrypted": false}
+      },
+      "expected": {"encryption": false, "product_state": "ALREADY_CANONICAL", "coverage_denominator": 6}
+    }
+  ]
+}
