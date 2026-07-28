@@ -468,6 +468,14 @@ runtime implementation, validation, or artifact support.
 | DEV-0412-R02 | Default supported store and registry remain empty and quarantine remains separate | AGENTS.md; DEC-0047 | `VALIDATION_PENDING` | integration composition test | QMS-009 | WP-0400 |
 | DEV-0412-R03 | Migration and regressions pass without production/evidence use | ARC-001 | `VALIDATION_PENDING` | migration 0004 | offline Alembic; 308 backend; 5 legacy | WP-0400 |
 
+## 16S. WP-0400 owner disposition
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| CORE-WP-001 | Candidate evidence-core infrastructure is owner-approved with permanent traceability | DEC-0049 | `OWNER_APPROVED_CANDIDATE` | DEV-0401–0412; migration 0004 | QMS-009 | WP-0400 |
+| CORE-WP-002 | Registry and supported normalized store remain empty | DEC-0049 | `DOCUMENTED_CONTROL` | empty default composition | QMS-009 integration tests | Future promotion gate |
+| CORE-WP-003 | QMS-009 and JSON/live-PostgreSQL/production limitations remain active | DEC-0049 | `DOCUMENTED_LIMITATION` | QMS-009; RSK-0024 | Future governed validation | WP-0400 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |

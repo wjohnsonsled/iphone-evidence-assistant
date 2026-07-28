@@ -81,7 +81,7 @@
 | DEV-0409 | Processing issue and partial-processing observation model | COMPLETE | DEV-0401; DEC-0046 | DEV-0409-processing-issue-acceptance | Immutable safe diagnostics and partial scope linkage; no evidentiary/support conclusion |
 | DEV-0410 | Candidate supported evidence store foundation | COMPLETE | DEV-0401 through DEV-0409; DEC-0047 | DEV-0410-supported-store-acceptance | Additive 0004 schema and exact admission/query boundary; registry/store remain empty |
 | DEV-0411 | Legacy and experimental store isolation | COMPLETE | DEV-0410 | DEV-0411-store-isolation-acceptance | Separate scoped quarantine store has no promotion/transfer path; supported store remains empty |
-| DEV-0412 | Evidence-core integration tests | VALIDATION_PENDING | DEV-0401 through DEV-0411 | DEV-0412-evidence-core-integration-acceptance; QMS-009 | Candidate package passes synthetic/offline validation; mandatory integrity/provenance owner review |
+| DEV-0412 | Evidence-core integration tests | COMPLETE | DEV-0401 through DEV-0411 | DEV-0412-evidence-core-integration-acceptance; QMS-009 | Owner approved WP-0400 candidate infrastructure in DEC-0049; registry/store remain empty |
 
 | DEV-0451 | Source Inventory Engine | BLOCKED | WP-0200, WP-0250, DEV-0402, DEV-0403 | To be created | WP-0450 allocation under DEC-0027; blocked by evidence identity/locator foundation |
 | DEV-0452 | Artifact Coverage Engine | BLOCKED | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | To be created | Must distinguish authorization, execution, zero, rejection, failure, partial, and unsupported |

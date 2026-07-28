@@ -13,5 +13,5 @@
 | Focused evidence-core suite | PASS — recorded in QMS-009 |
 | Backend and legacy regressions, compilation, and diff | PASS — recorded in QMS-009 |
 
-Status: `VALIDATION_PENDING` at the mandatory WP-0400
-evidence-integrity/provenance owner gate. No support status changes.
+Status: `COMPLETE` — owner approved candidate evidence-core infrastructure in
+DEC-0049 with every QMS-009 limitation retained. No support status changed.

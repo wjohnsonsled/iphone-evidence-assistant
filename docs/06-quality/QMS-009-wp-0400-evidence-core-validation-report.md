@@ -5,6 +5,9 @@
 Approve with documented limitations as candidate evidence-core infrastructure
 only.
 
+Owner disposition: approved in DEC-0049. Classification:
+`COMPLETE — CANDIDATE EVIDENCE-CORE INFRASTRUCTURE`.
+
 WP-0400 implements processing-run, artifact, locator, parser identity,
 fingerprint, typed-value, timestamp, coverage, issue, candidate store,
 admission, supersession, and quarantine-isolation contracts. The supported
@@ -25,6 +28,8 @@ registry and normalized store remain empty.
 Owner approval would authorize architectural use by later candidate tasks. It
 would not authorize parser activation, supported records, real evidence,
 production exposure, deployment, compatibility, or support promotion.
+
+All limitations in this report remain active after approval.
 
 ## Validation results
 

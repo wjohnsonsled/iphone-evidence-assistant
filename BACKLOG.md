@@ -251,6 +251,10 @@ authorization service and corrects DEV-0307's dependency.
 
 ## WP-0400 Supported Evidence Data Model
 
+**Package status:** `COMPLETE — CANDIDATE EVIDENCE-CORE INFRASTRUCTURE`
+under DEC-0049. QMS-009 limitations remain active. Registry entries and
+supported normalized records remain zero.
+
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
 | DEV-0401 | Processing-run model | COMPLETE | WP-0200, WP-0250, WP-0300 | WP-0400 review |
@@ -264,7 +268,7 @@ authorization service and corrects DEV-0307's dependency.
 | DEV-0409 | Failure and partial-processing model | COMPLETE | DEV-0401; DEC-0046 | WP-0400 review |
 | DEV-0410 | Supported evidence store | COMPLETE | DEV-0401 through DEV-0409; DEC-0047 | Candidate infrastructure; empty registry/store |
 | DEV-0411 | Legacy and experimental store isolation | COMPLETE | DEV-0410 | WP-0400 review |
-| DEV-0412 | Evidence-core integration tests | VALIDATION_PENDING | DEV-0401 through DEV-0411 | Mandatory WP-0400 integrity/provenance gate; QMS-009 |
+| DEV-0412 | Evidence-core integration tests | COMPLETE | DEV-0401 through DEV-0411 | Owner approved candidate package in DEC-0049; QMS-009 |
 
 ### WP-0400 completion criteria
 

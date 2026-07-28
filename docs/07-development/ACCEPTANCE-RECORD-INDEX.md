@@ -46,3 +46,15 @@ these records promotes a capability to Supported.
 
 Validation commands and results remain in the individual records and QMS-008.
 DEC-0037 limitations remain permanent unless explicitly superseded.
+
+## WP-0400 permanent traceability
+
+- Owner decision: DEC-0049
+- Validation package: QMS-009
+- Migration: `0004_candidate_supported_store`
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+- Supported registry entries: 0
+- Supported normalized records: 0
+
+DEV-0401 through DEV-0412 acceptance records and commits form the permanent
+package record. QMS-009 limitations remain active. No record promotes support.

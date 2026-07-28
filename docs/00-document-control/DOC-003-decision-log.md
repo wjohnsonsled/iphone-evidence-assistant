@@ -898,3 +898,21 @@ validation and is submitted for mandatory evidence-integrity/provenance review.
 The registry and supported normalized store remain empty. No support,
 compatibility, production, parser, API, report, AI, or real-evidence
 authorization follows.
+## DEC-0049 — Approve WP-0400 candidate evidence-core infrastructure
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Tasks: WP-0400; DEV-0401 through DEV-0412
+- Validation package: QMS-009
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+
+The owner approves WP-0400 and DEV-0412 as COMPLETE candidate evidence-core
+infrastructure with all QMS-009 limitations. Migration 0004, exact admission,
+scoped retrieval, immutable observations, supersession, and quarantine
+isolation may support later candidate tasks. Registry entries and supported
+normalized records remain zero.
+
+No live PostgreSQL, production repository, parser activation/execution,
+artifact or Apple compatibility, API, real evidence, report, AI, deployment,
+or support promotion is authorized. JSON observation payloads remain an
+accepted candidate limitation, not a final production representation.
