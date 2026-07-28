@@ -79,7 +79,8 @@
 | DEV-0407 | Timestamp provenance observation model | COMPLETE | DEV-0406; DEC-0044 | DEV-0407-timestamp-provenance-acceptance | Raw/derived separation, closed vocabularies, explicit ambiguity/failure; no algorithms/support |
 | DEV-0408 | Processing coverage and omission observation model | COMPLETE | DEV-0401; DEC-0045 | DEV-0408-processing-coverage-acceptance | Closed factual processing states/counts/omissions; zero and partial fail closed; no WP-0450 conclusion |
 | DEV-0409 | Processing issue and partial-processing observation model | COMPLETE | DEV-0401; DEC-0046 | DEV-0409-processing-issue-acceptance | Immutable safe diagnostics and partial scope linkage; no evidentiary/support conclusion |
-| DEV-0410 | Supported evidence store | READY | DEV-0401 through DEV-0409 | To be created | Requires owner-reviewed architecture/evidence-integrity store and migration boundary |
+| DEV-0410 | Candidate supported evidence store foundation | COMPLETE | DEV-0401 through DEV-0409; DEC-0047 | DEV-0410-supported-store-acceptance | Additive 0004 schema and exact admission/query boundary; registry/store remain empty |
+| DEV-0411 | Legacy and experimental store isolation | READY | DEV-0410 | To be created | Next WP-0400 task |
 
 | DEV-0451 | Source Inventory Engine | BLOCKED | WP-0200, WP-0250, DEV-0402, DEV-0403 | To be created | WP-0450 allocation under DEC-0027; blocked by evidence identity/locator foundation |
 | DEV-0452 | Artifact Coverage Engine | BLOCKED | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | To be created | Must distinguish authorization, execution, zero, rejection, failure, partial, and unsupported |

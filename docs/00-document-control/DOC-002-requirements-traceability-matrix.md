@@ -441,6 +441,16 @@ runtime implementation, validation, or artifact support.
 | DEV-0409-R03 | Preserve reference-only provenance and complete partial scope | DEC-0046 | `IMPLEMENTED_TASK_VALIDATED` | Issue/partial envelopes | AC-05; AC-06 | DEV-0409 |
 | DEV-0409-R04 | Keep immutable diagnostics free of evidentiary/support conclusions | DEC-0046 | `IMPLEMENTED_TASK_VALIDATED` | Frozen candidate records | AC-07; AC-08 | DEV-0409 |
 
+## 16P. DEV-0410 store requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0410-R01 | Additive reversible relational candidate store with no seeded support | DEC-0047 | `IMPLEMENTED_TASK_VALIDATED` | migration 0004 | offline/static tests | DEV-0410 |
+| DEV-0410-R02 | Exact admission with complete integrity/provenance/coverage/promotion references | DEC-0047 | `IMPLEMENTED_TASK_VALIDATED` | `SupportedEvidenceStore` | focused tests | DEV-0410 |
+| DEV-0410-R03 | Empty registry admits no records | DEC-0047 | `IMPLEMENTED_TASK_VALIDATED` | `REGISTRY_EMPTY` | denial test | DEV-0410 |
+| DEV-0410-R04 | Scope queries before materialization without enumeration | DEC-0047 | `IMPLEMENTED_TASK_VALIDATED` | scoped `get` | isolation test | DEV-0410 |
+| DEV-0410-R05 | Append-only records and acyclic supersession | DEC-0047 | `IMPLEMENTED_TASK_VALIDATED` | no update/delete; supersession | static/unit tests | DEV-0410 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |

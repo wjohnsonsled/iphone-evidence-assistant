@@ -474,3 +474,10 @@ The project owner approved this recommendation on 2026-07-24. DEC-0002 records
 the decision. This approval establishes an architectural basis only and does
 not promote any parser, artifact, input type, schema, workflow, or conclusion
 to supported status.
+
+## Candidate supported-store implementation
+
+DEC-0047 and migration `0004_candidate_supported_store` implement candidate
+relational infrastructure. Exact registry, scope, integrity, provenance,
+coverage, and promotion references gate admission. The supported registry and
+normalized-record store remain empty; schema existence is not support.

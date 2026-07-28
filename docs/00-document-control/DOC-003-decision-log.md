@@ -875,3 +875,14 @@ provenance, and limitations. Partial-processing observations link completed,
 incomplete, and unresolved scope to coverage, omissions, and issues. These
 diagnostics make no evidentiary, compatibility, support, intent, legal, AI,
 report, authenticity, or production conclusion.
+## DEC-0047 — Approve DEV-0410 candidate supported-store foundation
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Task: DEV-0410
+
+The owner approves additive relational candidate store infrastructure, exact
+fail-closed admission, scoped queries, immutable records, and supersession.
+The empty production registry admits no records. Schema existence is not
+support. Live PostgreSQL, production repositories, parsers, APIs, real
+evidence, and support promotion remain unapproved.

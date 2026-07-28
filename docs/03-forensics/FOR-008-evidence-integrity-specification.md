@@ -88,3 +88,9 @@ broken provenance, writable source, legacy input, unsupported profile,
 non-candidate registry state, incomplete provenance, unreconciled coverage,
 silent omissions, missing limitations, or failed self-test. Conformance always
 reports `NONE_CANDIDATE_ONLY`; it cannot confer support.
+## Candidate supported-store boundary
+
+DEV-0410 admits records only through exact registry authorization and complete
+integrity, provenance, coverage, raw-value, locator, fingerprint, limitation,
+and promotion references. Candidate, legacy, experimental, partial, failed,
+and unreconciled output is denied. The default registry and store remain empty.

@@ -27,6 +27,11 @@ from app.evidence_core.processing_issue import (
     IssueCategory, IssueSeverity, PartialProcessingObservation, ProcessingIssue,
     Recoverability, record_issue, record_partial_processing,
 )
+from app.evidence_core.supported_store import (
+    AdmissionAuthorization, AdmissionDecision, AdmissionDenied,
+    AdmissionOutcome, OutputDisposition, SupportedEvidenceStore,
+    SupportedNormalizedRecord, SupportedRecordCandidate,
+)
 
 __all__ = [
     "ProcessingRun", "ProcessingRunService", "SourceArtifact",
@@ -46,4 +51,7 @@ __all__ = [
     "IssueCategory", "IssueSeverity", "PartialProcessingObservation",
     "ProcessingIssue", "Recoverability", "record_issue",
     "record_partial_processing",
+    "AdmissionAuthorization", "AdmissionDecision", "AdmissionDenied",
+    "AdmissionOutcome", "OutputDisposition", "SupportedEvidenceStore",
+    "SupportedNormalizedRecord", "SupportedRecordCandidate",
 ]
