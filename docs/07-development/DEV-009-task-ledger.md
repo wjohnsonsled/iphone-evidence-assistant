@@ -113,7 +113,7 @@ readiness transitions are automatic and recorded in DEV-011.
 | DEV-0502 | Info.plist controlled reader | COMPLETE | DEV-0501 | DEV-0502-info-plist-reader-acceptance | Versioned projection adopts DEV-0501 reader; three approved fields; no compatibility/support |
 | DEV-0503 | Manifest.plist controlled reader | COMPLETE | DEV-0501; DEC-0009 | DEV-0503-manifest-plist-reader-acceptance | Versioned projection of IsEncrypted only; no secondary signal or decryption |
 | DEV-0504 | Status.plist controlled reader | COMPLETE | DEV-0501 | DEV-0504-status-plist-reader-acceptance | Versioned SnapshotState claim only; no completeness inference |
-| DEV-0505 | Backup metadata normalization | OWNER_REVIEW | DEV-0502 through DEV-0504 | To be created | META-NORMALIZATION-GATE: identifier/version normalization algorithms and profiles require evidence-integrity approval |
+| DEV-0505 | Backup metadata normalization | COMPLETE | DEV-0502 through DEV-0504; DEC-0056 | DEV-0505-metadata-normalization-acceptance; FOR-010 | Lossless class-specific identifier and dotted-version profiles v1; raw preserved; exact comparison only; no identity/compatibility/support inference |
 | DEV-0506 | Encryption and version field reconciliation | COMPLETE | DEV-0502 through DEV-0504; DEC-0009; DEC-0054 | DEV-0506-encryption-version-reconciliation-acceptance | Exact projection; IsEncrypted only; conflicts unresolved; version is not compatibility |
 | DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | To be created | Blocked by reporting and coverage package gates |
 

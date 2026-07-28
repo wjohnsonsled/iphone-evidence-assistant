@@ -107,3 +107,16 @@
   `META-NORMALIZATION-GATE`; DEV-0601 remains at `APPLE-SCHEMA-GATE`.
 - No independent READY task remains. The next executable task requires an
   owner decision at an already recorded mandatory gate.
+
+## DEC-0056 / DEV-0505 completion reevaluation
+
+- `META-NORMALIZATION-GATE` is resolved by DEC-0056; DEV-0505 is COMPLETE.
+- DEV-0507 automatically advanced through `DEPENDENCIES_SATISFIED` to `READY`.
+- DEV-0508 dependencies DEV-0502 through DEV-0506 are COMPLETE and it
+  automatically advanced through `DEPENDENCIES_SATISFIED` to `READY`.
+- DEV-0509 remains dependency-blocked by DEV-0507 and DEV-0508.
+- DEV-0507 is selected first as the higher-priority dependency-ordered task.
+- DEC-0055 remains controlling: WP-1100 is COMPLETE candidate infrastructure,
+  notwithstanding the stale pre-approval instruction embedded in DEC-0056.
+- No support, compatibility, API, production, deployment, parser, registry,
+  supported-record, or real-evidence authority follows.

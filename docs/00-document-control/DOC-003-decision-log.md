@@ -1016,3 +1016,27 @@ production repositories, production concurrency/cancellation/cleanup,
 deployment, real-evidence processing, API exposure, parser activation, and
 support promotion remain unapproved. The QMS-010 limitations and accepted
 TestClient warning remain active.
+
+## DEC-0056 — Approve DEV-0505 identifier and product-version normalization
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Task: DEV-0505
+- Profiles: `apple-backup-identifier-normalization` version 1;
+  `apple-product-version-normalization` version 1
+- Support effect: none
+
+The owner approves deterministic, lossless candidate normalization for exact
+metadata comparison. Raw observations remain immutable; identifier classes,
+semantic states, product-version component text/count/value/leading-zero
+properties, named comparison modes, transformation provenance, scope, safe
+failure states, and limitations remain explicit.
+
+Only conservative leading/trailing ASCII whitespace removal, approved
+case-insensitive hexadecimal lowercase comparison form, required-separator
+preservation, and exact syntax validation are authorized. No fuzzy matching,
+repair, class conversion, device attribution, authenticity conclusion,
+zero-component padding, suffix removal, Apple/schema/parser compatibility,
+parser activation, registry/store seeding, API, production, real evidence, or
+support promotion is authorized. DEV-0601 remains the Manifest.db
+compatibility gate. DEC-0055 remains controlling for WP-1100 completion.
