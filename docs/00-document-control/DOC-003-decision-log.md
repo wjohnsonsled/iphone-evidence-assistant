@@ -517,3 +517,17 @@ evidence hash-observation authority.
 
 This decision grants no Apple compatibility, parsing, persistence, API, real
 evidence, deployment, or support authority.
+
+## DEC-0022 — DEV-0206 adopts the WP-0250 audit authority
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0200_REVIEW
+- Task: DEV-0206
+
+DEV-0206 uses the owner-approved WP-0250 closed audit taxonomy and append-only
+service for registered intake evidence. It creates no competing intake audit
+model. Operational logs and stage-result serialization remain separate.
+
+The reference service is application-level and in-memory. This decision makes
+no persistence, storage immutability, legal chain-of-custody, API, production,
+real-evidence, or support claim.
