@@ -317,6 +317,15 @@ runtime implementation, validation, or artifact support.
 | DEV-0102-R04 | Validate a non-editable application install in an isolated environment | DEV-0102 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Documented clean-install workflow | AC-05; `pip check`; import smoke test | DEV-0102 |
 | DEV-0102-R05 | Preserve runtime, evidence boundaries, migrations, and support status | AGENTS.md; DEV-0102 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Dependency-only implementation | AC-06 through AC-08; regression suite | DEV-0102 |
 
+## 16B. DEV-0308 additive migration requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0308-R01 | Add one linear migration for the validated security schema | DEV-0308 acceptance; ARC-001 | `IMPLEMENTED_TASK_VALIDATED` | `0003_security_foundation.py` | AC-01; AC-02; Alembic head/history | DEV-0308 |
+| DEV-0308-R02 | Enforce tenant/case source linkage at the relational boundary | DEV-0305; DEV-0308 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Composite foreign key and unique case scope | AC-03 | DEV-0308 |
+| DEV-0308-R03 | Keep migration additive and downgrade limited to new tables | ARC-001; DEV-0308 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Dependency-ordered upgrade/downgrade | AC-04; offline SQL | DEV-0308 |
+| DEV-0308-R04 | Preserve evidence, API, parser, deployment, and support boundaries | AGENTS.md; DEV-0308 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Schema-only change | AC-07; diff review | DEV-0308 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |

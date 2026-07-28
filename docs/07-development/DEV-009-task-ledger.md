@@ -66,7 +66,7 @@
 | DEV-0303 | Case model | COMPLETE | DEV-0301 | DEV-0303-case-model-acceptance | Tenant-scoped immutable case identity and separate additive ORM contract validated; legacy cases unchanged; no migration/API/authorization |
 | DEV-0305 | Evidence-source tenant and case linkage | COMPLETE | DEV-0203, DEV-0303 | DEV-0305-evidence-source-linkage-acceptance | Evidence-source identity derives tenant/case from supported case; composite relational key rejects cross-tenant linkage; no evidence access or support effect |
 | DEV-0306 | Audit-actor attribution | COMPLETE | DEV-0302, DEV-0206 | DEV-0306-audit-actor-attribution-acceptance | Principal/membership-derived actor context attributes WP-0250 audit events and blocks cross-tenant attribution; no permission effect |
-| DEV-0308 | Additive Alembic migration baseline | READY | DEV-0301 through DEV-0306 | To be created | All model dependencies satisfied; next task in plan order |
+| DEV-0308 | Additive Alembic migration baseline | COMPLETE | DEV-0301 through DEV-0306 | DEV-0308-additive-security-migration-acceptance | One linear additive/reversible migration; offline SQL and regressions pass; no live PostgreSQL or support change |
 | DEV-0307 | Cross-tenant isolation tests | BLOCKED | DEV-0310, DEV-0305 | To be created | Dependency corrected by DEC-0014; implementation is not authorized until dependencies complete |
 | DEV-0310 | Authorization Service and Policy Enforcement | READY | DEV-0301, DEV-0302, DEV-0303 | To be created | Reserved by DEC-0014; dependencies satisfied but plan order follows DEV-0305 and DEV-0306 |
 
