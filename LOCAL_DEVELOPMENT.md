@@ -16,6 +16,20 @@ cp backend/.env.example backend/.env
 
 Do not put production credentials or real client paths in committed files.
 
+Configuration validation is fail-closed:
+
+- `ENVIRONMENT` is one of `development`, `test`, `staging`, or `production`;
+- `LOG_LEVEL` is one of `DEBUG`, `INFO`, `WARNING`, `ERROR`, or `CRITICAL`;
+- non-test environments require `postgresql+psycopg`;
+- SQLite is permitted only for deterministic tests;
+- every semicolon-separated `EVIDENCE_ROOT` entry must be absolute and unique;
+- the documented development database password is rejected in production.
+
+On Windows local runs, replace the container path `/evidence` with an absolute
+Windows path. Configuration diagnostics use `Settings.safe_summary()` and
+must never include a password or complete database URL. These checks do not
+connect to the database or establish production readiness.
+
 ## Docker Startup
 
 Create a local evidence directory:

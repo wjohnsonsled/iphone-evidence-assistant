@@ -256,6 +256,16 @@ as follows:
 These references are architecture traceability evidence. They do not establish
 runtime implementation, validation, or artifact support.
 
+## 16B. DEV-0103 configuration requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0103-R01 | Closed environment and log-level vocabularies | DEV-0103 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `Environment`; `LogLevel`; `Settings` validators | AC-01 | DEV-0103 |
+| DEV-0103-R02 | Parseable environment-appropriate database driver | DEV-0103 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Database URL and environment policy validators | AC-02; AC-04 | DEV-0103 |
+| DEV-0103-R03 | Absolute, normalized, unique evidence roots | DEV-0103 acceptance; SEC-INP-001 | `IMPLEMENTED_TASK_VALIDATED` | Evidence-root validator | AC-03 | DEV-0103 |
+| DEV-0103-R04 | Credential-safe deterministic diagnostics | AGENTS.md; DEV-0103 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Hidden database field; `safe_summary()` | AC-05; AC-06 | DEV-0103 |
+| DEV-0103-R05 | No evidence inspection, API, migration, external service, or support effect | DEV-0103 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Configuration-only module change | AC-07; AC-08 | DEV-0103 |
+
 ## 16A. DEV-0102 reproducible-environment requirements
 
 | Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |

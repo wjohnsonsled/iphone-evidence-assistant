@@ -405,3 +405,18 @@ Every capability promoted to Supported must permanently reference its Owner
 Decision ID, Validation Package ID, Acceptance Record IDs, Promotion Date, and
 Current Support Status. Missing traceability fails closed; promotion must be
 fully traceable through repository documentation.
+
+## DEC-0015 — DEV-0103 fail-closed configuration policy
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0100_REVIEW
+- Task: DEV-0103
+
+Backend configuration uses closed environment and log-level vocabularies,
+environment-appropriate database drivers, absolute unique evidence roots, and
+credential-safe diagnostics. SQLite is test-only. Production rejects the
+documented development database password.
+
+This is startup-value validation, not database connectivity, filesystem access,
+secret-manager integration, or production-readiness validation. It creates no
+route, migration, evidence workflow, parser activation, or support effect.

@@ -17,7 +17,7 @@
 | DEV-0101 | Backend scaffold | COMPLETE | DEV-0002, DEV-0003, DEV-0004 | DEV-0101-backend-scaffold-acceptance | Owner approved completion on 2026-07-24 in DEC-0003; default composition is health-only and import-isolated from legacy processing; backend 12/12 and evidence-engine 5/5 tests passed; pytest temp workaround and TestClient warning recorded; no migration or support promotion |
 
 | DEV-0102 | Dependency locking and reproducible environment | COMPLETE | DEV-0101 | DEV-0102-dependency-locking-acceptance | Owner approved in DEC-0014 with recorded Docker-build, scanning, mutable-image-tag, pytest-directory, and TestClient-warning limitations; no runtime or support-status change |
-| DEV-0103 | Configuration model and environment validation | READY | DEV-0102 | To be created | Unblocked by DEC-0014 approval of DEV-0102 |
+| DEV-0103 | Configuration model and environment validation | COMPLETE | DEV-0102 | DEV-0103-configuration-validation-acceptance | Closed environment/log/database/root validation, safe diagnostics, 13 focused, 113 backend, and 5 legacy tests pass; WP-0100 package review pending |
 | DEV-0106 | CI architecture and regression gate | READY | DEV-0102 | To be created | Unblocked by DEC-0014 approval of DEV-0102 |
 
 | DEV-0201 | Apple backup input adapter | COMPLETE | DEV-0003, DEV-0004, DEV-0101 | DEV-0201-apple-backup-input-adapter-acceptance | Owner approved completion on 2026-07-24 in DEC-0004; additive read-only adapter implements six explicit outcomes, root/link controls, provenance, limitations, and deterministic audit data; focused 14/14, backend 26/26, and characterization 5/5 tests passed; no input support claim |

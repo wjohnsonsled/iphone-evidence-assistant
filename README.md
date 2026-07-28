@@ -75,6 +75,11 @@ supported-registry boundary, and a supported-output quarantine gate. Its
 production composition is deliberately empty. No parser or artifact is
 registered, executed, or promoted by that foundation.
 
+DEV-0103 validates environment mode, log level, database driver, and absolute
+evidence-root configuration before application startup. Its diagnostic summary
+omits database credentials and the complete connection URL. It does not inspect
+an evidence root or establish production readiness.
+
 ## Supported-boundary intake foundation
 
 `backend/app/intake/apple_backup.py` contains the DEV-0201 read-only filesystem

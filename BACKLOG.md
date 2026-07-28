@@ -88,9 +88,9 @@ A task may be marked `COMPLETE` only after the required owner approval is record
 |---|---|---:|---|---|
 | DEV-0101 | Backend scaffold and legacy isolation | COMPLETE | DEV-0004 | Complete |
 | DEV-0102 | Dependency locking and reproducible environment | COMPLETE | DEV-0101 | Complete; DEC-0014 |
-| DEV-0103 | Configuration model and environment validation | READY | DEV-0102 | Package gate |
-| DEV-0104 | Structured error model | NOT_STARTED | DEV-0103 | Package gate |
-| DEV-0105 | Structured application logging baseline | NOT_STARTED | DEV-0103 | Package gate |
+| DEV-0103 | Configuration model and environment validation | COMPLETE | DEV-0102 | WP-0100 package review |
+| DEV-0104 | Structured error model | READY | DEV-0103 | Package gate |
+| DEV-0105 | Structured application logging baseline | READY | DEV-0103 | Package gate |
 | DEV-0106 | CI architecture and regression gate | READY | DEV-0102 | Package gate |
 
 ### WP-0100 completion criteria
