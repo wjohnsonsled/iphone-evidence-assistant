@@ -6,6 +6,11 @@
 
 |---|---|---|---|---|---|
 
+Canonical states under DEC-0051 are `NOT_STARTED`,
+`DEPENDENCIES_SATISFIED`, `READY`, `IN_PROGRESS`, `BLOCKED`, `OWNER_REVIEW`,
+`VALIDATION_PENDING`, `COMPLETE`, `DEFERRED`, and `CANCELLED`. Eligible
+readiness transitions are automatic and recorded in DEV-011.
+
 | DEV-0001 | Repository baseline inspection and reconciliation | COMPLETE | None | DEV-001; DOC-005; PRD-006; DEV-000 | Documentation review recorded through DEV-0002 authorization on 2026-07-24; baseline accepted for scope reconciliation; backend pytest limitation remains recorded in DOC-005 |
 
 | DEV-0002 | Confirm MVP scope against baseline | COMPLETE | DEV-0001 | PRD-003; PRD-007; FOR-004; FOR-006 | Owner approved PRD-007 on 2026-07-24; approval recorded as DEC-0001; no artifact, parser, schema, workflow, or conclusion was promoted |
@@ -84,12 +89,12 @@
 | DEV-0412 | Evidence-core integration tests | COMPLETE | DEV-0401 through DEV-0411 | DEV-0412-evidence-core-integration-acceptance; QMS-009 | Owner approved WP-0400 candidate infrastructure in DEC-0049; registry/store remain empty |
 
 | DEV-0451 | Source Inventory Engine | COMPLETE | WP-0200, WP-0250, DEV-0402, DEV-0403 | DEV-0451-source-inventory-acceptance | Deterministic registered-observation inventory only; no filesystem discovery, coverage conclusion, or support effect |
-| DEV-0452 | Artifact Coverage Engine | BLOCKED | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | To be created | Must distinguish authorization, execution, zero, rejection, failure, partial, and unsupported |
+| DEV-0452 | Artifact Coverage Engine | READY | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | To be created | DEC-0051 reevaluation: all dependencies complete; candidate factual coverage scope only |
 | DEV-0453 | Evidence Gap Classification | BLOCKED | DEV-0451, DEV-0452 | To be created | Closed versioned fail-closed vocabulary required |
 | DEV-0454 | Backup Structure and Coverage Assessment | BLOCKED | DEV-0451, DEV-0453, WP-0200 | To be created | Must not infer completeness, deletion, concealment, destruction, or spoliation |
-| DEV-0455 | Collection Opportunity Engine | FUTURE | DEV-0453, DEV-0454, WP-1900 where applicable | To be created | Post-MVP; reproducible versioned rules required |
-| DEV-0456 | Question-Specific Evidence Sufficiency Engine | FUTURE | DEV-0453, WP-1200, WP-1300 | To be created | Post-MVP; no legal sufficiency conclusion |
-| DEV-0457 | Acquisition Recommendation Engine | FUTURE | DEV-0455, DEV-0456 | To be created | Post-MVP; separate acquisition-method approval |
+| DEV-0455 | Collection Opportunity Engine | DEFERRED | DEV-0453, DEV-0454, WP-1900 where applicable | To be created | Post-MVP; reproducible versioned rules required |
+| DEV-0456 | Question-Specific Evidence Sufficiency Engine | DEFERRED | DEV-0453, WP-1200, WP-1300 | To be created | Post-MVP; no legal sufficiency conclusion |
+| DEV-0457 | Acquisition Recommendation Engine | DEFERRED | DEV-0455, DEV-0456 | To be created | Post-MVP; separate acquisition-method approval |
 | DEV-0458 | Attorney Coverage Summary Generator | BLOCKED | DEV-0453, DEV-0454, DEV-1401, DEV-1404 | To be created | Attorney-readable limitations mandatory |
 
 | DEV-1101 | Supported parser registry | COMPLETE | WP-0400, DEV-0262, DEV-0263, DEV-0264 | DEV-1101-supported-parser-registry-acceptance | Reuses DEV-0304 registry; complete permanent promotion references; production entry count remains zero |
@@ -98,11 +103,11 @@
 | DEV-1104 | Processing-run state machine | COMPLETE | DEV-0401 | DEV-1104-processing-run-state-machine-acceptance | Immutable closed transitions with distinct complete-zero, partial, failed, and cancelled terminal states |
 | DEV-1105 | Coverage aggregation | COMPLETE | DEV-0408 | DEV-1105-coverage-aggregation-acceptance | Same-run factual status/count reducer; unavailable counts remain unknown; no evidence-gap conclusion |
 | DEV-1106 | Failure aggregation | COMPLETE | DEV-0409 | DEV-1106-failure-aggregation-acceptance | Same-run safe category/severity/fatal/partial reducer; broken references fail closed |
-| DEV-1107 | Idempotency and rerun controls | NOT_STARTED | DEV-1104 | To be created | Deterministic processing identity |
-| DEV-1108 | Cancellation and cleanup | NOT_STARTED | DEV-1104 | To be created | Explicit terminal outcomes |
-| DEV-1109 | Pipeline audit events | NOT_STARTED | DEV-1104, DEV-0206 | To be created | Closed append-only taxonomy |
+| DEV-1107 | Idempotency and rerun controls | OWNER_REVIEW | DEV-1104 | To be created | ARC-GATE-1107: idempotency identity, rerun lineage, concurrency, retry, and persistence semantics unresolved |
+| DEV-1108 | Cancellation and cleanup | READY | DEV-1104 | To be created | DEC-0051 reevaluation: lifecycle dependency complete; candidate cleanup scope may proceed |
+| DEV-1109 | Pipeline audit events | READY | DEV-1104, DEV-0206 | To be created | DEC-0051 reevaluation: lifecycle and closed audit taxonomy dependencies complete |
 | DEV-1110 | Pipeline integration tests | NOT_STARTED | DEV-1101 through DEV-1109 | To be created | Synthetic package validation |
-| DEV-0459 | Commercial Services Integration | FUTURE | DEV-0457; separate approval | To be created | No external or paid integration authorized |
+| DEV-0459 | Commercial Services Integration | DEFERRED | DEV-0457; separate approval | To be created | No external or paid integration authorized |
 | DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | To be created | Blocked by reporting and coverage package gates |
 
 

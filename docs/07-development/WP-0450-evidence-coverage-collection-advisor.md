@@ -3,7 +3,7 @@
 ## Status
 
 - Governance: approved for backlog insertion by DEC-0027
-- Implementation: BLOCKED by foundational dependencies
+- Implementation: ACTIVE; DEV-0451 COMPLETE and DEV-0452 READY under DEC-0051
 - Support effect: none
 
 WP-0450 is the reconciled identifier for the requested “WP-0400 Evidence

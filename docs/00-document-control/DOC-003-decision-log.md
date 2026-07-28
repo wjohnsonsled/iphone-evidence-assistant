@@ -928,3 +928,17 @@ The owner designates DEV-1101 ready for immediate autonomous implementation.
 The task must preserve zero Supported Parser Registry entries, zero supported
 normalized records, legacy quarantine, and the prohibitions on parser or
 artifact promotion, real-evidence processing, API exposure, and deployment.
+
+## DEC-0051 — Approve automatic task readiness workflow
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Scope: task-state administration only
+
+Codex may automatically move eligible tasks through `NOT_STARTED`,
+`DEPENDENCIES_SATISFIED`, and `READY`, reevaluate stale blockers, and continue
+independent READY work when another task is in `OWNER_REVIEW`. The canonical
+ten-state vocabulary, readiness record, priority model, and work-in-progress
+limit are governing. All architecture, evidence-integrity, provenance,
+security, support, legal, AI-policy, production, deployment, and real-evidence
+owner gates remain unchanged.

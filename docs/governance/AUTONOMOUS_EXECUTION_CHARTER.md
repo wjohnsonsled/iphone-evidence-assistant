@@ -293,3 +293,40 @@ sequences of READY work while preserving:
 -   Commercial focus
 -   Documentation quality
 -   Minimal owner interruption
+
+------------------------------------------------------------------------
+
+# 21. Automatic Task Readiness
+
+DEC-0051 authorizes autonomous readiness administration. Canonical states are:
+`NOT_STARTED`, `DEPENDENCIES_SATISFIED`, `READY`, `IN_PROGRESS`, `BLOCKED`,
+`OWNER_REVIEW`, `VALIDATION_PENDING`, `COMPLETE`, `DEFERRED`, and `CANCELLED`.
+
+```text
+NOT_STARTED
+    ↓
+DEPENDENCIES_SATISFIED
+    ↓
+READY
+    ↓
+IN_PROGRESS
+    ↓
+VALIDATION_PENDING
+    ↓
+COMPLETE
+```
+
+Exceptional transitions are:
+
+```text
+NOT_STARTED or IN_PROGRESS → BLOCKED → DEPENDENCIES_SATISFIED → READY
+READY or IN_PROGRESS → OWNER_REVIEW → READY or IN_PROGRESS after approval
+Any active state → DEFERRED or CANCELLED through an applicable decision
+```
+
+Readiness must be reevaluated when dependencies, decisions, blockers, work
+packages, or task completions change and whenever no READY task remains.
+Eligible tasks may be promoted automatically. `BLOCKED` requires a concrete,
+dated blocker record. `OWNER_REVIEW` is reserved for genuine mandatory gates.
+One primary implementation task should normally be `IN_PROGRESS`. A review gate
+on one task does not stop independent READY work.

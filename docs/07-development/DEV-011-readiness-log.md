@@ -1,0 +1,33 @@
+# DEV-011 — Automatic Readiness Log
+
+## 2026-07-28 — DEC-0051 initial reconciliation
+
+- Repository state: `mvp-development` at `f46a31e`, clean, 69 commits ahead
+- Rows reviewed: 164 non-complete MVP task rows in BACKLOG
+- Direct dependency checks emphasized: DEV-0501, DEV-1101, DEV-0452,
+  DEV-1102 through DEV-1106, DEV-0451 successors, and WP-0400 dependents
+- Automatically READY:
+  - DEV-0452 — all six predecessor tasks/groups COMPLETE; factual candidate
+    coverage scope; no support or conclusion promotion
+  - DEV-0501 — WP-0200, WP-0400, DEV-0263, and DEV-0264 COMPLETE; candidate
+    discovery using synthetic fixtures only
+  - DEV-1108 — DEV-1104 COMPLETE; candidate cancellation/cleanup only
+  - DEV-1109 — DEV-1104 and DEV-0206 COMPLETE; approved audit taxonomy exists
+- OWNER_REVIEW:
+  - DEV-0601 — `APPLE-SCHEMA-GATE`: schema-profile compatibility rules require
+    owner approval before implementation
+  - DEV-1107 — `ARC-GATE-1107`: idempotency identity, rerun lineage,
+    concurrency, retry, and persistence semantics are undefined
+  - DEV-1211 — `PROV-CITATION-GATE`: citation-resolution semantics require
+    provenance review
+  - DEV-1403 and DEV-1404 — `ATTORNEY-CONCLUSION-GATE`: attorney-facing
+    custody/coverage language requires review
+  - DEV-1501 — `SEC-AUTH-GATE`: authentication integration changes a security
+    boundary
+- Remaining tasks retain `NOT_STARTED` when dependencies are incomplete;
+  existing BLOCKED states retain their recorded concrete downstream blockers.
+- Selected: DEV-0501 because it starts the first candidate artifact workflow
+  and most directly advances an end-to-end MVP path.
+- Limitations: readiness grants implementation authority only. It grants no
+  parser activation, compatibility, support, API, production, or real-evidence
+  authority.

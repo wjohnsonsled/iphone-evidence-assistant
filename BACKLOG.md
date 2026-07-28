@@ -38,15 +38,20 @@ Partial support is unsupported.
 Use only the following statuses:
 
 - `NOT_STARTED`
+- `DEPENDENCIES_SATISFIED`
 - `READY`
 - `IN_PROGRESS`
 - `BLOCKED`
+- `OWNER_REVIEW`
 - `VALIDATION_PENDING`
 - `COMPLETE`
-- `REJECTED`
 - `DEFERRED`
+- `CANCELLED`
 
-A task may become `READY` only when all dependencies are `COMPLETE`.
+A task advances automatically from `NOT_STARTED` to
+`DEPENDENCIES_SATISFIED` when its hard dependencies are satisfied, and to
+`READY` after the DEC-0051 readiness conditions pass. `OWNER_REVIEW` is used
+only for a genuine mandatory decision. `BLOCKED` requires a concrete blocker.
 
 ---
 
@@ -304,14 +309,14 @@ WP-0450 with corresponding DEV-0451 through DEV-0460 IDs.
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
 | DEV-0451 | Source Inventory Engine | COMPLETE | WP-0200, WP-0250, DEV-0402, DEV-0403 | WP-0450 gate |
-| DEV-0452 | Artifact Coverage Engine | BLOCKED | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | WP-0450 gate |
+| DEV-0452 | Artifact Coverage Engine | READY | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | WP-0450 gate |
 | DEV-0453 | Evidence Gap Classification | BLOCKED | DEV-0451, DEV-0452 | WP-0450 gate |
 | DEV-0454 | Backup Structure and Coverage Assessment | BLOCKED | DEV-0451, DEV-0453, WP-0200 | WP-0450 gate |
-| DEV-0455 | Collection Opportunity Engine | FUTURE | DEV-0453, DEV-0454, WP-1900 where applicable | Post-MVP gate |
-| DEV-0456 | Question-Specific Evidence Sufficiency Engine | FUTURE | DEV-0453, WP-1200, WP-1300 | Post-MVP gate |
-| DEV-0457 | Acquisition Recommendation Engine | FUTURE | DEV-0455, DEV-0456 | Post-MVP gate |
+| DEV-0455 | Collection Opportunity Engine | DEFERRED | DEV-0453, DEV-0454, WP-1900 where applicable | Post-MVP gate |
+| DEV-0456 | Question-Specific Evidence Sufficiency Engine | DEFERRED | DEV-0453, WP-1200, WP-1300 | Post-MVP gate |
+| DEV-0457 | Acquisition Recommendation Engine | DEFERRED | DEV-0455, DEV-0456 | Post-MVP gate |
 | DEV-0458 | Attorney Coverage Summary Generator | BLOCKED | DEV-0453, DEV-0454, DEV-1401, DEV-1404 | WP-0450 gate |
-| DEV-0459 | Commercial Services Integration | FUTURE | DEV-0457; separate commercial/security approval | Post-MVP gate |
+| DEV-0459 | Commercial Services Integration | DEFERRED | DEV-0457; separate commercial/security approval | Post-MVP gate |
 | DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | WP-0450 gate |
 
 The closed candidate coverage vocabulary and permanent forensic rules are
@@ -328,7 +333,7 @@ implementation is authorized ahead of its dependencies.
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0501 | Metadata artifact discovery via Manifest.db | NOT_STARTED | WP-0200, WP-0400, DEV-0263, DEV-0264 | Artifact gate |
+| DEV-0501 | Metadata artifact discovery via Manifest.db | READY | WP-0200, WP-0400, DEV-0263, DEV-0264 | Artifact gate |
 | DEV-0502 | Info.plist controlled reader | NOT_STARTED | DEV-0501 | Artifact gate |
 | DEV-0503 | Manifest.plist controlled reader | NOT_STARTED | DEV-0501 | Artifact gate |
 | DEV-0504 | Status.plist controlled reader | NOT_STARTED | DEV-0501 | Artifact gate |
@@ -348,7 +353,7 @@ implementation is authorized ahead of its dependencies.
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0601 | Manifest.db schema-profile validator | NOT_STARTED | WP-0200, WP-0400, DEV-0263, DEV-0264 | Artifact gate |
+| DEV-0601 | Manifest.db schema-profile validator | OWNER_REVIEW | WP-0200, WP-0400, DEV-0263, DEV-0264 | Artifact gate |
 | DEV-0602 | Files-table controlled query layer | NOT_STARTED | DEV-0601 | Artifact gate |
 | DEV-0603 | FileID normalization | NOT_STARTED | DEV-0602 | Artifact gate |
 | DEV-0604 | Domain normalization | NOT_STARTED | DEV-0602 | Artifact gate |
@@ -469,9 +474,9 @@ implementation is authorized ahead of its dependencies.
 | DEV-1104 | Processing-run state machine | COMPLETE | DEV-0401 | Package gate |
 | DEV-1105 | Coverage aggregation | COMPLETE | DEV-0408 | Package gate |
 | DEV-1106 | Failure aggregation | COMPLETE | DEV-0409 | Package gate |
-| DEV-1107 | Idempotency and rerun controls | NOT_STARTED | DEV-1104 | Package gate |
-| DEV-1108 | Cancellation and cleanup | NOT_STARTED | DEV-1104 | Package gate |
-| DEV-1109 | Pipeline audit events | NOT_STARTED | DEV-1104, DEV-0206 | Package gate |
+| DEV-1107 | Idempotency and rerun controls | OWNER_REVIEW | DEV-1104 | Package gate |
+| DEV-1108 | Cancellation and cleanup | READY | DEV-1104 | Package gate |
+| DEV-1109 | Pipeline audit events | READY | DEV-1104, DEV-0206 | Package gate |
 | DEV-1110 | Pipeline integration tests | NOT_STARTED | DEV-1101 through DEV-1109 | Package gate |
 
 **Owner-review gate:** Approve the supported processing pipeline before API exposure.
@@ -494,7 +499,7 @@ implementation is authorized ahead of its dependencies.
 | DEV-1208 | Unified timeline model | NOT_STARTED | supported artifact gates | Package gate |
 | DEV-1209 | Time-zone rendering and provenance | NOT_STARTED | DEV-1208 | Package gate |
 | DEV-1210 | Timeline filtering and sorting | NOT_STARTED | DEV-1208 | Package gate |
-| DEV-1211 | Source-citation resolver | NOT_STARTED | DEV-0403 | Package gate |
+| DEV-1211 | Source-citation resolver | OWNER_REVIEW | DEV-0403 | Package gate |
 | DEV-1212 | Search and timeline tests | NOT_STARTED | DEV-1201 through DEV-1211 | Package gate |
 
 **Owner-review gate:** Approve supported search and timeline semantics.
@@ -542,8 +547,8 @@ implementation is authorized ahead of its dependencies.
 |---|---|---:|---|---|
 | DEV-1401 | Report data contract | NOT_STARTED | WP-0400, WP-1200, DEV-0260 | Package gate |
 | DEV-1402 | Device and backup summary section | NOT_STARTED | supported metadata gate | Package gate |
-| DEV-1403 | Evidence-source and chain-of-custody section | NOT_STARTED | WP-0200 | Package gate |
-| DEV-1404 | Coverage and limitation section | NOT_STARTED | DEV-0408, DEV-1105 | Package gate |
+| DEV-1403 | Evidence-source and chain-of-custody section | OWNER_REVIEW | WP-0200 | Package gate |
+| DEV-1404 | Coverage and limitation section | OWNER_REVIEW | DEV-0408, DEV-1105 | Package gate |
 | DEV-1405 | Contacts section | NOT_STARTED | supported contacts gate | Package gate |
 | DEV-1406 | Calls section | NOT_STARTED | supported calls gate | Package gate |
 | DEV-1407 | Messages section | NOT_STARTED | supported messages gate | Package gate |
@@ -565,7 +570,7 @@ implementation is authorized ahead of its dependencies.
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-1501 | Authentication integration | NOT_STARTED | WP-0300 | Package gate |
+| DEV-1501 | Authentication integration | OWNER_REVIEW | WP-0300 | Package gate |
 | DEV-1502 | Case endpoints | NOT_STARTED | DEV-1501, DEV-0303 | Package gate |
 | DEV-1503 | Evidence-source registration endpoints | NOT_STARTED | DEV-1501, WP-0200 | Package gate |
 | DEV-1504 | Processing endpoints | NOT_STARTED | DEV-1501, WP-1100 | Package gate |
@@ -673,7 +678,9 @@ complete acquisition of an iCloud account.
 Codex shall:
 
 1. Read this file, `AGENTS.md`, `CODEX_AUTONOMY_CHARTER.md`, the decision log, task ledger, risk register, architecture, and traceability matrix.
-2. Select the first `READY` task in plan order.
+2. Reevaluate dependencies and blockers, promote qualifying tasks through
+   `DEPENDENCIES_SATISFIED` to `READY`, and select the highest-priority READY
+   task under DEC-0051.
 3. Create task-specific requirements and measurable acceptance criteria.
 4. Update traceability before implementation.
 5. Implement the smallest complete solution.

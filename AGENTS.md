@@ -476,3 +476,15 @@ Repository-specific approved decisions override generic backlog wording.
 No agent may infer support status from implementation presence.
 
 No unsupported or legacy output may enter supported stores, retrieval, AI, citations, reports, coverage calculations, or production claims.
+
+## Automatic task readiness
+
+Use the canonical states `NOT_STARTED`, `DEPENDENCIES_SATISFIED`, `READY`,
+`IN_PROGRESS`, `BLOCKED`, `OWNER_REVIEW`, `VALIDATION_PENDING`, `COMPLETE`,
+`DEFERRED`, and `CANCELLED`. When dependencies or blockers change, evaluate
+readiness automatically and advance eligible tasks through
+`NOT_STARTED → DEPENDENCIES_SATISFIED → READY` without routine owner approval.
+Record the evaluation once in the task ledger or readiness log. A task requiring
+a genuine architecture, evidence-integrity, provenance, security, support,
+legal, AI-policy, production, or deployment decision must be `OWNER_REVIEW`.
+Continue other independent READY work whenever possible.
