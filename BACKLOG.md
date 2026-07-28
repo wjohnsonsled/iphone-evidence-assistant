@@ -88,10 +88,10 @@ A task may be marked `COMPLETE` only after the required owner approval is record
 |---|---|---:|---|---|
 | DEV-0101 | Backend scaffold and legacy isolation | COMPLETE | DEV-0004 | Complete |
 | DEV-0102 | Dependency locking and reproducible environment | COMPLETE | DEV-0101 | Complete; DEC-0014 |
-| DEV-0103 | Configuration model and environment validation | COMPLETE | DEV-0102 | WP-0100 package review |
-| DEV-0104 | Structured error model | COMPLETE | DEV-0103 | WP-0100 package review |
-| DEV-0105 | Structured application logging baseline | COMPLETE | DEV-0103 | WP-0100 package review |
-| DEV-0106 | CI architecture and regression gate | COMPLETE | DEV-0102 | WP-0100 package review |
+| DEV-0103 | Configuration model and environment validation | COMPLETE | DEV-0102 | Complete; DEC-0019 |
+| DEV-0104 | Structured error model | COMPLETE | DEV-0103 | Complete; DEC-0019 |
+| DEV-0105 | Structured application logging baseline | COMPLETE | DEV-0103 | Complete; DEC-0019 |
+| DEV-0106 | CI architecture and regression gate | COMPLETE | DEV-0102 | Complete; DEC-0019 |
 
 ### WP-0100 completion criteria
 
@@ -102,8 +102,8 @@ A task may be marked `COMPLETE` only after the required owner approval is record
 - structured logs without evidence-content leakage;
 - automated tests and architecture-boundary checks.
 
-**Owner-review gate:** READY — review DEV-0101 through DEV-0106 before any
-production-facing API work.
+**Owner-review gate:** Satisfied by DEC-0019 for foundation infrastructure
+only. Production-facing API work remains separately governed.
 
 ---
 

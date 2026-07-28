@@ -1,6 +1,6 @@
 # DEV-0106 — CI Architecture and Regression Gate Acceptance
 
-- Status: COMPLETE — WP-0100 package review pending
+- Status: COMPLETE — owner approved in DEC-0019
 - Dependency: DEV-0102 complete
 - Scope: repository CI definition and deterministic gate validation
 - Deployment/support effect: none

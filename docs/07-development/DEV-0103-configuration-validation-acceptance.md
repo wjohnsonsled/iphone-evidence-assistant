@@ -1,6 +1,6 @@
 # DEV-0103 — Configuration Model and Environment Validation
 
-- Status: COMPLETE — WP-0100 package review pending
+- Status: COMPLETE — owner approved in DEC-0019
 - Dependency: DEV-0102 complete under DEC-0014
 - Scope: backend application configuration only
 - Runtime/API/support effect: no new route, evidence workflow, or support status

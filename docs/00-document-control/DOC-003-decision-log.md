@@ -465,3 +465,25 @@ remote-write, evidence-processing, or production migration step.
 The workflow has not run remotely; action references are major tags; and lint,
 type, vulnerability, license, secret, container, and live-database gates remain
 future hardening. No support status changes.
+
+## DEC-0019 — WP-0100 Backend Foundation completion approval
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Owner: Project owner
+- Work package: WP-0100
+- Tasks: DEV-0103, DEV-0104, DEV-0105, DEV-0106
+
+The owner approved WP-0100 and DEV-0103 through DEV-0106 as complete foundation
+infrastructure. The owner accepted the limitations recorded in QMS-006,
+RSK-0015, RSK-0017, and RSK-0018, including local-only CI validation, unavailable
+Docker validation, mutable GitHub Action version tags, omitted lint, type,
+vulnerability, license, secret, container-security, and live-PostgreSQL gates,
+configuration validation that does not establish production readiness,
+operational logs that are not immutable audit records, and the accepted
+TestClient warning.
+
+This approval does not authorize production deployment or production-facing
+APIs, customer-evidence processing, parser execution, artifact validation,
+support promotion, or a change to the trust model. The all-or-nothing support
+rule remains controlling.

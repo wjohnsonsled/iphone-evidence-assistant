@@ -1,6 +1,6 @@
 # DEV-0104 — Structured Error Model Acceptance
 
-- Status: COMPLETE — WP-0100 package review pending
+- Status: COMPLETE — owner approved in DEC-0019
 - Dependency: DEV-0103 complete
 - Scope: API error contracts and exception translation only
 - Support effect: none

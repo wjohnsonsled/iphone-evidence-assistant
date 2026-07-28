@@ -1,6 +1,6 @@
 # DEV-0105 — Structured Application Logging Baseline Acceptance
 
-- Status: COMPLETE — WP-0100 package review pending
+- Status: COMPLETE — owner approved in DEC-0019
 - Dependency: DEV-0103 complete
 - Scope: supported-path application logging and safe compatibility formatting
 - Audit effect: operational logs are not immutable audit/custody records
