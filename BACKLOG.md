@@ -466,6 +466,8 @@ implementation is authorized ahead of its dependencies.
 
 ## WP-1100 Supported Processing Pipeline
 
+**Status:** OWNER_REVIEW — candidate package QMS-010; no support effect.
+
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
 | DEV-1101 | Supported parser registry | COMPLETE | WP-0400, DEV-0262, DEV-0263, DEV-0264 | Package gate |
@@ -477,7 +479,7 @@ implementation is authorized ahead of its dependencies.
 | DEV-1107 | Idempotency and rerun controls | COMPLETE | DEV-1104 | Package gate |
 | DEV-1108 | Cancellation and cleanup | COMPLETE | DEV-1104 | Package gate |
 | DEV-1109 | Pipeline audit events | COMPLETE | DEV-1104, DEV-0206 | Package gate |
-| DEV-1110 | Pipeline integration tests | READY | DEV-1101 through DEV-1109 | Package gate |
+| DEV-1110 | Pipeline integration tests | VALIDATION_PENDING | DEV-1101 through DEV-1109 | Package gate |
 
 **Owner-review gate:** Approve the supported processing pipeline before API exposure.
 
