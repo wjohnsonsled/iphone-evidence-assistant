@@ -985,3 +985,34 @@ unsupported, inaccessible, and conflicting claims remain distinct. No universal
 Manifest.db/plist precedence applies. Manifest.db content/schema compatibility
 remains DEV-0601. Directory names are observations only. No parsing,
 compatibility, real-evidence, API, production, or support authority follows.
+
+## DEC-0055 — Approve WP-1100 candidate processing infrastructure
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Tasks: WP-1100; DEV-1101 through DEV-1110
+- Validation package: QMS-010
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+
+The owner approves WP-1100 and DEV-1110 as COMPLETE candidate processing
+infrastructure under the review submitted in DEC-0053 and all limitations in
+QMS-010. Later candidate tasks may use the exact parser-authorization,
+registry-isolation, fail-closed execution, immutable lifecycle, factual
+coverage/failure aggregation, versioned idempotency, retry/rerun lineage,
+cancellation/cleanup, audit, and integration controls.
+
+The accepted idempotency profile is
+`processing-request-canonical-json-sha256` version 1 using SHA-256 over sorted
+canonical JSON and the exact governed scope recorded in DEV-1107. Every actual
+attempt, retry, or rerun receives a new immutable processing-run UUID; prior
+outcomes remain immutable and checkpoint resume remains unapproved. Migration
+`0005_processing_idempotency` is accepted as additive, offline-reversible
+candidate infrastructure only.
+
+The Supported Parser Registry and supported normalized-record store remain
+empty. No parser, artifact, workflow, input, report, API, AI capability, Apple
+compatibility profile, or other capability becomes Supported. Live PostgreSQL,
+production repositories, production concurrency/cancellation/cleanup,
+deployment, real-evidence processing, API exposure, parser activation, and
+support promotion remain unapproved. The QMS-010 limitations and accepted
+TestClient warning remain active.

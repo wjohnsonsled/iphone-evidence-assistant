@@ -58,3 +58,19 @@ DEC-0037 limitations remain permanent unless explicitly superseded.
 
 DEV-0401 through DEV-0412 acceptance records and commits form the permanent
 package record. QMS-009 limitations remain active. No record promotes support.
+
+## WP-1100 permanent traceability
+
+- Owner decision: DEC-0055
+- Validation package: QMS-010
+- Migration: `0005_processing_idempotency`
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+- Supported registry entries: 0
+- Supported normalized records: 0
+
+DEV-1101 through DEV-1110 acceptance records and their focused local commits
+form the permanent package record. QMS-010 preserves the reported focused,
+backend-regression, legacy-characterization, compilation, lock, package,
+migration, and hygiene results. Its live PostgreSQL, production repository,
+production concurrency, API, deployment, real-evidence, parser-activation, and
+support limitations remain active.

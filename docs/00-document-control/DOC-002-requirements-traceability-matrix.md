@@ -141,7 +141,7 @@ statuses. They must not be displayed as support claims.
 | PROC-COV-001 | Processing coverage aggregation preserves factual states and unknown counts without inferring evidentiary completeness | DEC-0045; ARC-001 | `IMPLEMENTED_TASK_VALIDATED` | `app.processing.aggregate_coverage` | DEV-1105 synthetic aggregation tests | DEV-1105 |
 | PROC-FAIL-001 | Failure aggregation preserves safe issue/partial identities and closed factual counts without evidentiary conclusions | DEC-0046; ARC-001 | `IMPLEMENTED_TASK_VALIDATED` | `app.processing.aggregate_failures` | DEV-1106 synthetic aggregation tests | DEV-1106 |
 | PROC-IDEM-001 | Exact versioned request idempotency prevents duplicate execution without reusing run identity or erasing retry/rerun provenance | DEC-0052; ARC-001; ARC-002 | `IMPLEMENTED_TASK_VALIDATED` | `app.processing.idempotency`; migration 0005 | DEV-1107 focused concurrency, retry/rerun, isolation, recovery, and migration tests | DEV-1107 |
-| PROC-PIPE-001 | Candidate processing pipeline integrates registry denial, execution, lifecycle, coverage, failures, idempotency, cancellation, and audit without support leakage | ARC-001; ARC-002 | `VALIDATION_PENDING` | `app.processing` | DEV-1110 integration tests; QMS-010 | WP-1100 owner review |
+| PROC-PIPE-001 | Candidate processing pipeline integrates registry denial, execution, lifecycle, coverage, failures, idempotency, cancellation, and audit without support leakage | ARC-001; ARC-002; DEC-0055 | `IMPLEMENTED_TASK_VALIDATED` | `app.processing` | DEV-1110 integration tests; QMS-010; owner approval DEC-0055 | WP-1100 COMPLETE candidate infrastructure |
 
 ## 11. DEV-0101 backend-scaffold requirements
 

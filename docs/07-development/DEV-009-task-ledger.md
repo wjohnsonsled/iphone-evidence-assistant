@@ -106,7 +106,7 @@ readiness transitions are automatic and recorded in DEV-011.
 | DEV-1107 | Idempotency and rerun controls | COMPLETE | DEV-1104; DEC-0052 | DEV-1107-idempotency-rerun-acceptance | Exact versioned key, atomic claim, immutable attempts, explicit retry/rerun lineage, additive migration 0005 |
 | DEV-1108 | Cancellation and cleanup | COMPLETE | DEV-1104 | DEV-1108-cancellation-cleanup-acceptance | Cleanup-before-terminal; cleanup failure is explicit FAILED with safe reason |
 | DEV-1109 | Pipeline audit events | COMPLETE | DEV-1104, DEV-0206 | DEV-1109-pipeline-audit-events-acceptance | Closed append-only started/completed/zero/failed mapping with scoped attribution |
-| DEV-1110 | Pipeline integration tests | VALIDATION_PENDING | DEV-1101 through DEV-1109 | DEV-1110-pipeline-integration-acceptance; QMS-010 | Synthetic integrated package complete; WP-1100 owner review required |
+| DEV-1110 | Pipeline integration tests | COMPLETE | DEV-1101 through DEV-1109 | DEV-1110-pipeline-integration-acceptance; QMS-010 | Owner approved COMPLETE candidate integration validation in DEC-0055; all QMS-010 limitations remain; registry/store counts remain zero |
 | DEV-0459 | Commercial Services Integration | DEFERRED | DEV-0457; separate approval | To be created | No external or paid integration authorized |
 
 | DEV-0501 | Apple backup discovery and metadata reconciliation | COMPLETE | WP-0200, WP-0400, DEV-0263, DEV-0264; DEC-0054 | DEV-0501-apple-backup-discovery-acceptance | Versioned root-confined source-specific discovery; Manifest pending validation; conflicts unresolved; no support effect |

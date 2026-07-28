@@ -343,3 +343,19 @@ a new attempt begins or for an exact authorized running/completed duplicate.
 Every retry, rerun, or changed-context execution has a new run identity and
 preserves explicit prior-run lineage. Checkpoint resumption and cross-run output
 merging remain unapproved.
+
+## WP-1100 candidate processing approval
+
+DEC-0055 accepts the DEV-1101 through DEV-1110 implementation and QMS-010
+validation package for use by later candidate architecture. The approved
+boundary includes exact parser authorization, supported/legacy registry
+separation, fail-closed execution, immutable processing history, factual
+coverage and failure aggregation, versioned idempotency, explicit retry/rerun
+lineage, cancellation and cleanup provenance, and append-only pipeline audit
+events.
+
+This architectural acceptance does not authorize parser activation or
+production processing. The Supported Parser Registry and supported normalized
+store remain empty. Live PostgreSQL transaction behavior, production
+repositories, APIs, deployment, real evidence, and every parser/artifact
+support promotion remain subject to separate validation and approval.
