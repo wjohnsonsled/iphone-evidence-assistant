@@ -263,8 +263,8 @@ authorization service and corrects DEV-0307's dependency.
 | DEV-0408 | Coverage and omission model | COMPLETE | DEV-0401; DEC-0045 | WP-0400 review |
 | DEV-0409 | Failure and partial-processing model | COMPLETE | DEV-0401; DEC-0046 | WP-0400 review |
 | DEV-0410 | Supported evidence store | COMPLETE | DEV-0401 through DEV-0409; DEC-0047 | Candidate infrastructure; empty registry/store |
-| DEV-0411 | Legacy and experimental store isolation | READY | DEV-0410 | Package gate |
-| DEV-0412 | Evidence-core integration tests | NOT_STARTED | DEV-0401 through DEV-0411 | Package gate |
+| DEV-0411 | Legacy and experimental store isolation | COMPLETE | DEV-0410 | WP-0400 review |
+| DEV-0412 | Evidence-core integration tests | READY | DEV-0401 through DEV-0411 | Mandatory WP-0400 integrity/provenance gate |
 
 ### WP-0400 completion criteria
 

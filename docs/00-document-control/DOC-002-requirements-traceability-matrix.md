@@ -451,6 +451,15 @@ runtime implementation, validation, or artifact support.
 | DEV-0410-R04 | Scope queries before materialization without enumeration | DEC-0047 | `IMPLEMENTED_TASK_VALIDATED` | scoped `get` | isolation test | DEV-0410 |
 | DEV-0410-R05 | Append-only records and acyclic supersession | DEC-0047 | `IMPLEMENTED_TASK_VALIDATED` | no update/delete; supersession | static/unit tests | DEV-0410 |
 
+## 16Q. DEV-0411 isolation requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0411-R01 | Candidate, experimental, and legacy output remains in a distinct store | ARC-001; FOR-006 | `IMPLEMENTED_TASK_VALIDATED` | `QuarantinedOutputStore` | AC-01 | DEV-0411 |
+| DEV-0411-R02 | No transfer/promotion path or broad enumeration exists | DEC-0047 | `IMPLEMENTED_TASK_VALIDATED` | bounded API | AC-02 through AC-04 | DEV-0411 |
+| DEV-0411-R03 | Quarantine queries remain tenant/case scoped | DEC-0037 | `IMPLEMENTED_TASK_VALIDATED` | `list_scoped` | AC-05 | DEV-0411 |
+| DEV-0411-R04 | Isolation adds no parser/support behavior | AGENTS.md | `IMPLEMENTED_TASK_VALIDATED` | diagnostic-only module | AC-06 | DEV-0411 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |
