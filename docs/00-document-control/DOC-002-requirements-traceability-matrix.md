@@ -423,6 +423,15 @@ runtime implementation, validation, or artifact support.
 | DEV-0407-R04 | Require explicit numeric epoch metadata without guessing | DEC-0044 | `IMPLEMENTED_TASK_VALIDATED` | `NumericEpochMetadata` | AC-06 | DEV-0407 |
 | DEV-0407-R05 | Define provenance envelopes only without algorithms/support | DEC-0044 | `IMPLEMENTED_TASK_VALIDATED` | Candidate domain module | AC-08 | DEV-0407 |
 
+## 16N. DEV-0408 processing coverage requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0408-R01 | Closed factual status, authorization, execution, count, reconciliation, and omission vocabularies | DEC-0045 | `IMPLEMENTED_TASK_VALIDATED` | `processing_coverage` enums | AC-01; AC-02 | DEV-0408 |
+| DEV-0408-R02 | Complete and zero outcomes require authorized completed reconciled execution | DEC-0045 | `IMPLEMENTED_TASK_VALIDATED` | Coverage validation | AC-03; AC-04 | DEV-0408 |
+| DEV-0408-R03 | Partial/resource/omission states retain explicit metadata and cannot appear complete | DEC-0045 | `IMPLEMENTED_TASK_VALIDATED` | Coverage and omission envelopes | AC-05 through AC-07 | DEV-0408 |
+| DEV-0408-R04 | Processing facts produce no WP-0450, device-level, support, or legal conclusion | DEC-0045 | `IMPLEMENTED_TASK_VALIDATED` | Bounded observation contract | AC-08 | DEV-0408 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |

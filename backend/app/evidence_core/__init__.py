@@ -17,6 +17,12 @@ from app.evidence_core.timestamp_provenance import (
     TimestampCategory, TimestampConversion, TimestampObservation,
     TimestampPrecision, TimezoneContext, TimezoneSource, observe_timestamp,
 )
+from app.evidence_core.processing_coverage import (
+    AuthorizationState, CountObservation, CountStatus, CoverageStatus,
+    ExecutionState, OmissionCategory, OmissionObservation,
+    ProcessingCoverageObservation, ReconciliationStatus,
+    ResourceLimitObservation, count, observe_coverage,
+)
 
 __all__ = [
     "ProcessingRun", "ProcessingRunService", "SourceArtifact",
@@ -29,4 +35,8 @@ __all__ = [
     "NumericEpochMetadata", "TimestampCategory", "TimestampConversion",
     "TimestampObservation", "TimestampPrecision", "TimezoneContext",
     "TimezoneSource", "observe_timestamp",
+    "AuthorizationState", "CountObservation", "CountStatus", "CoverageStatus",
+    "ExecutionState", "OmissionCategory", "OmissionObservation",
+    "ProcessingCoverageObservation", "ReconciliationStatus",
+    "ResourceLimitObservation", "count", "observe_coverage",
 ]

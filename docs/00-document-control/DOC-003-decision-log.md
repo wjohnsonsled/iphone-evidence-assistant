@@ -851,3 +851,15 @@ and conversion. Controlled category, precision, timezone-source,
 interpretation, ambiguity, and conversion vocabularies govern candidate
 envelopes. No timezone, epoch, ambiguity, precision, or conversion algorithm is
 approved; artifact-specific profiles require separate governance.
+## DEC-0045 — Approve DEV-0408 processing coverage observations
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Task: DEV-0408
+
+Processing coverage records factual authorization, execution, source,
+reconciled-count, omission, failure, resource, and partial-processing
+observations. Complete zero records is permitted only after authorized complete
+reconciled execution. These observations remain separate from WP-0450 derived
+coverage and make no device-level, compatibility, support, legal, or intent
+conclusion.
