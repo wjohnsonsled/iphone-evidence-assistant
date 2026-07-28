@@ -40,7 +40,7 @@
 
 | DEV-0209 | Intake resource limits and denial-of-service controls | COMPLETE | DEV-0202; DEC-0025 | DEV-0209-intake-resource-limits-acceptance | Explicit caller-supplied policy validates ten required ceilings; adapter/copy/plist/schema/SQLite work limits fail closed with safe validation-failure outcomes and no support promotion |
 
-| DEV-0210 | Intake package integration tests | VALIDATION_PENDING | DEV-0203 through DEV-0209 | DEV-0210-intake-package-integration-acceptance; QMS-007 | Synthetic integration validates stable identity, shared hashes, controlled-copy cleanup, audit, provenance, resource denial, source immutability, distinct outcomes, and empty supported registry; owner package review required |
+| DEV-0210 | Intake package integration tests | COMPLETE | DEV-0203 through DEV-0209 | DEV-0210-intake-package-integration-acceptance; QMS-007 | Owner approved in DEC-0027 as candidate intake architecture only; supported registry remains empty |
 
 | DEV-0211 | Profile and validate secondary Apple backup encryption indicators | DEFERRED | Owner-approved signal sources and revised compatibility profile | To be created | Must source, characterize, order, and define conflicts for every candidate signal; requires synthetic and Apple-produced fixtures plus owner approval before implementation or promotion |
 
@@ -61,8 +61,24 @@
 | DEV-0265 | End-to-end integrity validation package | COMPLETE | DEV-0251 through DEV-0264 | WP-0250-acceptance-criteria | Owner approved WP-0250 candidate infrastructure with all documented limitations in DEC-0014 |
 
 | DEV-0304 | Artifact support-status model and parser quarantine enforcement | COMPLETE | DEV-0003, DEV-0004 | DEV-0304-support-status-quarantine-acceptance; FOR-004; FOR-006 | Owner approved in DEC-0014; supported registry remains empty and no capability is promoted |
+| DEV-0301 | Tenant model | READY | DEV-0103 | To be created | Earliest dependency-satisfied MVP task after DEC-0027; additive relational tenant foundation only |
+| DEV-0302 | User and role model | BLOCKED | DEV-0301 | To be created | Blocked by tenant model |
+| DEV-0303 | Case model | BLOCKED | DEV-0301 | To be created | Blocked by tenant model |
+| DEV-0305 | Evidence-source tenant and case linkage | BLOCKED | DEV-0203, DEV-0303 | To be created | Blocked by case model |
+| DEV-0306 | Audit-actor attribution | BLOCKED | DEV-0302, DEV-0206 | To be created | Blocked by user/role model |
 | DEV-0307 | Cross-tenant isolation tests | BLOCKED | DEV-0310, DEV-0305 | To be created | Dependency corrected by DEC-0014; implementation is not authorized until dependencies complete |
 | DEV-0310 | Authorization Service and Policy Enforcement | BLOCKED | DEV-0301, DEV-0302, DEV-0303 | To be created | Reserved by DEC-0014; no implementation authorization until dependencies and task-specific acceptance record are complete |
+
+| DEV-0451 | Source Inventory Engine | BLOCKED | WP-0200, WP-0250, DEV-0402, DEV-0403 | To be created | WP-0450 allocation under DEC-0027; blocked by evidence identity/locator foundation |
+| DEV-0452 | Artifact Coverage Engine | BLOCKED | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | To be created | Must distinguish authorization, execution, zero, rejection, failure, partial, and unsupported |
+| DEV-0453 | Evidence Gap Classification | BLOCKED | DEV-0451, DEV-0452 | To be created | Closed versioned fail-closed vocabulary required |
+| DEV-0454 | Backup Structure and Coverage Assessment | BLOCKED | DEV-0451, DEV-0453, WP-0200 | To be created | Must not infer completeness, deletion, concealment, destruction, or spoliation |
+| DEV-0455 | Collection Opportunity Engine | FUTURE | DEV-0453, DEV-0454, WP-1900 where applicable | To be created | Post-MVP; reproducible versioned rules required |
+| DEV-0456 | Question-Specific Evidence Sufficiency Engine | FUTURE | DEV-0453, WP-1200, WP-1300 | To be created | Post-MVP; no legal sufficiency conclusion |
+| DEV-0457 | Acquisition Recommendation Engine | FUTURE | DEV-0455, DEV-0456 | To be created | Post-MVP; separate acquisition-method approval |
+| DEV-0458 | Attorney Coverage Summary Generator | BLOCKED | DEV-0453, DEV-0454, DEV-1401, DEV-1404 | To be created | Attorney-readable limitations mandatory |
+| DEV-0459 | Commercial Services Integration | FUTURE | DEV-0457; separate approval | To be created | No external or paid integration authorized |
+| DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | To be created | Blocked by reporting and coverage package gates |
 
 
 

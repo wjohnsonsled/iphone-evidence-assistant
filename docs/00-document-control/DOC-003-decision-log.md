@@ -597,3 +597,31 @@ composition root is created. The supported registry remains empty.
 Integration success is not Apple compatibility approval, evidentiary
 completeness, parser/artifact support, real-evidence authority, deployment
 approval, or support promotion.
+
+## DEC-0027 — WP-0200 approval and evidence-coverage governance
+
+- Date: 2026-07-28
+- Status: APPROVED
+- Owner: Project owner
+- Work package: WP-0200
+- Validation package: QMS-007
+- Tasks: DEV-0201 through DEV-0210
+- Current support status: CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED
+
+The owner approved WP-0200 and DEV-0210 as complete candidate intake
+architecture with the acceptance records, reported test results, and QMS-007
+limitations. DEV-0209 remains complete. Resource-denial classifications and
+the empty supported registry remain mandatory.
+
+This approval does not establish production ceilings/capacity/readiness,
+deployment, real-evidence use, Apple version/schema compatibility, an approved
+compatibility profile, API/upload exposure, decryption, parsing, artifact
+interpretation/support, cloud support, device completeness, or support
+promotion. The TestClient warning remains development debt only.
+
+The requested coverage IDs conflicted with controlling WP-0400 and DEV-0401
+through DEV-0410. Preserving history, the Evidence Coverage & Collection
+Advisor is allocated as WP-0450 with DEV-0451 through DEV-0460. Its MVP tasks
+are blocked by evidence-core, processing, and reporting prerequisites;
+DEV-0455, DEV-0456, DEV-0457, and DEV-0459 are future. Cloud acquisition is
+separately reserved as future WP-1900.

@@ -111,7 +111,8 @@ only. Production-facing API work remains separately governed.
 
 ## WP-0200 Apple Backup Intake and Validation
 
-**Package status:** `VALIDATION_PENDING`
+**Package status:** `COMPLETE` — owner approved candidate infrastructure in
+DEC-0027; support effect remains none.
 **Support effect:** None.
 
 | Task | Title | Status | Dependencies | Owner Gate |
@@ -125,7 +126,7 @@ only. Production-facing API work remains separately governed.
 | DEV-0207 | Intake provenance model | COMPLETE | DEV-0203 | WP-0200 package review |
 | DEV-0208 | Intake cleanup and failure recovery | COMPLETE | DEV-0205 | WP-0200 package review |
 | DEV-0209 | Intake resource limits and denial-of-service controls | COMPLETE | DEV-0202 | WP-0200 package review |
-| DEV-0210 | Intake package integration tests | VALIDATION_PENDING | DEV-0203 through DEV-0209 | WP-0200 owner review |
+| DEV-0210 | Intake package integration tests | COMPLETE | DEV-0203 through DEV-0209 | Complete; DEC-0027 |
 | DEV-0211 | Profile and validate secondary Apple backup encryption indicators | DEFERRED | Separately approved signal sources and revised compatibility profile | Owner profile gate |
 
 ### DEV-0202 required classifications
@@ -159,9 +160,8 @@ backlog wording differs.
 - synthetic end-to-end intake fixtures;
 - no artifact parser support claim.
 
-**Owner-review gate:** READY — review QMS-007 and DEV-0204 through DEV-0210.
-Package approval must remain distinct from any future Apple compatibility
-profile or support-promotion decision.
+**Owner-review gate:** Satisfied by DEC-0027 for candidate intake architecture
+only. Apple compatibility and every support-promotion decision remain separate.
 
 ---
 
@@ -208,15 +208,15 @@ only; all limitations and support prohibitions remain controlling.
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0301 | Tenant model | NOT_STARTED | DEV-0103 | Package gate |
-| DEV-0302 | User and role model | NOT_STARTED | DEV-0301 | Package gate |
-| DEV-0303 | Case model | NOT_STARTED | DEV-0301 | Package gate |
+| DEV-0301 | Tenant model | READY | DEV-0103 | Package gate |
+| DEV-0302 | User and role model | BLOCKED | DEV-0301 | Package gate |
+| DEV-0303 | Case model | BLOCKED | DEV-0301 | Package gate |
 | DEV-0304 | Artifact support-status model and parser quarantine enforcement | COMPLETE | DEV-0003, DEV-0004 | Complete; DEC-0014 |
-| DEV-0305 | Evidence-source tenant and case linkage | NOT_STARTED | DEV-0203, DEV-0303 | Package gate |
-| DEV-0306 | Audit-actor attribution | NOT_STARTED | DEV-0302, DEV-0206 | Package gate |
+| DEV-0305 | Evidence-source tenant and case linkage | BLOCKED | DEV-0203, DEV-0303 | Package gate |
+| DEV-0306 | Audit-actor attribution | BLOCKED | DEV-0302, DEV-0206 | Package gate |
 | DEV-0307 | Cross-tenant isolation tests | BLOCKED | DEV-0310, DEV-0305 | Package gate |
-| DEV-0308 | Additive Alembic migration baseline | NOT_STARTED | DEV-0301 through DEV-0306 | Package gate |
-| DEV-0309 | Security package integration tests | NOT_STARTED | DEV-0301 through DEV-0308 | Package gate |
+| DEV-0308 | Additive Alembic migration baseline | BLOCKED | DEV-0301 through DEV-0306 | Package gate |
+| DEV-0309 | Security package integration tests | BLOCKED | DEV-0301 through DEV-0308 | Package gate |
 | DEV-0310 | Authorization Service and Policy Enforcement | BLOCKED | DEV-0301, DEV-0302, DEV-0303 | Package gate |
 
 ### WP-0300 completion criteria
@@ -275,6 +275,36 @@ Every supported record can be traced to:
 - coverage and limitations.
 
 **Owner-review gate:** Approve the normalized supported-evidence contract before any artifact family is promoted.
+
+---
+
+# PHASE 4.5 — EVIDENCE COVERAGE AND COLLECTION ADVISOR
+
+## WP-0450 Evidence Coverage & Collection Advisor
+
+Identifier reconciliation: the requested WP-0400 and DEV-0401 through DEV-0410
+identifiers were already assigned to the controlling Supported Evidence Data
+Model. DEC-0027 preserves those assignments and allocates this package as
+WP-0450 with corresponding DEV-0451 through DEV-0460 IDs.
+
+| Task | Title | Status | Dependencies | Owner Gate |
+|---|---|---:|---|---|
+| DEV-0451 | Source Inventory Engine | BLOCKED | WP-0200, WP-0250, DEV-0402, DEV-0403 | WP-0450 gate |
+| DEV-0452 | Artifact Coverage Engine | BLOCKED | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | WP-0450 gate |
+| DEV-0453 | Evidence Gap Classification | BLOCKED | DEV-0451, DEV-0452 | WP-0450 gate |
+| DEV-0454 | Backup Structure and Coverage Assessment | BLOCKED | DEV-0451, DEV-0453, WP-0200 | WP-0450 gate |
+| DEV-0455 | Collection Opportunity Engine | FUTURE | DEV-0453, DEV-0454, WP-1900 where applicable | Post-MVP gate |
+| DEV-0456 | Question-Specific Evidence Sufficiency Engine | FUTURE | DEV-0453, WP-1200, WP-1300 | Post-MVP gate |
+| DEV-0457 | Acquisition Recommendation Engine | FUTURE | DEV-0455, DEV-0456 | Post-MVP gate |
+| DEV-0458 | Attorney Coverage Summary Generator | BLOCKED | DEV-0453, DEV-0454, DEV-1401, DEV-1404 | WP-0450 gate |
+| DEV-0459 | Commercial Services Integration | FUTURE | DEV-0457; separate commercial/security approval | Post-MVP gate |
+| DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | WP-0450 gate |
+
+The closed candidate coverage vocabulary and permanent forensic rules are
+defined in `WP-0450-evidence-coverage-collection-advisor.md`. No coverage
+implementation is authorized ahead of its dependencies.
+
+**Owner-review gate:** Approve the coverage package before attorney-facing use.
 
 ---
 
@@ -604,6 +634,21 @@ Every supported record can be traced to:
 | DEV-1808 | MVP release candidate | NOT_STARTED | DEV-1801 through DEV-1807 | Release gate |
 
 **Owner-review gate:** Explicit MVP production-release decision.
+
+---
+
+# FUTURE — CLOUD EVIDENCE ACQUISITION
+
+## WP-1900 Cloud Evidence Acquisition
+
+**Status:** FUTURE — separate owner, legal, security, compatibility, capacity,
+and support approvals required.
+
+Cloud acquisition remains separate from Apple local computer backups and must
+distinguish iCloud device backup, iCloud Photos, Messages in iCloud, iCloud
+Drive, synchronized Notes, Contacts, Calendar, and other separately
+synchronized services. An iCloud device backup must never be represented as a
+complete acquisition of an iCloud account.
 
 ---
 

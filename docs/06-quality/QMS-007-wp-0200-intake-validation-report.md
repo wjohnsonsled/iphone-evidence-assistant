@@ -1,7 +1,7 @@
 # QMS-007 — WP-0200 Apple Backup Intake Validation Report
 
-- Status: VALIDATION_PENDING
-- Owner gate: WP-0200 package review
+- Status: COMPLETE — owner approved in DEC-0027
+- Owner gate: satisfied by DEC-0027 for candidate architecture only
 - Support effect: none
 
 ## Package scope
@@ -54,3 +54,8 @@ exports, or support promotion.
 - Filesystem TOCTOU and changing SQLite companion-set risks remain fail-closed
   but cannot be eliminated at application level.
 - The accepted TestClient third-party deprecation warning remains.
+
+## Owner disposition
+
+The owner accepted the reported results and limitations in DEC-0027. No
+support status changed; the supported registry remains empty.

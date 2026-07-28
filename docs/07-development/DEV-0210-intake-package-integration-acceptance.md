@@ -1,6 +1,6 @@
 # DEV-0210 — Intake Package Integration Tests
 
-- Status: VALIDATION_PENDING — WP-0200 owner review required
+- Status: COMPLETE — owner approved in DEC-0027
 - Dependencies: DEV-0203 through DEV-0209 complete
 - Scope: synthetic candidate integration only
 - Support effect: none
