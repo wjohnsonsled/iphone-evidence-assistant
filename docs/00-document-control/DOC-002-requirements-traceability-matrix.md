@@ -256,6 +256,15 @@ as follows:
 These references are architecture traceability evidence. They do not establish
 runtime implementation, validation, or artifact support.
 
+## 16C. DEV-0104 structured-error requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0104-R01 | Typed categories, stable codes, and one safe envelope | DEV-0104 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `ErrorCategory`; `ApiError`; `_response()` | AC-01; AC-02 | DEV-0104 |
+| DEV-0104-R02 | Safe validation and framework error translation | MES-v1 Part 7; DEV-0104 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Registered validation and HTTP handlers | AC-03; AC-04 | DEV-0104 |
+| DEV-0104-R03 | Hide unexpected exception content and retain correlation | AGENTS.md; DEV-0104 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Generic 500 response and UUID request ID | AC-05; AC-06 | DEV-0104 |
+| DEV-0104-R04 | Preserve composition and add no product/support behavior | DEV-0104 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Error-boundary-only change | AC-07; AC-08 | DEV-0104 |
+
 ## 16B. DEV-0103 configuration requirements
 
 | Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |

@@ -420,3 +420,17 @@ documented development database password.
 This is startup-value validation, not database connectivity, filesystem access,
 secret-manager integration, or production-readiness validation. It creates no
 route, migration, evidence workflow, parser activation, or support effect.
+
+## DEC-0016 — DEV-0104 structured safe API errors
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0100_REVIEW
+- Task: DEV-0104
+
+API application, validation, framework HTTP, and unexpected failures use a
+single typed envelope with stable code, category, safe message, retryable flag,
+and server-generated request identifier. Validation input and unexpected
+exception text are not returned to clients.
+
+Server-log content controls remain DEV-0105 scope. This task adds no route,
+evidence behavior, migration, external service, or support effect.
