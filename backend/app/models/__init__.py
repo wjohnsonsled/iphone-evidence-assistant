@@ -11,6 +11,7 @@ from app.models.security_case import SecurityCaseModel
 from app.models.evidence_source import EvidenceSourceModel
 from app.models.processing_run import SupportedProcessingRunModel
 from app.models.source_artifact import SupportedSourceArtifactModel
+from app.models.source_locator import SupportedSourceLocatorModel
 from app.models.integrity import (
     IntegrityAuditEvent,
     IntegrityCustodyEvent,
@@ -31,4 +32,5 @@ __all__ = [
     "EvidenceSourceModel",
     "SupportedProcessingRunModel",
     "SupportedSourceArtifactModel",
+    "SupportedSourceLocatorModel",
 ]

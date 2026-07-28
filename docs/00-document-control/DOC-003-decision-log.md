@@ -787,3 +787,14 @@ Candidate source artifacts have content-independent UUIDv4 identity linked to
 tenant, case, evidence source, processing run, and WP-0250 evidence UUID.
 Registration requires exact authorization and matching scope. Locator semantics
 remain DEV-0403 and migration DEV-0410. Presence never implies support.
+
+## DEC-0040 — DEV-0403 stable source locator
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0400_REVIEW
+- Task: DEV-0403
+
+Candidate locators use immutable internal identity and preserve raw and
+normalized values plus the declared normalization method. They perform no
+filesystem access and assert no presence, readability, completeness, or
+support. Migration remains DEV-0410 scope.

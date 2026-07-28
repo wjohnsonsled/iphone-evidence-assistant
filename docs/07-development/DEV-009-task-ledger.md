@@ -72,8 +72,10 @@
 | DEV-0309 | Security package integration tests | COMPLETE | DEV-0301 through DEV-0308; DEV-0310 | DEV-0309-security-package-integration-acceptance; QMS-008 | Owner approved WP-0300 candidate foundation in DEC-0037; live PostgreSQL, production policy/auth/API, and support remain unapproved |
 | DEV-0401 | Processing-run model | COMPLETE | WP-0200, WP-0250, WP-0300 | DEV-0401-processing-run-model-acceptance | Immutable scoped identity and authorization provenance validated; lifecycle DEV-1104, migration DEV-0410 |
 | DEV-0402 | Source-artifact identity model | COMPLETE | DEV-0401 | DEV-0402-source-artifact-identity-acceptance | Scoped authorized candidate identity; no locator/support claim; migration DEV-0410 |
-| DEV-0403 | Stable source-locator model | READY | DEV-0402 | To be created | Next plan-order WP-0400 task |
+| DEV-0403 | Stable source-locator model | COMPLETE | DEV-0402 | DEV-0403-stable-source-locator-acceptance | Stable internal identity preserves raw/normalized locator values separately; no filesystem/support semantics |
 | DEV-0404 | Parser identity and version model | READY | DEV-0401 | To be created | Dependency satisfied; follows DEV-0403 in plan order |
+| DEV-0405 | Schema-fingerprint model | READY | DEV-0402 | To be created | Dependency satisfied; follows DEV-0404 in plan order |
+| DEV-0406 | Raw and normalized value model | READY | DEV-0402 | To be created | Dependency satisfied; follows DEV-0405 in plan order |
 
 | DEV-0451 | Source Inventory Engine | BLOCKED | WP-0200, WP-0250, DEV-0402, DEV-0403 | To be created | WP-0450 allocation under DEC-0027; blocked by evidence identity/locator foundation |
 | DEV-0452 | Artifact Coverage Engine | BLOCKED | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | To be created | Must distinguish authorization, execution, zero, rejection, failure, partial, and unsupported |

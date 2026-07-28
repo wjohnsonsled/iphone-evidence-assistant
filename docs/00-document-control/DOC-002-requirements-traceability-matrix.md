@@ -369,6 +369,15 @@ runtime implementation, validation, or artifact support.
 | DEV-0402-R03 | Defer locators and prohibit presence-to-support inference | AGENTS.md; DEV-0402 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Bounded identity contract | AC-05; AC-06 | DEV-0402 |
 | DEV-0402-R04 | Separate candidate ORM metadata without migration/support effect | ARC-001 | `IMPLEMENTED_TASK_VALIDATED` | `SupportedSourceArtifactModel` | AC-07; AC-08 | DEV-0402 |
 
+## 16H. DEV-0403 locator requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0403-R01 | Stable scoped locator identity | ARC-002; WP-0400 | `IMPLEMENTED_TASK_VALIDATED` | `SourceLocator` | AC-01 | DEV-0403 |
+| DEV-0403-R02 | Preserve raw/normalized values and method separately | AGENTS.md | `IMPLEMENTED_TASK_VALIDATED` | Locator value fields | AC-02; AC-03 | DEV-0403 |
+| DEV-0403-R03 | Fail closed on invalid values without filesystem/support inference | AGENTS.md | `IMPLEMENTED_TASK_VALIDATED` | Contract validation | AC-04; AC-05 | DEV-0403 |
+| DEV-0403-R04 | Separate ORM metadata without migration/support effect | ARC-001 | `IMPLEMENTED_TASK_VALIDATED` | `SupportedSourceLocatorModel` | AC-06; AC-07 | DEV-0403 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |

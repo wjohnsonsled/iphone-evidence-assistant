@@ -5,5 +5,9 @@ from app.evidence_core.processing_run import (
     ProcessingRunService,
 )
 from app.evidence_core.source_artifact import SourceArtifact, SourceArtifactService
+from app.evidence_core.source_locator import SourceLocator, create_source_locator
 
-__all__ = ["ProcessingRun", "ProcessingRunService", "SourceArtifact", "SourceArtifactService"]
+__all__ = [
+    "ProcessingRun", "ProcessingRunService", "SourceArtifact",
+    "SourceArtifactService", "SourceLocator", "create_source_locator",
+]
