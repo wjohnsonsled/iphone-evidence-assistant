@@ -1040,3 +1040,23 @@ zero-component padding, suffix removal, Apple/schema/parser compatibility,
 parser activation, registry/store seeding, API, production, real evidence, or
 support promotion is authorized. DEV-0601 remains the Manifest.db
 compatibility gate. DEC-0055 remains controlling for WP-1100 completion.
+
+## DEC-0057 — Submit WP-0500 candidate metadata package for review
+
+- Date: 2026-07-28
+- Status: OWNER_REVIEW
+- Tasks: DEV-0501 through DEV-0509
+- Validation package: QMS-011
+- Support effect: none
+
+The candidate metadata package passes synthetic integration and regression
+validation. It preserves raw/source provenance, exact comparison boundaries,
+factual coverage, and permanent limitations. The corpus is not Apple-produced;
+the candidate compatibility profile and Manifest.db schema compatibility
+remain unapproved. Registry entries and supported normalized records remain
+zero.
+
+Owner review may approve candidate architectural use only. It cannot approve
+production Apple compatibility, activate a parser, promote an artifact/input
+or workflow, expose an API, authorize real evidence or deployment, populate
+supported storage, or change support status.

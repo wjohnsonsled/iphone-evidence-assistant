@@ -137,3 +137,13 @@
 - DEV-0509 is selected to assemble the candidate metadata validation package.
 - The subsequent WP-0500 artifact decision remains a mandatory owner-review
   gate; validation cannot itself promote support.
+
+## DEV-0509 completion reevaluation
+
+- DEV-0509 is `VALIDATION_PENDING`; WP-0500 is `OWNER_REVIEW` under DEC-0057
+  and QMS-011.
+- No downstream artifact task is unlocked: DEV-0601 remains at the independent
+  mandatory `APPLE-SCHEMA-GATE`.
+- No independent READY task remains after the complete ledger reevaluation.
+- Registry entries and supported normalized records remain zero; no support
+  state changed.
