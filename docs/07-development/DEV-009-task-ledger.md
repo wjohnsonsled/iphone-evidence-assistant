@@ -62,10 +62,10 @@
 
 | DEV-0304 | Artifact support-status model and parser quarantine enforcement | COMPLETE | DEV-0003, DEV-0004 | DEV-0304-support-status-quarantine-acceptance; FOR-004; FOR-006 | Owner approved in DEC-0014; supported registry remains empty and no capability is promoted |
 | DEV-0301 | Tenant model | COMPLETE | DEV-0103 | DEV-0301-tenant-model-acceptance | Neutral immutable UUIDv4 tenant identity and additive ORM contract validated; no migration, API, authorization, or production tenancy decision |
-| DEV-0302 | User and role model | READY | DEV-0301 | To be created | Tenant dependency satisfied; next task in plan order |
+| DEV-0302 | User and role model | COMPLETE | DEV-0301 | DEV-0302-user-role-model-acceptance | Neutral USER/SERVICE principals and tenant-scoped opaque role memberships validated; no permissions, credentials, authorization, API, or migration |
 | DEV-0303 | Case model | READY | DEV-0301 | To be created | Tenant dependency satisfied; remains after DEV-0302 in plan order |
 | DEV-0305 | Evidence-source tenant and case linkage | BLOCKED | DEV-0203, DEV-0303 | To be created | Blocked by case model |
-| DEV-0306 | Audit-actor attribution | BLOCKED | DEV-0302, DEV-0206 | To be created | Blocked by user/role model |
+| DEV-0306 | Audit-actor attribution | READY | DEV-0302, DEV-0206 | To be created | Dependencies satisfied; plan order remains after DEV-0303 and DEV-0305 |
 | DEV-0307 | Cross-tenant isolation tests | BLOCKED | DEV-0310, DEV-0305 | To be created | Dependency corrected by DEC-0014; implementation is not authorized until dependencies complete |
 | DEV-0310 | Authorization Service and Policy Enforcement | BLOCKED | DEV-0301, DEV-0302, DEV-0303 | To be created | Reserved by DEC-0014; no implementation authorization until dependencies and task-specific acceptance record are complete |
 

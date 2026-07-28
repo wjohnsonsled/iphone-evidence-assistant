@@ -640,3 +640,17 @@ The tenant is a neutral internal isolation boundary. This decision does not
 select a billing/legal organization model, authentication provider, production
 tenancy model, membership/role policy, authorization behavior, API, evidence
 workflow, deployment, or support status.
+
+## DEC-0029 — DEV-0302 neutral principal and membership foundation
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0300_REVIEW
+- Task: DEV-0302
+
+Principals use stable UUIDv4 identities and closed USER/SERVICE kinds.
+Tenant memberships always bind a tenant, principal, and canonical opaque role
+key. No role key has implicit permissions or global access. DEV-0308 retains
+migration ownership and DEV-0310 retains authorization-policy ownership.
+
+No provider selection, credential storage, authentication, permission
+vocabulary, API, evidence access, deployment, or support status is introduced.
