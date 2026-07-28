@@ -34,6 +34,8 @@
 
 | DEV-0206 | Intake audit-event model | COMPLETE | DEV-0203; DEV-0258 | DEV-0206-intake-audit-event-acceptance | Adopted the closed WP-0250 audit taxonomy and append-only reference service; intake scope, ordering, immutability, success/failure, and correlation validated synthetically |
 
+| DEV-0207 | Intake provenance model | COMPLETE | DEV-0203; DEV-0259, DEV-0260 | DEV-0207-intake-provenance-acceptance | Adopted the WP-0250 relational model; synthetic evidence-source, source-artifact, and controlled-copy lineage resolves deterministically and rejects broken or cross-scope relationships |
+
 | DEV-0211 | Profile and validate secondary Apple backup encryption indicators | DEFERRED | Owner-approved signal sources and revised compatibility profile | To be created | Must source, characterize, order, and define conflicts for every candidate signal; requires synthetic and Apple-produced fixtures plus owner approval before implementation or promotion |
 
 | DEV-0251 | Evidence-object domain contract | COMPLETE | DEV-0202; DEC-0011 | WP-0250-acceptance-criteria | Owner approved candidate infrastructure in DEC-0014; typed contract and additive relational model validated synthetically |

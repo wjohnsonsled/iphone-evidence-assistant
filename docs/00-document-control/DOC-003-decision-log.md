@@ -531,3 +531,18 @@ model. Operational logs and stage-result serialization remain separate.
 The reference service is application-level and in-memory. This decision makes
 no persistence, storage immutability, legal chain-of-custody, API, production,
 real-evidence, or support claim.
+
+## DEC-0023 — DEV-0207 adopts the WP-0250 provenance authority
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0200_REVIEW
+- Task: DEV-0207
+
+DEV-0207 uses the owner-approved WP-0250 relational provenance contracts for
+the intake evidence-source, source-artifact, and controlled-copy path. It
+creates no competing provenance model or graph database.
+
+The reference service is in-memory and caller-provided locators are not yet
+bound by integrated intake orchestration. This decision grants no parser,
+artifact, Apple compatibility, persistence, API, production, real-evidence, or
+support authority.
