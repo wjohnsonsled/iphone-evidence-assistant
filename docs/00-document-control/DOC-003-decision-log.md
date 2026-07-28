@@ -707,3 +707,13 @@ One linear revision adds only the five validated WP-0300 security tables and
 removes only those tables on downgrade. Static tests and PostgreSQL offline SQL
 generation passed; no live PostgreSQL migration was performed. No API,
 authorization, evidence processing, deployment, or support promotion results.
+## DEC-0034 — DEV-0310 fail-closed policy enforcement
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0300_REVIEW
+- Task: DEV-0310
+
+Authorization consumes an explicit versioned policy snapshot and permits only
+exact role/action matches after tenant, case, and evidence-source scope checks.
+There are no implicit grants or production policy. No authentication provider,
+API, evidence processing, deployment, or support promotion is authorized.

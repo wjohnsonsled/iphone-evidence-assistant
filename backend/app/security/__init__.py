@@ -32,3 +32,16 @@ __all__ = [
     "create_tenant",
     "register_evidence_source",
 ]
+from app.security.authorization import (
+    AuthorizationDecision,
+    AuthorizationService,
+    PolicyGrant,
+    PolicySnapshot,
+)
+
+__all__ = [
+    "AuthorizationDecision",
+    "AuthorizationService",
+    "PolicyGrant",
+    "PolicySnapshot",
+]

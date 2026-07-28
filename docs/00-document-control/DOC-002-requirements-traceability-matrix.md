@@ -326,6 +326,15 @@ runtime implementation, validation, or artifact support.
 | DEV-0308-R03 | Keep migration additive and downgrade limited to new tables | ARC-001; DEV-0308 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Dependency-ordered upgrade/downgrade | AC-04; offline SQL | DEV-0308 |
 | DEV-0308-R04 | Preserve evidence, API, parser, deployment, and support boundaries | AGENTS.md; DEV-0308 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Schema-only change | AC-07; diff review | DEV-0308 |
 
+## 16C. DEV-0310 authorization requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0310-R01 | Deny closed without an exact explicit policy grant | DEC-0014; DEV-0310 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `AuthorizationService`; `PolicySnapshot` | AC-01; AC-02 | DEV-0310 |
+| DEV-0310-R02 | Enforce tenant, case, and source scope before granting | AGENTS.md | `IMPLEMENTED_TASK_VALIDATED` | Authorization scope checks | AC-03; AC-04 | DEV-0310 |
+| DEV-0310-R03 | Return safe traceable decisions | DEV-0310 acceptance | `IMPLEMENTED_TASK_VALIDATED` | `AuthorizationDecision` | AC-01; AC-05 | DEV-0310 |
+| DEV-0310-R04 | Establish no implicit production policy or support effect | DEC-0014 | `IMPLEMENTED_TASK_VALIDATED` | Caller-supplied policy only | AC-07 | DEV-0310 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |
