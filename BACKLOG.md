@@ -248,9 +248,9 @@ authorization service and corrects DEV-0307's dependency.
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
 | DEV-0401 | Processing-run model | COMPLETE | WP-0200, WP-0250, WP-0300 | WP-0400 review |
-| DEV-0402 | Source-artifact identity model | READY | DEV-0401 | Package gate |
-| DEV-0403 | Stable source-locator model | NOT_STARTED | DEV-0402 | Package gate |
-| DEV-0404 | Parser identity and version model | NOT_STARTED | DEV-0401 | Package gate |
+| DEV-0402 | Source-artifact identity model | COMPLETE | DEV-0401 | WP-0400 review |
+| DEV-0403 | Stable source-locator model | READY | DEV-0402 | Package gate |
+| DEV-0404 | Parser identity and version model | READY | DEV-0401 | Package gate |
 | DEV-0405 | Schema-fingerprint model | NOT_STARTED | DEV-0402 | Package gate |
 | DEV-0406 | Raw and normalized value model | NOT_STARTED | DEV-0402 | Package gate |
 | DEV-0407 | Timestamp provenance model | NOT_STARTED | DEV-0406 | Package gate |

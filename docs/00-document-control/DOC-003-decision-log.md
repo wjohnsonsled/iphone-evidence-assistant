@@ -776,3 +776,14 @@ Candidate runs have immutable identity, tenant/case/source scope,
 request/correlation provenance, and exact policy authorization provenance.
 Lifecycle remains DEV-1104 scope and migration DEV-0410 scope. No parser, API,
 evidence processing, repository, or support promotion is introduced.
+
+## DEC-0039 — DEV-0402 source-artifact identity
+
+- Date: 2026-07-28
+- Status: IMPLEMENTED_PENDING_WP_0400_REVIEW
+- Task: DEV-0402
+
+Candidate source artifacts have content-independent UUIDv4 identity linked to
+tenant, case, evidence source, processing run, and WP-0250 evidence UUID.
+Registration requires exact authorization and matching scope. Locator semantics
+remain DEV-0403 and migration DEV-0410. Presence never implies support.

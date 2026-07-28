@@ -360,6 +360,15 @@ runtime implementation, validation, or artifact support.
 | DEV-0401-R03 | Separate candidate store metadata from legacy jobs | ARC-001 | `IMPLEMENTED_TASK_VALIDATED` | `SupportedProcessingRunModel` | AC-06 | DEV-0401 |
 | DEV-0401-R04 | No lifecycle, parser, API, evidence, or support expansion | DEV-0401 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Bounded module | AC-07 | DEV-0401 |
 
+## 16G. DEV-0402 source-artifact requirements
+
+| Requirement ID | Requirement | Source | Status | Implementation evidence | Verification evidence | Owner |
+|---|---|---|---|---|---|---|
+| DEV-0402-R01 | Distinct immutable artifact identity with complete run/source scope | ARC-002; WP-0400 | `IMPLEMENTED_TASK_VALIDATED` | `SourceArtifact` | AC-01; AC-02 | DEV-0402 |
+| DEV-0402-R02 | Authorize registration and reject mismatched run scope | DEC-0037 | `IMPLEMENTED_TASK_VALIDATED` | `SourceArtifactService` | AC-03; AC-04 | DEV-0402 |
+| DEV-0402-R03 | Defer locators and prohibit presence-to-support inference | AGENTS.md; DEV-0402 acceptance | `IMPLEMENTED_TASK_VALIDATED` | Bounded identity contract | AC-05; AC-06 | DEV-0402 |
+| DEV-0402-R04 | Separate candidate ORM metadata without migration/support effect | ARC-001 | `IMPLEMENTED_TASK_VALIDATED` | `SupportedSourceArtifactModel` | AC-07; AC-08 | DEV-0402 |
+
 ## 17. DEV-0003 acceptance criteria
 
 | Criterion | Result | Evidence |
