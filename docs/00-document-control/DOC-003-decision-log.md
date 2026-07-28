@@ -668,3 +668,16 @@ retains migration ownership.
 
 No lifecycle, membership, repository, authorization, route, evidence workflow,
 deployment, or support status is introduced.
+
+## DEC-0031 — DEV-0305 tenant/case evidence-source linkage
+
+- Date: 2026-07-29
+- Status: IMPLEMENTED_PENDING_WP_0300_REVIEW
+- Task: DEV-0305
+
+Evidence-source identity derives tenant and case from a supported-boundary case.
+The ORM contract uses a composite case/tenant foreign key so a source cannot
+reference a case owned by another tenant. DEV-0308 retains migration ownership.
+
+This adds no filesystem access, hashing, validation, parser, API,
+authorization, evidence processing, deployment, or support status.

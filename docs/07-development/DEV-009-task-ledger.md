@@ -64,7 +64,7 @@
 | DEV-0301 | Tenant model | COMPLETE | DEV-0103 | DEV-0301-tenant-model-acceptance | Neutral immutable UUIDv4 tenant identity and additive ORM contract validated; no migration, API, authorization, or production tenancy decision |
 | DEV-0302 | User and role model | COMPLETE | DEV-0301 | DEV-0302-user-role-model-acceptance | Neutral USER/SERVICE principals and tenant-scoped opaque role memberships validated; no permissions, credentials, authorization, API, or migration |
 | DEV-0303 | Case model | COMPLETE | DEV-0301 | DEV-0303-case-model-acceptance | Tenant-scoped immutable case identity and separate additive ORM contract validated; legacy cases unchanged; no migration/API/authorization |
-| DEV-0305 | Evidence-source tenant and case linkage | READY | DEV-0203, DEV-0303 | To be created | Dependencies satisfied; next task in plan order |
+| DEV-0305 | Evidence-source tenant and case linkage | COMPLETE | DEV-0203, DEV-0303 | DEV-0305-evidence-source-linkage-acceptance | Evidence-source identity derives tenant/case from supported case; composite relational key rejects cross-tenant linkage; no evidence access or support effect |
 | DEV-0306 | Audit-actor attribution | READY | DEV-0302, DEV-0206 | To be created | Dependencies satisfied; plan order remains after DEV-0303 and DEV-0305 |
 | DEV-0307 | Cross-tenant isolation tests | BLOCKED | DEV-0310, DEV-0305 | To be created | Dependency corrected by DEC-0014; implementation is not authorized until dependencies complete |
 | DEV-0310 | Authorization Service and Policy Enforcement | READY | DEV-0301, DEV-0302, DEV-0303 | To be created | Reserved by DEC-0014; dependencies satisfied but plan order follows DEV-0305 and DEV-0306 |
