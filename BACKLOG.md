@@ -466,7 +466,7 @@ implementation is authorized ahead of its dependencies.
 | DEV-1101 | Supported parser registry | COMPLETE | WP-0400, DEV-0262, DEV-0263, DEV-0264 | Package gate |
 | DEV-1102 | Legacy parser registry isolation | COMPLETE | DEV-1101 | Package gate |
 | DEV-1103 | Fail-closed parser executor | COMPLETE | DEV-1101 | Package gate |
-| DEV-1104 | Processing-run state machine | NOT_STARTED | DEV-0401 | Package gate |
+| DEV-1104 | Processing-run state machine | COMPLETE | DEV-0401 | Package gate |
 | DEV-1105 | Coverage aggregation | NOT_STARTED | DEV-0408 | Package gate |
 | DEV-1106 | Failure aggregation | NOT_STARTED | DEV-0409 | Package gate |
 | DEV-1107 | Idempotency and rerun controls | NOT_STARTED | DEV-1104 | Package gate |

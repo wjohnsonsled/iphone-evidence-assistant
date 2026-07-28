@@ -95,7 +95,7 @@
 | DEV-1101 | Supported parser registry | COMPLETE | WP-0400, DEV-0262, DEV-0263, DEV-0264 | DEV-1101-supported-parser-registry-acceptance | Reuses DEV-0304 registry; complete permanent promotion references; production entry count remains zero |
 | DEV-1102 | Legacy parser registry isolation | COMPLETE | DEV-1101 | DEV-1102-legacy-registry-isolation-acceptance | Static/runtime boundary validation; legacy plugin access remains confined to explicit legacy service |
 | DEV-1103 | Fail-closed parser executor | COMPLETE | DEV-1101 | DEV-1103-fail-closed-parser-executor-acceptance | Authorization-before-call, controlled-input, provenance, coverage, zero-result, and safe-failure enforcement |
-| DEV-1104 | Processing-run state machine | NOT_STARTED | DEV-0401 | To be created | Must distinguish lifecycle outcomes |
+| DEV-1104 | Processing-run state machine | COMPLETE | DEV-0401 | DEV-1104-processing-run-state-machine-acceptance | Immutable closed transitions with distinct complete-zero, partial, failed, and cancelled terminal states |
 | DEV-1105 | Coverage aggregation | NOT_STARTED | DEV-0408 | To be created | Factual aggregation only |
 | DEV-1106 | Failure aggregation | NOT_STARTED | DEV-0409 | To be created | Safe diagnostics and partial processing |
 | DEV-1107 | Idempotency and rerun controls | NOT_STARTED | DEV-1104 | To be created | Deterministic processing identity |
