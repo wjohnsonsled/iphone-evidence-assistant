@@ -89,8 +89,8 @@ readiness transitions are automatic and recorded in DEV-011.
 | DEV-0412 | Evidence-core integration tests | COMPLETE | DEV-0401 through DEV-0411 | DEV-0412-evidence-core-integration-acceptance; QMS-009 | Owner approved WP-0400 candidate infrastructure in DEC-0049; registry/store remain empty |
 
 | DEV-0451 | Source Inventory Engine | COMPLETE | WP-0200, WP-0250, DEV-0402, DEV-0403 | DEV-0451-source-inventory-acceptance | Deterministic registered-observation inventory only; no filesystem discovery, coverage conclusion, or support effect |
-| DEV-0452 | Artifact Coverage Engine | READY | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | To be created | DEC-0051 reevaluation: all dependencies complete; candidate factual coverage scope only |
-| DEV-0453 | Evidence Gap Classification | BLOCKED | DEV-0451, DEV-0452 | To be created | Closed versioned fail-closed vocabulary required |
+| DEV-0452 | Artifact Coverage Engine | COMPLETE | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | DEV-0452-artifact-coverage-engine-acceptance | Exact registered-set projection preserves closed factual states and denominator; no conclusion |
+| DEV-0453 | Evidence Gap Classification | OWNER_REVIEW | DEV-0451, DEV-0452 | To be created | COV-SEMANTICS-GATE: evidence-gap conclusion vocabulary and rules require owner review |
 | DEV-0454 | Backup Structure and Coverage Assessment | BLOCKED | DEV-0451, DEV-0453, WP-0200 | To be created | Must not infer completeness, deletion, concealment, destruction, or spoliation |
 | DEV-0455 | Collection Opportunity Engine | DEFERRED | DEV-0453, DEV-0454, WP-1900 where applicable | To be created | Post-MVP; reproducible versioned rules required |
 | DEV-0456 | Question-Specific Evidence Sufficiency Engine | DEFERRED | DEV-0453, WP-1200, WP-1300 | To be created | Post-MVP; no legal sufficiency conclusion |

@@ -26,8 +26,20 @@
     boundary
 - Remaining tasks retain `NOT_STARTED` when dependencies are incomplete;
   existing BLOCKED states retain their recorded concrete downstream blockers.
-- Selected: DEV-0501 because it starts the first candidate artifact workflow
-  and most directly advances an end-to-end MVP path.
+- DEV-0501 readiness correction after task-definition inspection:
+  `ARTIFACT-DISCOVERY-GATE`. The backlog title requires discovery “via
+  Manifest.db,” while BAK-001 through BAK-003 are top-level plists; no approved
+  record defines root-file versus Files-table discovery semantics. Status is
+  `OWNER_REVIEW` pending the narrow artifact/schema decision.
+- Selected: DEV-0452 as the highest-priority remaining READY task. Its closed
+  factual input vocabulary and predecessor observations are approved, and it
+  unblocks the active coverage workflow without creating conclusions.
 - Limitations: readiness grants implementation authority only. It grants no
   parser activation, compatibility, support, API, production, or real-evidence
   authority.
+
+## DEV-0452 completion reevaluation
+
+- DEV-0453 dependencies are complete, but `COV-SEMANTICS-GATE` requires owner
+  review because the task freezes evidence-gap conclusion semantics.
+- DEV-1108 and DEV-1109 remain independent READY tasks.

@@ -309,8 +309,8 @@ WP-0450 with corresponding DEV-0451 through DEV-0460 IDs.
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
 | DEV-0451 | Source Inventory Engine | COMPLETE | WP-0200, WP-0250, DEV-0402, DEV-0403 | WP-0450 gate |
-| DEV-0452 | Artifact Coverage Engine | READY | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | WP-0450 gate |
-| DEV-0453 | Evidence Gap Classification | BLOCKED | DEV-0451, DEV-0452 | WP-0450 gate |
+| DEV-0452 | Artifact Coverage Engine | COMPLETE | DEV-0451, DEV-0304, DEV-0408, DEV-0409, DEV-1101 through DEV-1106 | WP-0450 gate |
+| DEV-0453 | Evidence Gap Classification | OWNER_REVIEW | DEV-0451, DEV-0452 | WP-0450 gate |
 | DEV-0454 | Backup Structure and Coverage Assessment | BLOCKED | DEV-0451, DEV-0453, WP-0200 | WP-0450 gate |
 | DEV-0455 | Collection Opportunity Engine | DEFERRED | DEV-0453, DEV-0454, WP-1900 where applicable | Post-MVP gate |
 | DEV-0456 | Question-Specific Evidence Sufficiency Engine | DEFERRED | DEV-0453, WP-1200, WP-1300 | Post-MVP gate |
@@ -333,7 +333,7 @@ implementation is authorized ahead of its dependencies.
 
 | Task | Title | Status | Dependencies | Owner Gate |
 |---|---|---:|---|---|
-| DEV-0501 | Metadata artifact discovery via Manifest.db | READY | WP-0200, WP-0400, DEV-0263, DEV-0264 | Artifact gate |
+| DEV-0501 | Metadata artifact discovery via Manifest.db | OWNER_REVIEW | WP-0200, WP-0400, DEV-0263, DEV-0264 | Artifact gate |
 | DEV-0502 | Info.plist controlled reader | NOT_STARTED | DEV-0501 | Artifact gate |
 | DEV-0503 | Manifest.plist controlled reader | NOT_STARTED | DEV-0501 | Artifact gate |
 | DEV-0504 | Status.plist controlled reader | NOT_STARTED | DEV-0501 | Artifact gate |
