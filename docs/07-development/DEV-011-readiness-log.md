@@ -79,3 +79,18 @@
 - All three controlled metadata readers are COMPLETE.
 - DEV-0505 and DEV-0506 automatically advanced through
   `DEPENDENCIES_SATISFIED` to `READY`.
+
+## DEV-0505/DEV-0506 readiness refinement
+
+- DEV-0505 is `OWNER_REVIEW` at `META-NORMALIZATION-GATE`; normalization
+  algorithms and profiles are not yet approved.
+- DEV-0506 remains authorized by DEC-0009 and DEC-0054 and proceeds with exact
+  reconciliation only.
+
+## DEV-0506 completion reevaluation
+
+- DEV-0507 and DEV-0508 remain dependency-blocked by DEV-0505.
+- DEV-0509 remains dependency-blocked by DEV-0505, DEV-0507, and DEV-0508.
+- No independent task satisfies every readiness condition. Active work is at
+  the recorded WP-1100, metadata-normalization, Apple-schema,
+  coverage-semantics, provenance, security, or attorney-conclusion gates.
