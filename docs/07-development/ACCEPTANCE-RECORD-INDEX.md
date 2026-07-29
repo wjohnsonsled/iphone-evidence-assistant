@@ -131,3 +131,16 @@ duplicate, absence, artifact, parser, or support validation.
 The exact domain grammar is repository-characterized and synthetic. Structural
 recognition is not Apple authority, application activity, physical existence,
 completeness, artifact meaning, parser support, or capability support.
+
+## DEV-0605 validation traceability
+
+- Implementation decision: DEC-0067
+- Completion decision: DEC-0068
+- Validation package: QMS-015
+- Acceptance record: DEV-0605-manifest-relative-path-acceptance
+- Status: `COMPLETE_CANDIDATE_INFRASTRUCTURE`
+- Support: `CANDIDATE_NOT_SUPPORTED`
+- Supported registry entries / normalized records: 0 / 0
+
+Lexical relative-path safety is not host-path safety, filesystem resolution,
+physical existence, artifact identity, completeness, or support.

@@ -1314,3 +1314,41 @@ container/file/physical-object existence, completeness, compatibility, parser
 behavior, artifact meaning, or support. Registry entries and supported records
 remain zero. No API, production use, deployment, real evidence, parser
 activation, artifact/input/workflow support, or support promotion is approved.
+
+## DEC-0067 — Authorize DEV-0605 candidate relative-path lexical profile
+
+- Date: 2026-07-29
+- Status: APPROVED FOR IMPLEMENTATION
+- Task: DEV-0605
+- Profile: `manifestdb-relative-path-lexical` version 1
+- Support effect: none
+
+The autonomous Manifest authorization permits an immutable, resource-bounded
+lexical observation of proven query v1/v2 `Files.relativePath` values. It must
+separate exact raw values, storage and encoding state, tokenization, empty
+paths, separators, absolute indicators, dot/parent traversal, canonical lexical
+comparison, unsafe/indeterminate outcomes, provenance, and limitations.
+
+No trimming, repair, joining, filesystem access, symlink resolution, physical
+existence, artifact interpretation, parser behavior, API, persistence,
+migration, real evidence, or support promotion is authorized.
+
+## DEC-0068 — Approve DEV-0605 candidate relative-path infrastructure
+
+- Date: 2026-07-29
+- Status: APPROVED
+- Task: DEV-0605
+- Validation package: QMS-015
+- Acceptance record: DEV-0605-manifest-relative-path-acceptance
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+
+Candidate-level review accepts DEV-0605 COMPLETE: 23 focused, 136 combined
+Manifest, 543 backend, and 5 legacy tests pass with all quality gates. The
+unchanged TestClient warning remains accepted. Migration head remains
+`0005_processing_idempotency`; no migration was added.
+
+FOR-016 limitations remain permanent. Lexical safety is not host-path safety,
+filesystem resolution, physical existence, artifact identity, compatibility,
+or support. No path was repaired, joined, or resolved. Registry/store counts
+remain zero; no API, parser, real evidence, deployment, or support promotion is
+approved.

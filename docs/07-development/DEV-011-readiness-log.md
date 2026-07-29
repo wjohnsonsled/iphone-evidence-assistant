@@ -275,3 +275,11 @@
   `DEPENDENCIES_SATISFIED` to `READY`.
 - DEV-0606, DEV-0607, and DEV-0609 remain ordered after their predecessors.
   Registry/store counts and support status remain zero/unchanged.
+
+## DEC-0067 / DEC-0068 — DEV-0605 completion and DEV-0606 readiness
+
+- Candidate-level review accepts DEV-0605 COMPLETE with FOR-016/QMS-015
+  limitations and no support effect.
+- DEV-0606's routine candidate gate is covered by the autonomous Manifest
+  authorization; it advances through `DEPENDENCIES_SATISFIED` to `READY`.
+- Registry/store counts and support status remain zero/unchanged.

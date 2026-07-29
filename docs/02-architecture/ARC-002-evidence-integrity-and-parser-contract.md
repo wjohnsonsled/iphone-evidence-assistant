@@ -401,3 +401,7 @@ DEC-0065 adds the isolated `manifestdb-domain-grammar` version 1 candidate
 observation layer after controlled query. It does not alter query profiles,
 compose a parser, access physical objects, write supported storage, or expose an
 API. Raw observations and derived structural labels remain separate.
+
+DEC-0067/DEC-0068 add a candidate lexical relative-path observation after
+controlled query. The module has no filesystem capability, persistence,
+production composition, parser registration, or supported-store admission.

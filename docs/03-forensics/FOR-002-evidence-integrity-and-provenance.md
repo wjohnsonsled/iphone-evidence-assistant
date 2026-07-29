@@ -38,3 +38,8 @@ controlled-copy, database, run, query, locator, table/column, implementation,
 time, and limitation provenance. Canonical structure is separate derived data;
 unknown and malformed raw values remain intact. Structural labels create no
 application-activity, physical-existence, completeness, or support conclusion.
+
+DEC-0067/FOR-016 preserve exact typed `relativePath` observations and complete
+query provenance separately from lexical segments, safety state, and unchanged
+comparison representation. Unsafe or resource-terminated values remain
+explicit and are never repaired or resolved.

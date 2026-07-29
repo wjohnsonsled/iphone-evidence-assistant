@@ -43,3 +43,10 @@ observations. Exact case-sensitive grammar prevents broad coercion; malformed
 and unknown values fail closed while raw values remain immutable. Serialization
 omits raw BLOB bytes and host paths. No filesystem lookup, global index,
 parser, API, persistence, supported store, or cross-scope discovery exists.
+
+## Candidate relative-path controls — DEV-0605
+
+Untrusted `relativePath` values remain data. Exact absolute, alternate
+separator, repeated separator, dot, parent-traversal, encoding, and resource
+states fail closed. The module imports no filesystem API and never joins or
+resolves a path. Caller-supplied positive lexical ceilings are mandatory.
