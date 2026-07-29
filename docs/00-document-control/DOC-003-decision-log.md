@@ -1267,3 +1267,50 @@ artifacts, or user content may be read or interpreted. No parser execution,
 registry entry, supported record, Apple/input/parser/artifact/workflow
 support, API, production, deployment, real evidence, or support promotion is
 authorized.
+
+## DEC-0065 — Authorize DEV-0604 candidate Manifest domain grammar
+
+- Date: 2026-07-29
+- Status: APPROVED FOR IMPLEMENTATION
+- Task: DEV-0604
+- Profile: `manifestdb-domain-grammar` version 1
+- Support effect: none
+
+Under the autonomous Manifest workstream authorization, DEV-0604 may implement
+an immutable, exact, case-sensitive candidate grammar for proven
+`Files.domain` observations from query profiles v1 and v2. Raw values, dynamic
+SQLite types, full scope/query/locator provenance, unknown and malformed forms,
+and limitations must remain explicit. Repository-characterized literal and
+prefixed forms are provisional and synthetic, not an exhaustive or
+authoritative Apple specification.
+
+The profile may separate structural families and opaque application, group, or
+plugin components. It may not infer installation, execution, activity,
+ownership, container/file/physical-object existence, completeness,
+compatibility, artifact meaning, parser behavior, or support. No trimming,
+repair, filesystem access, hashing, API, migration, persistence, real evidence,
+registry entry, supported record, or support promotion is authorized.
+
+## DEC-0066 — Approve DEV-0604 candidate Manifest domain infrastructure
+
+- Date: 2026-07-29
+- Status: APPROVED
+- Task: DEV-0604
+- Validation package: QMS-014
+- Acceptance record: DEV-0604-manifest-domain-normalization-acceptance
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+
+The authorized candidate-level review accepts DEV-0604 as COMPLETE. All
+acceptance criteria pass using deterministic synthetic fixtures: 33 focused,
+113 combined Manifest, 520 backend regression, and 5 legacy characterization
+tests, plus compilation, dependency, migration, and hygiene checks. The
+unchanged TestClient warning remains accepted. Migration head remains
+`0005_processing_idempotency`; no migration was added.
+
+FOR-015 limitations remain permanent. Its repository-characterized grammar is
+not authoritative or exhaustive Apple documentation. Structural recognition
+does not prove application installation, execution, activity, ownership,
+container/file/physical-object existence, completeness, compatibility, parser
+behavior, artifact meaning, or support. Registry entries and supported records
+remain zero. No API, production use, deployment, real evidence, parser
+activation, artifact/input/workflow support, or support promotion is approved.

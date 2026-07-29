@@ -29,3 +29,12 @@ database, processing-run, query/locator profile, ROWID, table/column, storage
 class, value state, transformation, implementation, time, and limitation
 provenance. Corrections and reruns create new observations with prior lineage;
 historical results are never overwritten or silently upgraded.
+
+## Candidate Manifest domain observations
+
+DEC-0065/FOR-015 bind each candidate domain result to the immutable raw typed
+`Files.domain` observation and complete tenant, case, source, artifact,
+controlled-copy, database, run, query, locator, table/column, implementation,
+time, and limitation provenance. Canonical structure is separate derived data;
+unknown and malformed raw values remain intact. Structural labels create no
+application-activity, physical-existence, completeness, or support conclusion.

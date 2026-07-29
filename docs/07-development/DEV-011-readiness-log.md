@@ -255,3 +255,23 @@
   and it advances through `DEPENDENCIES_SATISFIED` to `READY`.
 - DEV-0605 through DEV-0607 and DEV-0609 remain pending their ordered task
   execution. Registry/store counts and support status remain unchanged.
+
+## DEC-0065 / DEV-0604 implementation readiness
+
+- DEC-0065 records the authorized candidate grammar and DEV-0604 advances from
+  `READY` to `IN_PROGRESS`.
+- FOR-015 and the task acceptance record constrain recognition to exact,
+  provisional repository-characterized forms with unknown/malformed
+  preservation and no semantic existence/activity/support conclusion.
+- DEV-0605 remains ordered after DEV-0604 completion. Registry/store counts and
+  support status remain zero/unchanged.
+
+## DEC-0066 / DEV-0604 completion and DEV-0605 readiness
+
+- Candidate-level review accepts DEV-0604 COMPLETE with every FOR-015/QMS-014
+  limitation and no support effect.
+- The autonomous Manifest authorization resolves DEV-0605's prior routine path
+  gate; its dependencies are satisfied and it advances through
+  `DEPENDENCIES_SATISFIED` to `READY`.
+- DEV-0606, DEV-0607, and DEV-0609 remain ordered after their predecessors.
+  Registry/store counts and support status remain zero/unchanged.

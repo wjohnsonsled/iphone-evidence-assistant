@@ -116,3 +116,18 @@ infrastructure; it promotes no support.
 The generic framework and single fileID profile remain synthetic candidate
 infrastructure. Lexical/canonical equality is not hash, content, physical,
 duplicate, absence, artifact, parser, or support validation.
+
+## DEV-0604 validation traceability
+
+- Implementation decision: DEC-0065
+- Completion decision: DEC-0066
+- Validation package: QMS-014
+- Acceptance record: DEV-0604-manifest-domain-normalization-acceptance
+- Current status: `COMPLETE_CANDIDATE_INFRASTRUCTURE`
+- Current support status: `CANDIDATE_NOT_SUPPORTED`
+- Supported registry entries: 0
+- Supported normalized records: 0
+
+The exact domain grammar is repository-characterized and synthetic. Structural
+recognition is not Apple authority, application activity, physical existence,
+completeness, artifact meaning, parser support, or capability support.

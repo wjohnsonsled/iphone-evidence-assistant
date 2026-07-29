@@ -35,3 +35,11 @@ DEC-0058 does not expose WP-0500 through an API or production composition.
 Discovery remains authorized-root-confined, read-only, top-level only, and
 tenant/case/source/run scoped. Filenames and plist values remain untrusted.
 No real evidence or user-content artifact was processed during validation.
+
+## Candidate Manifest domain controls — DEV-0604
+
+Production adapters accept only tenant/case/source/run-matched query v1/v2
+observations. Exact case-sensitive grammar prevents broad coercion; malformed
+and unknown values fail closed while raw values remain immutable. Serialization
+omits raw BLOB bytes and host paths. No filesystem lookup, global index,
+parser, API, persistence, supported store, or cross-scope discovery exists.

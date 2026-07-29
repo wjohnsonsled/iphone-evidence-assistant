@@ -396,3 +396,8 @@ values, controlled-copy/database/run/ROWID provenance, declared profile,
 transformations, and limitations. Lexical recognition and canonical equality
 create no hash, physical-object, existence, content, duplicate, absence,
 artifact, parser, or support conclusion.
+
+DEC-0065 adds the isolated `manifestdb-domain-grammar` version 1 candidate
+observation layer after controlled query. It does not alter query profiles,
+compose a parser, access physical objects, write supported storage, or expose an
+API. Raw observations and derived structural labels remain separate.

@@ -89,3 +89,10 @@ Its lexical normalization never constructs backup-object paths, searches the
 backup root, opens or hashes physical files, or evaluates file existence.
 Canonical equality is not physical resolution, content identity, duplication,
 or evidence absence.
+
+## DEV-0604 domain boundary
+
+DEV-0604 observes only proven controlled-query `Files.domain` values. Exact
+candidate grammar does not search a backup, resolve a container or file,
+interpret user content, prove application installation/activity, establish
+backup completeness, or authorize Apple, parser, artifact, or workflow support.

@@ -363,8 +363,8 @@ separate owner decision.
 | DEV-0602 | Files-table controlled query layer | COMPLETE | DEV-0601 | Artifact/provenance gate |
 | DEV-0602A | Files-table query hardening and resource-control profile | COMPLETE | DEV-0602; DEC-0061; DEC-0062 | Owner-approved candidate infrastructure; no support effect |
 | DEV-0603 | Canonical identifier framework and Manifest fileID normalization | COMPLETE | DEV-0602; DEV-0602A; DEC-0063; DEC-0064 | Candidate-only approval; no support effect |
-| DEV-0604 | Domain normalization | READY | DEV-0602; DEV-0603; autonomous Manifest authorization | Candidate-only implementation authorized |
-| DEV-0605 | Relative-path normalization | OWNER_REVIEW | DEV-0602 | Security/provenance gate |
+| DEV-0604 | Domain normalization | COMPLETE | DEV-0602; DEV-0603; DEC-0065; DEC-0066 | Candidate-only approval; no support effect |
+| DEV-0605 | Relative-path normalization | READY | DEV-0602; DEV-0604; autonomous Manifest authorization | Candidate-only path semantics authorized; no filesystem resolution |
 | DEV-0606 | Flags and file metadata normalization | OWNER_REVIEW | DEV-0602 | Evidence-interpretation gate |
 | DEV-0607 | Manifest metadata-blob characterization | OWNER_REVIEW | DEV-0602 | Evidence-interpretation gate |
 | DEV-0608 | Inventory provenance and coverage | NOT_STARTED | DEV-0603 through DEV-0607 | Artifact gate |
