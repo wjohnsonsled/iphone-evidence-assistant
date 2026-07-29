@@ -101,3 +101,18 @@ Apple-produced compatibility fixture and no record promotes support.
 DEV-0602 remains COMPLETE under DEC-0060 and its version 1 profiles remain
 immutable. DEV-0602A is separately versioned owner-approved candidate
 infrastructure; it promotes no support.
+
+## DEV-0603 validation traceability
+
+- Implementation decision: DEC-0063
+- Completion decision: DEC-0064
+- Validation package: QMS-013
+- Acceptance record: DEV-0603-manifest-fileid-normalization-acceptance
+- Current status: `COMPLETE_CANDIDATE_INFRASTRUCTURE`
+- Current support status: `CANDIDATE_NOT_SUPPORTED`
+- Supported registry entries: 0
+- Supported normalized records: 0
+
+The generic framework and single fileID profile remain synthetic candidate
+infrastructure. Lexical/canonical equality is not hash, content, physical,
+duplicate, absence, artifact, parser, or support validation.

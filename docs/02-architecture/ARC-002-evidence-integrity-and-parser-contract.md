@@ -388,3 +388,11 @@ conclusion.
 DEC-0062 accepts this version 2 boundary for candidate architectural use only
 with QMS-012 limitations. It authorizes no production composition, parser,
 artifact, Apple compatibility, supported record, or support status.
+
+DEC-0063 adds the reusable `canonical-identifier-normalization` v1 framework
+and only the `manifestdb-fileid-normalization` v1 profile. Normalized
+representations remain derived immutable observations bound to raw query
+values, controlled-copy/database/run/ROWID provenance, declared profile,
+transformations, and limitations. Lexical recognition and canonical equality
+create no hash, physical-object, existence, content, duplicate, absence,
+artifact, parser, or support conclusion.

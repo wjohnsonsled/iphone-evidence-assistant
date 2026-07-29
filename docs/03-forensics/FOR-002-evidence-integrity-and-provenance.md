@@ -20,3 +20,12 @@ interpretation, or support conclusion.
 DEC-0062 accepts this model as COMPLETE candidate infrastructure only. The
 observations remain ineligible for supported evidence storage, interpretation,
 AI, reporting, or support claims.
+
+## Candidate identifier normalization
+
+DEC-0063/FOR-014 require each canonical fileID representation to retain the
+immutable raw SQLite observation and its tenant, case, source, controlled-copy,
+database, processing-run, query/locator profile, ROWID, table/column, storage
+class, value state, transformation, implementation, time, and limitation
+provenance. Corrections and reruns create new observations with prior lineage;
+historical results are never overwritten or silently upgraded.

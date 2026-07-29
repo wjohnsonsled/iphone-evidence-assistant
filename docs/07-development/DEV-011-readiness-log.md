@@ -233,3 +233,25 @@
   remain blocked by their predecessor sets.
 - No independent task qualifies for `READY`. The next mandatory owner gate is
   DEV-0603 FileID normalization rules. Registry/store counts remain zero.
+
+## DEC-0063 / DEV-0603 readiness and validation
+
+- DEC-0063 resolves `FILEID-NORMALIZATION-GATE`; DEV-0603 advanced through
+  `DEPENDENCIES_SATISFIED`, `READY`, and `IN_PROGRESS`.
+- The generic identifier framework and exact Manifest fileID v1 profile pass
+  their synthetic acceptance matrix and DEV-0603 is `VALIDATION_PENDING`.
+- DEV-0604 through DEV-0607 and DEV-0609 remain at their independent mandatory
+  owner gates. DEV-0608, DEV-0610, and DEV-0611 remain dependency-blocked.
+- No independent task qualifies for `READY`. The next mandatory owner gate is
+  DEV-0603 completion review, followed separately by DEV-0604 semantics.
+- Registry/store counts and support status remain zero/unchanged.
+
+## DEC-0064 / DEV-0603 completion and DEV-0604 readiness
+
+- The authorized candidate-level review accepts DEV-0603 COMPLETE with QMS-013
+  limitations and caller-directed bounded comparison clarification.
+- The autonomous Manifest authorization resolves DEV-0604's prior routine
+  candidate gate without authorizing support; its dependencies are satisfied
+  and it advances through `DEPENDENCIES_SATISFIED` to `READY`.
+- DEV-0605 through DEV-0607 and DEV-0609 remain pending their ordered task
+  execution. Registry/store counts and support status remain unchanged.

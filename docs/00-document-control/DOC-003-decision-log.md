@@ -842,6 +842,68 @@ support promotion is authorized. Registry entries and supported normalized
 records remain zero. DEV-0603 through DEV-0607 and DEV-0609 remain independent
 mandatory owner gates.
 
+## DEC-0063 — Approve DEV-0603 canonical identifier framework and fileID profile
+
+- Date: 2026-07-28
+- Status: APPROVED_FOR_IMPLEMENTATION
+- Task: DEV-0603
+- Framework: `canonical-identifier-normalization` v1
+- Profile: `manifestdb-fileid-normalization` v1
+- Support effect: none
+
+The owner authorizes a reusable immutable identifier-observation framework and
+one concrete Manifest.db `Files.fileID` lexical profile. Inputs must be proven
+DEV-0602 v1 or DEV-0602A v2 row observations with complete tenant, case,
+source, controlled-copy/database, run, query, locator, storage-class, value
+state, and source-location provenance.
+
+Version 1 recognizes exactly 40 ASCII hexadecimal characters and may create a
+lowercase canonical comparison representation only after exact recognition.
+The only transformations are NONE, strict ASCII BLOB decoding, and ASCII
+hexadecimal case canonicalization. Raw TEXT, BLOB, NULL, INTEGER, and REAL
+observations remain distinct and immutable. Comparisons are explicitly
+EXACT_RAW, EXACT_CANONICAL, or NOT_COMPARABLE and remain case/tenant scoped.
+
+Lexical recognition is not hash verification. Normalization is not physical
+resolution. Canonical equality is not content or object identity. Repeated
+fileIDs are not duplicate, orphan, absence, corruption, or tampering
+conclusions. No hashing, filesystem search, physical resolution, BLOB metadata
+decoding, domain/path/flags interpretation, parser, artifact, API, persistence,
+real evidence, production use, or support promotion is authorized. DEV-0603
+must stop at VALIDATION_PENDING.
+
+## DEC-0064 — Approve DEV-0603 candidate identifier infrastructure
+
+- Date: 2026-07-29
+- Status: APPROVED
+- Task: DEV-0603
+- Validation package: QMS-013
+- Acceptance record: DEV-0603-manifest-fileid-normalization-acceptance
+- Framework/profile: `canonical-identifier-normalization` v1;
+  `manifestdb-fileid-normalization` v1
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+
+Under the owner-authorized autonomous Manifest workstream, the candidate-level
+review accepts DEV-0603 as COMPLETE with every QMS-013 and FOR-014 limitation.
+Inputs remain proven query v1/v2 observations; exact raw SQLite values and
+scope/query/locator provenance are immutable. The only transformations are
+NONE, strict authorized ASCII BLOB decoding, and post-recognition ASCII hex
+case canonicalization.
+
+Comparison is caller-directed and bounded: one pair, one subject against an
+explicit bounded candidate set, or an explicit bounded pair sequence. These
+operations are linear in supplied work and enforce count, byte,
+deterministic-memory, monotonic-time, cancellation, scope, and profile limits
+before each result. No implicit Cartesian product, all-pairs engine, global
+matching, persistent identifier index, or duplicate/content conclusion exists.
+
+Lexical recognition is not hash verification; canonicalization is not physical
+resolution; equality is not content identity; repeated fileIDs are not
+duplicate or absence conclusions. No evidence hash, filesystem access,
+physical object, parser, artifact, persistence, API, real evidence, production
+use, supported record, or support promotion is authorized. Registry/store
+counts remain zero.
+
 Every future protected service, repository, job, report, export, AI, and API
 boundary must authorize before returning, transforming, exporting, or
 retrieving protected content. Queries must be tenant/case/resource scoped where

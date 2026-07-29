@@ -81,3 +81,11 @@ DEC-0058 accepts this WP-0500 surface as candidate metadata infrastructure
 only. No user-content artifact was parsed. Top-level presence and normalized
 metadata observations do not establish Apple compatibility, device identity,
 backup completeness, evidence absence, parser support, or artifact support.
+
+## DEV-0603 fileID boundary
+
+DEV-0603 consumes only proven controlled-query `Files.fileID` observations.
+Its lexical normalization never constructs backup-object paths, searches the
+backup root, opens or hashes physical files, or evaluates file existence.
+Canonical equality is not physical resolution, content identity, duplication,
+or evidence absence.

@@ -20,6 +20,15 @@ unexposed. Production ceilings and distributed concurrency are unvalidated.
 DEC-0062 accepts these controls at the candidate infrastructure level with all
 QMS-012 limitations; it does not establish production authorization,
 distributed isolation, deployment readiness, or API exposure.
+
+## Candidate identifier-normalization controls — DEV-0603
+
+Production adapters accept only scope-matched query v1/v2 row observations.
+Canonical comparisons deny cross-tenant and cross-case scope and incompatible
+profiles without fallback or existence disclosure. Batch normalization and
+comparison require caller-supplied observation, comparison, byte, deterministic
+memory-estimate, monotonic time, and cancellation ceilings. No cross-case
+index, filesystem search, raw-BLOB logging, public API, or persistence exists.
 ## Candidate metadata scope
 
 DEC-0058 does not expose WP-0500 through an API or production composition.
