@@ -128,7 +128,7 @@ readiness transitions are automatic and recorded in DEV-011.
 | DEV-0607 | Manifest metadata-blob characterization | COMPLETE | DEV-0602; DEV-0606; DEC-0071; DEC-0072 | DEV-0607-manifest-metadata-blob-acceptance; FOR-018; QMS-017 | Candidate bounded bplist00 syntax approved; no class instantiation, field meaning, or support |
 | DEV-0608 | Inventory provenance and coverage | COMPLETE | DEV-0603 through DEV-0607; DEC-0075; DEC-0076 | DEV-0608-manifest-inventory-coverage-acceptance; FOR-020; QMS-019 | Candidate multidimensional factual row-universe coverage approved; absence eligibility fail closed; no support effect |
 | DEV-0609 | Duplicate and orphan detection | COMPLETE | DEV-0602; DEV-0603 through DEV-0607; DEC-0073; DEC-0074 | DEV-0609-manifest-reconciliation-semantics-acceptance; FOR-019; QMS-018 | Candidate repetition semantics approved; physical universe unavailable and all conclusions not established |
-| DEV-0610 | Manifest fixture corpus | NOT_STARTED | DEV-0601 through DEV-0609 | To be created | Dependency set satisfied; exact fixture-governance records must be reviewed before readiness transition |
+| DEV-0610 | Manifest fixture corpus | OWNER_REVIEW | DEV-0601 through DEV-0609 | To be created | Dependencies satisfied, but no exact scope/acceptance/QMS record defines synthetic versus Apple-produced corpus provenance, custody, lawful distribution, or version matrix |
 | DEV-0611 | Manifest validation report | BLOCKED | DEV-0601 through DEV-0610 | To be created | Blocked by DEV-0610 fixture corpus |
 | DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | To be created | Blocked by reporting and coverage package gates |
 

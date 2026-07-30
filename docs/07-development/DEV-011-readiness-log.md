@@ -328,6 +328,22 @@
   transition; it is recorded `NOT_STARTED` pending that immediate review.
 - DEV-0611 remains blocked by DEV-0610. Registry/store counts remain zero.
 
+## DEV-0610 exact-record review — mandatory owner gate
+
+- The repository defines DEV-0610 only as `Manifest fixture corpus` and requires
+  separately governed Apple-produced fixture validation.
+- No task-specific scope, acceptance criteria, QMS record, lawful-distribution
+  and fixture-provenance policy, custody rule, or version/schema matrix exists.
+- The current authorization prohibits real evidence and prohibits inferring
+  DEV-0610 scope from its title. A synthetic-only corpus would not satisfy the
+  recorded Apple-produced validation dependency, while acquiring or using
+  Apple-produced backups is not authorized.
+- DEV-0610 therefore advances to `OWNER_REVIEW`, not implementation. DEV-0611
+  remains blocked. Required decision: define the candidate corpus type and
+  permitted source/provenance, exact version/schema matrix, handling/custody,
+  acceptance criteria, and whether synthetic characterization can complete
+  DEV-0610 without satisfying the future support-validation package.
+
 ## DEC-0067 / DEC-0068 — DEV-0605 completion and DEV-0606 readiness
 
 - Candidate-level review accepts DEV-0605 COMPLETE with FOR-016/QMS-015

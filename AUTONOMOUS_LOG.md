@@ -54,3 +54,18 @@
 - DEV-0608 is COMPLETE with FOR-020/QMS-019 limitations.
 - Registry and supported normalized-record counts remain zero; support status
   is unchanged.
+
+## 2026-07-30T14:30:00-04:00 — DEV-0608 local commit
+
+- Created local commit `c8e9684` (`DEV-0608: record factual inventory coverage`).
+- Branch is 100 commits ahead of remote; nothing was pushed.
+
+## 2026-07-30T14:35:00-04:00 — DEV-0610 readiness / stop condition
+
+- Read all exact DEV-0610/DEV-0611 repository references.
+- DEV-0610 has no task-specific scope, acceptance, QMS, fixture provenance,
+  lawful-distribution, custody, or version/schema-matrix record.
+- Existing governance requires Apple-produced validation; current authorization
+  prohibits real evidence and forbids inferring scope from the task title.
+- Recorded DEV-0610 `OWNER_REVIEW` and DEV-0611 blocked. No fixture was created
+  or accessed; registry/store counts and support remain unchanged.
