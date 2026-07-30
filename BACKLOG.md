@@ -366,9 +366,9 @@ separate owner decision.
 | DEV-0604 | Domain normalization | COMPLETE | DEV-0602; DEV-0603; DEC-0065; DEC-0066 | Candidate-only approval; no support effect |
 | DEV-0605 | Relative-path normalization | COMPLETE | DEV-0602; DEV-0604; DEC-0067; DEC-0068 | Candidate-only approval; no filesystem resolution |
 | DEV-0606 | Flags and file metadata normalization | COMPLETE | DEV-0602; DEV-0605; DEC-0069; DEC-0070 | Candidate-only approval; all bits unknown |
-| DEV-0607 | Manifest metadata-blob characterization | READY | DEV-0602; DEV-0606; autonomous Manifest authorization | Bounded syntactic characterization only; no support |
+| DEV-0607 | Manifest metadata-blob characterization | COMPLETE | DEV-0602; DEV-0606; DEC-0071; DEC-0072 | Candidate-only bounded syntax approval; no field meaning/support |
 | DEV-0608 | Inventory provenance and coverage | NOT_STARTED | DEV-0603 through DEV-0607 | Artifact gate |
-| DEV-0609 | Duplicate and orphan detection | OWNER_REVIEW | DEV-0602 | Evidence-conclusion gate |
+| DEV-0609 | Duplicate and orphan detection | READY | DEV-0602; DEV-0603 through DEV-0607; autonomous Manifest authorization | Semantics framework only; no physical inventory or conclusions |
 | DEV-0610 | Manifest fixture corpus | NOT_STARTED | DEV-0601 through DEV-0609 | Artifact gate |
 | DEV-0611 | Manifest validation report | NOT_STARTED | DEV-0601 through DEV-0610 | Artifact gate |
 

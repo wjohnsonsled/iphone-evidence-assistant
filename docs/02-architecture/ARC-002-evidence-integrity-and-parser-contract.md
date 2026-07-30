@@ -409,3 +409,8 @@ production composition, parser registration, or supported-store admission.
 DEC-0069/DEC-0070 add a candidate flags observation after controlled query.
 The layer preserves unknown numeric structure only; it contains no metadata
 decoder, filesystem behavior, parser composition, persistence, or admission.
+
+DEC-0071/DEC-0072 add an isolated iterative `bplist00` syntax scanner after an
+explicitly authorized controlled-query BLOB projection. It uses no native
+deserializer or dynamic classes and remains outside parser composition,
+persistence, supported admission, and APIs.

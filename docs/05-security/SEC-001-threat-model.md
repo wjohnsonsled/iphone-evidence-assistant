@@ -57,3 +57,11 @@ Only proven scope-matched query observations enter. Bit enumeration is bounded
 by a positive caller policy and stops before excess work. Every bit remains
 unknown, raw BLOB bytes are not serialized, and no metadata decoder,
 filesystem, parser, API, persistence, or supported-store path exists.
+
+## Candidate metadata-BLOB controls — DEV-0607
+
+Only explicitly authorized raw BLOB projections enter the iterative scanner.
+Exact byte/object/depth/scalar/collection/memory/time/cancellation limits,
+payload/offset/reference bounds, and cycle checks fail closed. No native
+deserialization, class loading/instantiation, DATA emission, filesystem,
+parser, API, persistence, or supported-store path exists.

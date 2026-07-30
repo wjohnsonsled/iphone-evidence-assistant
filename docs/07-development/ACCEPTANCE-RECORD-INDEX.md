@@ -157,3 +157,17 @@ physical existence, artifact identity, completeness, or support.
 
 All observed set bits remain unknown. The profile creates no file-state,
 deletion, tampering, corruption, artifact, parser, or support conclusion.
+
+## DEV-0607 validation traceability
+
+- Implementation decision: DEC-0071
+- Completion decision: DEC-0072
+- Validation package: QMS-017
+- Acceptance record: DEV-0607-manifest-metadata-blob-acceptance
+- Status: `COMPLETE_CANDIDATE_INFRASTRUCTURE`
+- Support: `CANDIDATE_NOT_SUPPORTED`
+- Supported registry entries / normalized records: 0 / 0
+
+The bounded scanner establishes binary-plist syntax only. It instantiates no
+class and assigns no metadata-field, artifact, compatibility, or support
+meaning.

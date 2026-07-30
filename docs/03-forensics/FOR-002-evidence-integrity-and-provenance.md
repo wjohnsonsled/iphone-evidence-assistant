@@ -48,3 +48,8 @@ DEC-0069/FOR-017 preserve exact typed `Files.flags` observations and complete
 query provenance separately from bounded set-bit positions. Known meanings
 remain empty, so the derived structure cannot silently acquire file-state or
 physical semantics.
+
+DEC-0071/FOR-018 bind every bounded syntactic node to the immutable raw-BLOB
+query observation and its complete scope/run/locator provenance. Raw BLOB and
+DATA bytes are not serialized; partial resource/cancellation results contain
+only completed nodes and an explicit termination state.

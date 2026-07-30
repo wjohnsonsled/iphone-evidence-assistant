@@ -246,6 +246,17 @@
   DEV-0603 completion review, followed separately by DEV-0604 semantics.
 - Registry/store counts and support status remain zero/unchanged.
 
+## DEC-0071 / DEC-0072 — DEV-0607 completion and DEV-0609 readiness
+
+- Candidate-level review accepts DEV-0607 COMPLETE with FOR-018/QMS-017
+  limitations and no support effect.
+- DEV-0608 now has satisfied implementation dependencies but retains its
+  separate artifact/coverage gate, which is outside the listed autonomous
+  Manifest tasks.
+- DEV-0609's candidate semantics gate is covered by the autonomous Manifest
+  authorization and advances through `DEPENDENCIES_SATISFIED` to `READY`.
+- Registry/store counts and support status remain zero/unchanged.
+
 ## DEC-0069 / DEC-0070 — DEV-0606 completion and DEV-0607 readiness
 
 - Candidate-level review accepts DEV-0606 COMPLETE with FOR-017/QMS-016

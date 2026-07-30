@@ -1392,3 +1392,46 @@ remains unknown. Numeric observations do not prove file type, existence,
 deletion, user action, tampering, corruption, physical state, artifact meaning,
 compatibility, or support. Registry/store counts remain zero. No BLOB decoding,
 API, parser, real evidence, deployment, or support promotion is approved.
+
+## DEC-0071 — Authorize DEV-0607 bounded metadata-BLOB syntax profile
+
+- Date: 2026-07-30
+- Status: APPROVED FOR IMPLEMENTATION
+- Task: DEV-0607
+- Profile: `manifestdb-file-bplist-syntax` version 1
+- Support effect: none
+
+Under the autonomous Manifest authorization, DEV-0607 may implement a custom
+iterative scanner for exact `bplist00` syntax from explicitly authorized raw
+query observations. It must validate trailer/offset/reference/graph structure,
+enforce caller byte/object/depth/string/collection/memory/time/cancellation
+controls, retain only completed syntactic nodes, emit no DATA bytes, and never
+instantiate archived or dynamic classes.
+
+Scalar/key/UID values and object graphs remain syntactic and uninterpreted.
+Unknown formats, versions, tokens, classes, graphs, malformed inputs, cycles,
+and resource termination fail closed. No universal plist support,
+NSKeyedArchiver semantics, metadata-field meaning, Apple compatibility,
+filesystem/physical conclusion, parser, artifact, API, persistence, migration,
+real evidence, or support promotion is authorized.
+
+## DEC-0072 — Approve DEV-0607 candidate metadata-BLOB syntax infrastructure
+
+- Date: 2026-07-30
+- Status: APPROVED
+- Task: DEV-0607
+- Validation package: QMS-017
+- Acceptance record: DEV-0607-manifest-metadata-blob-acceptance
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+
+Candidate-level review accepts DEV-0607 COMPLETE: 19 focused, 172 combined
+Manifest, 579 backend, and 5 legacy tests pass with all quality gates. The
+unchanged TestClient warning remains accepted. Migration head remains
+`0005_processing_idempotency`; no migration was added.
+
+FOR-018 limitations remain permanent. The custom scanner handles bounded
+`bplist00` syntax only, validates nonoverlapping offsets/references/cycles, and
+instantiates no class or dynamic object. Scalars, UIDs, keys, and graphs have no
+approved metadata meaning. Registry/store counts remain zero. No Apple
+compatibility, parser/artifact/input/workflow support, API, real evidence,
+deployment, or support promotion is approved.
