@@ -43,3 +43,8 @@ DEC-0067/FOR-016 preserve exact typed `relativePath` observations and complete
 query provenance separately from lexical segments, safety state, and unchanged
 comparison representation. Unsafe or resource-terminated values remain
 explicit and are never repaired or resolved.
+
+DEC-0069/FOR-017 preserve exact typed `Files.flags` observations and complete
+query provenance separately from bounded set-bit positions. Known meanings
+remain empty, so the derived structure cannot silently acquire file-state or
+physical semantics.

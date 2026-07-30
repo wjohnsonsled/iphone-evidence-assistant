@@ -144,3 +144,16 @@ completeness, artifact meaning, parser support, or capability support.
 
 Lexical relative-path safety is not host-path safety, filesystem resolution,
 physical existence, artifact identity, completeness, or support.
+
+## DEV-0606 validation traceability
+
+- Implementation decision: DEC-0069
+- Completion decision: DEC-0070
+- Validation package: QMS-016
+- Acceptance record: DEV-0606-manifest-flags-observation-acceptance
+- Status: `COMPLETE_CANDIDATE_INFRASTRUCTURE`
+- Support: `CANDIDATE_NOT_SUPPORTED`
+- Supported registry entries / normalized records: 0 / 0
+
+All observed set bits remain unknown. The profile creates no file-state,
+deletion, tampering, corruption, artifact, parser, or support conclusion.

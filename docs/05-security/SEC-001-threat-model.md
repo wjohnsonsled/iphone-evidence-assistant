@@ -50,3 +50,10 @@ Untrusted `relativePath` values remain data. Exact absolute, alternate
 separator, repeated separator, dot, parent-traversal, encoding, and resource
 states fail closed. The module imports no filesystem API and never joins or
 resolves a path. Caller-supplied positive lexical ceilings are mandatory.
+
+## Candidate flags controls — DEV-0606
+
+Only proven scope-matched query observations enter. Bit enumeration is bounded
+by a positive caller policy and stops before excess work. Every bit remains
+unknown, raw BLOB bytes are not serialized, and no metadata decoder,
+filesystem, parser, API, persistence, or supported-store path exists.

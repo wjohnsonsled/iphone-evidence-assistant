@@ -1352,3 +1352,43 @@ filesystem resolution, physical existence, artifact identity, compatibility,
 or support. No path was repaired, joined, or resolved. Registry/store counts
 remain zero; no API, parser, real evidence, deployment, or support promotion is
 approved.
+
+## DEC-0069 — Authorize DEV-0606 fail-closed flags observation
+
+- Date: 2026-07-30
+- Status: APPROVED FOR IMPLEMENTATION
+- Task: DEV-0606
+- Profile: `manifestdb-flags-observation` version 1
+- Support effect: none
+
+Repository review finds no governing source that approves any `Files.flags`
+bit meaning. Under the autonomous Manifest authorization, DEV-0606 may preserve
+proven query v1/v2 raw typed values and bounded set-bit positions, but the known
+meaning set must remain empty and every set bit must remain unknown. Zero and
+negative values require explicit non-semantic states.
+
+No file type, existence, deletion, user action, tampering, corruption, physical
+state, artifact, completeness, compatibility, parser, or support inference is
+authorized. Metadata BLOB decoding remains DEV-0607. No API, persistence,
+migration, filesystem operation, real evidence, or support promotion is
+authorized.
+
+## DEC-0070 — Approve DEV-0606 candidate flags infrastructure
+
+- Date: 2026-07-30
+- Status: APPROVED
+- Task: DEV-0606
+- Validation package: QMS-016
+- Acceptance record: DEV-0606-manifest-flags-observation-acceptance
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+
+Candidate-level review accepts DEV-0606 COMPLETE: 17 focused, 153 combined
+Manifest, 560 backend, and 5 legacy tests pass with all quality gates. The
+unchanged TestClient warning remains accepted. Migration head remains
+`0005_processing_idempotency`; no migration was added.
+
+FOR-017 limitations remain permanent. No bit meaning is approved; every set bit
+remains unknown. Numeric observations do not prove file type, existence,
+deletion, user action, tampering, corruption, physical state, artifact meaning,
+compatibility, or support. Registry/store counts remain zero. No BLOB decoding,
+API, parser, real evidence, deployment, or support promotion is approved.

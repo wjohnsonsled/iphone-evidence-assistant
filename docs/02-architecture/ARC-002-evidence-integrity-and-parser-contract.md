@@ -405,3 +405,7 @@ API. Raw observations and derived structural labels remain separate.
 DEC-0067/DEC-0068 add a candidate lexical relative-path observation after
 controlled query. The module has no filesystem capability, persistence,
 production composition, parser registration, or supported-store admission.
+
+DEC-0069/DEC-0070 add a candidate flags observation after controlled query.
+The layer preserves unknown numeric structure only; it contains no metadata
+decoder, filesystem behavior, parser composition, persistence, or admission.
