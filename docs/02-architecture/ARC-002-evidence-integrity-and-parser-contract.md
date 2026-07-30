@@ -414,3 +414,8 @@ DEC-0071/DEC-0072 add an isolated iterative `bplist00` syntax scanner after an
 explicitly authorized controlled-query BLOB projection. It uses no native
 deserializer or dynamic classes and remains outside parser composition,
 persistence, supported admission, and APIs.
+
+DEC-0073/DEC-0074 add an in-memory, scope-bound repetition-semantics layer.
+Because no physical inventory is composed, every physical reconciliation and
+absence conclusion is structurally unavailable. The layer has no filesystem,
+hashing, persistence, parser composition, supported admission, or API.

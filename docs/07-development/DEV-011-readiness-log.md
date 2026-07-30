@@ -246,6 +246,18 @@
   DEV-0603 completion review, followed separately by DEV-0604 semantics.
 - Registry/store counts and support status remain zero/unchanged.
 
+## DEC-0073 / DEC-0074 — DEV-0609 completion and workstream stop
+
+- Candidate-level review accepts DEV-0609 COMPLETE with FOR-019/QMS-018
+  limitations and no support effect.
+- All tasks expressly listed in the autonomous Manifest semantics authorization
+  (DEV-0603, DEV-0604, DEV-0605, DEV-0606, DEV-0607, and DEV-0609) are COMPLETE.
+- DEV-0608 has satisfied dependencies but retains a separate artifact,
+  provenance, and coverage owner gate outside that authorization. DEV-0610 and
+  DEV-0611 remain governed by their work-package/fixture gates.
+- No independent task within the authorized workstream remains READY.
+  Registry/store counts and support status remain zero/unchanged.
+
 ## DEC-0071 / DEC-0072 — DEV-0607 completion and DEV-0609 readiness
 
 - Candidate-level review accepts DEV-0607 COMPLETE with FOR-018/QMS-017

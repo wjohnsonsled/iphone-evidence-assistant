@@ -65,3 +65,10 @@ Exact byte/object/depth/scalar/collection/memory/time/cancellation limits,
 payload/offset/reference bounds, and cycle checks fail closed. No native
 deserialization, class loading/instantiation, DATA emission, filesystem,
 parser, API, persistence, or supported-store path exists.
+
+## Candidate reconciliation controls — DEV-0609
+
+Inputs must share exact tenant/case/source/artifact/run scope and compatible
+profile versions. Caller row/group/member/byte/memory/time/cancellation bounds
+fail closed. No raw BLOB identifier is textualized, no filesystem or physical
+inventory is reachable, and all evidentiary conclusions remain unavailable.

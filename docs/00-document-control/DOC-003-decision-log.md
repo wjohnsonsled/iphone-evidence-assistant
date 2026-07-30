@@ -1435,3 +1435,45 @@ instantiates no class or dynamic object. Scalars, UIDs, keys, and graphs have no
 approved metadata meaning. Registry/store counts remain zero. No Apple
 compatibility, parser/artifact/input/workflow support, API, real evidence,
 deployment, or support promotion is approved.
+
+## DEC-0073 — Authorize DEV-0609 fail-closed reconciliation semantics
+
+- Date: 2026-07-30
+- Status: APPROVED FOR IMPLEMENTATION
+- Task: DEV-0609
+- Profile: `manifestdb-reconciliation-semantics` version 1
+- Support effect: none
+
+The autonomous Manifest authorization permits a candidate framework that
+separately observes repeated Manifest row locators, raw TEXT fileIDs, canonical
+fileIDs, and domain/path tuples under compatible source profiles and complete
+scope provenance. These are pattern observations only.
+
+No physical inventory or resolution task is approved. Therefore duplicate,
+orphan, missing-object, and absence conclusions must remain `NOT_ESTABLISHED`;
+physical-inventory and comparison-universe completeness must remain false with
+explicit blockers. Partial, cancelled, resource-terminated, cross-scope, or
+incompatible inputs cannot support a conclusion. No filesystem, hashing,
+parser, artifact, API, persistence, migration, real evidence, or support
+promotion is authorized.
+
+## DEC-0074 — Approve DEV-0609 candidate reconciliation semantics
+
+- Date: 2026-07-30
+- Status: APPROVED
+- Task: DEV-0609
+- Validation package: QMS-018
+- Acceptance record: DEV-0609-manifest-reconciliation-semantics-acceptance
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+
+Candidate-level review accepts DEV-0609 COMPLETE: 13 focused, 185 combined
+Manifest, 592 backend, and 5 legacy tests pass with all quality gates. The
+unchanged TestClient warning remains accepted. Migration head remains
+`0005_processing_idempotency`; no migration was added.
+
+FOR-019 limitations remain permanent. Repeated row/value/tuple patterns are not
+duplicate files or content. No physical inventory or resolution was performed,
+the comparison universe remains incomplete, and duplicate, orphan,
+missing-object, and absence conclusions remain `NOT_ESTABLISHED`.
+Registry/store counts remain zero. No parser/artifact/input/workflow support,
+API, real evidence, deployment, or support promotion is approved.

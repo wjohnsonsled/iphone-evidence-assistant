@@ -53,3 +53,8 @@ DEC-0071/FOR-018 bind every bounded syntactic node to the immutable raw-BLOB
 query observation and its complete scope/run/locator provenance. Raw BLOB and
 DATA bytes are not serialized; partial resource/cancellation results contain
 only completed nodes and an explicit termination state.
+
+DEC-0073/FOR-019 bind repetition patterns to compatible query, locator,
+identifier, domain, path, scope, source, and run provenance. Physical-universe
+provenance is explicitly absent, so no duplicate/orphan/missing/absence
+conclusion can be emitted.
