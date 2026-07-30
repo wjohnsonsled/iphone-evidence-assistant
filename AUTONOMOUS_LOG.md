@@ -40,6 +40,21 @@
   history.
 - Beginning the complete regression and repository-quality matrix.
 
+## 2026-07-30T15:55:00-04:00 — DEV-0610 full regression
+
+- 322 combined Manifest, 713 backend, and 5 legacy tests passed.
+- Compilation, exact dependency lock, `pip check`, Alembic single head/history/
+  offline SQL, hygiene, regeneration, and diff checks passed.
+- The existing accepted TestClient warning was the only warning.
+- Migration head remains `0005_processing_idempotency`; no migration was added.
+
+## 2026-07-30T16:00:00-04:00 — DEV-0610 candidate completion
+
+- DEC-0078 records the authorized candidate-level approval.
+- DEV-0610 is COMPLETE with FOR-021/QMS-020 limitations.
+- Only synthetic characterization is complete; Apple-produced, compatibility,
+  support, registry, and supported-store states remain unchanged.
+
 ## 2026-07-30T14:25:00-04:00 — DEV-0608 full regression
 
 - 242 combined Manifest, 633 backend, and 5 legacy tests passed.
@@ -69,3 +84,36 @@
   prohibits real evidence and forbids inferring scope from the task title.
 - Recorded DEV-0610 `OWNER_REVIEW` and DEV-0611 blocked. No fixture was created
   or accessed; registry/store counts and support remain unchanged.
+
+## 2026-07-30T15:00:00-04:00 — DEV-0610 task start
+
+- DEC-0077 resolves the prior fixture governance gate and authorizes only
+  project-original deterministic synthetic characterization.
+- DEV-0610 advanced through dependency/readiness states to `IN_PROGRESS`.
+- Design boundary: fixed-root test tooling, pure manifest verification, no
+  arbitrary ingestion, Apple-produced data, parser activation, migration,
+  compatibility claim, or support effect.
+
+## 2026-07-30T15:20:00-04:00 — DEV-0610 corpus checkpoint
+
+- Generated corpus `manifest-synthetic-characterization-corpus` version 1.
+- Registered 60 project-original canonical-JSON scenario resources across 13
+  approved candidate profile/version matrix rows.
+- All 60 fixture digests and the corpus manifest digest verify; corpus SHA-256
+  is `159b01df907f56cd7c8f82c1a77cc67e479f6c87e169408b3aec5fcec38655bc`.
+- Statuses remain synthetic characterized only; Apple-produced, compatibility,
+  and support evaluation remain not started/not evaluated.
+
+## 2026-07-30T15:30:00-04:00 — DEV-0610 focused test result
+
+- 80 focused governance, provenance, custody, distribution, integrity,
+  determinism, matrix, source-policy, security, supersession, and claim-boundary
+  tests passed.
+- Manifest corpus implementation and generator compilation passed.
+
+## 2026-07-30T15:40:00-04:00 — DEV-0610 documentation / pre-regression
+
+- Added FOR-021, QMS-020, acceptance, architecture, security, provenance,
+  traceability, risk, validation-index, ledger, readiness, fixture README, and
+  progress records.
+- Beginning the complete regression and repository-quality matrix.

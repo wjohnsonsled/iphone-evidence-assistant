@@ -1,15 +1,14 @@
 # Autonomous Next
 
-- Exact next action: obtain the owner-defined DEV-0610 fixture package scope,
-  provenance/source authorization, version/schema matrix, and acceptance
-  criteria; then reevaluate readiness without changing support.
-- Governing decision: DEC-0075/DEC-0076 and the DEV-0608 autonomous
-  continuation authorization.
-- Files currently changing: readiness/ledger/progress records only.
-- Tests last run: DEV-0608 — 41 focused, 242 combined Manifest, 633 backend,
-  5 legacy; all passed.
-- Tests still required: none until DEV-0610 is defined.
-- Stop condition: genuine evidentiary requirements conflict for DEV-0610.
-- Latest safe commit: `c8e9684`.
-- Resume workflow: read the new owner decision and task-specific DEV-0610
-  record, advance through readiness if complete, then implement only that scope.
+- Exact next action: commit DEV-0610, update the checkpoint, then read the exact
+  DEV-0611 records and reevaluate readiness.
+- Governing decision: DEC-0077.
+- Files currently changing: DEV-0610 governance, implementation, corpus,
+  tests, acceptance, and progress records.
+- Tests last run: DEV-0610 focused — 80 passed; compilation passed.
+- Tests still required: none for DEV-0610.
+- Stop condition: none.
+- Latest safe commit: `6b716e4`.
+- Resume workflow: inspect DEC-0077/FOR-021 and the committed corpus manifest,
+  finish documentation, record the pre-regression checkpoint, and run the full
+  matrix.

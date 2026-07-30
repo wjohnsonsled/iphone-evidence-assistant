@@ -419,3 +419,17 @@ DEC-0073/DEC-0074 add an in-memory, scope-bound repetition-semantics layer.
 Because no physical inventory is composed, every physical reconciliation and
 absence conclusion is structurally unavailable. The layer has no filesystem,
 hashing, persistence, parser composition, supported admission, or API.
+
+## Synthetic characterization corpus boundary
+
+DEC-0077 adds a test-only, fixed-root generation and pure-validation boundary
+for the versioned Manifest synthetic corpus. Canonical internal fixture
+resources and their SHA-256 values are test assets, not source evidence,
+evidence objects, evidence hashes, parser output, normalized records, or
+production seed data. The corpus is not connected to a supported or legacy
+composition root and adds no persistence or API.
+
+Corpus provenance and custody describe generator-controlled test assets only.
+They must never be represented as evidence provenance or legal chain of
+custody. Apple-produced validation remains a separate, future controlled
+package outside the repository by default.

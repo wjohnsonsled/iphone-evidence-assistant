@@ -1,0 +1,3891 @@
+{
+  "apple_produced_status": "APPLE_PRODUCED_NOT_STARTED",
+  "compatibility_status": "COMPATIBILITY_NOT_EVALUATED",
+  "contains_real_or_apple_produced_data": false,
+  "corpus_id": "manifest-synthetic-characterization-corpus",
+  "corpus_manifest_sha256": "159b01df907f56cd7c8f82c1a77cc67e479f6c87e169408b3aec5fcec38655bc",
+  "corpus_version": "1",
+  "created": "2026-07-30",
+  "custody_events": [
+    {
+      "actor": "dev-0610-manifest-synthetic-corpus-generator",
+      "event": "CREATED",
+      "sequence": 1
+    },
+    {
+      "actor": "dev-0610-manifest-synthetic-corpus-generator",
+      "event": "GENERATOR_EXECUTED",
+      "sequence": 2
+    },
+    {
+      "actor": "dev-0610-manifest-synthetic-corpus-generator",
+      "event": "INITIAL_DIGEST_RECORDED",
+      "sequence": 3
+    },
+    {
+      "actor": "DEV-0610",
+      "event": "REPOSITORY_ADDITION",
+      "sequence": 4
+    },
+    {
+      "actor": "DEV-0610-candidate-review",
+      "event": "REVIEWED",
+      "sequence": 5
+    },
+    {
+      "actor": "DEC-0078",
+      "event": "APPROVED",
+      "sequence": 6
+    }
+  ],
+  "fixtures": [
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "COMPATIBLE_MANIFEST_SCHEMA",
+      "fixture_id": "DEV-0610-FX-001",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 1,
+        "scenario": "compatible_manifest_schema"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 1,
+        "profile_id": "apple-manifestdb-schema",
+        "profile_version": "1",
+        "scenario_id": "compatible_manifest_schema",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "apple-manifestdb-schema",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "compatible manifest schema",
+      "resource_id": "internal://manifest-synthetic/compatible_manifest_schema/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "f6fb1502440f02f4f7d2541efef985532b2567c1c7c0713f9f8182d65804a87b",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "5addcbef3e0bed000cd3e4df64f474f365036df6d01e662c1eb0b6d47d3deee5",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "UNKNOWN_MANIFEST_SCHEMA",
+      "fixture_id": "DEV-0610-FX-002",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 2,
+        "scenario": "unknown_manifest_schema"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 2,
+        "profile_id": "apple-manifestdb-schema",
+        "profile_version": "1",
+        "scenario_id": "unknown_manifest_schema",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "apple-manifestdb-schema",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "unknown manifest schema",
+      "resource_id": "internal://manifest-synthetic/unknown_manifest_schema/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "f6fb1502440f02f4f7d2541efef985532b2567c1c7c0713f9f8182d65804a87b",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "67cef8a19f0124c667074a51d5a3384028776b829686bb47eae496dcc342e978",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "CORRUPT_MANIFEST_DATABASE",
+      "fixture_id": "DEV-0610-FX-003",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 3,
+        "scenario": "corrupt_manifest_database"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 3,
+        "profile_id": "manifestdb-files-query",
+        "profile_version": "2",
+        "scenario_id": "corrupt_manifest_database",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-files-query",
+          "profile_version": "2"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "corrupt manifest database",
+      "resource_id": "internal://manifest-synthetic/corrupt_manifest_database/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "1e7fa5173d9f373fe179452bfddf91f532f9147b398e6237a0e6e1748f80f51a",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "4a6ade4e034b29a5ecb6714989483e52d6a1481fc68fef22f171139287ec479b",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "MALFORMED"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "INVALID_MANIFEST_DATABASE",
+      "fixture_id": "DEV-0610-FX-004",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 4,
+        "scenario": "invalid_manifest_database"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 4,
+        "profile_id": "manifestdb-query-resource-controls",
+        "profile_version": "1",
+        "scenario_id": "invalid_manifest_database",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-query-resource-controls",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "invalid manifest database",
+      "resource_id": "internal://manifest-synthetic/invalid_manifest_database/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "f615f3315c792a87b059a502c701235707a3efd20310e8caec1e495172354c11",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "be8c41a7b4993a756bc1db94286d4910eb69cd232cdfc31298f5996be47c12af",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "MALFORMED"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "MISSING_FILES_TABLE",
+      "fixture_id": "DEV-0610-FX-005",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 5,
+        "scenario": "missing_files_table"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 5,
+        "profile_id": "canonical-identifier-normalization",
+        "profile_version": "1",
+        "scenario_id": "missing_files_table",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "canonical-identifier-normalization",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "missing files table",
+      "resource_id": "internal://manifest-synthetic/missing_files_table/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "57b4b8616be5ffef2df6b10245dab4c1b22aaf6a7685d36d3cb405e17c1440e0",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "f15792bfcff28ca6d9703a4378e8f8294881ce2b84aaa6715d7d9e44e22d3ca5",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "MISSING_REQUIRED_COLUMN",
+      "fixture_id": "DEV-0610-FX-006",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 6,
+        "scenario": "missing_required_column"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 6,
+        "profile_id": "manifestdb-fileid-normalization",
+        "profile_version": "1",
+        "scenario_id": "missing_required_column",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-fileid-normalization",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "missing required column",
+      "resource_id": "internal://manifest-synthetic/missing_required_column/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "e532342527c3c864c2dd1416f4f2783b72eda550cd953a26c07cd2f35b2106b0",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "58c23f9a0be9b4e428ce70fdb1515da056cd54f22d9176956aa141fc94ac4413",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "UNEXPECTED_COLUMN",
+      "fixture_id": "DEV-0610-FX-007",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 7,
+        "scenario": "unexpected_column"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 7,
+        "profile_id": "manifestdb-domain-grammar",
+        "profile_version": "1",
+        "scenario_id": "unexpected_column",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-domain-grammar",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "unexpected column",
+      "resource_id": "internal://manifest-synthetic/unexpected_column/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "755a7ee38b4144bf05a064745fe71a53fe42f2cb3b3e8b02f140fa5cc38b8382",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "984baa1ad7eaf3d05bb7a51c760efe59cfab470d6cbfc6ab915237cc64801bf0",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "ROWID_LOCATOR_SUCCESS",
+      "fixture_id": "DEV-0610-FX-008",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 8,
+        "scenario": "rowid_locator_success"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 8,
+        "profile_id": "manifestdb-row-locator",
+        "profile_version": "1",
+        "scenario_id": "rowid_locator_success",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-row-locator",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "rowid locator success",
+      "resource_id": "internal://manifest-synthetic/rowid_locator_success/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "f47d378a44cb5bb3dcea7f1d7deaea3769d6a7d235249376d836c09765e425f5",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "ea27b73eead51fdcc60baadb1ba173e3be7cdcb13cb1b5da33cc91d60292ba22",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "WITHOUT_ROWID_DENIAL",
+      "fixture_id": "DEV-0610-FX-009",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 9,
+        "scenario": "without_rowid_denial"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 9,
+        "profile_id": "manifestdb-flags-observation",
+        "profile_version": "1",
+        "scenario_id": "without_rowid_denial",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-flags-observation",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "without rowid denial",
+      "resource_id": "internal://manifest-synthetic/without_rowid_denial/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "0499f3753db56d3e8569b4ebbeb192f1e6cef84fff032aefb1c9f560c1aa131f",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "81fb2af751e7cce559e5d552a3f9cc2893d0f06142276dc2fe1abf7a1cb48a05",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "DUPLICATE_LOCATOR_DENIAL",
+      "fixture_id": "DEV-0610-FX-010",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 10,
+        "scenario": "duplicate_locator_denial"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 10,
+        "profile_id": "manifestdb-row-locator",
+        "profile_version": "1",
+        "scenario_id": "duplicate_locator_denial",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-row-locator",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "duplicate locator denial",
+      "resource_id": "internal://manifest-synthetic/duplicate_locator_denial/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "f47d378a44cb5bb3dcea7f1d7deaea3769d6a7d235249376d836c09765e425f5",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "c72cba4a5011c147b02b618de9ffdeffd01bee5040ab1038837c46afc1d07b7a",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "NONMONOTONIC_LOCATOR_DENIAL",
+      "fixture_id": "DEV-0610-FX-011",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 11,
+        "scenario": "nonmonotonic_locator_denial"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 11,
+        "profile_id": "manifestdb-row-locator",
+        "profile_version": "1",
+        "scenario_id": "nonmonotonic_locator_denial",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-row-locator",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "nonmonotonic locator denial",
+      "resource_id": "internal://manifest-synthetic/nonmonotonic_locator_denial/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "f47d378a44cb5bb3dcea7f1d7deaea3769d6a7d235249376d836c09765e425f5",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "94f9923ed6f6b9732937f2a828d49aea0ba94ad5cc8c1478661c262a29d01ea5",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "QUERY_V1_COMPLETE_PAGE",
+      "fixture_id": "DEV-0610-FX-012",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 12,
+        "scenario": "query_v1_complete_page"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 12,
+        "profile_id": "manifestdb-files-query",
+        "profile_version": "1",
+        "scenario_id": "query_v1_complete_page",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-files-query",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "query v1 complete page",
+      "resource_id": "internal://manifest-synthetic/query_v1_complete_page/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "1e7fa5173d9f373fe179452bfddf91f532f9147b398e6237a0e6e1748f80f51a",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "7dfaa7adde5f2af91fbdd8f63bf37673ff4c4fee1d96112f934b9ec50ad1d28d",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "QUERY_V2_BOUNDED_BLOB_OBSERVATION",
+      "fixture_id": "DEV-0610-FX-013",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 13,
+        "scenario": "query_v2_bounded_blob_observation"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 13,
+        "profile_id": "manifestdb-files-query",
+        "profile_version": "2",
+        "scenario_id": "query_v2_bounded_blob_observation",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-files-query",
+          "profile_version": "2"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "query v2 bounded blob observation",
+      "resource_id": "internal://manifest-synthetic/query_v2_bounded_blob_observation/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "1e7fa5173d9f373fe179452bfddf91f532f9147b398e6237a0e6e1748f80f51a",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "2ecc587a85602f56987ccfdd48e2f91c48530457b9104970dbcb7eab8486c675",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "AUTHORIZED_RAW_BLOB_PATH",
+      "fixture_id": "DEV-0610-FX-014",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 14,
+        "scenario": "authorized_raw_blob_path"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 14,
+        "profile_id": "manifestdb-files-query",
+        "profile_version": "2",
+        "scenario_id": "authorized_raw_blob_path",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-files-query",
+          "profile_version": "2"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "authorized raw blob path",
+      "resource_id": "internal://manifest-synthetic/authorized_raw_blob_path/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "1e7fa5173d9f373fe179452bfddf91f532f9147b398e6237a0e6e1748f80f51a",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "0a9dea85a2511ebc0b36e05208c3ccad842a852fea0db484c0c4be2b1aec0d3f",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "UNAUTHORIZED_RAW_BLOB_DENIAL",
+      "fixture_id": "DEV-0610-FX-015",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 15,
+        "scenario": "unauthorized_raw_blob_denial"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 15,
+        "profile_id": "manifestdb-row-locator",
+        "profile_version": "1",
+        "scenario_id": "unauthorized_raw_blob_denial",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-row-locator",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "unauthorized raw blob denial",
+      "resource_id": "internal://manifest-synthetic/unauthorized_raw_blob_denial/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "f47d378a44cb5bb3dcea7f1d7deaea3769d6a7d235249376d836c09765e425f5",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "ac7c9201512f74c5f7cff79361287a100a75db819fff68e9dd7ff27183bbeefd",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "ROW_CEILING",
+      "fixture_id": "DEV-0610-FX-016",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 16,
+        "scenario": "row_ceiling"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 16,
+        "profile_id": "manifestdb-query-resource-controls",
+        "profile_version": "1",
+        "scenario_id": "row_ceiling",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-query-resource-controls",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "row ceiling",
+      "resource_id": "internal://manifest-synthetic/row_ceiling/v1",
+      "resource_scenario": "ROW_CEILING",
+      "schema_fingerprint": "f615f3315c792a87b059a502c701235707a3efd20310e8caec1e495172354c11",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "68a395612df773529684094110b4561235693bb10da073fb4a2d0dbb68fd166c",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "BYTE_CEILING",
+      "fixture_id": "DEV-0610-FX-017",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 17,
+        "scenario": "byte_ceiling"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 17,
+        "profile_id": "manifestdb-query-resource-controls",
+        "profile_version": "1",
+        "scenario_id": "byte_ceiling",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-query-resource-controls",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "byte ceiling",
+      "resource_id": "internal://manifest-synthetic/byte_ceiling/v1",
+      "resource_scenario": "BYTE_CEILING",
+      "schema_fingerprint": "f615f3315c792a87b059a502c701235707a3efd20310e8caec1e495172354c11",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "de97712c8cba012009963f13699cad70a388f3989a1d6a5ab7b0c1d6415c30b8",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "MEMORY_ESTIMATE_CEILING",
+      "fixture_id": "DEV-0610-FX-018",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 18,
+        "scenario": "memory_estimate_ceiling"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 18,
+        "profile_id": "manifestdb-query-resource-controls",
+        "profile_version": "1",
+        "scenario_id": "memory_estimate_ceiling",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-query-resource-controls",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "memory estimate ceiling",
+      "resource_id": "internal://manifest-synthetic/memory_estimate_ceiling/v1",
+      "resource_scenario": "MEMORY_ESTIMATE_CEILING",
+      "schema_fingerprint": "f615f3315c792a87b059a502c701235707a3efd20310e8caec1e495172354c11",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "0ca64df46bcabbdd98be8dc929df85bee68372cf3f32410514add7c75a5ab764",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "WALL_CLOCK_CEILING",
+      "fixture_id": "DEV-0610-FX-019",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 19,
+        "scenario": "wall_clock_ceiling"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 19,
+        "profile_id": "manifestdb-query-resource-controls",
+        "profile_version": "1",
+        "scenario_id": "wall_clock_ceiling",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-query-resource-controls",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "wall clock ceiling",
+      "resource_id": "internal://manifest-synthetic/wall_clock_ceiling/v1",
+      "resource_scenario": "WALL_CLOCK_CEILING",
+      "schema_fingerprint": "f615f3315c792a87b059a502c701235707a3efd20310e8caec1e495172354c11",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "2ff72db94700ab7fdcbdadf44a533652b71171b2a2974188174af0c5c8941b5d",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "CANCELLATION",
+      "fixture_id": "DEV-0610-FX-020",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 20,
+        "scenario": "cancellation"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 20,
+        "profile_id": "manifestdb-query-resource-controls",
+        "profile_version": "1",
+        "scenario_id": "cancellation",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-query-resource-controls",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "cancellation",
+      "resource_id": "internal://manifest-synthetic/cancellation/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "f615f3315c792a87b059a502c701235707a3efd20310e8caec1e495172354c11",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "f7140bdbb4d342b8daa8595dd3f74a451fb70b184134056a9c376279112223a6",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "CONCURRENCY_DENIAL",
+      "fixture_id": "DEV-0610-FX-021",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 21,
+        "scenario": "concurrency_denial"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 21,
+        "profile_id": "manifestdb-query-resource-controls",
+        "profile_version": "1",
+        "scenario_id": "concurrency_denial",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-query-resource-controls",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "concurrency denial",
+      "resource_id": "internal://manifest-synthetic/concurrency_denial/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "f615f3315c792a87b059a502c701235707a3efd20310e8caec1e495172354c11",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "7ea87005efc383605aaaa2157395f9827263eda72637f357c627adafd577691e",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "IDENTIFIER_VALID_LOWERCASE",
+      "fixture_id": "DEV-0610-FX-022",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 22,
+        "scenario": "identifier_valid_lowercase"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 22,
+        "profile_id": "manifestdb-fileid-normalization",
+        "profile_version": "1",
+        "scenario_id": "identifier_valid_lowercase",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-fileid-normalization",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "identifier valid lowercase",
+      "resource_id": "internal://manifest-synthetic/identifier_valid_lowercase/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "e532342527c3c864c2dd1416f4f2783b72eda550cd953a26c07cd2f35b2106b0",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "f9586cce9216ae4ddf481acd695316205a2813c866c748b1a1d0e4db550f5dcb",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "IDENTIFIER_VALID_UPPERCASE",
+      "fixture_id": "DEV-0610-FX-023",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 23,
+        "scenario": "identifier_valid_uppercase"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 23,
+        "profile_id": "manifestdb-fileid-normalization",
+        "profile_version": "1",
+        "scenario_id": "identifier_valid_uppercase",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-fileid-normalization",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "identifier valid uppercase",
+      "resource_id": "internal://manifest-synthetic/identifier_valid_uppercase/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "e532342527c3c864c2dd1416f4f2783b72eda550cd953a26c07cd2f35b2106b0",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "d29d67128f32c7b05cbe57ffa8ee2b25b01d134f41d7ded42770144d03b36911",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "IDENTIFIER_INVALID_LENGTH",
+      "fixture_id": "DEV-0610-FX-024",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 24,
+        "scenario": "identifier_invalid_length"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 24,
+        "profile_id": "manifestdb-fileid-normalization",
+        "profile_version": "1",
+        "scenario_id": "identifier_invalid_length",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-fileid-normalization",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "identifier invalid length",
+      "resource_id": "internal://manifest-synthetic/identifier_invalid_length/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "e532342527c3c864c2dd1416f4f2783b72eda550cd953a26c07cd2f35b2106b0",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "16133ca2db51d2b62eb1ec53f7757a379aa21050b66afb9302b9b17868dce307",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "MALFORMED"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "IDENTIFIER_INVALID_CHARACTER",
+      "fixture_id": "DEV-0610-FX-025",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 25,
+        "scenario": "identifier_invalid_character"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 25,
+        "profile_id": "manifestdb-fileid-normalization",
+        "profile_version": "1",
+        "scenario_id": "identifier_invalid_character",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-fileid-normalization",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "identifier invalid character",
+      "resource_id": "internal://manifest-synthetic/identifier_invalid_character/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "e532342527c3c864c2dd1416f4f2783b72eda550cd953a26c07cd2f35b2106b0",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "d46e74fcf02c24bc203cd978f9afd18810117e1efcac91ba2dd0ce5363eac326",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "MALFORMED"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "IDENTIFIER_UNSUPPORTED_STORAGE_CLASS",
+      "fixture_id": "DEV-0610-FX-026",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 26,
+        "scenario": "identifier_unsupported_storage_class"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 26,
+        "profile_id": "manifestdb-fileid-normalization",
+        "profile_version": "1",
+        "scenario_id": "identifier_unsupported_storage_class",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-fileid-normalization",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "identifier unsupported storage class",
+      "resource_id": "internal://manifest-synthetic/identifier_unsupported_storage_class/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "e532342527c3c864c2dd1416f4f2783b72eda550cd953a26c07cd2f35b2106b0",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "cc7c1c8ed87ecb1e1feebcfc4ed220b336af71c67814d1a134add75b006d932b",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "DOMAIN_RECOGNIZED",
+      "fixture_id": "DEV-0610-FX-027",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 27,
+        "scenario": "domain_recognized"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 27,
+        "profile_id": "manifestdb-domain-grammar",
+        "profile_version": "1",
+        "scenario_id": "domain_recognized",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-domain-grammar",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "domain recognized",
+      "resource_id": "internal://manifest-synthetic/domain_recognized/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "755a7ee38b4144bf05a064745fe71a53fe42f2cb3b3e8b02f140fa5cc38b8382",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "21af41d3be7f0df2f4d1d37f4bedfb87e4b0cef204abaaa2c4e79e1cc7c6d941",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "DOMAIN_UNKNOWN",
+      "fixture_id": "DEV-0610-FX-028",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 28,
+        "scenario": "domain_unknown"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 28,
+        "profile_id": "manifestdb-domain-grammar",
+        "profile_version": "1",
+        "scenario_id": "domain_unknown",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-domain-grammar",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "domain unknown",
+      "resource_id": "internal://manifest-synthetic/domain_unknown/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "755a7ee38b4144bf05a064745fe71a53fe42f2cb3b3e8b02f140fa5cc38b8382",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "eb296c826d4983dca7f0c0546b6aed09b91f05a4bebe453a4ec61a3456e9a4fe",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "DOMAIN_MALFORMED",
+      "fixture_id": "DEV-0610-FX-029",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 29,
+        "scenario": "domain_malformed"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 29,
+        "profile_id": "manifestdb-domain-grammar",
+        "profile_version": "1",
+        "scenario_id": "domain_malformed",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-domain-grammar",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "domain malformed",
+      "resource_id": "internal://manifest-synthetic/domain_malformed/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "755a7ee38b4144bf05a064745fe71a53fe42f2cb3b3e8b02f140fa5cc38b8382",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "288eabb899a5b3bdeac857e4581f42b6083d3efa59210f1e8624335f0e81c271",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "MALFORMED"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "RELATIVE_PATH_VALID",
+      "fixture_id": "DEV-0610-FX-030",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 30,
+        "scenario": "relative_path_valid"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 30,
+        "profile_id": "manifestdb-relative-path-lexical",
+        "profile_version": "1",
+        "scenario_id": "relative_path_valid",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-relative-path-lexical",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "relative path valid",
+      "resource_id": "internal://manifest-synthetic/relative_path_valid/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "61f7e9e2ae0f51ba368033ef0793259ff64f22893dd39362dbb931cb8ddac114",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "9e2f0ee972f85b548046e71a7bc60b5f89483ca68fc47040c7fad3400b398491",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "RELATIVE_PATH_UNSAFE",
+      "fixture_id": "DEV-0610-FX-031",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 31,
+        "scenario": "relative_path_unsafe"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 31,
+        "profile_id": "manifestdb-relative-path-lexical",
+        "profile_version": "1",
+        "scenario_id": "relative_path_unsafe",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-relative-path-lexical",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "relative path unsafe",
+      "resource_id": "internal://manifest-synthetic/relative_path_unsafe/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "61f7e9e2ae0f51ba368033ef0793259ff64f22893dd39362dbb931cb8ddac114",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "d13252c837476b99769e6d9823fbcc8ef34f032be807dd7f7c1d4beaadb155c0",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "RELATIVE_PATH_INDETERMINATE",
+      "fixture_id": "DEV-0610-FX-032",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 32,
+        "scenario": "relative_path_indeterminate"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 32,
+        "profile_id": "manifestdb-relative-path-lexical",
+        "profile_version": "1",
+        "scenario_id": "relative_path_indeterminate",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-relative-path-lexical",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "relative path indeterminate",
+      "resource_id": "internal://manifest-synthetic/relative_path_indeterminate/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "61f7e9e2ae0f51ba368033ef0793259ff64f22893dd39362dbb931cb8ddac114",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "eed66d15dd177f062ce58b3c41f94ec8f33544915887c930b25dbe75b037654e",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "FLAGS_UNKNOWN",
+      "fixture_id": "DEV-0610-FX-033",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 33,
+        "scenario": "flags_unknown"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 33,
+        "profile_id": "manifestdb-flags-observation",
+        "profile_version": "1",
+        "scenario_id": "flags_unknown",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-flags-observation",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "flags unknown",
+      "resource_id": "internal://manifest-synthetic/flags_unknown/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "0499f3753db56d3e8569b4ebbeb192f1e6cef84fff032aefb1c9f560c1aa131f",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "f7b6fabcb1966eaff10757950d04560794956fdd4e99d7f1ee34f6f247730fc0",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "FLAGS_UNSUPPORTED_STORAGE_CLASS",
+      "fixture_id": "DEV-0610-FX-034",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 34,
+        "scenario": "flags_unsupported_storage_class"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 34,
+        "profile_id": "manifestdb-flags-observation",
+        "profile_version": "1",
+        "scenario_id": "flags_unsupported_storage_class",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-flags-observation",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "flags unsupported storage class",
+      "resource_id": "internal://manifest-synthetic/flags_unsupported_storage_class/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "0499f3753db56d3e8569b4ebbeb192f1e6cef84fff032aefb1c9f560c1aa131f",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "8f5fce994c7bc3d943d6b49ad2e133fa4b4fbe0251bdec525c7dacda9ee3a76a",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "METADATA_BLOB_RECOGNIZED_SYNTAX",
+      "fixture_id": "DEV-0610-FX-035",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 35,
+        "scenario": "metadata_blob_recognized_syntax"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 35,
+        "profile_id": "manifestdb-file-bplist-syntax",
+        "profile_version": "1",
+        "scenario_id": "metadata_blob_recognized_syntax",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-file-bplist-syntax",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "metadata blob recognized syntax",
+      "resource_id": "internal://manifest-synthetic/metadata_blob_recognized_syntax/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "1defdd51de2aebe18a2069f990ce14764a625d01fb5d7088ea6426f6e3caef59",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "ec762799d80e917329a467e5559558a50648940eed1276ed38bac6918e0ee45e",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "METADATA_BLOB_MALFORMED_SYNTAX",
+      "fixture_id": "DEV-0610-FX-036",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 36,
+        "scenario": "metadata_blob_malformed_syntax"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 36,
+        "profile_id": "manifestdb-file-bplist-syntax",
+        "profile_version": "1",
+        "scenario_id": "metadata_blob_malformed_syntax",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-file-bplist-syntax",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "metadata blob malformed syntax",
+      "resource_id": "internal://manifest-synthetic/metadata_blob_malformed_syntax/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "1defdd51de2aebe18a2069f990ce14764a625d01fb5d7088ea6426f6e3caef59",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "b80341bf789bd23d3a2816ed9f97dc55fca31f3c0d7cb4be845c1d7ac73b37c4",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "MALFORMED"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "METADATA_BLOB_RESOURCE_EXCEEDED",
+      "fixture_id": "DEV-0610-FX-037",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 37,
+        "scenario": "metadata_blob_resource_exceeded"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 37,
+        "profile_id": "manifestdb-file-bplist-syntax",
+        "profile_version": "1",
+        "scenario_id": "metadata_blob_resource_exceeded",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-file-bplist-syntax",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "metadata blob resource exceeded",
+      "resource_id": "internal://manifest-synthetic/metadata_blob_resource_exceeded/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "1defdd51de2aebe18a2069f990ce14764a625d01fb5d7088ea6426f6e3caef59",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "db0c3add0e7ce2c8c1da26a37a91caa91682d61dadd1d7eda460294be1693f10",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "RECONCILIATION_COMPLETE_UNIVERSE",
+      "fixture_id": "DEV-0610-FX-038",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 38,
+        "scenario": "reconciliation_complete_universe"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 38,
+        "profile_id": "manifestdb-reconciliation-semantics",
+        "profile_version": "1",
+        "scenario_id": "reconciliation_complete_universe",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-reconciliation-semantics",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "reconciliation complete universe",
+      "resource_id": "internal://manifest-synthetic/reconciliation_complete_universe/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "1035d179c4cd5baf305874d7f8c81db5ea71d9c98093f60b0565998b40a724ab",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "1743a1d2625bab0ef7889887ae97d3c839d4b8fc2a3ec4c563b08637c0f9966f",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "RECONCILIATION_PARTIAL_UNIVERSE",
+      "fixture_id": "DEV-0610-FX-039",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 39,
+        "scenario": "reconciliation_partial_universe"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 39,
+        "profile_id": "manifestdb-reconciliation-semantics",
+        "profile_version": "1",
+        "scenario_id": "reconciliation_partial_universe",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-reconciliation-semantics",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "reconciliation partial universe",
+      "resource_id": "internal://manifest-synthetic/reconciliation_partial_universe/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "1035d179c4cd5baf305874d7f8c81db5ea71d9c98093f60b0565998b40a724ab",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "f660a95eb2aebab88ef5673a92dfdb6390b272b4f890f9bbdf24492a51499a81",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "RECONCILIATION_INCOMPATIBLE_UNIVERSE",
+      "fixture_id": "DEV-0610-FX-040",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 40,
+        "scenario": "reconciliation_incompatible_universe"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 40,
+        "profile_id": "manifestdb-reconciliation-semantics",
+        "profile_version": "1",
+        "scenario_id": "reconciliation_incompatible_universe",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-reconciliation-semantics",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "reconciliation incompatible universe",
+      "resource_id": "internal://manifest-synthetic/reconciliation_incompatible_universe/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "1035d179c4cd5baf305874d7f8c81db5ea71d9c98093f60b0565998b40a724ab",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "7adbc9c6798850fce1cd3e3f45af4e3809d13093f989aadca280a1648161498c",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "INVENTORY_COVERAGE_COMPLETE",
+      "fixture_id": "DEV-0610-FX-041",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 41,
+        "scenario": "inventory_coverage_complete"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 41,
+        "profile_id": "manifestdb-inventory-coverage",
+        "profile_version": "1",
+        "scenario_id": "inventory_coverage_complete",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-inventory-coverage",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "inventory coverage complete",
+      "resource_id": "internal://manifest-synthetic/inventory_coverage_complete/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "4318fb7b26473093f82c76f49719f49a44dbf139971b07ec2efa442d6c5d48fc",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "903deb01174c381003af2d6fcb5eb160ee4ea2afb8855fee7c0f274a3ac92ec9",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "INVENTORY_COVERAGE_PARTIAL",
+      "fixture_id": "DEV-0610-FX-042",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 42,
+        "scenario": "inventory_coverage_partial"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 42,
+        "profile_id": "manifestdb-inventory-coverage",
+        "profile_version": "1",
+        "scenario_id": "inventory_coverage_partial",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-inventory-coverage",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "inventory coverage partial",
+      "resource_id": "internal://manifest-synthetic/inventory_coverage_partial/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "4318fb7b26473093f82c76f49719f49a44dbf139971b07ec2efa442d6c5d48fc",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "5113afd99b60504505a73a43e98a82801052de8a7b040dfa6c79d7725368a5d2",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "INVENTORY_COVERAGE_MUTATION_TERMINATED",
+      "fixture_id": "DEV-0610-FX-043",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 43,
+        "scenario": "inventory_coverage_mutation_terminated"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 43,
+        "profile_id": "manifestdb-inventory-coverage",
+        "profile_version": "1",
+        "scenario_id": "inventory_coverage_mutation_terminated",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-inventory-coverage",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "inventory coverage mutation terminated",
+      "resource_id": "internal://manifest-synthetic/inventory_coverage_mutation_terminated/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "4318fb7b26473093f82c76f49719f49a44dbf139971b07ec2efa442d6c5d48fc",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "e9d518fb13b4f16ad952ca2e2cd8b1b7f8fe44c102b0c0f5e9c3e31c394822af",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "ABSENCE_NOT_ELIGIBLE",
+      "fixture_id": "DEV-0610-FX-044",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 44,
+        "scenario": "absence_not_eligible"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 44,
+        "profile_id": "manifestdb-inventory-coverage",
+        "profile_version": "1",
+        "scenario_id": "absence_not_eligible",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-inventory-coverage",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "absence not eligible",
+      "resource_id": "internal://manifest-synthetic/absence_not_eligible/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "4318fb7b26473093f82c76f49719f49a44dbf139971b07ec2efa442d6c5d48fc",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "c0da297f077c3d2c8b3f4acdc344de7519a887f7ffc6aa7ee83bdf47fb1df502",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "PHYSICAL_INVENTORY_UNAVAILABLE",
+      "fixture_id": "DEV-0610-FX-045",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 45,
+        "scenario": "physical_inventory_unavailable"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 45,
+        "profile_id": "manifestdb-inventory-coverage",
+        "profile_version": "1",
+        "scenario_id": "physical_inventory_unavailable",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-inventory-coverage",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "physical inventory unavailable",
+      "resource_id": "internal://manifest-synthetic/physical_inventory_unavailable/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "4318fb7b26473093f82c76f49719f49a44dbf139971b07ec2efa442d6c5d48fc",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "67c182ebaa4d5f0ec0bc294f6d4bae25ffa60150acd220674b686f41bb66551b",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "ARTIFACT_COVERAGE_UNSUPPORTED",
+      "fixture_id": "DEV-0610-FX-046",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 46,
+        "scenario": "artifact_coverage_unsupported"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 46,
+        "profile_id": "manifestdb-inventory-coverage",
+        "profile_version": "1",
+        "scenario_id": "artifact_coverage_unsupported",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-inventory-coverage",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "artifact coverage unsupported",
+      "resource_id": "internal://manifest-synthetic/artifact_coverage_unsupported/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "4318fb7b26473093f82c76f49719f49a44dbf139971b07ec2efa442d6c5d48fc",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "46dd090d0fb996414606071586458ba1cb78278a91185cec16d3daf2e6615d0c",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "CROSS_CASE_DENIAL",
+      "fixture_id": "DEV-0610-FX-047",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 47,
+        "scenario": "cross_case_denial"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 47,
+        "profile_id": "manifestdb-relative-path-lexical",
+        "profile_version": "1",
+        "scenario_id": "cross_case_denial",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-relative-path-lexical",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "cross case denial",
+      "resource_id": "internal://manifest-synthetic/cross_case_denial/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "61f7e9e2ae0f51ba368033ef0793259ff64f22893dd39362dbb931cb8ddac114",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "e8a45c2df23218bc01556cf54fbed5f624552424fd01c6bc7389b612f849b8a5",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "CROSS_TENANT_DENIAL",
+      "fixture_id": "DEV-0610-FX-048",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 48,
+        "scenario": "cross_tenant_denial"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 48,
+        "profile_id": "manifestdb-flags-observation",
+        "profile_version": "1",
+        "scenario_id": "cross_tenant_denial",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-flags-observation",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "cross tenant denial",
+      "resource_id": "internal://manifest-synthetic/cross_tenant_denial/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "0499f3753db56d3e8569b4ebbeb192f1e6cef84fff032aefb1c9f560c1aa131f",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "fdce41ac974b4167cb29074c753b8c3d8cc4f2233287334478142df7249d89ab",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "DETERMINISTIC_RERUN",
+      "fixture_id": "DEV-0610-FX-049",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 49,
+        "scenario": "deterministic_rerun"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 49,
+        "profile_id": "manifestdb-file-bplist-syntax",
+        "profile_version": "1",
+        "scenario_id": "deterministic_rerun",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-file-bplist-syntax",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "deterministic rerun",
+      "resource_id": "internal://manifest-synthetic/deterministic_rerun/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "1defdd51de2aebe18a2069f990ce14764a625d01fb5d7088ea6426f6e3caef59",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "19461a5ec601d5538213e18ddeca8d7634812ec20cbb321a575123de42825501",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "FIXTURE_INTEGRITY_MISMATCH",
+      "fixture_id": "DEV-0610-FX-050",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 50,
+        "scenario": "fixture_integrity_mismatch"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 50,
+        "profile_id": "manifestdb-reconciliation-semantics",
+        "profile_version": "1",
+        "scenario_id": "fixture_integrity_mismatch",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-reconciliation-semantics",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "fixture integrity mismatch",
+      "resource_id": "internal://manifest-synthetic/fixture_integrity_mismatch/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "1035d179c4cd5baf305874d7f8c81db5ea71d9c98093f60b0565998b40a724ab",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "ccf4bcdcefd62d723d9f0c5ea3b9cf2d6bd686cd9390ae90171e09ea4008b2b5",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "CORPUS_MANIFEST_MISMATCH",
+      "fixture_id": "DEV-0610-FX-051",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 51,
+        "scenario": "corpus_manifest_mismatch"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 51,
+        "profile_id": "manifestdb-inventory-coverage",
+        "profile_version": "1",
+        "scenario_id": "corpus_manifest_mismatch",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-inventory-coverage",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "corpus manifest mismatch",
+      "resource_id": "internal://manifest-synthetic/corpus_manifest_mismatch/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "4318fb7b26473093f82c76f49719f49a44dbf139971b07ec2efa442d6c5d48fc",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "4e362682be9ecde68efcc6a3fe8bf8b3e0f70da1e182e05e535a5aa1691759fe",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "UNREGISTERED_FIXTURE_DENIAL",
+      "fixture_id": "DEV-0610-FX-052",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 52,
+        "scenario": "unregistered_fixture_denial"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 52,
+        "profile_id": "apple-manifestdb-schema",
+        "profile_version": "1",
+        "scenario_id": "unregistered_fixture_denial",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "apple-manifestdb-schema",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "unregistered fixture denial",
+      "resource_id": "internal://manifest-synthetic/unregistered_fixture_denial/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "f6fb1502440f02f4f7d2541efef985532b2567c1c7c0713f9f8182d65804a87b",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "34cc7ae9ad5b13f640a6a98f4a001ca47af9363e3a3f5806349bb0717d577bc2",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "PROHIBITED_SOURCE_FIXTURE_DENIAL",
+      "fixture_id": "DEV-0610-FX-053",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 53,
+        "scenario": "prohibited_source_fixture_denial"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 53,
+        "profile_id": "manifestdb-files-query",
+        "profile_version": "1",
+        "scenario_id": "prohibited_source_fixture_denial",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-files-query",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "prohibited source fixture denial",
+      "resource_id": "internal://manifest-synthetic/prohibited_source_fixture_denial/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "1e7fa5173d9f373fe179452bfddf91f532f9147b398e6237a0e6e1748f80f51a",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "61ebe89fbdf5d1b981ab381417a1e4c633804fd617af877b070eafe881816460",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "INCOMPLETE_PROVENANCE_DENIAL",
+      "fixture_id": "DEV-0610-FX-054",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 54,
+        "scenario": "incomplete_provenance_denial"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 54,
+        "profile_id": "manifestdb-row-locator",
+        "profile_version": "1",
+        "scenario_id": "incomplete_provenance_denial",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-row-locator",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "incomplete provenance denial",
+      "resource_id": "internal://manifest-synthetic/incomplete_provenance_denial/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "f47d378a44cb5bb3dcea7f1d7deaea3769d6a7d235249376d836c09765e425f5",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "7c38f45fd0756a3c6d45b7642df5f3138438cf2350eff7267d9b2090062d6e9a",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "DISTRIBUTION_UNVERIFIED_DENIAL",
+      "fixture_id": "DEV-0610-FX-055",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 55,
+        "scenario": "distribution_unverified_denial"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 55,
+        "profile_id": "manifestdb-files-query",
+        "profile_version": "2",
+        "scenario_id": "distribution_unverified_denial",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-files-query",
+          "profile_version": "2"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "distribution unverified denial",
+      "resource_id": "internal://manifest-synthetic/distribution_unverified_denial/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "1e7fa5173d9f373fe179452bfddf91f532f9147b398e6237a0e6e1748f80f51a",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "3ff1ae4e4d5b750afd1cee0901a9ab0364ad703cbc933ef552d6e03d1d9bf1a0",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "NEGATIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "SUPERSEDED_FIXTURE_BEHAVIOR",
+      "fixture_id": "DEV-0610-FX-056",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 56,
+        "scenario": "superseded_fixture_behavior"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 56,
+        "profile_id": "manifestdb-query-resource-controls",
+        "profile_version": "1",
+        "scenario_id": "superseded_fixture_behavior",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-query-resource-controls",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "superseded fixture behavior",
+      "resource_id": "internal://manifest-synthetic/superseded_fixture_behavior/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "f615f3315c792a87b059a502c701235707a3efd20310e8caec1e495172354c11",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "c48ce1c228185b004f11997f2910814352fc0d71932264ddace87c1ede261f22",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "SUPERSEDED_SYNTHETIC_TEST",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "PROFILE_VERSION_INCOMPATIBILITY",
+      "fixture_id": "DEV-0610-FX-057",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 57,
+        "scenario": "profile_version_incompatibility"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 57,
+        "profile_id": "canonical-identifier-normalization",
+        "profile_version": "1",
+        "scenario_id": "profile_version_incompatibility",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "canonical-identifier-normalization",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "INCOMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "profile version incompatibility",
+      "resource_id": "internal://manifest-synthetic/profile_version_incompatibility/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "57b4b8616be5ffef2df6b10245dab4c1b22aaf6a7685d36d3cb405e17c1440e0",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "e2ae195371327e664a4c10dae8222e0264d41bd1eecfecbeb44dd7627191c7d9",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "NO_APPLE_VERSION_SUPPORT_CLAIM",
+      "fixture_id": "DEV-0610-FX-058",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 58,
+        "scenario": "no_apple_version_support_claim"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 58,
+        "profile_id": "manifestdb-fileid-normalization",
+        "profile_version": "1",
+        "scenario_id": "no_apple_version_support_claim",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-fileid-normalization",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "no apple version support claim",
+      "resource_id": "internal://manifest-synthetic/no_apple_version_support_claim/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "e532342527c3c864c2dd1416f4f2783b72eda550cd953a26c07cd2f35b2106b0",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "1c3e6e320884059e3bdb1c60e43271e4235cc010463c561cf81f75fd276e1a53",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "NO_ARTIFACT_SUPPORT_CLAIM",
+      "fixture_id": "DEV-0610-FX-059",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 59,
+        "scenario": "no_artifact_support_claim"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 59,
+        "profile_id": "manifestdb-inventory-coverage",
+        "profile_version": "1",
+        "scenario_id": "no_artifact_support_claim",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-inventory-coverage",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "no artifact support claim",
+      "resource_id": "internal://manifest-synthetic/no_artifact_support_claim/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "4318fb7b26473093f82c76f49719f49a44dbf139971b07ec2efa442d6c5d48fc",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "682b54ed6a826d1f88ba6b400dd17bddc5ff5cb4eb168e6de95073e318cbc5d6",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    },
+    {
+      "contains_external_material": false,
+      "corpus_id": "manifest-synthetic-characterization-corpus",
+      "custody_state": "APPROVED_VERSION_CONTROLLED_TEST_ASSET",
+      "date_created": "2026-07-30",
+      "date_last_regenerated": "2026-07-30",
+      "expected_outcome": "NO_SUPPORTED_PROMOTION",
+      "fixture_id": "DEV-0610-FX-060",
+      "fixture_type": "CANONICAL_JSON_SCENARIO",
+      "fixture_version": "1",
+      "generating_decision": "DEC-0077",
+      "generating_task": "DEV-0610",
+      "generation_method": "VERSIONED_PROJECT_GENERATOR",
+      "generation_parameters": {
+        "ordinal": 60,
+        "scenario": "no_supported_promotion"
+      },
+      "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+      "generator_version": "1",
+      "lawful_distribution": "ORIGINAL_PROJECT_SYNTHETIC",
+      "limitation_ids": [
+        "LIMIT-SYNTHETIC-NOT-APPLE-PRODUCED",
+        "LIMIT-NO-COMPATIBILITY-CLAIM",
+        "LIMIT-NO-SUPPORT"
+      ],
+      "manually_edited": false,
+      "non_evidentiary": true,
+      "payload": {
+        "neutral_schema": "SYNTHETIC_SCHEMA_A",
+        "ordinal": 60,
+        "profile_id": "manifestdb-relative-path-lexical",
+        "profile_version": "1",
+        "scenario_id": "no_supported_promotion",
+        "synthetic_marker": "PROJECT_ORIGINAL_NON_EVIDENTIARY"
+      },
+      "profile_coverage": [
+        {
+          "profile_id": "manifestdb-relative-path-lexical",
+          "profile_version": "1"
+        }
+      ],
+      "profile_version_scenario": "COMPATIBLE",
+      "provenance_state": "GENERATED_DETERMINISTICALLY",
+      "purpose": "no supported promotion",
+      "resource_id": "internal://manifest-synthetic/no_supported_promotion/v1",
+      "resource_scenario": "NOT_APPLICABLE",
+      "schema_fingerprint": "61f7e9e2ae0f51ba368033ef0793259ff64f22893dd39362dbb931cb8ddac114",
+      "schema_identity": "SYNTHETIC_SCHEMA_A",
+      "sha256": "89fb8f4bec7afd7b334e33f7f2ddcbc41d22b5bae91c2ab79d70157d8131379f",
+      "source_classification": "PROJECT_ORIGINAL_SYNTHETIC",
+      "supersession_status": "CURRENT",
+      "test_classification": "POSITIVE",
+      "validity_classification": "VALID_SYNTHETIC_CONDITION"
+    }
+  ],
+  "generator_id": "dev-0610-manifest-synthetic-corpus-generator",
+  "generator_version": "1",
+  "governance_profile_id": "synthetic-characterization-corpus-governance",
+  "governance_profile_version": "1",
+  "last_regenerated": "2026-07-30",
+  "limitations": [
+    "Synthetic characterization is not Apple-produced validation.",
+    "Synthetic characterization is not compatibility or support validation.",
+    "Fixture SHA-256 values protect test assets and are not evidence hashes.",
+    "No Apple, parser, artifact, input, workflow, production, or Supported claim is established."
+  ],
+  "origin": "PROJECT_ORIGINAL_SYNTHETIC_ONLY",
+  "profile_matrix": [
+    {
+      "boundary_fixtures": [
+        "DEV-0610-FX-005"
+      ],
+      "compatible_synthetic_schema": "SYNTHETIC_SCHEMA_A",
+      "deterministic_rerun_fixtures": [
+        "DEV-0610-FX-049"
+      ],
+      "expected_outcome_coverage": [
+        "SUCCESS",
+        "FAIL_CLOSED"
+      ],
+      "malformed_fixtures": [
+        "DEV-0610-FX-003"
+      ],
+      "missing_coverage": [],
+      "negative_fixtures": [
+        "DEV-0610-FX-002"
+      ],
+      "positive_fixtures": [
+        "DEV-0610-FX-001",
+        "DEV-0610-FX-002",
+        "DEV-0610-FX-052"
+      ],
+      "profile_compatibility_fixtures": [
+        "DEV-0610-FX-057"
+      ],
+      "profile_id": "apple-manifestdb-schema",
+      "profile_version": "1",
+      "resource_limit_fixtures": [
+        "DEV-0610-FX-016",
+        "DEV-0610-FX-017",
+        "DEV-0610-FX-018",
+        "DEV-0610-FX-019"
+      ],
+      "unsupported_fixtures": [
+        "DEV-0610-FX-004"
+      ]
+    },
+    {
+      "boundary_fixtures": [
+        "DEV-0610-FX-005"
+      ],
+      "compatible_synthetic_schema": "SYNTHETIC_SCHEMA_A",
+      "deterministic_rerun_fixtures": [
+        "DEV-0610-FX-049"
+      ],
+      "expected_outcome_coverage": [
+        "SUCCESS",
+        "FAIL_CLOSED"
+      ],
+      "malformed_fixtures": [
+        "DEV-0610-FX-003"
+      ],
+      "missing_coverage": [],
+      "negative_fixtures": [
+        "DEV-0610-FX-002"
+      ],
+      "positive_fixtures": [
+        "DEV-0610-FX-012",
+        "DEV-0610-FX-053"
+      ],
+      "profile_compatibility_fixtures": [
+        "DEV-0610-FX-057"
+      ],
+      "profile_id": "manifestdb-files-query",
+      "profile_version": "1",
+      "resource_limit_fixtures": [
+        "DEV-0610-FX-016",
+        "DEV-0610-FX-017",
+        "DEV-0610-FX-018",
+        "DEV-0610-FX-019"
+      ],
+      "unsupported_fixtures": [
+        "DEV-0610-FX-004"
+      ]
+    },
+    {
+      "boundary_fixtures": [
+        "DEV-0610-FX-005"
+      ],
+      "compatible_synthetic_schema": "SYNTHETIC_SCHEMA_A",
+      "deterministic_rerun_fixtures": [
+        "DEV-0610-FX-049"
+      ],
+      "expected_outcome_coverage": [
+        "SUCCESS",
+        "FAIL_CLOSED"
+      ],
+      "malformed_fixtures": [
+        "DEV-0610-FX-003"
+      ],
+      "missing_coverage": [],
+      "negative_fixtures": [
+        "DEV-0610-FX-002"
+      ],
+      "positive_fixtures": [
+        "DEV-0610-FX-008",
+        "DEV-0610-FX-010",
+        "DEV-0610-FX-011",
+        "DEV-0610-FX-015",
+        "DEV-0610-FX-054"
+      ],
+      "profile_compatibility_fixtures": [
+        "DEV-0610-FX-057"
+      ],
+      "profile_id": "manifestdb-row-locator",
+      "profile_version": "1",
+      "resource_limit_fixtures": [
+        "DEV-0610-FX-016",
+        "DEV-0610-FX-017",
+        "DEV-0610-FX-018",
+        "DEV-0610-FX-019"
+      ],
+      "unsupported_fixtures": [
+        "DEV-0610-FX-004"
+      ]
+    },
+    {
+      "boundary_fixtures": [
+        "DEV-0610-FX-005"
+      ],
+      "compatible_synthetic_schema": "SYNTHETIC_SCHEMA_A",
+      "deterministic_rerun_fixtures": [
+        "DEV-0610-FX-049"
+      ],
+      "expected_outcome_coverage": [
+        "SUCCESS",
+        "FAIL_CLOSED"
+      ],
+      "malformed_fixtures": [
+        "DEV-0610-FX-003"
+      ],
+      "missing_coverage": [],
+      "negative_fixtures": [
+        "DEV-0610-FX-002"
+      ],
+      "positive_fixtures": [
+        "DEV-0610-FX-003",
+        "DEV-0610-FX-013",
+        "DEV-0610-FX-014",
+        "DEV-0610-FX-055"
+      ],
+      "profile_compatibility_fixtures": [
+        "DEV-0610-FX-057"
+      ],
+      "profile_id": "manifestdb-files-query",
+      "profile_version": "2",
+      "resource_limit_fixtures": [
+        "DEV-0610-FX-016",
+        "DEV-0610-FX-017",
+        "DEV-0610-FX-018",
+        "DEV-0610-FX-019"
+      ],
+      "unsupported_fixtures": [
+        "DEV-0610-FX-004"
+      ]
+    },
+    {
+      "boundary_fixtures": [
+        "DEV-0610-FX-005"
+      ],
+      "compatible_synthetic_schema": "SYNTHETIC_SCHEMA_A",
+      "deterministic_rerun_fixtures": [
+        "DEV-0610-FX-049"
+      ],
+      "expected_outcome_coverage": [
+        "SUCCESS",
+        "FAIL_CLOSED"
+      ],
+      "malformed_fixtures": [
+        "DEV-0610-FX-003"
+      ],
+      "missing_coverage": [],
+      "negative_fixtures": [
+        "DEV-0610-FX-002"
+      ],
+      "positive_fixtures": [
+        "DEV-0610-FX-004",
+        "DEV-0610-FX-016",
+        "DEV-0610-FX-017",
+        "DEV-0610-FX-018",
+        "DEV-0610-FX-019",
+        "DEV-0610-FX-020",
+        "DEV-0610-FX-021",
+        "DEV-0610-FX-056"
+      ],
+      "profile_compatibility_fixtures": [
+        "DEV-0610-FX-057"
+      ],
+      "profile_id": "manifestdb-query-resource-controls",
+      "profile_version": "1",
+      "resource_limit_fixtures": [
+        "DEV-0610-FX-016",
+        "DEV-0610-FX-017",
+        "DEV-0610-FX-018",
+        "DEV-0610-FX-019"
+      ],
+      "unsupported_fixtures": [
+        "DEV-0610-FX-004"
+      ]
+    },
+    {
+      "boundary_fixtures": [
+        "DEV-0610-FX-005"
+      ],
+      "compatible_synthetic_schema": "SYNTHETIC_SCHEMA_A",
+      "deterministic_rerun_fixtures": [
+        "DEV-0610-FX-049"
+      ],
+      "expected_outcome_coverage": [
+        "SUCCESS",
+        "FAIL_CLOSED"
+      ],
+      "malformed_fixtures": [
+        "DEV-0610-FX-003"
+      ],
+      "missing_coverage": [],
+      "negative_fixtures": [
+        "DEV-0610-FX-002"
+      ],
+      "positive_fixtures": [
+        "DEV-0610-FX-005",
+        "DEV-0610-FX-057"
+      ],
+      "profile_compatibility_fixtures": [
+        "DEV-0610-FX-057"
+      ],
+      "profile_id": "canonical-identifier-normalization",
+      "profile_version": "1",
+      "resource_limit_fixtures": [
+        "DEV-0610-FX-016",
+        "DEV-0610-FX-017",
+        "DEV-0610-FX-018",
+        "DEV-0610-FX-019"
+      ],
+      "unsupported_fixtures": [
+        "DEV-0610-FX-004"
+      ]
+    },
+    {
+      "boundary_fixtures": [
+        "DEV-0610-FX-005"
+      ],
+      "compatible_synthetic_schema": "SYNTHETIC_SCHEMA_A",
+      "deterministic_rerun_fixtures": [
+        "DEV-0610-FX-049"
+      ],
+      "expected_outcome_coverage": [
+        "SUCCESS",
+        "FAIL_CLOSED"
+      ],
+      "malformed_fixtures": [
+        "DEV-0610-FX-003"
+      ],
+      "missing_coverage": [],
+      "negative_fixtures": [
+        "DEV-0610-FX-002"
+      ],
+      "positive_fixtures": [
+        "DEV-0610-FX-006",
+        "DEV-0610-FX-022",
+        "DEV-0610-FX-023",
+        "DEV-0610-FX-024",
+        "DEV-0610-FX-025",
+        "DEV-0610-FX-026",
+        "DEV-0610-FX-058"
+      ],
+      "profile_compatibility_fixtures": [
+        "DEV-0610-FX-057"
+      ],
+      "profile_id": "manifestdb-fileid-normalization",
+      "profile_version": "1",
+      "resource_limit_fixtures": [
+        "DEV-0610-FX-016",
+        "DEV-0610-FX-017",
+        "DEV-0610-FX-018",
+        "DEV-0610-FX-019"
+      ],
+      "unsupported_fixtures": [
+        "DEV-0610-FX-004"
+      ]
+    },
+    {
+      "boundary_fixtures": [
+        "DEV-0610-FX-005"
+      ],
+      "compatible_synthetic_schema": "SYNTHETIC_SCHEMA_A",
+      "deterministic_rerun_fixtures": [
+        "DEV-0610-FX-049"
+      ],
+      "expected_outcome_coverage": [
+        "SUCCESS",
+        "FAIL_CLOSED"
+      ],
+      "malformed_fixtures": [
+        "DEV-0610-FX-003"
+      ],
+      "missing_coverage": [],
+      "negative_fixtures": [
+        "DEV-0610-FX-002"
+      ],
+      "positive_fixtures": [
+        "DEV-0610-FX-007",
+        "DEV-0610-FX-027",
+        "DEV-0610-FX-028",
+        "DEV-0610-FX-029"
+      ],
+      "profile_compatibility_fixtures": [
+        "DEV-0610-FX-057"
+      ],
+      "profile_id": "manifestdb-domain-grammar",
+      "profile_version": "1",
+      "resource_limit_fixtures": [
+        "DEV-0610-FX-016",
+        "DEV-0610-FX-017",
+        "DEV-0610-FX-018",
+        "DEV-0610-FX-019"
+      ],
+      "unsupported_fixtures": [
+        "DEV-0610-FX-004"
+      ]
+    },
+    {
+      "boundary_fixtures": [
+        "DEV-0610-FX-005"
+      ],
+      "compatible_synthetic_schema": "SYNTHETIC_SCHEMA_A",
+      "deterministic_rerun_fixtures": [
+        "DEV-0610-FX-049"
+      ],
+      "expected_outcome_coverage": [
+        "SUCCESS",
+        "FAIL_CLOSED"
+      ],
+      "malformed_fixtures": [
+        "DEV-0610-FX-003"
+      ],
+      "missing_coverage": [],
+      "negative_fixtures": [
+        "DEV-0610-FX-002"
+      ],
+      "positive_fixtures": [
+        "DEV-0610-FX-030",
+        "DEV-0610-FX-031",
+        "DEV-0610-FX-032",
+        "DEV-0610-FX-047",
+        "DEV-0610-FX-060"
+      ],
+      "profile_compatibility_fixtures": [
+        "DEV-0610-FX-057"
+      ],
+      "profile_id": "manifestdb-relative-path-lexical",
+      "profile_version": "1",
+      "resource_limit_fixtures": [
+        "DEV-0610-FX-016",
+        "DEV-0610-FX-017",
+        "DEV-0610-FX-018",
+        "DEV-0610-FX-019"
+      ],
+      "unsupported_fixtures": [
+        "DEV-0610-FX-004"
+      ]
+    },
+    {
+      "boundary_fixtures": [
+        "DEV-0610-FX-005"
+      ],
+      "compatible_synthetic_schema": "SYNTHETIC_SCHEMA_A",
+      "deterministic_rerun_fixtures": [
+        "DEV-0610-FX-049"
+      ],
+      "expected_outcome_coverage": [
+        "SUCCESS",
+        "FAIL_CLOSED"
+      ],
+      "malformed_fixtures": [
+        "DEV-0610-FX-003"
+      ],
+      "missing_coverage": [],
+      "negative_fixtures": [
+        "DEV-0610-FX-002"
+      ],
+      "positive_fixtures": [
+        "DEV-0610-FX-009",
+        "DEV-0610-FX-033",
+        "DEV-0610-FX-034",
+        "DEV-0610-FX-048"
+      ],
+      "profile_compatibility_fixtures": [
+        "DEV-0610-FX-057"
+      ],
+      "profile_id": "manifestdb-flags-observation",
+      "profile_version": "1",
+      "resource_limit_fixtures": [
+        "DEV-0610-FX-016",
+        "DEV-0610-FX-017",
+        "DEV-0610-FX-018",
+        "DEV-0610-FX-019"
+      ],
+      "unsupported_fixtures": [
+        "DEV-0610-FX-004"
+      ]
+    },
+    {
+      "boundary_fixtures": [
+        "DEV-0610-FX-005"
+      ],
+      "compatible_synthetic_schema": "SYNTHETIC_SCHEMA_A",
+      "deterministic_rerun_fixtures": [
+        "DEV-0610-FX-049"
+      ],
+      "expected_outcome_coverage": [
+        "SUCCESS",
+        "FAIL_CLOSED"
+      ],
+      "malformed_fixtures": [
+        "DEV-0610-FX-003"
+      ],
+      "missing_coverage": [],
+      "negative_fixtures": [
+        "DEV-0610-FX-002"
+      ],
+      "positive_fixtures": [
+        "DEV-0610-FX-035",
+        "DEV-0610-FX-036",
+        "DEV-0610-FX-037",
+        "DEV-0610-FX-049"
+      ],
+      "profile_compatibility_fixtures": [
+        "DEV-0610-FX-057"
+      ],
+      "profile_id": "manifestdb-file-bplist-syntax",
+      "profile_version": "1",
+      "resource_limit_fixtures": [
+        "DEV-0610-FX-016",
+        "DEV-0610-FX-017",
+        "DEV-0610-FX-018",
+        "DEV-0610-FX-019"
+      ],
+      "unsupported_fixtures": [
+        "DEV-0610-FX-004"
+      ]
+    },
+    {
+      "boundary_fixtures": [
+        "DEV-0610-FX-005"
+      ],
+      "compatible_synthetic_schema": "SYNTHETIC_SCHEMA_A",
+      "deterministic_rerun_fixtures": [
+        "DEV-0610-FX-049"
+      ],
+      "expected_outcome_coverage": [
+        "SUCCESS",
+        "FAIL_CLOSED"
+      ],
+      "malformed_fixtures": [
+        "DEV-0610-FX-003"
+      ],
+      "missing_coverage": [],
+      "negative_fixtures": [
+        "DEV-0610-FX-002"
+      ],
+      "positive_fixtures": [
+        "DEV-0610-FX-038",
+        "DEV-0610-FX-039",
+        "DEV-0610-FX-040",
+        "DEV-0610-FX-050"
+      ],
+      "profile_compatibility_fixtures": [
+        "DEV-0610-FX-057"
+      ],
+      "profile_id": "manifestdb-reconciliation-semantics",
+      "profile_version": "1",
+      "resource_limit_fixtures": [
+        "DEV-0610-FX-016",
+        "DEV-0610-FX-017",
+        "DEV-0610-FX-018",
+        "DEV-0610-FX-019"
+      ],
+      "unsupported_fixtures": [
+        "DEV-0610-FX-004"
+      ]
+    },
+    {
+      "boundary_fixtures": [
+        "DEV-0610-FX-005"
+      ],
+      "compatible_synthetic_schema": "SYNTHETIC_SCHEMA_A",
+      "deterministic_rerun_fixtures": [
+        "DEV-0610-FX-049"
+      ],
+      "expected_outcome_coverage": [
+        "SUCCESS",
+        "FAIL_CLOSED"
+      ],
+      "malformed_fixtures": [
+        "DEV-0610-FX-003"
+      ],
+      "missing_coverage": [],
+      "negative_fixtures": [
+        "DEV-0610-FX-002"
+      ],
+      "positive_fixtures": [
+        "DEV-0610-FX-041",
+        "DEV-0610-FX-042",
+        "DEV-0610-FX-043",
+        "DEV-0610-FX-044",
+        "DEV-0610-FX-045",
+        "DEV-0610-FX-046",
+        "DEV-0610-FX-051",
+        "DEV-0610-FX-059"
+      ],
+      "profile_compatibility_fixtures": [
+        "DEV-0610-FX-057"
+      ],
+      "profile_id": "manifestdb-inventory-coverage",
+      "profile_version": "1",
+      "resource_limit_fixtures": [
+        "DEV-0610-FX-016",
+        "DEV-0610-FX-017",
+        "DEV-0610-FX-018",
+        "DEV-0610-FX-019"
+      ],
+      "unsupported_fixtures": [
+        "DEV-0610-FX-004"
+      ]
+    }
+  ],
+  "registered_resources": [
+    "internal://manifest-synthetic/compatible_manifest_schema/v1",
+    "internal://manifest-synthetic/unknown_manifest_schema/v1",
+    "internal://manifest-synthetic/corrupt_manifest_database/v1",
+    "internal://manifest-synthetic/invalid_manifest_database/v1",
+    "internal://manifest-synthetic/missing_files_table/v1",
+    "internal://manifest-synthetic/missing_required_column/v1",
+    "internal://manifest-synthetic/unexpected_column/v1",
+    "internal://manifest-synthetic/rowid_locator_success/v1",
+    "internal://manifest-synthetic/without_rowid_denial/v1",
+    "internal://manifest-synthetic/duplicate_locator_denial/v1",
+    "internal://manifest-synthetic/nonmonotonic_locator_denial/v1",
+    "internal://manifest-synthetic/query_v1_complete_page/v1",
+    "internal://manifest-synthetic/query_v2_bounded_blob_observation/v1",
+    "internal://manifest-synthetic/authorized_raw_blob_path/v1",
+    "internal://manifest-synthetic/unauthorized_raw_blob_denial/v1",
+    "internal://manifest-synthetic/row_ceiling/v1",
+    "internal://manifest-synthetic/byte_ceiling/v1",
+    "internal://manifest-synthetic/memory_estimate_ceiling/v1",
+    "internal://manifest-synthetic/wall_clock_ceiling/v1",
+    "internal://manifest-synthetic/cancellation/v1",
+    "internal://manifest-synthetic/concurrency_denial/v1",
+    "internal://manifest-synthetic/identifier_valid_lowercase/v1",
+    "internal://manifest-synthetic/identifier_valid_uppercase/v1",
+    "internal://manifest-synthetic/identifier_invalid_length/v1",
+    "internal://manifest-synthetic/identifier_invalid_character/v1",
+    "internal://manifest-synthetic/identifier_unsupported_storage_class/v1",
+    "internal://manifest-synthetic/domain_recognized/v1",
+    "internal://manifest-synthetic/domain_unknown/v1",
+    "internal://manifest-synthetic/domain_malformed/v1",
+    "internal://manifest-synthetic/relative_path_valid/v1",
+    "internal://manifest-synthetic/relative_path_unsafe/v1",
+    "internal://manifest-synthetic/relative_path_indeterminate/v1",
+    "internal://manifest-synthetic/flags_unknown/v1",
+    "internal://manifest-synthetic/flags_unsupported_storage_class/v1",
+    "internal://manifest-synthetic/metadata_blob_recognized_syntax/v1",
+    "internal://manifest-synthetic/metadata_blob_malformed_syntax/v1",
+    "internal://manifest-synthetic/metadata_blob_resource_exceeded/v1",
+    "internal://manifest-synthetic/reconciliation_complete_universe/v1",
+    "internal://manifest-synthetic/reconciliation_partial_universe/v1",
+    "internal://manifest-synthetic/reconciliation_incompatible_universe/v1",
+    "internal://manifest-synthetic/inventory_coverage_complete/v1",
+    "internal://manifest-synthetic/inventory_coverage_partial/v1",
+    "internal://manifest-synthetic/inventory_coverage_mutation_terminated/v1",
+    "internal://manifest-synthetic/absence_not_eligible/v1",
+    "internal://manifest-synthetic/physical_inventory_unavailable/v1",
+    "internal://manifest-synthetic/artifact_coverage_unsupported/v1",
+    "internal://manifest-synthetic/cross_case_denial/v1",
+    "internal://manifest-synthetic/cross_tenant_denial/v1",
+    "internal://manifest-synthetic/deterministic_rerun/v1",
+    "internal://manifest-synthetic/fixture_integrity_mismatch/v1",
+    "internal://manifest-synthetic/corpus_manifest_mismatch/v1",
+    "internal://manifest-synthetic/unregistered_fixture_denial/v1",
+    "internal://manifest-synthetic/prohibited_source_fixture_denial/v1",
+    "internal://manifest-synthetic/incomplete_provenance_denial/v1",
+    "internal://manifest-synthetic/distribution_unverified_denial/v1",
+    "internal://manifest-synthetic/superseded_fixture_behavior/v1",
+    "internal://manifest-synthetic/profile_version_incompatibility/v1",
+    "internal://manifest-synthetic/no_apple_version_support_claim/v1",
+    "internal://manifest-synthetic/no_artifact_support_claim/v1",
+    "internal://manifest-synthetic/no_supported_promotion/v1"
+  ],
+  "registry_entry_count": 0,
+  "status": "SYNTHETIC_CHARACTERIZED",
+  "support_status": "SUPPORT_NOT_EVALUATED",
+  "supported_normalized_record_count": 0
+}

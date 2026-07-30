@@ -58,3 +58,11 @@ DEC-0073/FOR-019 bind repetition patterns to compatible query, locator,
 identifier, domain, path, scope, source, and run provenance. Physical-universe
 provenance is explicitly absent, so no duplicate/orphan/missing/absence
 conclusion can be emitted.
+
+DEC-0077/FOR-021 bind each synthetic Manifest characterization resource to its
+project generator, fixed parameters, task/decision, candidate profiles,
+expected result, SHA-256, custody events, lawful-distribution class,
+supersession state, and permanent limitations. This is test-asset provenance
+and custody only. It is never evidence provenance, an evidence hash, legal
+chain of custody, Apple-produced validation, compatibility evidence, or support
+evidence.

@@ -1527,3 +1527,49 @@ user-activity coverage. No absence, deletion, missing-object, duplicate,
 orphan, or completeness conclusion is approved. Registry/store counts remain
 zero. No parser/artifact/input/workflow support, API, real evidence,
 deployment, or support promotion is approved.
+
+## DEC-0077 — Authorize DEV-0610 synthetic characterization corpus
+
+- Date: 2026-07-30
+- Status: APPROVED FOR IMPLEMENTATION
+- Task: DEV-0610
+- Profile: `synthetic-characterization-corpus-governance` version 1
+- Support effect: none
+
+The owner authorizes a versioned, deterministic, project-original synthetic
+Manifest characterization corpus with complete test-asset provenance, fixture
+custody, lawful-distribution classification, SHA-256 integrity, regeneration,
+schema/profile coverage, supersession, and limitations. Only repository-created
+non-personal, non-device, non-evidentiary values may be committed.
+
+Synthetic characterization is distinct from Apple-produced characterization,
+compatibility validation, support validation, production readiness, and
+Supported capability. DEV-0610 may set only `SYNTHETIC_CHARACTERIZED`.
+Apple-produced fixtures, customer or device data, real or sanitized backups,
+uncertain/licensed sources, parser activation, migration, API, Supported
+entries/records, compatibility claims, and support promotion remain prohibited.
+
+## DEC-0078 — Approve DEV-0610 synthetic characterization corpus
+
+- Date: 2026-07-30
+- Status: APPROVED
+- Task: DEV-0610
+- Validation package: QMS-020
+- Acceptance record: DEV-0610-synthetic-manifest-corpus-acceptance
+- Profile: `synthetic-characterization-corpus-governance` version 1
+- Corpus: `manifest-synthetic-characterization-corpus` version 1
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+
+The authorized candidate review accepts DEV-0610 COMPLETE. The corpus contains
+60 deterministic project-original internal resources across 13 candidate
+profile/version matrix entries. All fixture and manifest digests verify.
+Validation passed with 80 focused, 322 combined Manifest, 713 backend, and 5
+legacy tests plus compilation, dependency, pip, Alembic, and hygiene gates.
+The existing accepted TestClient warning remains. Migration head remains
+`0005_processing_idempotency`; no migration was added.
+
+Only `SYNTHETIC_CHARACTERIZED` is approved. Apple-produced characterization is
+`APPLE_PRODUCED_NOT_STARTED`; compatibility and support remain
+`NOT_EVALUATED`. No Apple/customer/device/real data, parser activation,
+artifact/input/workflow support, API, production seed, supported entry/record,
+deployment, or support promotion is approved.

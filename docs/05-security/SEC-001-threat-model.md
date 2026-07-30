@@ -72,3 +72,17 @@ Inputs must share exact tenant/case/source/artifact/run scope and compatible
 profile versions. Caller row/group/member/byte/memory/time/cancellation bounds
 fail closed. No raw BLOB identifier is textualized, no filesystem or physical
 inventory is reachable, and all evidentiary conclusions remain unavailable.
+
+## Synthetic corpus controls — DEV-0610
+
+The corpus generator accepts no path, URL, environment-derived value, command,
+module, or fixture content. Its output is fixed to the repository test-fixture
+directory. The validator is pure data processing: it performs no filesystem
+read/write, network access, dynamic loading, native deserialization, or command
+execution. Unknown generators, traversal opportunities, missing/unregistered
+resources, digest mutation, incomplete provenance/custody, prohibited sources,
+and uncertain distribution fail closed.
+
+Only project-original, non-personal, non-device synthetic values are present.
+The corpus is excluded from production composition, APIs, supported storage,
+and seed data.

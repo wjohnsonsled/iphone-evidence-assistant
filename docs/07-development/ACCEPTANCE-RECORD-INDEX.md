@@ -197,3 +197,18 @@ artifact, parser, or support conclusion.
 
 Logical Files-row coverage never establishes backup, physical-object, artifact,
 parser, metadata, normalized-record, user-activity, or absence conclusions.
+
+## DEV-0610 validation traceability
+
+- Implementation decision: DEC-0077
+- Completion decision: DEC-0078
+- Validation package: QMS-020
+- Acceptance record: DEV-0610-synthetic-manifest-corpus-acceptance
+- Profile/corpus: FOR-021; `manifest-synthetic-characterization-corpus` v1
+- Status: `COMPLETE_CANDIDATE_INFRASTRUCTURE`
+- Support: `CANDIDATE_NOT_SUPPORTED`
+- Supported registry entries / normalized records: 0 / 0
+
+Only synthetic characterization is in scope. Apple-produced, compatibility,
+support, production, parser, artifact, input, and workflow validation remain
+not started/not evaluated.

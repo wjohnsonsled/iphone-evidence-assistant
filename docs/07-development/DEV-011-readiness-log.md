@@ -344,6 +344,24 @@
   acceptance criteria, and whether synthetic characterization can complete
   DEV-0610 without satisfying the future support-validation package.
 
+## DEC-0077 — DEV-0610 synthetic corpus readiness
+
+- DEC-0077 resolves the fixture-source, provenance, custody, distribution,
+  matrix, and acceptance boundary using project-original synthetic values only.
+- DEV-0610 advances `OWNER_REVIEW → DEPENDENCIES_SATISFIED → READY →
+  IN_PROGRESS`.
+- Apple-produced, compatibility, support, and production validation remain
+  explicitly not started. DEV-0611 remains blocked until DEV-0610 completes.
+
+## DEC-0078 — DEV-0610 completion and DEV-0611 reevaluation
+
+- Candidate-level review accepts DEV-0610 COMPLETE with FOR-021/QMS-020
+  limitations and no support effect.
+- Only synthetic characterization is complete; Apple-produced, compatibility,
+  support, and production validation remain not started/not evaluated.
+- DEV-0611's dependency is satisfied. Its exact task/acceptance/governance
+  records must now be reviewed before readiness changes.
+
 ## DEC-0067 / DEC-0068 — DEV-0605 completion and DEV-0606 readiness
 
 - Candidate-level review accepts DEV-0605 COMPLETE with FOR-016/QMS-015
