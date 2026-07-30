@@ -308,6 +308,26 @@
 - DEV-0606, DEV-0607, and DEV-0609 remain ordered after their predecessors.
   Registry/store counts and support status remain zero/unchanged.
 
+## DEC-0075 — DEV-0608 implementation readiness
+
+- Owner authorization resolves DEV-0608's candidate coverage/provenance gate.
+- Dependencies DEV-0603 through DEV-0607 are COMPLETE; DEV-0608 advances to
+  `IN_PROGRESS`.
+- FOR-020 constrains the work to factual logical-row coverage with fail-closed
+  absence eligibility and no physical, artifact, parser, user-activity, or
+  support conclusion.
+- DEV-0610 and DEV-0611 remain blocked until DEV-0608 completes and their exact
+  governing records are reevaluated.
+
+## DEC-0076 — DEV-0608 completion and DEV-0610 reevaluation
+
+- Candidate-level review accepts DEV-0608 COMPLETE with FOR-020/QMS-019
+  limitations and no support effect.
+- DEV-0610's dependency set is now satisfied, but its exact fixture-governance,
+  acceptance, and QMS records must be read before an automatic readiness
+  transition; it is recorded `NOT_STARTED` pending that immediate review.
+- DEV-0611 remains blocked by DEV-0610. Registry/store counts remain zero.
+
 ## DEC-0067 / DEC-0068 — DEV-0605 completion and DEV-0606 readiness
 
 - Candidate-level review accepts DEV-0605 COMPLETE with FOR-016/QMS-015

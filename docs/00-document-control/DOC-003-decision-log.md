@@ -1477,3 +1477,53 @@ the comparison universe remains incomplete, and duplicate, orphan,
 missing-object, and absence conclusions remain `NOT_ESTABLISHED`.
 Registry/store counts remain zero. No parser/artifact/input/workflow support,
 API, real evidence, deployment, or support promotion is approved.
+
+## DEC-0075 — Authorize DEV-0608 inventory provenance and factual coverage
+
+- Date: 2026-07-30
+- Status: APPROVED FOR IMPLEMENTATION
+- Task: DEV-0608
+- Support effect: none
+
+The owner authorizes candidate-only infrastructure that records the exact
+requested, authorized, observed, completed, partial, unavailable,
+indeterminate, comparison-ready, and comparison-incomplete inventory universes
+as independent factual dimensions. Every observation must bind tenant, case,
+source, artifact, controlled-copy, database, processing-run, schema, query,
+locator, normalization, interpretation, resource, mutation, continuation,
+count, scope, prior-run, implementation, time, and limitation provenance.
+
+Absence eligibility fails closed and is not an absence conclusion. Manifest-row
+coverage is not backup, physical-object, artifact, parser, normalized-record,
+metadata, or user-activity coverage. Continuation composition requires exact
+scope/copy/profile continuity, explicit locator continuation, no gaps/overlap,
+no mutation, unique runs, and complete components.
+
+No migration, physical inventory, path construction, object resolution,
+hashing, parser activation, supported registry entry, supported record, API,
+real evidence, deployment, evidentiary conclusion, or support promotion is
+authorized. After candidate completion, DEV-0610 and DEV-0611 may proceed under
+the same authorization when their exact records are sufficient.
+
+## DEC-0076 — Approve DEV-0608 candidate inventory coverage
+
+- Date: 2026-07-30
+- Status: APPROVED
+- Task: DEV-0608
+- Validation package: QMS-019
+- Acceptance record: DEV-0608-manifest-inventory-coverage-acceptance
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+
+The owner-authorized candidate review accepts DEV-0608 COMPLETE. Validation
+passed with 41 focused scenarios, 242 combined Manifest tests, 633 backend
+tests, 5 legacy characterization tests, compilation, dependency-lock, pip,
+Alembic head/history/offline SQL, and repository hygiene checks. The unchanged
+accepted TestClient warning remains. Migration head remains
+`0005_processing_idempotency`; no migration was added.
+
+FOR-020 limitations remain permanent. Logical `Files`-row coverage is not
+backup, physical-object, artifact, parser, metadata, normalized-record, or
+user-activity coverage. No absence, deletion, missing-object, duplicate,
+orphan, or completeness conclusion is approved. Registry/store counts remain
+zero. No parser/artifact/input/workflow support, API, real evidence,
+deployment, or support promotion is approved.

@@ -184,3 +184,16 @@ meaning.
 
 Repetition patterns create no duplicate, orphan, missing-object, absence,
 artifact, parser, or support conclusion.
+
+## DEV-0608 validation traceability
+
+- Implementation decision: DEC-0075
+- Completion decision: DEC-0076
+- Validation package: QMS-019
+- Acceptance record: DEV-0608-manifest-inventory-coverage-acceptance
+- Status: `COMPLETE_CANDIDATE_INFRASTRUCTURE`
+- Support: `CANDIDATE_NOT_SUPPORTED`
+- Supported registry entries / normalized records: 0 / 0
+
+Logical Files-row coverage never establishes backup, physical-object, artifact,
+parser, metadata, normalized-record, user-activity, or absence conclusions.

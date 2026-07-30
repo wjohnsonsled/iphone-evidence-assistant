@@ -367,10 +367,10 @@ separate owner decision.
 | DEV-0605 | Relative-path normalization | COMPLETE | DEV-0602; DEV-0604; DEC-0067; DEC-0068 | Candidate-only approval; no filesystem resolution |
 | DEV-0606 | Flags and file metadata normalization | COMPLETE | DEV-0602; DEV-0605; DEC-0069; DEC-0070 | Candidate-only approval; all bits unknown |
 | DEV-0607 | Manifest metadata-blob characterization | COMPLETE | DEV-0602; DEV-0606; DEC-0071; DEC-0072 | Candidate-only bounded syntax approval; no field meaning/support |
-| DEV-0608 | Inventory provenance and coverage | OWNER_REVIEW | DEV-0603 through DEV-0607 | Dependencies satisfied; artifact/provenance/coverage architecture gate requires owner decision |
+| DEV-0608 | Inventory provenance and coverage | COMPLETE | DEV-0603 through DEV-0607; DEC-0075; DEC-0076 | Candidate factual row-universe coverage approved; no support effect |
 | DEV-0609 | Duplicate and orphan detection | COMPLETE | DEV-0602; DEV-0603 through DEV-0607; DEC-0073; DEC-0074 | Candidate semantics only; no physical conclusions |
-| DEV-0610 | Manifest fixture corpus | BLOCKED | DEV-0601 through DEV-0609 | Blocked by DEV-0608 owner gate and Apple-produced fixture governance |
-| DEV-0611 | Manifest validation report | BLOCKED | DEV-0601 through DEV-0610 | Blocked by DEV-0608 and DEV-0610 |
+| DEV-0610 | Manifest fixture corpus | NOT_STARTED | DEV-0601 through DEV-0609 | Readiness requires exact fixture-governance record review |
+| DEV-0611 | Manifest validation report | BLOCKED | DEV-0601 through DEV-0610 | Blocked by DEV-0610 |
 
 **Owner-review gate:** Decide whether Manifest.db inventory is promoted to `SUPPORTED`, remains `CANDIDATE`, or is `REJECTED`.
 
