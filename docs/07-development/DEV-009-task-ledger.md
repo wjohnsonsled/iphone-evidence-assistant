@@ -129,7 +129,7 @@ readiness transitions are automatic and recorded in DEV-011.
 | DEV-0608 | Inventory provenance and coverage | COMPLETE | DEV-0603 through DEV-0607; DEC-0075; DEC-0076 | DEV-0608-manifest-inventory-coverage-acceptance; FOR-020; QMS-019 | Candidate multidimensional factual row-universe coverage approved; absence eligibility fail closed; no support effect |
 | DEV-0609 | Duplicate and orphan detection | COMPLETE | DEV-0602; DEV-0603 through DEV-0607; DEC-0073; DEC-0074 | DEV-0609-manifest-reconciliation-semantics-acceptance; FOR-019; QMS-018 | Candidate repetition semantics approved; physical universe unavailable and all conclusions not established |
 | DEV-0610 | Synthetic Manifest characterization corpus | COMPLETE | DEV-0601 through DEV-0609; DEC-0077; DEC-0078 | DEV-0610-synthetic-manifest-corpus-acceptance; FOR-021; QMS-020 | Candidate project-original deterministic corpus approved; Apple-produced/compatibility/support validation not started |
-| DEV-0611 | Manifest validation report | BLOCKED | DEV-0601 through DEV-0610 | To be created | Blocked by DEV-0610 fixture corpus |
+| DEV-0611 | Manifest validation report | OWNER_REVIEW | DEV-0601 through DEV-0610 | To be created | Dependency satisfied; no exact task/acceptance record defines report inputs, audience, sections, validation levels, claims, disposition vocabulary, signoff, or support boundary |
 | DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | To be created | Blocked by reporting and coverage package gates |
 
 

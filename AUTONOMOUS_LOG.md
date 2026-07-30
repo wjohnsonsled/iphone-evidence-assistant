@@ -55,6 +55,20 @@
 - Only synthetic characterization is complete; Apple-produced, compatibility,
   support, registry, and supported-store states remain unchanged.
 
+## 2026-07-30T16:05:00-04:00 — DEV-0610 local commit
+
+- Created local commit `f615f8b` (`DEV-0610: govern synthetic Manifest corpus`).
+- Branch is 102 commits ahead of remote; nothing was pushed.
+
+## 2026-07-30T16:15:00-04:00 — DEV-0611 readiness / stop condition
+
+- Read every exact DEV-0611 repository reference after DEV-0610 completion.
+- Only title/dependency and the adjacent support-disposition gate exist; no
+  report or acceptance contract defines validation level, claims, sections,
+  inputs, disposition, signoff, or synthetic-only boundary.
+- Recorded DEV-0611 `OWNER_REVIEW`. No report was invented, and no support,
+  registry, store, Apple-validation, parser, API, or migration state changed.
+
 ## 2026-07-30T14:25:00-04:00 — DEV-0608 full regression
 
 - 242 combined Manifest, 633 backend, and 5 legacy tests passed.

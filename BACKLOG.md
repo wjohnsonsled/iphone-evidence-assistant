@@ -370,7 +370,7 @@ separate owner decision.
 | DEV-0608 | Inventory provenance and coverage | COMPLETE | DEV-0603 through DEV-0607; DEC-0075; DEC-0076 | Candidate factual row-universe coverage approved; no support effect |
 | DEV-0609 | Duplicate and orphan detection | COMPLETE | DEV-0602; DEV-0603 through DEV-0607; DEC-0073; DEC-0074 | Candidate semantics only; no physical conclusions |
 | DEV-0610 | Synthetic Manifest characterization corpus | COMPLETE | DEV-0601 through DEV-0609; DEC-0077; DEC-0078 | Candidate synthetic characterization approved; Apple-produced validation remains not started |
-| DEV-0611 | Manifest validation report | BLOCKED | DEV-0601 through DEV-0610 | Blocked by DEV-0610 |
+| DEV-0611 | Manifest validation report | OWNER_REVIEW | DEV-0601 through DEV-0610 | Dependency satisfied; exact report scope, validation level, claims, disposition, and acceptance criteria are undefined |
 
 **Owner-review gate:** Decide whether Manifest.db inventory is promoted to `SUPPORTED`, remains `CANDIDATE`, or is `REJECTED`.
 

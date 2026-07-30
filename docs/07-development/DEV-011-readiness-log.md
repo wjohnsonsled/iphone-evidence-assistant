@@ -362,6 +362,25 @@
 - DEV-0611's dependency is satisfied. Its exact task/acceptance/governance
   records must now be reviewed before readiness changes.
 
+## DEV-0611 exact-record review — mandatory owner gate
+
+- The repository defines DEV-0611 only as `Manifest validation report`, its
+  dependency, and a nearby WP-0600 `SUPPORTED`/`CANDIDATE`/`REJECTED` owner
+  gate.
+- No task-specific acceptance record defines the report's purpose, audience,
+  input packages, required sections, validation-level taxonomy, factual claims,
+  pass/fail/disposition vocabulary, limitation rules, signoff, or whether the
+  deliverable is synthetic-characterization-only.
+- DEC-0077 requires scope not be inferred from the title and prohibits support
+  promotion. Drafting an unspecified final validation report could conflate
+  synthetic characterization with Apple-produced compatibility or support
+  validation.
+- DEV-0611 therefore advances from `BLOCKED` to `OWNER_REVIEW`. Required owner
+  decision: define a synthetic-only candidate validation-report contract or
+  defer DEV-0611 until an Apple-produced validation package exists. Any
+  Supported/Candidate/Rejected disposition must remain a separate explicit
+  owner decision.
+
 ## DEC-0067 / DEC-0068 — DEV-0605 completion and DEV-0606 readiness
 
 - Candidate-level review accepts DEV-0605 COMPLETE with FOR-016/QMS-015
