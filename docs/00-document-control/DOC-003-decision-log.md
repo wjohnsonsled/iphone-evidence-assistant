@@ -1621,3 +1621,46 @@ validation, and production readiness remain not evaluated; Supported
 capability remains unauthorized. Registry/store counts remain zero. No real
 evidence, Apple-produced fixture, physical resolution, parser activation, API,
 deployment, support claim, or promotion is approved.
+
+## DEC-0081 — Authorize WP-0620 physical inventory and resolution
+
+- Date: 2026-07-31
+- Status: APPROVED FOR IMPLEMENTATION
+- Work package: WP-0620
+- Tasks: DEV-0621 through DEV-0626
+- Support effect: none
+
+The owner authorizes candidate-only, read-only physical Apple local-backup
+object inventory and exact Manifest-fileID resolution infrastructure against a
+validated, authorized, tenant/case/source/run-bound root. WP-0620 is distinct
+from attachment-specific DEV-1003 through DEV-1005 and does not renumber or
+replace them.
+
+The approved profiles are `apple-local-backup-physical-inventory` v1,
+`apple-backup-physical-object-locator` v1, and
+`manifest-fileid-physical-resolution` v1. The v1 layout rule is provisional and
+synthetic: a candidate object is an exact lowercase 40-ASCII-hex filename at
+depth two beneath an exact lowercase two-ASCII-hex directory equal to the
+filename's first two characters. This is not asserted as Apple-authoritative.
+
+No user-content parsing, artifact interpretation, Apple compatibility, real
+evidence, parser activation, production/API exposure, supported record,
+deployment, or support promotion is authorized. Migration head must remain
+`0005_processing_idempotency`.
+
+## DEC-0082 — Approve DEV-0621 candidate physical inventory
+
+- Date: 2026-07-31
+- Status: APPROVED
+- Task: DEV-0621
+- Acceptance record: DEV-0621-physical-inventory-acceptance
+- Profile: FOR-022
+- Support effect: none
+
+Candidate review accepts the read-only, authorized-root-confined v1 physical
+inventory, explicit object types, deterministic relative locators, exact
+provisional layout classification, unknown preservation, and caller resource
+controls. Focused and regression gates pass; two privileged live Windows
+symlink creation cases are skipped while deterministic symlink/reparse denial
+tests pass. No Apple-authority, content, artifact, compatibility, completeness,
+parser, API, persistence, real evidence, or support claim is approved.

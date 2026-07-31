@@ -130,6 +130,12 @@ readiness transitions are automatic and recorded in DEV-011.
 | DEV-0609 | Duplicate and orphan detection | COMPLETE | DEV-0602; DEV-0603 through DEV-0607; DEC-0073; DEC-0074 | DEV-0609-manifest-reconciliation-semantics-acceptance; FOR-019; QMS-018 | Candidate repetition semantics approved; physical universe unavailable and all conclusions not established |
 | DEV-0610 | Synthetic Manifest characterization corpus | COMPLETE | DEV-0601 through DEV-0609; DEC-0077; DEC-0078 | DEV-0610-synthetic-manifest-corpus-acceptance; FOR-021; QMS-020 | Candidate project-original deterministic corpus approved; Apple-produced/compatibility/support validation not started |
 | DEV-0611 | Synthetic Manifest validation report package | COMPLETE | DEV-0601 through DEV-0610; DEC-0079; DEC-0080 | DEV-0611-acceptance-record; QMS-021 | `SYNTHETIC_CHARACTERIZATION_ACCEPTED_WITH_LIMITATIONS`; levels 3–6 not started/not evaluated/unauthorized; no support effect |
+| DEV-0621 | Physical inventory profile, confinement, types, and locators | COMPLETE | WP-0200, WP-0250, WP-0300, DEV-0611; DEC-0081; DEC-0082 | DEV-0621-physical-inventory-acceptance; FOR-022 | Candidate read-only root-confined filesystem observations approved |
+| DEV-0622 | Physical-object hashing, mutation, and provenance | IN_PROGRESS | DEV-0621, WP-0250 | WP-0620-acceptance-criteria | Streaming SHA-256 and instability observations under existing integrity policy |
+| DEV-0623 | Manifest fileID physical-resolution profile | BLOCKED | DEV-0621, DEV-0622, DEV-0603 | WP-0620-acceptance-criteria | Exact provisional synthetic mapping; no Apple-authority/content claim |
+| DEV-0624 | Physical inventory coverage and reconciliation | BLOCKED | DEV-0621 through DEV-0623, DEV-0608, DEV-0609 | WP-0620-acceptance-criteria | Separate physical/Manifest universes; absence/duplicate/orphan fail closed |
+| DEV-0625 | Synthetic physical inventory corpus and integration | BLOCKED | DEV-0621 through DEV-0624 | WP-0620-acceptance-criteria | At least 50 project-original scenarios; no Apple-produced data |
+| DEV-0626 | Physical inventory candidate validation report | BLOCKED | DEV-0621 through DEV-0625 | WP-0620-acceptance-criteria | Internal validation package only; no support effect |
 | DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | To be created | Blocked by reporting and coverage package gates |
 
 

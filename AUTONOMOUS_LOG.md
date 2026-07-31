@@ -122,6 +122,23 @@
   final workstream stop and a separate owner choice for the next gate.
 - Nothing was pushed, merged, deployed, exposed, activated, or promoted.
 
+## 2026-07-31T09:00:00-04:00 — WP-0620 / DEV-0621 start
+
+- Verified `mvp-development`, clean tree, 105 commits ahead, latest `407a9a6`.
+- DEC-0081 authorizes candidate physical inventory/resolution and defines a
+  narrow provisional synthetic v1 layout; no Apple-authority claim.
+- Added WP-0620 and DEV-0621 through DEV-0626 without changing attachment tasks
+  DEV-1003 through DEV-1005.
+
+## 2026-07-31T09:30:00-04:00 — DEV-0621 completion
+
+- Implemented physical inventory/locator v1 with exact scope, read-only depth
+  confinement, explicit types, deterministic ordering, unknown preservation,
+  and caller resource limits.
+- 17 focused tests passed; two privileged Windows symlink-creation tests skipped
+  while deterministic symlink/reparse denial tests passed.
+- DEC-0082 accepts candidate completion; DEV-0622 selected next.
+
 ## 2026-07-30T14:25:00-04:00 — DEV-0608 full regression
 
 - 242 combined Manifest, 633 backend, and 5 legacy tests passed.

@@ -376,6 +376,23 @@ separate owner decision.
 
 ---
 
+## WP-0620 Physical Apple Backup Object Inventory and Resolution
+
+| Task | Title | Status | Dependencies | Boundary |
+|---|---|---:|---|---|
+| DEV-0621 | Physical inventory profile, confinement, types, and locators | COMPLETE | WP-0200, WP-0250, WP-0300, DEV-0611; DEC-0081; DEC-0082 | Candidate read-only synthetic infrastructure approved |
+| DEV-0622 | Physical-object hashing, mutation, and provenance | IN_PROGRESS | DEV-0621, WP-0250 | Existing SHA-256 integrity policy; no evidence-authenticity claim |
+| DEV-0623 | Manifest fileID physical-resolution profile | BLOCKED | DEV-0621, DEV-0622, DEV-0603 | Exact provisional synthetic mapping only |
+| DEV-0624 | Physical inventory coverage and reconciliation | BLOCKED | DEV-0621 through DEV-0623, DEV-0608, DEV-0609 | No deletion/duplicate/orphan conclusion |
+| DEV-0625 | Synthetic physical inventory corpus and integration | BLOCKED | DEV-0621 through DEV-0624 | Project-original synthetic fixtures only |
+| DEV-0626 | Physical inventory candidate validation report | BLOCKED | DEV-0621 through DEV-0625 | Internal candidate report; no support effect |
+
+This work package does not replace attachment-specific DEV-1003 through
+DEV-1005. Those tasks remain scoped to message attachments and may consume this
+candidate infrastructure only through later approved adapters.
+
+---
+
 # PHASE 7 — CONTACTS CANDIDATE
 
 ## WP-0700 Contacts

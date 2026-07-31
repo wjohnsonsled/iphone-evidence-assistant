@@ -439,3 +439,9 @@ DEV-0611 reads only the registered synthetic corpus and compiled repository
 facts, generates no evidentiary record, and remains outside production,
 supported, parser, persistence, and API composition. Its logical digest protects
 report-package integrity only.
+
+DEC-0081/DEC-0082 add an isolated read-only physical inventory boundary after
+validated intake authorization. It observes an exact provisional depth-two
+synthetic layout, never follows links/reparse/special objects, emits only
+source/run-bound relative locators, and remains outside parsing, supported
+storage, persistence, API, and production composition.

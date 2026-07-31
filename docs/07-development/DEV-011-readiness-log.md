@@ -403,6 +403,22 @@
   characterization planning, physical-object inventory/resolution architecture,
   or an explicit support-validation roadmap.
 
+## DEC-0081 — WP-0620 physical inventory readiness
+
+- Owner selected physical backup-object inventory and resolution architecture
+  as the next workstream.
+- Existing attachment tasks DEV-1003 through DEV-1005 remain unchanged and are
+  not duplicates because their scope begins with parsed message-attachment
+  rows; WP-0620 supplies general candidate infrastructure only.
+- DEV-0621 advances `NOT_STARTED → DEPENDENCIES_SATISFIED → READY →
+  IN_PROGRESS`; DEV-0622 through DEV-0626 remain dependency-blocked.
+
+## DEC-0082 — DEV-0621 completion and DEV-0622 readiness
+
+- Candidate review accepts DEV-0621 COMPLETE with FOR-022 limitations.
+- DEV-0622 advances `BLOCKED → DEPENDENCIES_SATISFIED → READY → IN_PROGRESS`.
+- Registry/store counts and support status remain zero/unchanged.
+
 ## DEC-0067 / DEC-0068 — DEV-0605 completion and DEV-0606 readiness
 
 - Candidate-level review accepts DEV-0605 COMPLETE with FOR-016/QMS-015

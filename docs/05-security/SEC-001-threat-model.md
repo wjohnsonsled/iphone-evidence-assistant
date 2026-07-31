@@ -95,3 +95,11 @@ registered sources, corpus/report digest mismatch, traceability gaps, inventory
 gaps, conflicting decisions, or nonzero registry/store counts fail closed.
 Generated logical content excludes absolute/temporary paths, secrets, raw
 BLOBs, customer data, and environment-specific timestamps.
+
+## Candidate physical inventory controls — DEV-0621
+
+Inventory requires an exact authorized/validated root and matching
+tenant/case/source/run scope. The v1 reader traverses no more than the root and
+recognized lowercase two-hex directories. Symbolic links, reparse points,
+special objects, root links, escape conditions, unavailable types, and every
+caller resource ceiling fail closed. Locators never serialize host paths.
