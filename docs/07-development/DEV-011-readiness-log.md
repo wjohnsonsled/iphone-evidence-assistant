@@ -436,6 +436,12 @@
 
 - DEV-0624 passes focused and full regression gates and advances to `COMPLETE`.
 - DEV-0625 advances `BLOCKED → DEPENDENCIES_SATISFIED → READY → IN_PROGRESS`.
+
+## DEV-0625 completion and DEV-0626 readiness
+
+- The versioned 50-scenario project-original corpus and all regression gates pass.
+- DEV-0625 advances to `COMPLETE`; DEV-0626 advances
+  `BLOCKED → DEPENDENCIES_SATISFIED → READY → IN_PROGRESS`.
 - Registry/store counts and support status remain zero/unchanged.
 
 ## DEC-0067 / DEC-0068 — DEV-0605 completion and DEV-0606 readiness

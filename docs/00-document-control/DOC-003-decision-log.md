@@ -1703,3 +1703,14 @@ verification, deletion detection, parser or artifact support, or promotion.
 Separate physical coverage and conservative reconciliation counts are accepted.
 Absence, deletion, duplication, orphan status, tampering, and completeness remain
 explicitly not established.
+
+## DEC-0086 — Complete DEV-0625 synthetic physical corpus
+
+- Date: 2026-07-31
+- Status: APPROVED CANDIDATE VALIDATION MATERIAL
+- Acceptance: DEV-0625-synthetic-physical-corpus-acceptance
+- Support effect: none
+
+The deterministic 50-scenario project-original corpus is accepted for internal
+candidate validation. It is not Apple-produced and cannot establish Apple
+compatibility, real-evidence readiness, or Supported status.

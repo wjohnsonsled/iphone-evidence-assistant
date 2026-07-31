@@ -134,8 +134,8 @@ readiness transitions are automatic and recorded in DEV-011.
 | DEV-0622 | Physical-object hashing, mutation, and provenance | COMPLETE | DEV-0621, WP-0250 | DEV-0622-physical-hashing-acceptance | Streaming SHA-256 and instability observations under existing integrity policy |
 | DEV-0623 | Manifest fileID physical-resolution profile | COMPLETE | DEV-0621, DEV-0622, DEV-0603 | DEV-0623-physical-resolution-acceptance; FOR-023 | Exact provisional synthetic mapping; no Apple-authority/content claim |
 | DEV-0624 | Physical inventory coverage and reconciliation | COMPLETE | DEV-0621 through DEV-0623, DEV-0608, DEV-0609 | DEV-0624-physical-coverage-acceptance | Separate physical/Manifest universes; absence/duplicate/orphan fail closed |
-| DEV-0625 | Synthetic physical inventory corpus and integration | IN_PROGRESS | DEV-0621 through DEV-0624 | WP-0620-acceptance-criteria | At least 50 project-original scenarios; no Apple-produced data |
-| DEV-0626 | Physical inventory candidate validation report | BLOCKED | DEV-0621 through DEV-0625 | WP-0620-acceptance-criteria | Internal validation package only; no support effect |
+| DEV-0625 | Synthetic physical inventory corpus and integration | COMPLETE | DEV-0621 through DEV-0624 | DEV-0625-synthetic-physical-corpus-acceptance | 50 project-original scenarios; no Apple-produced data |
+| DEV-0626 | Physical inventory candidate validation report | IN_PROGRESS | DEV-0621 through DEV-0625 | WP-0620-acceptance-criteria | Internal validation package only; no support effect |
 | DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | To be created | Blocked by reporting and coverage package gates |
 
 

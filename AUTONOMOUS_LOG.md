@@ -128,6 +128,30 @@ DEV-0624 regression finished
 DEV-0624 commit started
 Preparing focused local commit and automatic transition to DEV-0625.
 
+2026-07-31T18:24:00-04:00
+DEV-0624 committed
+Created local commit 495fcd1; support counts remain zero.
+
+2026-07-31T18:25:00-04:00
+Started DEV-0625
+Building the versioned project-original synthetic physical inventory corpus and integration checks.
+
+2026-07-31T18:31:00-04:00
+DEV-0625 focused and integration tests finished
+50 deterministic scenario specifications verified; 28 physical workstream tests passed with 2 host-dependent skips.
+
+2026-07-31T18:32:00-04:00
+DEV-0625 backend regression started
+Running the complete backend and legacy suites plus compilation and diff gates.
+
+2026-07-31T18:36:00-04:00
+DEV-0625 regression finished
+804 backend and 5 legacy tests passed; compilation and diff gates passed.
+
+2026-07-31T18:37:00-04:00
+DEV-0625 commit started
+Preparing the focused corpus and validation checkpoint commit.
+
 ## 2026-07-30T15:55:00-04:00 — DEV-0610 full regression
 
 - 322 combined Manifest, 713 backend, and 5 legacy tests passed.

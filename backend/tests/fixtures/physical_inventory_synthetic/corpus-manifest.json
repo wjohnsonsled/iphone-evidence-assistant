@@ -1,0 +1,411 @@
+{
+  "apple_produced": false,
+  "corpus_id": "physical-inventory-synthetic-corpus",
+  "corpus_version": "1",
+  "generator": "generate_corpus.py",
+  "scenario_count": 50,
+  "scenarios": [
+    {
+      "category": "exact_match",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0000000000000000000000000000000000000000",
+      "scenario_id": "PHY-001",
+      "sha256": "05a667ee9e94659913b865b63e313982b7aac1c2012e5f6a5be7eda4c130c557",
+      "synthetic_only": true
+    },
+    {
+      "category": "complete_no_match",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0100000000000000000000000000000000000001",
+      "scenario_id": "PHY-002",
+      "sha256": "0f55fbc7b041070ceef060110da881ebd7598275834eeb7bfaa6ac273d679996",
+      "synthetic_only": true
+    },
+    {
+      "category": "partial_no_match",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0200000000000000000000000000000000000002",
+      "scenario_id": "PHY-003",
+      "sha256": "a2f861a1b02e57266314d3883ea9af110bee3989a2c7d1219746f2ffdcf0bc90",
+      "synthetic_only": true
+    },
+    {
+      "category": "invalid_name",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0300000000000000000000000000000000000003",
+      "scenario_id": "PHY-004",
+      "sha256": "280c27e134b7e7868e7e6111e54d314f0de6ef9875833496ac2dbb8991202033",
+      "synthetic_only": true
+    },
+    {
+      "category": "wrong_prefix",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0400000000000000000000000000000000000004",
+      "scenario_id": "PHY-005",
+      "sha256": "4974063820be6d2600aa487f935720a45780b09bdb7156044020a8a10ad956da",
+      "synthetic_only": true
+    },
+    {
+      "category": "unexpected_directory",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0500000000000000000000000000000000000005",
+      "scenario_id": "PHY-006",
+      "sha256": "6d08e003f23053f6ce056a7677da7091709a2bbe32329c3dff69e58103c2585b",
+      "synthetic_only": true
+    },
+    {
+      "category": "unsupported_object",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0600000000000000000000000000000000000006",
+      "scenario_id": "PHY-007",
+      "sha256": "86047558f8673f3a174738f030b7b28175e7b2e1c406eb70eb52884e4f79b7dd",
+      "synthetic_only": true
+    },
+    {
+      "category": "inaccessible",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0700000000000000000000000000000000000007",
+      "scenario_id": "PHY-008",
+      "sha256": "dab14a08ba9f4db0544de1df2ed94c96d2efbef92ff505f51cf3bcb70dceb3c9",
+      "synthetic_only": true
+    },
+    {
+      "category": "resource_limit",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0800000000000000000000000000000000000008",
+      "scenario_id": "PHY-009",
+      "sha256": "7bbc1bebd7dd2263f03e6ce88a207f6d1700ada124996521927845ab388db945",
+      "synthetic_only": true
+    },
+    {
+      "category": "cancellation",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0900000000000000000000000000000000000009",
+      "scenario_id": "PHY-010",
+      "sha256": "b9e4f176e861ad3d9b8db22bbefb33239799e3035cd810fda538f652c8f849de",
+      "synthetic_only": true
+    },
+    {
+      "category": "scope_mismatch",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0a0000000000000000000000000000000000000a",
+      "scenario_id": "PHY-011",
+      "sha256": "85516439a012bdccf160c49a3af8bdc42baeda0dc4b65e4575a2214f3d37837c",
+      "synthetic_only": true
+    },
+    {
+      "category": "hash_success",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0b0000000000000000000000000000000000000b",
+      "scenario_id": "PHY-012",
+      "sha256": "269d3acf0d0c868dda4402aae27bc376e3e40dbcb3a0c3372edb93cee4f36cbf",
+      "synthetic_only": true
+    },
+    {
+      "category": "hash_mutation",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0c0000000000000000000000000000000000000c",
+      "scenario_id": "PHY-013",
+      "sha256": "f89ced1ab13b7cd71756be053faa356e898cbe59b0bf912faa6e043c1ef16c57",
+      "synthetic_only": true
+    },
+    {
+      "category": "hash_limit",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0d0000000000000000000000000000000000000d",
+      "scenario_id": "PHY-014",
+      "sha256": "c858ed017837739f4b2211d3a0bc1b43ec8277dc5c61da1d8db448d79ebdd842",
+      "synthetic_only": true
+    },
+    {
+      "category": "multiple_match",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0e0000000000000000000000000000000000000e",
+      "scenario_id": "PHY-015",
+      "sha256": "24ac9886121fd001a6c66e25dd769d0dc777feeedf137c980e8f3230758d40eb",
+      "synthetic_only": true
+    },
+    {
+      "category": "determinism",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "0f0000000000000000000000000000000000000f",
+      "scenario_id": "PHY-016",
+      "sha256": "5823870685aec7b45434a07fd80dec52eb7844111132d6d7389932a9e09ce64c",
+      "synthetic_only": true
+    },
+    {
+      "category": "provenance",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1000000000000000000000000000000000000010",
+      "scenario_id": "PHY-017",
+      "sha256": "7c1435188a92ab334dde24ad17f32fc09dbbe3362c1ef2b53f5ea0d14b424af9",
+      "synthetic_only": true
+    },
+    {
+      "category": "coverage_separation",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1100000000000000000000000000000000000011",
+      "scenario_id": "PHY-018",
+      "sha256": "75e5fc62c5601c6aaff3f55a8a39cc4e2f7fc940753393f47774281235816e62",
+      "synthetic_only": true
+    },
+    {
+      "category": "absence_prohibited",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1200000000000000000000000000000000000012",
+      "scenario_id": "PHY-019",
+      "sha256": "07fc5bde6da0378cd887ca0966069172c934d75e6cb0b9ad316b273c7867f2c8",
+      "synthetic_only": true
+    },
+    {
+      "category": "support_prohibited",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1300000000000000000000000000000000000013",
+      "scenario_id": "PHY-020",
+      "sha256": "61610dbf7c8716a583a647d2c772f974f0d26c42014a9671e53dc85a07a1e36f",
+      "synthetic_only": true
+    },
+    {
+      "category": "exact_match",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1400000000000000000000000000000000000014",
+      "scenario_id": "PHY-021",
+      "sha256": "b65f617d4fb8da36926f0d56a0cf550e7c25608573b52d015b6a61657eaa10ec",
+      "synthetic_only": true
+    },
+    {
+      "category": "complete_no_match",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1500000000000000000000000000000000000015",
+      "scenario_id": "PHY-022",
+      "sha256": "8c90160db95636d8eb8be659fa3a624821dea4477d123ba7d03f7a8f8027059c",
+      "synthetic_only": true
+    },
+    {
+      "category": "partial_no_match",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1600000000000000000000000000000000000016",
+      "scenario_id": "PHY-023",
+      "sha256": "7f397c21c0a0694a36e5681a49ca81aad69d9536e03ff7948842e63b2fdb23d1",
+      "synthetic_only": true
+    },
+    {
+      "category": "invalid_name",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1700000000000000000000000000000000000017",
+      "scenario_id": "PHY-024",
+      "sha256": "20647e34b4eec89289c6fbe81deae847a078cc3bbd63c91d5b1ba8bf36cc3177",
+      "synthetic_only": true
+    },
+    {
+      "category": "wrong_prefix",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1800000000000000000000000000000000000018",
+      "scenario_id": "PHY-025",
+      "sha256": "31fcc28cfba41497f69b698a0d39a11a41f8e226a78e186310b240de4d36aa36",
+      "synthetic_only": true
+    },
+    {
+      "category": "unexpected_directory",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1900000000000000000000000000000000000019",
+      "scenario_id": "PHY-026",
+      "sha256": "b580e4d3bfef88beaef0051f56cb37f2e9e32b7a4276c58807bdac2cca4231a0",
+      "synthetic_only": true
+    },
+    {
+      "category": "unsupported_object",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1a0000000000000000000000000000000000001a",
+      "scenario_id": "PHY-027",
+      "sha256": "dafc5f40dc73d7e7028f895bfadfeb06d91a6a9e77aaf40a700b74966729fc28",
+      "synthetic_only": true
+    },
+    {
+      "category": "inaccessible",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1b0000000000000000000000000000000000001b",
+      "scenario_id": "PHY-028",
+      "sha256": "b3bd15788e9d35d2334a60b5fd89e2c29b63e9e49628eb752feea836efc9d3c1",
+      "synthetic_only": true
+    },
+    {
+      "category": "resource_limit",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1c0000000000000000000000000000000000001c",
+      "scenario_id": "PHY-029",
+      "sha256": "edc4bd82e1648802942b0a3d48aaa3f9a54a5a487dca832e7dd82ff67e7b6a4a",
+      "synthetic_only": true
+    },
+    {
+      "category": "cancellation",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1d0000000000000000000000000000000000001d",
+      "scenario_id": "PHY-030",
+      "sha256": "6906ae3ecab359ee16d6e4576d4474ee8ec7db2ee2f43599812e795edd873cf2",
+      "synthetic_only": true
+    },
+    {
+      "category": "scope_mismatch",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1e0000000000000000000000000000000000001e",
+      "scenario_id": "PHY-031",
+      "sha256": "3fd693b3a34509cb3b969039523c167d9d256f3556c172b8fac4b8ea38a24dbe",
+      "synthetic_only": true
+    },
+    {
+      "category": "hash_success",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "1f0000000000000000000000000000000000001f",
+      "scenario_id": "PHY-032",
+      "sha256": "9e4cdce26380c86c92269131e2c4a76cab3bc129e0d1393ec87d34d6d50a6f19",
+      "synthetic_only": true
+    },
+    {
+      "category": "hash_mutation",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2000000000000000000000000000000000000020",
+      "scenario_id": "PHY-033",
+      "sha256": "e2269bb60a2200710004cc31caa97ebfc6e98e84ed5dc70b497ac46c4b5c0481",
+      "synthetic_only": true
+    },
+    {
+      "category": "hash_limit",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2100000000000000000000000000000000000021",
+      "scenario_id": "PHY-034",
+      "sha256": "2a42715dd4674a0ac66f39b7552b3fd874740c055af3c1a5dd723df8e0a29bfd",
+      "synthetic_only": true
+    },
+    {
+      "category": "multiple_match",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2200000000000000000000000000000000000022",
+      "scenario_id": "PHY-035",
+      "sha256": "ac363b9de21c3d7463975b3739d2175319c0acbbd63740eeca500773a2a35093",
+      "synthetic_only": true
+    },
+    {
+      "category": "determinism",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2300000000000000000000000000000000000023",
+      "scenario_id": "PHY-036",
+      "sha256": "74576d3205e3c177f6154fb3cc69f118ba6e474b420d0820dcd7b9afbe84db8f",
+      "synthetic_only": true
+    },
+    {
+      "category": "provenance",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2400000000000000000000000000000000000024",
+      "scenario_id": "PHY-037",
+      "sha256": "6088ccd4864d3f18936d01301033f88343628d77855799da24c2580fc0f36bdc",
+      "synthetic_only": true
+    },
+    {
+      "category": "coverage_separation",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2500000000000000000000000000000000000025",
+      "scenario_id": "PHY-038",
+      "sha256": "a07ada8b8596d759bb1112617fd8719cf49e235c259e5c8c4ccb1d2b3bf58c8f",
+      "synthetic_only": true
+    },
+    {
+      "category": "absence_prohibited",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2600000000000000000000000000000000000026",
+      "scenario_id": "PHY-039",
+      "sha256": "70de5d89c4007f11567d05f52ed209883539377b19af2b9557180800bc402f41",
+      "synthetic_only": true
+    },
+    {
+      "category": "support_prohibited",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2700000000000000000000000000000000000027",
+      "scenario_id": "PHY-040",
+      "sha256": "adb4522048459a57a947703044fb8d9378562a4e1ce46575194bee24ef43e849",
+      "synthetic_only": true
+    },
+    {
+      "category": "exact_match",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2800000000000000000000000000000000000028",
+      "scenario_id": "PHY-041",
+      "sha256": "368245498c8c6d4bbf764a23ea9bb4fd9e6cd0086dae75614e53f6e1897b6fb4",
+      "synthetic_only": true
+    },
+    {
+      "category": "complete_no_match",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2900000000000000000000000000000000000029",
+      "scenario_id": "PHY-042",
+      "sha256": "59be4f3229c40d8b196acb35e28e3726fa26cf41318704631a4a41f691399ba7",
+      "synthetic_only": true
+    },
+    {
+      "category": "partial_no_match",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2a0000000000000000000000000000000000002a",
+      "scenario_id": "PHY-043",
+      "sha256": "e62bb38bfd7b67e743a418b328031c9c356d87ad51ba9c7e39a2ff33df2ecc03",
+      "synthetic_only": true
+    },
+    {
+      "category": "invalid_name",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2b0000000000000000000000000000000000002b",
+      "scenario_id": "PHY-044",
+      "sha256": "ab3d8a6c7ca52402c6e5550d691d7d8bcc2092edb3f6945129a8c7d7253958be",
+      "synthetic_only": true
+    },
+    {
+      "category": "wrong_prefix",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2c0000000000000000000000000000000000002c",
+      "scenario_id": "PHY-045",
+      "sha256": "11a548cf08582a6d892eb09c77f8f5fe6c73675d9bf96a4697c2cff44ee89f04",
+      "synthetic_only": true
+    },
+    {
+      "category": "unexpected_directory",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2d0000000000000000000000000000000000002d",
+      "scenario_id": "PHY-046",
+      "sha256": "ad47d246c5331ceffe1fd3c40f565b5a8976a5b63e77dfb8e04dbe605d1d2a3b",
+      "synthetic_only": true
+    },
+    {
+      "category": "unsupported_object",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2e0000000000000000000000000000000000002e",
+      "scenario_id": "PHY-047",
+      "sha256": "601841c49e79646782bab0bc173e1da53b9ff4f6c0ef2747fde42d01b8222c85",
+      "synthetic_only": true
+    },
+    {
+      "category": "inaccessible",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "2f0000000000000000000000000000000000002f",
+      "scenario_id": "PHY-048",
+      "sha256": "79ef756366ab94fb7075c860e25e2976aeb43b8443926042096b3758e4fc4d8c",
+      "synthetic_only": true
+    },
+    {
+      "category": "resource_limit",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "3000000000000000000000000000000000000030",
+      "scenario_id": "PHY-049",
+      "sha256": "80848790cad4482e322619459cbee96d2c6870b956b53db9eba70818ce3ea62b",
+      "synthetic_only": true
+    },
+    {
+      "category": "cancellation",
+      "expected_claim_boundary": "CANDIDATE_OBSERVATION_ONLY",
+      "file_id": "3100000000000000000000000000000000000031",
+      "scenario_id": "PHY-050",
+      "sha256": "6b96b0d001e7a475d1d3aca52946fcc996c6d6543f0e6f4a1e3146b816a7d939",
+      "synthetic_only": true
+    }
+  ],
+  "source_basis": "PROJECT_ORIGINAL_SYNTHETIC",
+  "support_effect": "NONE"
+}
