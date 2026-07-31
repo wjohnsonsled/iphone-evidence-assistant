@@ -40,6 +40,34 @@
   history.
 - Beginning the complete regression and repository-quality matrix.
 
+2026-07-31T16:37:46-04:00
+Resumed DEV-0622
+Adopted the owner-required autonomous status format and resumed from the passing focused-test checkpoint without repeating DEV-0621.
+
+2026-07-31T16:38:00-04:00
+DEV-0622 focused tests finished
+20 focused physical-inventory and hashing tests passed; 2 live Windows symlink fixture tests skipped, with deterministic link and reparse denial coverage passing.
+
+2026-07-31T16:42:00-04:00
+DEV-0622 integration tests started
+Running the combined physical inventory and integrity infrastructure boundary suite.
+
+2026-07-31T16:45:00-04:00
+DEV-0622 integration tests finished
+33 tests passed and 2 live Windows symlink fixture tests skipped; no failures.
+
+2026-07-31T16:46:00-04:00
+DEV-0622 backend regression started
+Running complete backend and legacy suites, compilation, and diff hygiene.
+
+2026-07-31T16:49:00-04:00
+DEV-0622 regression finished
+796 backend tests passed with 2 platform skips and 1 accepted TestClient warning; 5 legacy tests, compilation, and diff hygiene passed.
+
+2026-07-31T16:50:00-04:00
+DEV-0622 commit started
+Acceptance, traceability, risk, readiness, and operational records are complete; preparing focused local commit.
+
 ## 2026-07-30T15:55:00-04:00 — DEV-0610 full regression
 
 - 322 combined Manifest, 713 backend, and 5 legacy tests passed.

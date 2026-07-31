@@ -1,14 +1,21 @@
-# Autonomous Next
+Current Task
 
-- Exact next action: implement DEV-0621 immutable root-confined inventory,
-  filesystem classification, locator profile, ordering, and resource policy.
-- Governing decision: DEC-0081.
-- Files currently changing: WP-0620 governance, physical inventory profiles,
-  implementation, tests, traceability, risk, and progress records.
-- Tests last run: DEV-0611 final matrix — 63 focused, 385 Manifest, 776 backend,
-  5 legacy; passed.
-- Tests still required: all WP-0620 focused and regression gates.
-- Stop condition: none.
-- Latest safe commit: `407a9a6`.
-- Resume workflow: inspect DEC-0081 and WP-0620, implement DEV-0621, run focused
-  tests, document, commit, and advance DEV-0622.
+DEV-0622
+
+Immediately After
+
+DEV-0623
+
+Remaining Current Work Package
+
+DEV-0624
+DEV-0625
+DEV-0626
+
+Next Known Owner Gate
+
+WP-0620 validation review, only if required by governing readiness records
+
+Expected Stop Condition
+
+Completion of all unblocked WP-0620 tasks or a genuine mandatory governance conflict.

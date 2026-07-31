@@ -1,20 +1,64 @@
 # Autonomous Status
 
-- Updated: 2026-07-31T09:00:00-04:00
-- Branch: `mvp-development`
-- Working tree: WP-0620 governance integration in progress
-- Current task: DEV-0621 — Physical inventory profile and confinement
-- Current state: IN_PROGRESS
-- Current phase: Governance COMPLETE; Design IN_PROGRESS
-- Latest completed task: DEV-0611
-- Latest safe commit: `407a9a6`
-- Focused tests: NOT_STARTED
-- Integration tests: NOT_STARTED
-- Backend regression: NOT_STARTED
-- Current blocker: none
-- Next task: DEV-0622 after DEV-0621 completion
-- Supported Parser Registry entries: 0
-- Supported normalized records: 0
+Timestamp:
+2026-07-31T16:50:00-04:00
 
-Authorized workstream: DEV-0621 through DEV-0626. Completed: 0. In progress: 1.
-Blocked: 5.
+Current Task:
+DEV-0622
+
+Task Title:
+Physical-object hashing and mutation observations
+
+Current Phase:
+Committing
+
+Progress:
+95%
+
+Current Branch:
+mvp-development
+
+Working Tree:
+Dirty (expected)
+
+Latest Commit:
+e5ed383
+
+Focused Tests:
+Passed: 20
+Failed: 0
+Skipped: 2
+
+Integration Tests:
+Passed: 33
+Failed: 0
+
+Backend Regression:
+Passed
+
+Current Files Being Modified:
+
+- backend/app/physical_inventory/hashing.py
+- backend/tests/test_physical_inventory_hashing.py
+- docs/07-development/DEV-0622-physical-hashing-acceptance.md
+
+Current Blocker:
+None
+
+Next Planned Action:
+Create the focused DEV-0622 local commit, then begin DEV-0623.
+
+Estimated Next Update:
+Approximately 5–15 minutes
+
+Supported Parser Registry:
+0
+
+Supported Normalized Records:
+0
+
+Real Evidence Processed:
+NO
+
+Support Promotion:
+NO

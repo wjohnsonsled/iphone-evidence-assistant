@@ -417,6 +417,14 @@
 
 - Candidate review accepts DEV-0621 COMPLETE with FOR-022 limitations.
 - DEV-0622 advances `BLOCKED → DEPENDENCIES_SATISFIED → READY → IN_PROGRESS`.
+
+## DEV-0622 completion and DEV-0623 readiness
+
+- DEV-0622 acceptance passes: 20 focused tests and 33 integration tests passed;
+  full regression reports 796 backend and 5 legacy tests passed.
+- DEV-0622 advances `IN_PROGRESS → COMPLETE`.
+- DEV-0623 dependencies are satisfied and it advances
+  `BLOCKED → DEPENDENCIES_SATISFIED → READY → IN_PROGRESS`.
 - Registry/store counts and support status remain zero/unchanged.
 
 ## DEC-0067 / DEC-0068 — DEV-0605 completion and DEV-0606 readiness

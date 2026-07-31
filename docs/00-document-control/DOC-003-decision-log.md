@@ -1664,3 +1664,18 @@ controls. Focused and regression gates pass; two privileged live Windows
 symlink creation cases are skipped while deterministic symlink/reparse denial
 tests pass. No Apple-authority, content, artifact, compatibility, completeness,
 parser, API, persistence, real evidence, or support claim is approved.
+
+## DEC-0083 — Complete DEV-0622 candidate physical-object hashing
+
+- Date: 2026-07-31
+- Status: APPROVED CANDIDATE INFRASTRUCTURE
+- Task: DEV-0622
+- Acceptance record: DEV-0622-physical-hashing-acceptance
+- Support effect: none
+
+DEV-0622 reuses the existing append-only SHA-256 integrity registry behind a
+root-confined physical-inventory adapter. It records scoped locator and run
+provenance, byte counts, pre/post filesystem metadata, resource termination,
+cancellation, operational failure, and source-instability outcomes. A digest or
+bounded stability observation does not establish authenticity, Apple or artifact
+compatibility, evidentiary completeness, parsing success, or support.
