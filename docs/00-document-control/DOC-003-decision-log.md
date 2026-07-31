@@ -1692,3 +1692,14 @@ The exact provisional synthetic comparison profile and its distinct complete,
 partial, inaccessible, unsupported, invalid, incompatible, and scope outcomes
 are accepted for architectural use. It is not Apple validation, content
 verification, deletion detection, parser or artifact support, or promotion.
+
+## DEC-0085 — Complete DEV-0624 candidate physical coverage
+
+- Date: 2026-07-31
+- Status: APPROVED CANDIDATE INFRASTRUCTURE
+- Acceptance: DEV-0624-physical-coverage-acceptance
+- Support effect: none
+
+Separate physical coverage and conservative reconciliation counts are accepted.
+Absence, deletion, duplication, orphan status, tampering, and completeness remain
+explicitly not established.
