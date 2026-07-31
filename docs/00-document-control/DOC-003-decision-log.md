@@ -1679,3 +1679,16 @@ provenance, byte counts, pre/post filesystem metadata, resource termination,
 cancellation, operational failure, and source-instability outcomes. A digest or
 bounded stability observation does not establish authenticity, Apple or artifact
 compatibility, evidentiary completeness, parsing success, or support.
+
+## DEC-0084 — Complete DEV-0623 candidate physical resolution
+
+- Date: 2026-07-31
+- Status: APPROVED CANDIDATE INFRASTRUCTURE
+- Acceptance: DEV-0623-physical-resolution-acceptance
+- Profile: FOR-023
+- Support effect: none
+
+The exact provisional synthetic comparison profile and its distinct complete,
+partial, inaccessible, unsupported, invalid, incompatible, and scope outcomes
+are accepted for architectural use. It is not Apple validation, content
+verification, deletion detection, parser or artifact support, or promotion.

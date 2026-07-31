@@ -425,6 +425,12 @@
 - DEV-0622 advances `IN_PROGRESS → COMPLETE`.
 - DEV-0623 dependencies are satisfied and it advances
   `BLOCKED → DEPENDENCIES_SATISFIED → READY → IN_PROGRESS`.
+
+## DEV-0623 completion and DEV-0624 readiness
+
+- DEV-0623 passes focused, integration, full regression, compilation, and diff gates.
+- DEV-0623 advances `IN_PROGRESS → COMPLETE`.
+- DEV-0624 advances `BLOCKED → DEPENDENCIES_SATISFIED → READY → IN_PROGRESS`.
 - Registry/store counts and support status remain zero/unchanged.
 
 ## DEC-0067 / DEC-0068 — DEV-0605 completion and DEV-0606 readiness
