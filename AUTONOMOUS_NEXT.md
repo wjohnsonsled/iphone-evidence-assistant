@@ -1,12 +1,13 @@
 # Autonomous Next
 
-- Exact next action: obtain an owner-defined DEV-0611 validation-report
-  contract or deferral, then reevaluate readiness without changing support.
-- Governing decision: DEC-0077/DEC-0078 and the autonomous continuation rule.
-- Files currently changing: DEV-0611 readiness/ledger/progress records only.
-- Tests last run: DEV-0610 focused — 80 passed; compilation passed.
-- Tests still required: none until DEV-0611 is exactly defined.
-- Stop condition: genuine validation/support-boundary requirements conflict.
-- Latest safe commit: `f615f8b`.
-- Resume workflow: read the new DEV-0611 owner decision and acceptance
-  contract, advance readiness if complete, and implement only that scope.
+- Exact next action: create the local DEV-0611 completion commit, record the
+  post-commit checkpoint, and stop at the final Manifest owner gate.
+- Governing decision: DEC-0079/DEC-0080.
+- Files currently changing: DEV-0611 implementation, reports, tests,
+  acceptance, QMS, governance, and progress records.
+- Tests last run: 63 focused, 385 combined Manifest, 776 backend, and 5 legacy;
+  all required static/dependency/migration gates passed.
+- Tests still required: none for DEV-0611.
+- Stop condition: authorized final workstream stop.
+- Latest safe commit: `afaf259`.
+- Resume workflow: await owner selection of the next separately governed gate.

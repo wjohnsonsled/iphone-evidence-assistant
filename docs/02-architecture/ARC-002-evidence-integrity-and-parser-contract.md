@@ -433,3 +433,9 @@ Corpus provenance and custody describe generator-controlled test assets only.
 They must never be represented as evidence provenance or legal chain of
 custody. Apple-produced validation remains a separate, future controlled
 package outside the repository by default.
+
+DEC-0079/DEC-0080 add a fixed-input, deterministic derived-report boundary.
+DEV-0611 reads only the registered synthetic corpus and compiled repository
+facts, generates no evidentiary record, and remains outside production,
+supported, parser, persistence, and API composition. Its logical digest protects
+report-package integrity only.

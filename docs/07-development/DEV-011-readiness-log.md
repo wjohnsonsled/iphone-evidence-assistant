@@ -381,6 +381,28 @@
   Supported/Candidate/Rejected disposition must remain a separate explicit
   owner decision.
 
+## DEC-0079 — DEV-0611 report readiness
+
+- DEC-0079 exclusively defines DEV-0611 as an internal deterministic
+  synthetic-characterization report package and resolves the prior scope and
+  support-boundary gate.
+- DEV-0611 advances `OWNER_REVIEW → DEPENDENCIES_SATISFIED → READY →
+  IN_PROGRESS`.
+- The report must stop at synthetic characterization and preserve all
+  Apple-produced, compatibility, support, production, parser, registry, store,
+  physical-object, API, and evidence exclusions.
+
+## DEC-0080 — DEV-0611 completion and Manifest workstream stop
+
+- Candidate-level review accepts DEV-0611 COMPLETE with QMS-021 and the
+  authoritative synthetic validation report limitations.
+- WP-0600 implementation and synthetic characterization are accepted with
+  limitations only. The work package is not promoted to Supported.
+- No autonomous next task is selected. The next owner gate must separately
+  choose controlled Apple-produced fixture governance, Apple-produced
+  characterization planning, physical-object inventory/resolution architecture,
+  or an explicit support-validation roadmap.
+
 ## DEC-0067 / DEC-0068 — DEV-0605 completion and DEV-0606 readiness
 
 - Candidate-level review accepts DEV-0605 COMPLETE with FOR-016/QMS-015

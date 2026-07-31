@@ -66,3 +66,8 @@ supersession state, and permanent limitations. This is test-asset provenance
 and custody only. It is never evidence provenance, an evidence hash, legal
 chain of custody, Apple-produced validation, compatibility evidence, or support
 evidence.
+
+DEC-0079/DEC-0080 make every substantive DEV-0611 report statement traceable
+through task, decision, acceptance, profile, validation, limitation, report
+section, and commit where recorded. The report digest applies to derived report
+content only and is not evidence integrity verification.

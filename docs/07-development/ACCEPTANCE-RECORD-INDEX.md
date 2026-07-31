@@ -212,3 +212,24 @@ parser, metadata, normalized-record, user-activity, or absence conclusions.
 Only synthetic characterization is in scope. Apple-produced, compatibility,
 support, production, parser, artifact, input, and workflow validation remain
 not started/not evaluated.
+
+## DEV-0611 validation traceability
+
+- Implementation decision: DEC-0079
+- Completion decision: DEC-0080
+- Validation package: QMS-021
+- Acceptance record: DEV-0611-acceptance-record
+- Profile: `manifest-synthetic-validation-report` version 1
+- Authoritative report: `DEV-0611-manifest-synthetic-validation-report.md`
+- Machine-readable report: `DEV-0611-manifest-synthetic-validation-report.json`
+- Logical-content SHA-256:
+  `5953d2d3a462dd3b15d42f287c65b660540c8d8b52cdf9081b00ef8798a42cc7`
+- Disposition: `SYNTHETIC_CHARACTERIZATION_ACCEPTED_WITH_LIMITATIONS`
+- Status: `COMPLETE_CANDIDATE_INFRASTRUCTURE`
+- Support: `CANDIDATE_NOT_SUPPORTED`
+- Supported registry entries / normalized records: 0 / 0
+
+The report accepts only implementation and synthetic characterization with
+limitations. Apple-produced characterization is not started; compatibility,
+support, and production readiness are not evaluated; Supported capability is
+unauthorized.

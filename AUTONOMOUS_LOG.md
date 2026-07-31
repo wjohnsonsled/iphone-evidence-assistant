@@ -69,6 +69,49 @@
 - Recorded DEV-0611 `OWNER_REVIEW`. No report was invented, and no support,
   registry, store, Apple-validation, parser, API, or migration state changed.
 
+## 2026-07-30T16:35:00-04:00 — DEV-0611 task start
+
+- Verified the interrupted readiness commit completed as `afaf259`; tree clean.
+- DEC-0079 resolves DEV-0611 exclusively as a deterministic internal
+  synthetic-characterization report package.
+- DEV-0611 advanced through readiness to `IN_PROGRESS`; report levels 3–7 and
+  every support/production/Apple/parser/physical/API claim remain excluded.
+
+## 2026-07-30T16:55:00-04:00 — DEV-0611 report checkpoint
+
+- Generated `manifest-synthetic-validation-report` version 1 as authoritative
+  Markdown and deterministic JSON.
+- Initial logical report digest:
+  `1e85ed21403488c555403e20db174ee04d4401f4781a8b681404d49b4468bcfc`.
+- Package accounts for 12 tasks, 17 profile/corpus/report entries, 18 claims,
+  16 validation dimensions, six ladder levels, and 40 required sections.
+
+## 2026-07-30T17:00:00-04:00 — DEV-0611 focused result
+
+- 63 required-section, inventory, claims, limitations, ladder, traceability,
+  digest, determinism, corpus cross-check, security, and fail-closed tests
+  passed.
+- Report implementation, generator, and tests compile.
+
+## 2026-07-30T17:20:00-04:00 — DEV-0611 full regression
+
+- 385 combined Manifest, 776 backend, and 5 legacy tests passed.
+- Compilation, dependency lock, `pip check`, Alembic head/history/offline SQL,
+  deterministic regeneration, digest, hygiene, and final diff checks passed.
+- The existing accepted TestClient warning was the only warning.
+- Migration head remains `0005_processing_idempotency`; no migration was added.
+
+## 2026-07-30T17:25:00-04:00 — DEV-0611 candidate completion
+
+- DEC-0080 accepts DEV-0611 COMPLETE with disposition
+  `SYNTHETIC_CHARACTERIZATION_ACCEPTED_WITH_LIMITATIONS`.
+- Final logical report digest:
+  `5953d2d3a462dd3b15d42f287c65b660540c8d8b52cdf9081b00ef8798a42cc7`.
+- The authorized Manifest synthetic-characterization workstream is complete.
+- Apple-produced, compatibility, support, production, parser, registry/store,
+  physical-object, API, evidence, deployment, and promotion states are
+  unchanged and remain outside authorization.
+
 ## 2026-07-30T14:25:00-04:00 — DEV-0608 full regression
 
 - 242 combined Manifest, 633 backend, and 5 legacy tests passed.

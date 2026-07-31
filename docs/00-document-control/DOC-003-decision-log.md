@@ -1573,3 +1573,51 @@ Only `SYNTHETIC_CHARACTERIZED` is approved. Apple-produced characterization is
 `NOT_EVALUATED`. No Apple/customer/device/real data, parser activation,
 artifact/input/workflow support, API, production seed, supported entry/record,
 deployment, or support promotion is approved.
+
+## DEC-0079 — Authorize DEV-0611 synthetic validation report package
+
+- Date: 2026-07-30
+- Status: APPROVED FOR IMPLEMENTATION
+- Task: DEV-0611
+- Profile: `manifest-synthetic-validation-report` version 1
+- Expected disposition: derived, candidate synthetic-only
+- Support effect: none
+
+The owner authorizes a deterministic Markdown and JSON internal
+engineering/forensic-governance report covering repository-controlled records
+for DEV-0601 through DEV-0610. The package must separately report implementation
+and synthetic characterization, Apple-produced characterization,
+compatibility, support validation, production readiness, and Supported
+capability. Only the first two levels may be complete.
+
+The report is not attorney-facing and cannot validate Apple-produced backups,
+claim Apple/device/software compatibility, activate a parser, resolve physical
+objects, create registry entries or supported records, expose production
+functionality, process real evidence, or make a support determination.
+
+## DEC-0080 — Approve DEV-0611 synthetic Manifest validation report
+
+- Date: 2026-07-30
+- Status: APPROVED
+- Task: DEV-0611
+- Validation package: QMS-021
+- Acceptance record: DEV-0611-acceptance-record
+- Profile: `manifest-synthetic-validation-report` version 1
+- Disposition: `SYNTHETIC_CHARACTERIZATION_ACCEPTED_WITH_LIMITATIONS`
+- Current support status: `CANDIDATE_INFRASTRUCTURE_NOT_SUPPORTED`
+
+The authorized candidate review accepts DEV-0611 COMPLETE. Its authoritative
+Markdown and deterministic JSON package account for all 12 tasks, 17
+profile/corpus/report entries, 18 bounded claims, 16 validation dimensions, six
+validation-ladder levels, 40 required sections, and complete task
+traceability. Validation passed with 63 focused, 385 combined Manifest, 776
+backend, and 5 legacy tests plus compilation, dependency, pip, Alembic, and
+hygiene gates. The accepted TestClient warning remains. Migration head is
+`0005_processing_idempotency`; no migration was added.
+
+Only candidate implementation and synthetic characterization are accepted.
+Apple-produced characterization remains not started; compatibility, support
+validation, and production readiness remain not evaluated; Supported
+capability remains unauthorized. Registry/store counts remain zero. No real
+evidence, Apple-produced fixture, physical resolution, parser activation, API,
+deployment, support claim, or promotion is approved.

@@ -86,3 +86,12 @@ and uncertain distribution fail closed.
 Only project-original, non-personal, non-device synthetic values are present.
 The corpus is excluded from production composition, APIs, supported storage,
 and seed data.
+
+## Synthetic validation-report controls — DEV-0611
+
+Report generation has fixed registered input/output paths and accepts no caller
+path, URL, environment value, command, or dynamic code. Missing or malformed
+registered sources, corpus/report digest mismatch, traceability gaps, inventory
+gaps, conflicting decisions, or nonzero registry/store counts fail closed.
+Generated logical content excludes absolute/temporary paths, secrets, raw
+BLOBs, customer data, and environment-specific timestamps.
