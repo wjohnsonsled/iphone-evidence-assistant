@@ -385,7 +385,7 @@ separate owner decision.
 | DEV-0623 | Manifest fileID physical-resolution profile | COMPLETE | DEV-0621, DEV-0622, DEV-0603 | Exact provisional synthetic mapping only |
 | DEV-0624 | Physical inventory coverage and reconciliation | COMPLETE | DEV-0621 through DEV-0623, DEV-0608, DEV-0609 | No deletion/duplicate/orphan conclusion |
 | DEV-0625 | Synthetic physical inventory corpus and integration | COMPLETE | DEV-0621 through DEV-0624 | Project-original synthetic fixtures only |
-| DEV-0626 | Physical inventory candidate validation report | IN_PROGRESS | DEV-0621 through DEV-0625 | Internal candidate report; no support effect |
+| DEV-0626 | Physical inventory candidate validation report | COMPLETE | DEV-0621 through DEV-0625 | QMS-021; candidate-only, no support effect |
 
 This work package does not replace attachment-specific DEV-1003 through
 DEV-1005. Those tasks remain scoped to message attachments and may consume this

@@ -426,6 +426,14 @@
 - DEV-0623 dependencies are satisfied and it advances
   `BLOCKED → DEPENDENCIES_SATISFIED → READY → IN_PROGRESS`.
 
+## DEV-0626 and WP-0620 completion readiness evaluation
+
+- QMS-021 reconciles all acceptance, test, limitation, risk, and support-state records.
+- DEV-0626 advances `IN_PROGRESS → COMPLETE`; WP-0620 is candidate COMPLETE.
+- No independent `READY` task remains. DEV-0453 is the next plan-order gate and
+  remains `OWNER_REVIEW` because its evidence-gap conclusion vocabulary changes
+  evidence reasoning semantics.
+
 ## DEV-0623 completion and DEV-0624 readiness
 
 - DEV-0623 passes focused, integration, full regression, compilation, and diff gates.

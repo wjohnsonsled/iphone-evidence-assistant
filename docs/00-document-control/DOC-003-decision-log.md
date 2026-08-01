@@ -1714,3 +1714,16 @@ explicitly not established.
 The deterministic 50-scenario project-original corpus is accepted for internal
 candidate validation. It is not Apple-produced and cannot establish Apple
 compatibility, real-evidence readiness, or Supported status.
+
+## DEC-0087 — Complete WP-0620 candidate physical inventory infrastructure
+
+- Date: 2026-07-31
+- Status: APPROVED CANDIDATE ARCHITECTURAL COMPLETION
+- Tasks: DEV-0621 through DEV-0626
+- Validation package: QMS-021
+- Support effect: none
+
+All internal synthetic acceptance criteria pass. This records candidate
+architectural completion only. Apple compatibility, real-evidence use, API or
+production exposure, parser/artifact activation, and support promotion remain
+unapproved. Apple-produced validation remains a future mandatory gate.
