@@ -1,6 +1,6 @@
 # Project Health
 
-Updated: 2026-08-04T13:56:00-04:00
+Updated: 2026-08-04T14:00:00-04:00
 
 - Overall MVP completion estimate: 49% (engineering estimate; support remains 0%).
 - Completed work packages: governance, backend foundation, intake/validation,
@@ -16,8 +16,8 @@ Updated: 2026-08-04T13:56:00-04:00
 - Current legacy regression: 5 passed.
 - Migration head: `0005_processing_idempotency`.
 - Current branch: `mvp-development`.
-- Commits ahead: 0 before the pending local WP-0630 commit.
-- Repository health: healthy; all preparation gates green; no backup processed.
+- Commits ahead: 2 after preparation and operational completion commits.
+- Repository health: healthy; worktree clean; all preparation gates green; no backup processed.
 - Technical debt: accepted TestClient deprecation warning; privileged Windows
   symlink fixture creation unavailable; candidate profiles lack Apple-produced validation.
 - Current risks: provisional physical-layout semantics, bounded filesystem

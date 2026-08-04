@@ -4,7 +4,7 @@ DEV-0634
 
 Immediately After
 
-Owner creates the controlled Apple-produced fixture and requests separate package-specific validation authorization
+Owner follows OWNER-001 and SOP-001, creates the restricted fixture outside Git, and requests separate validation authorization naming the exact package ID
 
 Remaining Current Work Package
 
