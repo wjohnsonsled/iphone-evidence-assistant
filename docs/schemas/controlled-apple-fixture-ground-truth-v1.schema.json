@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "controlled-apple-fixture-ground-truth-v1",
+  "type": "object",
+  "required": ["fixture_package_id", "schema_id", "schema_version", "events", "record_digest"],
+  "properties": {
+    "schema_id": {"const": "controlled-apple-fixture-ground-truth"},
+    "schema_version": {"const": "1"},
+    "record_digest": {"pattern": "^[0-9a-f]{64}$"},
+    "events": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["event_id", "event_type", "action_performed", "expected_source_artifact", "expected_logical_record", "expected_participant", "expected_direction", "expected_timestamp", "timestamp_source", "timestamp_precision", "expected_content", "expected_attachment_identity", "execution_status", "independent_confirmation_method", "known_limitations", "validation_disposition"]}}
+  }
+}

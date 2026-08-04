@@ -137,6 +137,10 @@ readiness transitions are automatic and recorded in DEV-011.
 | DEV-0625 | Synthetic physical inventory corpus and integration | COMPLETE | DEV-0621 through DEV-0624 | DEV-0625-synthetic-physical-corpus-acceptance | 50 project-original scenarios; no Apple-produced data |
 | DEV-0626 | Physical inventory candidate validation report | COMPLETE | DEV-0621 through DEV-0625 | DEV-0626-physical-validation-acceptance; QMS-021 | Candidate package complete; no support effect |
 | DEV-0460 | Coverage Report Integration | BLOCKED | DEV-0458, WP-1400 | To be created | Blocked by reporting and coverage package gates |
+| DEV-0631 | Fixture governance, owner checklist, and generation SOP | COMPLETE | WP-0620; DEC-0088 | WP-0630 acceptance | Preparation only; no backup access |
+| DEV-0632 | Ground-truth, custody, manifest, and validation templates | COMPLETE | DEV-0631 | WP-0630 acceptance | Versioned schemas and synthetic examples only |
+| DEV-0633 | Fixture-package preflight validator | COMPLETE | DEV-0632 | WP-0630 acceptance | Data-only readiness; no processing |
+| DEV-0634 | Preparation validation and QMS report | COMPLETE | DEV-0631 through DEV-0633 | DEV-0634 acceptance; QMS-022 | Preparation-complete is maximum outcome |
 
 
 

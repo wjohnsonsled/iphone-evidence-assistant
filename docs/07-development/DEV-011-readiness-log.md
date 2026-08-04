@@ -246,6 +246,17 @@
   DEV-0603 completion review, followed separately by DEV-0604 semantics.
 - Registry/store counts and support status remain zero/unchanged.
 
+## DEC-0088 — WP-0630 preparation completion
+
+- No equivalent fixture-preparation package existed; unused WP-0630 and
+  DEV-0631 through DEV-0634 preserve all historical IDs.
+- The owner authorization independently prioritizes validation preparation
+  without resolving DEV-0453.
+- DEV-0631 through DEV-0634 advance in dependency order to `COMPLETE` after
+  QMS-022 validation; WP-0630 is candidate preparation COMPLETE.
+- Apple-produced characterization is blocked until the owner creates and
+  separately authorizes a lawfully controlled package by exact package ID.
+
 ## DEC-0073 / DEC-0074 — DEV-0609 completion and workstream stop
 
 - Candidate-level review accepts DEV-0609 COMPLETE with FOR-019/QMS-018

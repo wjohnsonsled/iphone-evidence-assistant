@@ -1727,3 +1727,17 @@ All internal synthetic acceptance criteria pass. This records candidate
 architectural completion only. Apple compatibility, real-evidence use, API or
 production exposure, parser/artifact activation, and support promotion remain
 unapproved. Apple-produced validation remains a future mandatory gate.
+
+## DEC-0088 — Controlled Apple fixture preparation
+
+- Date: 2026-08-04
+- Status: APPROVED AND CANDIDATE PREPARATION COMPLETE
+- Work package: WP-0630; DEV-0631 through DEV-0634
+- Validation: QMS-022; DEV-0634 acceptance
+- Maximum outcome: `CONTROLLED_APPLE_FIXTURE_PREPARATION_COMPLETE`
+- Support effect: none
+
+The owner authorized procedures, schemas, templates, synthetic examples, and a
+data-only readiness validator. No Apple backup was created, opened, inspected,
+or processed. The future restricted fixture remains outside Git and requires a
+separate package-specific owner authorization before processing.

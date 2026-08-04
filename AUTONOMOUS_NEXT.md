@@ -1,10 +1,10 @@
 Current Task
 
-DEV-0626
+DEV-0634
 
 Immediately After
 
-DEV-0453 owner review
+Owner creates the controlled Apple-produced fixture and requests separate package-specific validation authorization
 
 Remaining Current Work Package
 
@@ -12,8 +12,8 @@ None
 
 Next Known Owner Gate
 
-DEV-0453 — Evidence Gap Classification
+Controlled Apple-produced characterization authorization for an exact package ID
 
 Expected Stop Condition
 
-Owner decision required for evidence-gap conclusion vocabulary and rules; no independent READY task remains.
+OWNER MUST CREATE THE CONTROLLED APPLE-PRODUCED FIXTURE BEFORE DEVELOPMENT CAN CONTINUE TO APPLE-PRODUCED CHARACTERIZATION.

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "controlled-apple-fixture-package-v1",
+  "type": "object",
+  "required": ["package_id", "package_version", "fixture_classification", "owner_authorization", "device_ownership_basis", "account_control_basis", "device_model", "os_version", "host_os", "apple_software_version", "backup_type", "encryption_state", "backup_creation_start", "backup_creation_end", "timezone_context", "operator", "backup_root_identity", "controlled_package_location", "source_hash_observations", "controlled_copy_identity", "package_digest", "ground_truth_record_reference", "custody_record_reference", "minimization_record", "retention_classification", "destruction_requirement", "distribution_restriction", "profile_matrix", "limitations", "approvals", "validation_boundary"],
+  "properties": {
+    "package_id": {"type": "string"}, "package_version": {"const": "1"},
+    "fixture_classification": {"const": "CONTROLLED_APPLE_PRODUCED_TEST_FIXTURE"},
+    "backup_type": {"const": "APPLE_LOCAL_BACKUP"}, "encryption_state": {"const": "UNENCRYPTED"},
+    "distribution_restriction": {"const": "RESTRICTED_OUTSIDE_GIT"},
+    "validation_boundary": {"const": "OWNER_AUTHORIZATION_REQUIRED_BEFORE_PROCESSING"},
+    "package_digest": {"pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

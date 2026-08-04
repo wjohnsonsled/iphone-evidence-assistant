@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "action_performed": "send benign unique token",
+      "event_id": "EVT-001",
+      "event_type": "SMS",
+      "execution_status": "PLANNED",
+      "expected_attachment_identity": null,
+      "expected_content": "FIXTURE-TOKEN-001",
+      "expected_direction": "OUTGOING",
+      "expected_logical_record": "message candidate",
+      "expected_participant": "SYNTHETIC-A",
+      "expected_source_artifact": "sms.db candidate",
+      "expected_timestamp": "2026-08-04T14:00:00+00:00",
+      "independent_confirmation_method": "OWNER_SCREENSHOT_REFERENCE_PENDING",
+      "known_limitations": [
+        "Execution does not guarantee backup presence."
+      ],
+      "timestamp_precision": "SECOND",
+      "timestamp_source": "operator worksheet",
+      "validation_disposition": "NOT_EVALUATED"
+    }
+  ],
+  "fixture_package_id": "CAF-EXAMPLE-001",
+  "record_digest": "8e11db9f28f34b1d78978d9aae4aa51cc1138dcb4d183c980f33790468586712",
+  "schema_id": "controlled-apple-fixture-ground-truth",
+  "schema_version": "1"
+}

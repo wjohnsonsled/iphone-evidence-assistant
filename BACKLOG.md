@@ -395,6 +395,18 @@ candidate infrastructure only through later approved adapters.
 
 # PHASE 7 — CONTACTS CANDIDATE
 
+## WP-0630 Controlled Apple-Produced Fixture Preparation
+
+State: IN_PROGRESS. This package prepares governance and a data-only preflight
+harness. It never creates, opens, or processes an Apple backup.
+
+| Task | Title | State | Dependencies | Boundary |
+|---|---|---|---|---|
+| DEV-0631 | Fixture governance, owner checklist, and generation SOP | COMPLETE | WP-0620; DEC-0088 | Preparation only; fixture stays outside Git |
+| DEV-0632 | Ground-truth, custody, manifest, and validation templates | COMPLETE | DEV-0631 | Schemas/templates and synthetic examples only |
+| DEV-0633 | Fixture-package preflight validator | COMPLETE | DEV-0632 | Reads manifest/ground truth only; no backup access |
+| DEV-0634 | Preparation validation and QMS report | COMPLETE | DEV-0631 through DEV-0633 | QMS-022; preparation complete only |
+
 ## WP-0700 Contacts
 
 | Task | Title | Status | Dependencies | Owner Gate |
