@@ -1,0 +1,65 @@
+{
+  "fixtures": [
+    {
+      "apple_produced_characterization_status": "NOT_STARTED",
+      "classification": "CONTROLLED_APPLE_PRODUCED_TEST_FIXTURE",
+      "compatibility_validation_status": "NOT_EVALUATED",
+      "created_at": "2026-08-07",
+      "current_owner_action": "CREATE_CONTROLLED_APPLE_PRODUCED_FIXTURE",
+      "custody_record_reference": "docs/operations/TPL-002-fixture-custody-record.md",
+      "fixture_generated": false,
+      "governing_decisions": [
+        "DEC-0088",
+        "DEC-0089"
+      ],
+      "governing_work_package": "WP-0630",
+      "ground_truth_reference": "docs/operations/TPL-001-ground-truth-event-plan.md",
+      "last_updated_at": "2026-08-07",
+      "lifecycle_status": "PREPARATION_COMPLETE",
+      "limitations": [
+        "Package documentation preparation is complete only.",
+        "One fixture cannot establish compatibility or support."
+      ],
+      "minimization_record_reference": "docs/operations/TPL-003-fixture-minimization-checklist.md",
+      "owner_authorization_reference": "OWNER-AUTH-2026-08-07-CAF-2026-001-REGISTRATION",
+      "owner_checklist_reference": "docs/operations/OWNER-001-controlled-apple-fixture-checklist.md",
+      "package_id": "CAF-2026-001",
+      "package_id_reusable": false,
+      "package_manifest_reference": "docs/schemas/controlled-apple-fixture-package-v1.schema.json",
+      "package_version": "1",
+      "permitted_processing_status": "NOT_AUTHORIZED",
+      "preflight_passed": false,
+      "preparation_status": "CONTROLLED_APPLE_FIXTURE_PREPARATION_COMPLETE",
+      "production_readiness_status": "NOT_EVALUATED",
+      "restrictions": [
+        "Fixture has not been generated.",
+        "No backup has been opened or processed.",
+        "Future raw fixture must remain outside Git.",
+        "Processing requires separate owner authorization naming CAF-2026-001."
+      ],
+      "retention_destruction_record_reference": "docs/operations/TPL-004-retention-destruction-record.md",
+      "retirement_status": "ACTIVE",
+      "secured_external_storage_reference_policy": "NON_SENSITIVE_ID_ONLY_PROTECTED_MAPPING_NOT_IN_GIT",
+      "sop_reference": "docs/operations/SOP-001-controlled-apple-fixture-generation.md",
+      "source_control_policy": "RAW_FIXTURE_PROHIBITED",
+      "storage_reference_id": "CAF-2026-001-SECURE-STORE",
+      "storage_status": "NOT_YET_ASSIGNED",
+      "superseded_by": null,
+      "supersedes": null,
+      "support_validation_status": "NOT_EVALUATED",
+      "supported_capability_status": "UNAUTHORIZED",
+      "validation_matrix_reference": "docs/operations/TPL-005-apple-fixture-validation-matrix.md"
+    }
+  ],
+  "limitations": [
+    "Registry digest protects document consistency only; it is not an evidence hash or Apple authenticity proof.",
+    "Registry presence does not authorize processing or support."
+  ],
+  "logical_digest": "b0533520fc033c9dca607bbc43e1e65632dfe10af0757d3a916d4a53397eda1d",
+  "logical_digest_algorithm": "SHA-256",
+  "logical_digest_canonicalization_profile": "canonical-json-sorted-keys-no-whitespace-excluding-logical-digest",
+  "logical_digest_canonicalization_version": "1",
+  "registry_classification": "CONTROLLED_INTERNAL_VALIDATION_METADATA",
+  "registry_id": "controlled-apple-fixture-registry",
+  "registry_version": "1"
+}

@@ -13,3 +13,7 @@ passed. No migration was added; head is `0005_processing_idempotency`.
 Disposition: `CONTROLLED_APPLE_FIXTURE_PREPARATION_COMPLETE`. Apple-produced
 characterization, compatibility, support, production, and Supported capability
 remain not performed, not evaluated, or unauthorized.
+
+Current-state addendum (2026-08-07): package ID `CAF-2026-001` is assigned in
+the authoritative registry. This does not revise historical preparation
+validation or imply fixture generation or processing.

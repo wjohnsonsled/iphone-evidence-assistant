@@ -1,5 +1,7 @@
 # Apple Fixture Validation Matrix Template
 
+Current working package: `CAF-2026-001`. All execution rows remain `NOT_EVALUATED`.
+
 For every row record governing task/decision/profile, expected and actual
 outcome, `PASS`/`FAIL`/`INDETERMINATE`, limitations, source citation, and
 validation evidence.

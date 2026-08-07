@@ -523,3 +523,4 @@ runtime implementation, validation, or artifact support.
 | Each row identifies verification and an owning task or gap | PASS | Matrix columns in Sections 4–10 |
 | No artifact or parser is promoted | PASS | Document control and maintenance rule 8 |
 | FOR-FIX-001 — Controlled Apple fixture preparation defines lawful source, ground truth, minimization, custody, integrity, storage, retention/destruction, validation boundaries, Git exclusion, and fail-closed readiness without backup processing | PASS | DEC-0088; FOR-024; SOP-001; WP-0630; QMS-022; `app.fixture_preflight` |
+| FOR-FIX-002 — Controlled fixture registry preserves package identity, distinct lifecycle/readiness dimensions, safe references, deterministic logical integrity, and fail-closed transitions without backup access | PASS | DEC-0089; DEV-0635; QMS-023; `app.fixture_preflight.registry` |

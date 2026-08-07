@@ -1,5 +1,7 @@
 # SOP-001 — Generate a Controlled Apple Test Fixture
 
+Current package: `CAF-2026-001`. Processing is not authorized.
+
 1. Confirm device ownership/authorization; assign package ID; create controlled
    test accounts; open the ground-truth and custody worksheets; record device,
    host, Apple Devices, OS/build, and timezone details.

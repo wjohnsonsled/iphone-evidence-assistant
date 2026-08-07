@@ -1,5 +1,7 @@
 # Fixture Minimization Checklist
 
+Current working package: `CAF-2026-001`. Attestations await owner action.
+
 - [ ] Dedicated controlled test accounts where possible
 - [ ] Unrelated accounts and personal content removed before acquisition
 - [ ] No client, litigation, employee, family, confidential business, or third-party data

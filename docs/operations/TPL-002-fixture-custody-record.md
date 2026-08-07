@@ -1,5 +1,7 @@
 # Controlled Test-Fixture Handling Record
 
+Current working package: `CAF-2026-001`. No generation/custody event has occurred.
+
 Record package creation, backup completion, registration, initial SHA-256,
 transfer release, receipt, pre/post-transfer verification, controlled-copy
 creation/verification, authorized validation run, temporary working copies,

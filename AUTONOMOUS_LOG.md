@@ -196,6 +196,14 @@ Created local commit 798926d; candidate preparation is complete and support coun
 Autonomous execution stopped at controlled-fixture creation gate
 OWNER MUST CREATE THE CONTROLLED APPLE-PRODUCED FIXTURE BEFORE DEVELOPMENT CAN CONTINUE TO APPLE-PRODUCED CHARACTERIZATION.
 
+2026-08-07T10:00:00-04:00
+Started DEV-0635
+Repository gate passed at clean tracked WP-0630 checkpoint; no fixture registry existed.
+
+2026-08-07T10:30:00-04:00
+DEV-0635 focused tests finished
+47 registry and preflight tests passed; CAF-2026-001 remains preparation-complete, not generated, and processing unauthorized.
+
 ## 2026-07-30T15:55:00-04:00 — DEV-0610 full regression
 
 - 322 combined Manifest, 713 backend, and 5 legacy tests passed.
@@ -357,3 +365,5 @@ OWNER MUST CREATE THE CONTROLLED APPLE-PRODUCED FIXTURE BEFORE DEVELOPMENT CAN C
   traceability, risk, validation-index, ledger, readiness, fixture README, and
   progress records.
 - Beginning the complete regression and repository-quality matrix.
+2026-08-07T10:42:00-04:00
+Completed DEV-0635 validation: 47 focused tests, 851 backend tests with 2 skips and 1 accepted warning, and 5 legacy tests passed. Compilation, dependency-lock validation, pip check, Alembic history, and offline migration SQL checks passed. Beginning focused local commit.

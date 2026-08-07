@@ -10,3 +10,6 @@
 | AC-06 | Synthetic examples and deterministic digest/serialization tests pass | PASS |
 | AC-07 | Full quality matrix passes with no migration or backup processing | PASS |
 | AC-08 | Maximum state is `CONTROLLED_APPLE_FIXTURE_PREPARATION_COMPLETE`; all later ladder states remain prohibited | PASS |
+
+Current package assignment: `CAF-2026-001`; lifecycle `PREPARATION_COMPLETE`;
+fixture generated `false`; processing authorized `false`.

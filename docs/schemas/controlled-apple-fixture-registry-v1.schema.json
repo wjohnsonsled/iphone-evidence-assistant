@@ -1,0 +1,8 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"controlled-apple-fixture-registry",
+  "schema_version":"1",
+  "type":"object",
+  "required":["registry_id","registry_version","registry_classification","logical_digest_algorithm","logical_digest_canonicalization_profile","logical_digest_canonicalization_version","logical_digest","fixtures","limitations"],
+  "properties":{"registry_id":{"const":"controlled-apple-fixture-registry"},"registry_version":{"const":"1"},"logical_digest_algorithm":{"const":"SHA-256"},"logical_digest":{"pattern":"^[0-9a-f]{64}$"},"fixtures":{"type":"array","items":{"type":"object","required":["package_id","package_version","classification","lifecycle_status","preparation_status","apple_produced_characterization_status","compatibility_validation_status","support_validation_status","production_readiness_status","supported_capability_status","owner_authorization_reference","governing_work_package","governing_decisions","owner_checklist_reference","sop_reference","package_manifest_reference","ground_truth_reference","custody_record_reference","minimization_record_reference","retention_destruction_record_reference","validation_matrix_reference","storage_reference_id","storage_status","source_control_policy","permitted_processing_status","restrictions","limitations","created_at","last_updated_at","supersedes","superseded_by","retirement_status"]}}}
+}

@@ -1,5 +1,7 @@
 # Owner Checklist — Controlled Apple Test Fixture
 
+Current package: `CAF-2026-001`. The ID is assigned; the fixture has not been generated.
+
 - [ ] Use a lawfully owned/controlled dedicated test iPhone.
 - [ ] Assign a non-sensitive package ID; use only owner-controlled test accounts.
 - [ ] Remove unrelated accounts/data before acquisition; never use client,

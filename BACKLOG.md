@@ -406,6 +406,7 @@ harness. It never creates, opens, or processes an Apple backup.
 | DEV-0632 | Ground-truth, custody, manifest, and validation templates | COMPLETE | DEV-0631 | Schemas/templates and synthetic examples only |
 | DEV-0633 | Fixture-package preflight validator | COMPLETE | DEV-0632 | Reads manifest/ground truth only; no backup access |
 | DEV-0634 | Preparation validation and QMS report | COMPLETE | DEV-0631 through DEV-0633 | QMS-022; preparation complete only |
+| DEV-0635 | Controlled Apple fixture registry and CAF-2026-001 assignment | COMPLETE | WP-0630; DEC-0089 | Registry/documentation only; processing unauthorized |
 
 ## WP-0700 Contacts
 

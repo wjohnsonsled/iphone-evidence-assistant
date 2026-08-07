@@ -141,6 +141,7 @@ readiness transitions are automatic and recorded in DEV-011.
 | DEV-0632 | Ground-truth, custody, manifest, and validation templates | COMPLETE | DEV-0631 | WP-0630 acceptance | Versioned schemas and synthetic examples only |
 | DEV-0633 | Fixture-package preflight validator | COMPLETE | DEV-0632 | WP-0630 acceptance | Data-only readiness; no processing |
 | DEV-0634 | Preparation validation and QMS report | COMPLETE | DEV-0631 through DEV-0633 | DEV-0634 acceptance; QMS-022 | Preparation-complete is maximum outcome |
+| DEV-0635 | Controlled Apple fixture registry and CAF-2026-001 assignment | COMPLETE | WP-0630; DEC-0089 | DEV-0635 acceptance; QMS-023 | Registry metadata only; fixture not generated; processing unauthorized |
 
 
 

@@ -1,10 +1,10 @@
 Current Task
 
-DEV-0634
+DEV-0635
 
 Immediately After
 
-Owner follows OWNER-001 and SOP-001, creates the restricted fixture outside Git, and requests separate validation authorization naming the exact package ID
+Owner follows OWNER-001 and SOP-001 to create CAF-2026-001 outside Git
 
 Remaining Current Work Package
 
@@ -12,8 +12,8 @@ None
 
 Next Known Owner Gate
 
-Controlled Apple-produced characterization authorization for an exact package ID
+Package-specific authorization to process CAF-2026-001 after generation and preflight readiness
 
 Expected Stop Condition
 
-OWNER MUST CREATE THE CONTROLLED APPLE-PRODUCED FIXTURE BEFORE DEVELOPMENT CAN CONTINUE TO APPLE-PRODUCED CHARACTERIZATION.
+OWNER MUST CREATE CAF-2026-001 BEFORE DEVELOPMENT CAN CONTINUE TO APPLE-PRODUCED CHARACTERIZATION.

@@ -1,5 +1,7 @@
 # Ground-Truth Event Plan Template
 
+Current working package: `CAF-2026-001`. Keep this template reusable.
+
 For each event record: event ID; artifact family/type; planned local time;
 planned UTC when determinable; timezone basis; synthetic participants;
 direction; benign unique content token; attachment identity; call disposition;

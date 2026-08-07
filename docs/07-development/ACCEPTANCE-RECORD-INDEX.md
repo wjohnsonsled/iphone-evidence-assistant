@@ -87,6 +87,9 @@ DEV-0501 through DEV-0509 acceptance records form the complete candidate
 package. QMS-011 limitations remain active. Its synthetic corpus is not an
 Apple-produced compatibility fixture and no record promotes support.
 
+- DEV-0635 — `DEV-0635-controlled-fixture-registry-acceptance.md`; QMS-023;
+  registry metadata only; CAF-2026-001 not generated or authorized for processing.
+
 ## DEV-0602A permanent validation traceability
 
 - Implementation decision: DEC-0061

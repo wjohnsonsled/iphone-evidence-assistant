@@ -1741,3 +1741,17 @@ The owner authorized procedures, schemas, templates, synthetic examples, and a
 data-only readiness validator. No Apple backup was created, opened, inspected,
 or processed. The future restricted fixture remains outside Git and requires a
 separate package-specific owner authorization before processing.
+
+## DEC-0089 — Assign CAF-2026-001 and authorize controlled fixture registry
+
+- Date: 2026-08-07
+- Status: APPROVED REGISTRY METADATA ONLY
+- Task: DEV-0635
+- Package: CAF-2026-001 version 1
+- Lifecycle: `PREPARATION_COMPLETE`
+- Processing: `NOT_AUTHORIZED`
+- Support effect: none
+
+The fixture has not been generated. The authoritative registry may record only
+non-sensitive logical metadata and repository-relative document references.
+Raw fixture material and protected storage mappings remain outside Git.

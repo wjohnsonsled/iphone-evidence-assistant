@@ -257,6 +257,20 @@
 - Apple-produced characterization is blocked until the owner creates and
   separately authorizes a lawfully controlled package by exact package ID.
 
+## DEC-0089 — DEV-0635 registry readiness
+
+- Owner assigns CAF-2026-001 and authorizes metadata-only registry work.
+- DEV-0635 advances `NOT_STARTED → DEPENDENCIES_SATISFIED → READY → IN_PROGRESS`.
+- CAF-2026-001 remains `PREPARATION_COMPLETE`, not generated, not preflighted,
+  and not authorized for processing. No later validation level changes.
+
+## DEV-0635 completion
+
+- Authoritative JSON, Markdown projection, schema, current pointer, digest, and
+  fail-closed tests pass; DEV-0635 advances `IN_PROGRESS → COMPLETE`.
+- Next action remains owner generation of CAF-2026-001 outside Git. Processing
+  requires a later owner authorization naming CAF-2026-001.
+
 ## DEC-0073 / DEC-0074 — DEV-0609 completion and workstream stop
 
 - Candidate-level review accepts DEV-0609 COMPLETE with FOR-019/QMS-018

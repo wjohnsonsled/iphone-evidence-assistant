@@ -6,6 +6,9 @@ communications, calls, and attachments. Client, litigation, employee, family,
 production credential, uncontrolled cloud, and third-party personal data are
 prohibited.
 
+Registry assignment: `CAF-2026-001` is `PREPARATION_COMPLETE`; it is not an
+existing backup, generation has not occurred, and processing is not authorized.
+
 The first matrix is one unencrypted Apple local backup created with Apple
 Devices for Windows. Exact device model, iOS version/build, host OS, Apple
 Devices version, timezone, operator, and start/end times must be recorded but
